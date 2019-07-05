@@ -9,8 +9,10 @@ import org.apache.logging.log4j.Logger;
         modid = DocumentMod.MODID,
         name = DocumentMod.NAME,
         version = DocumentMod.VERSION,
-        dependencies = "after:quark"
+        dependencies = "required-after:jei@[1.12.2-4.15.0.268,);after:quark@[r1.5-167,);",
+        clientSideOnly = true
 )
+
 public class DocumentMod
 {
     public static final String MODID = "documentmod";
