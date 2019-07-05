@@ -3,7 +3,7 @@ package com.aaronhowser1.documentmod;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import static com.aaronhowser1.documentmod.DocumentModJEIIntegration.addInfo;
+import static com.aaronhowser1.documentmod.DocumentModJEIIntegration.addItemInfo;
 
 @GameRegistry.ObjectHolder("quark")
 public class QuarkItems
@@ -40,35 +40,35 @@ public class QuarkItems
 
     public static void init()
     {
-        addInfo(CHUTE, "documentationmod.quark.chute");
-        addInfo(STURDY_STONE, "documentationmod.quark.sturdystone");
-        addInfo(GOLD_BUTTON, "documentationmod.quark.goldbutton");
-        addInfo(IRON_BUTTON, "documentationmod.quark.ironbutton");
-        addInfo(OBSIDIAN_PRESSURE_PLATE, "documentationmod.quark.obsidianpressureplate");
-        addInfo(IRON_ROD, "documentationmod.quark.ironrod");
-        addInfo(REDSTONE_RANDOMIZER, "documentationmod.quark.redstonerandomizer");
-        addInfo(WEATHER_DETECTOR, "documentationmod.quark.weatherdetector");
-        addInfo(TROWEL, "documentationmod.quark.trowel");
-        addInfo(GLASS_ITEM_FRAME, "documentationmod.quark.glassitemframe");
-        addInfo(IRON_LADDER, "documentationmod.quark.ironladder");
-        addInfo(CANDLE, "documentationmod.quark.candle");
-        addInfo(WITCH_HAT, "documentationmod.quark.witchhat");
-        addInfo(BIOTITE_ORE, "documentationmod.quark.biotiteore");
-        addInfo(SMOKER, "documentationmod.quark.smoker");
-        addInfo(DIAMOND_HEART, "documentationmod.quark.diamondheart");
-        addInfo(SOUL_BEAD, "documentationmod.quark.soulbead");
-        addInfo(ANCIENT_TOME, "documentationmod.quark.ancienttome");
-        addInfo(RUNE, "documentationmod.quark.rune");
-        addInfo(ENDERDRAGON_SCALE, "documentationmod.quark.enderdragonscale");
-        addInfo(ARROW_ENDER, "documentationmod.quark.enderarrow");
-        addInfo(ARROW_EXPLSOSIVE, "documentationmod.quark.explosivearrow");
-        addInfo(ARROW_TORCH, "documentationmod.quark.torcharrow");
-        addInfo(PARROT_EGG, "documentationmod.quark.parrotegg");
-        addInfo(PICKARANG, "documentationmod.quark.pickarange");
-        addInfo(SLIME_BUCKET, "documentationmod.quark.slimebucket");
-        addInfo(SOUL_POWDER, "documentationmod.quark.soulpowder");
-        addInfo(BLACK_ASH, "documentationmod.quark.blackash");
-        addInfo(ENDER_WATCHER, "documentationmod.quark.enderwatcher");
+        addItemInfo(CHUTE, "documentationmod.quark.chute");
+        addItemInfo(STURDY_STONE, "documentationmod.quark.sturdystone");
+        addItemInfo(GOLD_BUTTON, "documentationmod.quark.goldbutton");
+        addItemInfo(IRON_BUTTON, "documentationmod.quark.ironbutton");
+        addItemInfo(OBSIDIAN_PRESSURE_PLATE, "documentationmod.quark.obsidianpressureplate");
+        addItemInfo(IRON_ROD, "documentationmod.quark.ironrod");
+        addItemInfo(REDSTONE_RANDOMIZER, "documentationmod.quark.redstonerandomizer");
+        addItemInfo(WEATHER_DETECTOR, "documentationmod.quark.weatherdetector");
+        addItemInfo(TROWEL, "documentationmod.quark.trowel");
+        addItemInfo(GLASS_ITEM_FRAME, "documentationmod.quark.glassitemframe");
+        addItemInfo(IRON_LADDER, "documentationmod.quark.ironladder");
+        addItemInfo(CANDLE, "documentationmod.quark.candle");
+        addItemInfo(WITCH_HAT, "documentationmod.quark.witchhat");
+        addItemInfo(BIOTITE_ORE, "documentationmod.quark.biotiteore");
+        addItemInfo(SMOKER, "documentationmod.quark.smoker");
+        addItemInfo(DIAMOND_HEART, "documentationmod.quark.diamondheart");
+        addItemInfo(SOUL_BEAD, "documentationmod.quark.soulbead");
+        addItemInfo(ANCIENT_TOME, "documentationmod.quark.ancienttome");
+        addItemInfo(RUNE, "documentationmod.quark.rune");
+        addItemInfo(ENDERDRAGON_SCALE, "documentationmod.quark.enderdragonscale");
+        addItemInfo(ARROW_ENDER, "documentationmod.quark.enderarrow");
+        addItemInfo(ARROW_EXPLSOSIVE, "documentationmod.quark.explosivearrow");
+        addItemInfo(ARROW_TORCH, "documentationmod.quark.torcharrow");
+        addItemInfo(PARROT_EGG, "documentationmod.quark.parrotegg");
+        addItemInfo(PICKARANG, "documentationmod.quark.pickarange");
+        addItemInfo(SLIME_BUCKET, "documentationmod.quark.slimebucket");
+        addItemInfo(SOUL_POWDER, "documentationmod.quark.soulpowder");
+        addItemInfo(BLACK_ASH, "documentationmod.quark.blackash");
+        addItemInfo(ENDER_WATCHER, "documentationmod.quark.enderwatcher");
     }
 }
 

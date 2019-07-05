@@ -27,3 +27,19 @@ documentationmod.quark.slimebucket=Right click a Slime with a Bucket to put the 
 documentationmod.quark.soulpowder=Right click in the Nether to create a spirit that will fly in the direction of the nearest Nether Fortress.
 documentationmod.quark.blackash=Monsters cannot spawn on Wither Ash, or on the block above Wither Ash.
 documentationmod.quark.enderwatcher=Gives off a Redstone signal when being looked at.
+
+documentationmod.quark.vanilla.dispenser=Dispensers can plant seeds, place blocks, and insert Records into Jukeboxes.
+documentationmod.quark.vanilla.stickypiston=Sticky Pistons can now push Tile Entities like Chests and Furnaces (except Mob Spawners).
+documentationmod.quark.vanilla.lead=Leads can now connect two Fences, instead of just a Fence and a Mob.
+documentationmod.quark.vanilla.boat=Right click a Chest on a Boat to place it on the Boat. While in the Boat, opening your inventory will also open the Chest's inventory.
+documentationmod.quark.vanilla.shulker=Shulker Boxes are now explosion-proof.
+documentationmod.quark.vanilla.compass=While in the Nether or End, Compasses will point towards the Portal that took you there.
+documentationmod.quark.vanilla.ladder=Using a Ladder on a Ladder will place it at the bottom. You can quickly slide down Ladders by looking down.
+documentationmod.quark.vanilla.armorstand=Sneak right click an Armor Stand to swap all of your armor and the item in your offhand.
+documentationmod.quark.vanilla.sign=You can right click a placed Sign to edit it.
+documentationmod.quark.vanilla.emeraldblock=Villagers will follow players holding a Block of Emerald.
+documentationmod.quark.vanilla.elytra=You can dye Elytras.
+documentationmod.quark.vanilla.glowstonedust=Can be placed like Redstone Dust to emit light, similar to a Torch.
+documentationmod.quark.vanilla.gunpowder=Can be placed like Redstone Dust and ignited with a Flint and Steel. The Fire will spread along the Gunpowder at 2 blocks a second. Placing on Netherrack makes it go twice as fast.
+documentationmod.quark.vanilla.dragonbreath=Can be thrown to replace nearby Stone with End Stone.
+

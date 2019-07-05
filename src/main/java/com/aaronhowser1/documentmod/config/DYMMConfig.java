@@ -6,7 +6,9 @@ import net.minecraftforge.common.config.Config;
 @Config(modid=DocumentMod.MODID)
 public class DYMMConfig {
 
-    @net.minecraftforge.common.config.Config.Name("Use Quark?")
+    @Config.Comment("Add information tabs to items added by Quark?")
     public static boolean useQuark = true;
 
+    @Config.Comment("Add information tabs to vanilla items that Quark changes?")
+    public static boolean useVanillaQuark = true;
 }
