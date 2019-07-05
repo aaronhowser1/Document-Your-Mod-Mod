@@ -1,6 +1,5 @@
 package com.aaronhowser1.documentmod;
 
-import mezz.jei.api.IModRegistry;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
