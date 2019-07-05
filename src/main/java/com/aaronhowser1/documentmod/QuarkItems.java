@@ -26,8 +26,8 @@ public class QuarkItems
     public static final Item SMOKER = Items.AIR;
     public static final Item DIAMOND_HEART = Items.AIR;
     public static final Item SOUL_BEAD = Items.AIR;
-//    public static final Item ANCIENT_TOME = Items.AIR;
-//    public static final Item RUNE = Items.AIR;
+    public static final Item ANCIENT_TOME = Items.AIR;
+    public static final Item RUNE = Items.AIR;
     public static final Item ENDERDRAGON_SCALE = Items.AIR;
     public static final Item ARROW_ENDER = Items.AIR;
     public static final Item ARROW_EXPLSOSIVE= Items.AIR;
@@ -58,8 +58,8 @@ public class QuarkItems
         addInfo(SMOKER, "documentationmod.quark.smoker");
         addInfo(DIAMOND_HEART, "documentationmod.quark.diamondheart");
         addInfo(SOUL_BEAD, "documentationmod.quark.soulbead");
-//        addInfo(ANCIENT_TOME, "documentationmod.quark.ancienttome");
-//        addInfo(RUNE, "documentationmod.quark.rune");
+        addInfo(ANCIENT_TOME, "documentationmod.quark.ancienttome");
+        addInfo(RUNE, "documentationmod.quark.rune");
         addInfo(ENDERDRAGON_SCALE, "documentationmod.quark.enderdragonscale");
         addInfo(ARROW_ENDER, "documentationmod.quark.enderarrow");
         addInfo(ARROW_EXPLSOSIVE, "documentationmod.quark.explosivearrow");
