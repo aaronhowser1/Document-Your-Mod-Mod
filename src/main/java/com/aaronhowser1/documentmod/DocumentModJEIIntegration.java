@@ -17,7 +17,9 @@ public class DocumentModJEIIntegration implements IModPlugin
     public void register(IModRegistry r)
     {
         registry = r;
-        if(useQuark) QuarkItems.init();
+        if(useQuark) {
+            QuarkItems.init();
+        }
     }
     public static void addInfo(Item item, String desc)
     {
