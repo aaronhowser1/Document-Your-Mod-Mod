@@ -3,7 +3,7 @@ package com.aaronhowser1.documentmod;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import static com.aaronhowser1.documentmod.DocumentModJEIIntegration.addItemInfo;
+import static com.aaronhowser1.documentmod.DocumentModJEIIntegration.*;
 
 @GameRegistry.ObjectHolder("quark")
 public class QuarkItems

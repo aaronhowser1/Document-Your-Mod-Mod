@@ -32,7 +32,9 @@ documentationmod.quark.vanilla.dispenser=Dispensers can plant seeds, place block
 documentationmod.quark.vanilla.stickypiston=Sticky Pistons can now push Tile Entities like Chests and Furnaces (except Mob Spawners).
 documentationmod.quark.vanilla.lead=Leads can now connect two Fences, instead of just a Fence and a Mob.
 documentationmod.quark.vanilla.boat=Right click a Chest on a Boat to place it on the Boat. While in the Boat, opening your inventory will also open the Chest's inventory.
-documentationmod.quark.vanilla.shulker=Shulker Boxes are now explosion-proof.
+documentationmod.quark.vanilla.shulkerexplosion=Shulker Boxes are now explosion-proof.
+documentationmod.quark.vanilla.shulkerhover=You can hover over a Shulker Box in your inventory to see the contents.
+documentationmod.quark.vanilla.shulkeradd=While holding an item in your cursor, you can right click a Shulker Box in your inventory to directly insert it without having the Shulker Box down.
 documentationmod.quark.vanilla.compass=While in the Nether or End, Compasses will point towards the Portal that took you there.
 documentationmod.quark.vanilla.ladder=Using a Ladder on a Ladder will place it at the bottom. You can quickly slide down Ladders by looking down.
 documentationmod.quark.vanilla.armorstand=Sneak right click an Armor Stand to swap all of your armor and the item in your offhand.
@@ -42,4 +44,7 @@ documentationmod.quark.vanilla.elytra=You can dye Elytras.
 documentationmod.quark.vanilla.glowstonedust=Can be placed like Redstone Dust to emit light, similar to a Torch.
 documentationmod.quark.vanilla.gunpowder=Can be placed like Redstone Dust and ignited with a Flint and Steel. The Fire will spread along the Gunpowder at 2 blocks a second. Placing on Netherrack makes it go twice as fast.
 documentationmod.quark.vanilla.dragonbreath=Can be thrown to replace nearby Stone with End Stone.
+documentationmod.quark.vanilla.map=You can hover over a filled Map in your inventory to see it.
+documentationmod.quark.vanilla.enchantedbook=You can hover over an Enchanted Book in your inventory to see what types of item it can be enchanted with.
+
 

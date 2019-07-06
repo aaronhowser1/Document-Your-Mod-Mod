@@ -34,4 +34,5 @@ public class DocumentModJEIIntegration implements IModPlugin
     {
         if(block != Blocks.AIR) registry.addIngredientInfo(new ItemStack(block), VanillaTypes.ITEM, desc);
     }
+    //TODO Figure out how the hell to add descriptions to runes
 }
