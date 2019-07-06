@@ -1,4 +1,4 @@
-package com.aaronhowser1.documentmod;
+package com.aaronhowser1.documentmod.quark;
 
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;

@@ -1,5 +1,7 @@
 package com.aaronhowser1.documentmod;
 
+import com.aaronhowser1.documentmod.quark.QuarkItems;
+import com.aaronhowser1.documentmod.quark.QuarkVanillaItems;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.IModRegistry;
 import mezz.jei.api.JEIPlugin;
