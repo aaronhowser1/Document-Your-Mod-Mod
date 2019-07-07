@@ -3,6 +3,9 @@ package com.aaronhowser1.documentmod.quark;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+
+import java.util.stream.IntStream;
+
 import static com.aaronhowser1.documentmod.DocumentModJEIIntegration.*;
 
 @GameRegistry.ObjectHolder("quark")
@@ -58,7 +61,9 @@ public class QuarkItems
         addItemInfo(DIAMOND_HEART, "documentationmod.quark.diamondheart");
         addItemInfo(SOUL_BEAD, "documentationmod.quark.soulbead");
         addItemInfo(ANCIENT_TOME, "documentationmod.quark.ancienttome");
-        addItemInfo(RUNE, "documentationmod.quark.rune");
+        IntStream.range(0, 16).forEachOrdered(n -> {
+            addItemWithDamageInfo(RUNE, n, "documentationmod.quark.rune");
+        });
         addItemInfo(ENDERDRAGON_SCALE, "documentationmod.quark.enderdragonscale");
         addItemInfo(ARROW_ENDER, "documentationmod.quark.enderarrow");
         addItemInfo(ARROW_EXPLSOSIVE, "documentationmod.quark.explosivearrow");

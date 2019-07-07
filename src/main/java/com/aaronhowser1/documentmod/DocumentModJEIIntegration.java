@@ -11,6 +11,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+
 import static com.aaronhowser1.documentmod.config.DYMMConfig.*;
 
 @JEIPlugin
@@ -36,5 +37,8 @@ public class DocumentModJEIIntegration implements IModPlugin
     {
         if(block != Blocks.AIR) registry.addIngredientInfo(new ItemStack(block), VanillaTypes.ITEM, desc);
     }
-    //TODO Figure out how the hell to add descriptions to runes
+    public static void addItemWithDamageInfo(Item item, int meta, String desc)
+    {
+        if(item != Items.AIR) registry.addIngredientInfo(new ItemStack(item, 1, meta), VanillaTypes.ITEM, desc);
+    }
 }
