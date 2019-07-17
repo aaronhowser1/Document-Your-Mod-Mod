@@ -26,5 +26,4 @@ public class DocumentMod
     {
         logger = event.getModLog();
     }
-
 }

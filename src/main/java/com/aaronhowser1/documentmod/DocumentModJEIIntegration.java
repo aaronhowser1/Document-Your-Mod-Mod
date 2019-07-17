@@ -41,4 +41,8 @@ public class DocumentModJEIIntegration implements IModPlugin
     {
         if(item != Items.AIR) registry.addIngredientInfo(new ItemStack(item, 1, meta), VanillaTypes.ITEM, desc);
     }
+    public static void addBlockWithDamageInfo(Block block, int meta, String desc)
+    {
+        if(block != Blocks.AIR) registry.addIngredientInfo(new ItemStack(block, 1, meta), VanillaTypes.ITEM, desc);
+    }
 }

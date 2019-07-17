@@ -19,8 +19,12 @@ public class DYMMConfig {
     public static SubCategory vanillaitemschangedbyquark = new SubCategory();
 
     public static class SubCategory {
-        @Config.Comment("Say that Dispensers can place blocks etc?")
-        public boolean infoDispenser = true;
+        @Config.Comment("Say that Dispensers can plant Seeds?")
+        public boolean infoDispenserSeeds = true;
+        @Config.Comment("Say that Dispensers can place blocks?")
+        public boolean infoDispenserBlocks = true;
+        @Config.Comment("Say that Dispensers can fill Jukeboxes?")
+        public boolean infoDispenserRecords = true;
         @Config.Comment("Say that Sticky Pistons can move Tile Entities?")
         public boolean infoStickyPiston = true;
         @Config.Comment("Say that Leads can connect 2 Fences?")
@@ -55,5 +59,47 @@ public class DYMMConfig {
         public boolean infoMap = true;
         @Config.Comment("Say that Enchanted Books show what tools they can go on?")
         public boolean infoEnchantedBook = true;
+        @Config.Comment("Say that Item Frames can be placed on floors and ceilings?")
+        public boolean infoItemFrames = true;
+        @Config.Comment("Say that there are new Quark Banner things?")
+        public boolean infoQuarkBannerMotifs = true;
+        @Config.Comment("Say that Banners have more layers?")
+        public boolean infoBannerLayers = true;
+        @Config.Comment("Say that Boats can have Boats can have Banners?")
+        public boolean infoBannersOnBoats = true;
+        @Config.Comment("Say that you can dye item names in the Anvil?")
+        public boolean infoColorItemNames = true;
+        @Config.Comment("Say that you can sit on Stairs?")
+        public boolean infoSitOnStairs = true;
+        @Config.Comment("Say that animals eat food off the ground?")
+        public boolean infoAnimalsEatFood = true;
+        @Config.Comment("Say that you can place Blaze Rods?")
+        public boolean infoPlaceBlazeRods = true;
+        @Config.Comment("Say that Pistons can move items?")
+        public boolean infoPistonsMoveItems = true;
+        @Config.Comment("Say that Endermites can burrow into Purpur to make Shulkers?")
+        public boolean infoEndermiteShulkers = true;
+        @Config.Comment("Say that you can make Map markers?")
+        public boolean infoMapMarkers = true;
+        @Config.Comment("Say that Noteblocks have a new interface?")
+        public boolean infoNoteBlockInterface = true;
+        @Config.Comment("Say that Noteblocks will play mob sounds?")
+        public boolean infoNoteBlockMobSounds = true;
+        @Config.Comment("Say that Poison Potatoes stop mobs from aging?")
+        public boolean infoPoisonBabies = true;
+        @Config.Comment("Say that Chickens shed feathers?")
+        public boolean infoChickensShed = true;
+        @Config.Comment("Say that Chickens can be sheared?")
+        public boolean infoShearChickens = true;
+        @Config.Comment("Say that Doors open together?")
+        public boolean infoDoubleDoors = true;
+        @Config.Comment("Say that Axes quickly break Leaves?")
+        public boolean infoAxesLeaves = true;
+        @Config.Comment("Say that Hoes break a 5x5 of plants?")
+        public boolean infoHoesAoE = true;
+        @Config.Comment("Say that not everyone has to sleep to skip night?")
+        public boolean infoSleepVote = true;
+        @Config.Comment("Say that you can right-click to harvest?")
+        public boolean infoRightClickHarvest = true;
     }
 }
