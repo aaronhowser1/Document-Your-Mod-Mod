@@ -5,6 +5,7 @@ import com.aaronhowser1.documentmod.quark.QuarkItems;
 import com.aaronhowser1.documentmod.quark.QuarkVanillaItems;
 import com.aaronhowser1.documentmod.tinkersconstruct.TinkersConstruct;
 import com.aaronhowser1.documentmod.twilightforest.TwilightForest;
+import com.aaronhowser1.documentmod.waystones.Waystones;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.IModRegistry;
 import mezz.jei.api.JEIPlugin;
@@ -39,6 +40,9 @@ public class DocumentModJEIIntegration implements IModPlugin
         }
         if(useTwilightForest) {
             TwilightForest.init();
+        }
+        if(useWaystone) {
+            Waystones.init();
         }
     }
     public static void addItemInfo(Item item, String desc)

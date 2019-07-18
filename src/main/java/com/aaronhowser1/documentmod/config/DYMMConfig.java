@@ -114,4 +114,7 @@ public class DYMMConfig {
 
     @Config.Name("Twilight Forest info")
     public static boolean useTwilightForest = true;
+
+    @Config.Name("Waystones info")
+    public static boolean useWaystone = true;
 }

@@ -14,7 +14,8 @@ import org.apache.logging.log4j.Logger;
                 "after:quark@[r1.5-167,);" +
                 "after:naturescompass;" +
                 "after:tconstruct;" +
-                "after:twilightforest",
+                "after:twilightforest" +
+                "after:waystones",
         clientSideOnly = true
 )
 
