@@ -150,10 +150,11 @@ public class QuarkVanillaItems
                 addItemInfo(i, "documentationmod.quark.vanilla.animalseatfood");
             }
         }
-        if(quarksubcat.infoPlaceBlazeRods && ModuleLoader.isFeatureEnabled(PlaceBlazeRods.class)) {
-            addItemInfo(Items.BLAZE_ROD, "documentationmod.quark.vanilla.blazerod");
-            addItemInfo(QuarkItems.BLAZE_ROD, "documentationmod.quark.vanilla.blazerod");
-        }
+//        Commented out as feature is not in current version, and so stops mod from loading
+//        if(quarksubcat.infoPlaceBlazeRods && ModuleLoader.isFeatureEnabled(PlaceBlazeRods.class)) {
+//            addItemInfo(Items.BLAZE_ROD, "documentationmod.quark.vanilla.blazerod");
+//            addItemInfo(QuarkItems.BLAZE_ROD, "documentationmod.quark.vanilla.blazerod");
+//        }
         if(quarksubcat.infoPistonsMoveItems && ModuleLoader.isFeatureEnabled(PistonsPushPullItems.class)) {
             addBlockInfo(PISTON, "documentationmod.quark.vanilla.pistonpush");
             addBlockInfo(STICKY_PISTON, "documentationmod.quark.vanilla.pistonpull");
@@ -203,5 +204,7 @@ public class QuarkVanillaItems
         if(quarksubcat.infoSleepVote && ModuleLoader.isFeatureEnabled(ImprovedSleeping.class)) {
             IntStream.range(0,16).forEachOrdered(n -> addItemWithDamageInfo(Items.BED, n, "documentationmod.quark.vanilla.sleepvote"));
         }
+
+        if(debugModIsDocumented) System.out.println("Quark Vanilla documented");
     }
 }

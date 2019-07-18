@@ -3,6 +3,8 @@ package com.aaronhowser1.documentmod;
 import com.aaronhowser1.documentmod.naturescompass.NaturesCompass;
 import com.aaronhowser1.documentmod.quark.QuarkItems;
 import com.aaronhowser1.documentmod.quark.QuarkVanillaItems;
+import com.aaronhowser1.documentmod.refinedstorage.RefinedStorage;
+import com.aaronhowser1.documentmod.refinedstorage.RefinedStorageAddons;
 import com.aaronhowser1.documentmod.tinkersconstruct.TinkersConstruct;
 import com.aaronhowser1.documentmod.twilightforest.TwilightForest;
 import com.aaronhowser1.documentmod.waystones.Waystones;
@@ -40,6 +42,10 @@ public class DocumentModJEIIntegration implements IModPlugin
         }
         if(useTwilightForest) {
             TwilightForest.init();
+        }
+        if(useRefinedStorage) {
+            RefinedStorage.init();
+            RefinedStorageAddons.init();
         }
         if(useWaystone) {
             Waystones.init();

@@ -117,4 +117,10 @@ public class DYMMConfig {
 
     @Config.Name("Waystones info")
     public static boolean useWaystone = true;
+
+    @Config.Name("Refined Storage info")
+    public static boolean useRefinedStorage = true;
+
+    @Config.Name("Debug")
+    public static boolean debugModIsDocumented = false;
 }

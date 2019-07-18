@@ -5,6 +5,7 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import static com.aaronhowser1.documentmod.DocumentModJEIIntegration.*;
+import static com.aaronhowser1.documentmod.config.DYMMConfig.debugModIsDocumented;
 
 @GameRegistry.ObjectHolder("twilightforest")
 public class TwilightForest {
@@ -118,5 +119,7 @@ public class TwilightForest {
         addItemInfo(TROPHY_PEDESTAL, "documentationmod.twilightforest.trophypedestal");
         addItemInfo(AURORA_BLACK, "documentationmod.twilightforest.aurora");
         addItemInfo(CASTLE_DOOR, "documentationmod.twilightforest.castledoor");
+
+        if(debugModIsDocumented) System.out.println("Twilight Forest documented");
     }
 }

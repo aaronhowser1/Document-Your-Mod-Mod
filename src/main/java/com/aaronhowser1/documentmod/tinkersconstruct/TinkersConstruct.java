@@ -10,6 +10,7 @@ import vazkii.quark.tweaks.feature.LookDownLadders;
 import java.util.stream.IntStream;
 
 import static com.aaronhowser1.documentmod.DocumentModJEIIntegration.*;
+import static com.aaronhowser1.documentmod.config.DYMMConfig.debugModIsDocumented;
 import static com.aaronhowser1.documentmod.config.DYMMConfig.quarksubcat;
 
 @GameRegistry.ObjectHolder("tconstruct")
@@ -122,5 +123,7 @@ public class TinkersConstruct{
         addItemInfo(CROSSBOW, "documentationmod.tconstruct.tool.crossbow");
         addItemInfo(SHURIKEN, "documentationmod.tconstruct.tool.shuriken");
         addItemInfo(BOLT_CORE, "documentationmod.tconstruct.boltcore");
+
+        if(debugModIsDocumented) System.out.println("Tinkers' Construct documented");
     }
 }

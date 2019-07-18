@@ -4,20 +4,13 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import vazkii.quark.base.module.ModuleLoader;
-import vazkii.quark.automation.feature.*;
-import vazkii.quark.building.feature.*;
-import vazkii.quark.decoration.feature.*;
-import vazkii.quark.misc.feature.*;
 import vazkii.quark.tweaks.feature.DeployLaddersDown;
-import vazkii.quark.tweaks.feature.GlassShards;
 import vazkii.quark.tweaks.feature.LookDownLadders;
-import vazkii.quark.vanity.feature.*;
-import vazkii.quark.world.feature.*;
+
 import java.util.stream.IntStream;
 
 import static com.aaronhowser1.documentmod.DocumentModJEIIntegration.*;
 import static com.aaronhowser1.documentmod.config.DYMMConfig.*;
-import static vazkii.quark.automation.feature.MetalButtons.*;
 import static vazkii.quark.misc.feature.HorseWhistle.horsesAreMagical;
 import static vazkii.quark.world.feature.Archaeologist.*;
 import static vazkii.quark.world.feature.Wraiths.enableCurse;
@@ -71,129 +64,56 @@ public class QuarkItems
 
     public static void init()
     {
-        if(ModuleLoader.isFeatureEnabled(Chute.class)) {
-            addItemInfo(CHUTE, "documentationmod.quark.chute");
+        addItemInfo(CHUTE, "documentationmod.quark.chute");
+        addItemInfo(STURDY_STONE, "documentationmod.quark.sturdystone");
+        addItemInfo(GOLD_BUTTON, "documentationmod.quark.goldbutton");
+        addItemInfo(IRON_BUTTON, "documentationmod.quark.ironbutton");
+        addItemInfo(OBSIDIAN_PRESSURE_PLATE, "documentationmod.quark.obsidianpressureplate");
+        addItemInfo(IRON_ROD, "documentationmod.quark.ironrod");
+        addItemInfo(REDSTONE_RANDOMIZER, "documentationmod.quark.redstonerandomizer");
+        addItemInfo(RAIN_DETECTOR, "documentationmod.quark.weatherdetector");
+        addItemInfo(TROWEL, "documentationmod.quark.trowel");
+        addItemInfo(GLASS_ITEM_FRAME, "documentationmod.quark.glassitemframe");
+        addItemInfo(IRON_LADDER, "documentationmod.quark.ironladder");
+        if(quarksubcat.infoDeployLadder && ModuleLoader.isFeatureEnabled(DeployLaddersDown.class)) {
+            addItemInfo(IRON_LADDER, "documentationmod.quark.vanilla.ladder.deploy");
         }
-        if(ModuleLoader.isFeatureEnabled(SturdyStone.class)) {
-            addItemInfo(STURDY_STONE, "documentationmod.quark.sturdystone");
+        if(quarksubcat.infoSlideDownLadders && ModuleLoader.isFeatureEnabled(LookDownLadders.class)) {
+            addItemInfo(IRON_LADDER, "documentationmod.quark.vanilla.ladder.slide");
         }
-        if(enableGold) {
-            addItemInfo(GOLD_BUTTON, "documentationmod.quark.goldbutton");
-        }
-        if(enableIron) {
-            addItemInfo(IRON_BUTTON, "documentationmod.quark.ironbutton");
-        }
-        if(ModuleLoader.isFeatureEnabled(ObsidianPressurePlate.class)) {
-            addItemInfo(OBSIDIAN_PRESSURE_PLATE, "documentationmod.quark.obsidianpressureplate");
-        }
-        if(ModuleLoader.isFeatureEnabled(PistonSpikes.class)) {
-            addItemInfo(IRON_ROD, "documentationmod.quark.ironrod");
-        }
-        if(ModuleLoader.isFeatureEnabled(RedstoneRandomizer.class)) {
-            addItemInfo(REDSTONE_RANDOMIZER, "documentationmod.quark.redstonerandomizer");
-        }
-        if(ModuleLoader.isFeatureEnabled(RainDetector.class)) {
-            addItemInfo(RAIN_DETECTOR, "documentationmod.quark.weatherdetector");
-        }
-        if(ModuleLoader.isFeatureEnabled(Trowel.class)) {
-            addItemInfo(TROWEL, "documentationmod.quark.trowel");
-        }
-        if(ModuleLoader.isFeatureEnabled(GlassItemFrame.class)) {
-            addItemInfo(GLASS_ITEM_FRAME, "documentationmod.quark.glassitemframe");
-        }
-        if(ModuleLoader.isFeatureEnabled(IronLadders.class)) {
-            addItemInfo(IRON_LADDER, "documentationmod.quark.ironladder");
-            if(quarksubcat.infoDeployLadder && ModuleLoader.isFeatureEnabled(DeployLaddersDown.class)) {
-                addItemInfo(IRON_LADDER, "documentationmod.quark.vanilla.ladder.deploy");
-            }
-            if(quarksubcat.infoSlideDownLadders && ModuleLoader.isFeatureEnabled(LookDownLadders.class)) {
-                addItemInfo(IRON_LADDER, "documentationmod.quark.vanilla.ladder.slide");
-            }
-        }
-        if(ModuleLoader.isFeatureEnabled(TallowAndCandles.class)) {
-            IntStream.range(0, 16).forEachOrdered(n -> addItemWithDamageInfo(CANDLE, n, "documentationmod.quark.candle"));
-        }
-        if(ModuleLoader.isFeatureEnabled(WitchHat.class)) {
-            addItemInfo(WITCH_HAT, "documentationmod.quark.witchhat");
-        }
-        if(ModuleLoader.isFeatureEnabled(Biotite.class)) {
-            addItemInfo(BIOTITE_ORE, "documentationmod.quark.biotiteore");
-        }
-        if(ModuleLoader.isFeatureEnabled(NetherSmoker.class)) {
-            addItemInfo(SMOKER, "documentationmod.quark.smoker");
-        }
-        if(ModuleLoader.isFeatureEnabled(Stonelings.class)) {
-            addItemInfo(DIAMOND_HEART, "documentationmod.quark.diamondheart");
-        }
-        if(ModuleLoader.isFeatureEnabled(Wraiths.class) && enableCurse) {
-            addItemInfo(SOUL_BEAD, "documentationmod.quark.soulbead");
-        }
-        if(ModuleLoader.isFeatureEnabled(AncientTomes.class)) {
-            addItemInfo(ANCIENT_TOME, "documentationmod.quark.ancienttome");
-        }
-        if(ModuleLoader.isFeatureEnabled(ColorRunes.class)) {
-            IntStream.range(0, 16).forEachOrdered(n -> addItemWithDamageInfo(RUNE, n, "documentationmod.quark.rune"));
-        }
-        if(ModuleLoader.isFeatureEnabled(EnderdragonScales.class)) {
-            addItemInfo(ENDERDRAGON_SCALE, "documentationmod.quark.enderdragonscale");
-        }
-        if(ModuleLoader.isFeatureEnabled(ExtraArrows.class)) {
-            addItemInfo(ARROW_ENDER, "documentationmod.quark.enderarrow");
-            addItemInfo(ARROW_EXPLOSIVE, "documentationmod.quark.explosivearrow");
-            addItemInfo(ARROW_TORCH, "documentationmod.quark.torcharrow");
-        }
+        IntStream.range(0, 16).forEachOrdered(n -> addItemWithDamageInfo(CANDLE, n, "documentationmod.quark.candle"));
+        addItemInfo(WITCH_HAT, "documentationmod.quark.witchhat");
+        addItemInfo(BIOTITE_ORE, "documentationmod.quark.biotiteore");
+        addItemInfo(SMOKER, "documentationmod.quark.smoker");
+        addItemInfo(DIAMOND_HEART, "documentationmod.quark.diamondheart");
+        if(enableCurse) addItemInfo(SOUL_BEAD, "documentationmod.quark.soulbead");
+        addItemInfo(ANCIENT_TOME, "documentationmod.quark.ancienttome");
+        IntStream.range(0, 16).forEachOrdered(n -> addItemWithDamageInfo(RUNE, n, "documentationmod.quark.rune"));
+        addItemInfo(ENDERDRAGON_SCALE, "documentationmod.quark.enderdragonscale");
+        addItemInfo(ARROW_ENDER, "documentationmod.quark.enderarrow");
+        addItemInfo(ARROW_EXPLOSIVE, "documentationmod.quark.explosivearrow");
+        addItemInfo(ARROW_TORCH, "documentationmod.quark.torcharrow");
+        IntStream.range(0,5).forEachOrdered(n-> addItemWithDamageInfo(PARROT_EGG, n, "documentationmod.quark.parrotegg"));
+        addItemInfo(PICKARANG, "documentationmod.quark.pickarange");
+        addItemInfo(SLIME_BUCKET, "documentationmod.quark.slimebucket");
+        addItemInfo(SOUL_POWDER, "documentationmod.quark.soulpowder");
+        addItemInfo(BLACK_ASH, "documentationmod.quark.blackash");
+        addItemInfo(ENDER_WATCHER, "documentationmod.quark.enderwatcher");
+        addItemInfo(ARCHAEOLOGIST_HAT, "documentationmod.quark.archhat.ores");
+        if(sellHat) addItemInfo(ARCHAEOLOGIST_HAT, "documentationmod.quark.archhat.sell");
+        if(dropHat) addItemInfo(ARCHAEOLOGIST_HAT, "documentationmod.quark.archhat.drop");
+        addItemInfo(CHARCOAL_BLOCK, "documentationmod.quark.charcoalblock");
+        addItemInfo(SUGAR_BLOCK, "documentationmod.quark.sugarblock");
+        addItemInfo(REDSTONE_INDUCTOR, "documentationmod.quark.redstoneinductor");
+        addItemInfo(GRATE, "documentationmod.quark.grate");
+        addItemInfo(ROPE, "documentationmod.quark.rope");
+        addItemInfo(ROPE, "documentationmod.quark.rope.dispenser");
+        addItemInfo(GRAVISAND, "documentationmod.quark.gravisand");
+        addItemInfo(LIT_LAMP, "documentationmod.quark.litlamp");
+        IntStream.range(0, 16).forEachOrdered(n -> addItemWithDamageInfo(GLASS_SHARDS, n, "documentationmod.quark.glassshard"));
+        if (!horsesAreMagical) addItemInfo(HORSE_WHISTLE, "documentationmod.quark.horsewhistle");
+        if (horsesAreMagical) addItemInfo(HORSE_WHISTLE, "documentationmod.quark.horsewhistle.ibelieveinmagic");
 
-        if(ModuleLoader.isFeatureEnabled(ParrotEggs.class)) {
-            IntStream.range(0,5).forEachOrdered(n-> addItemWithDamageInfo(PARROT_EGG, n, "documentationmod.quark.parrotegg"));
-        }
-        if(ModuleLoader.isFeatureEnabled(Pickarang.class)) {
-            addItemInfo(PICKARANG, "documentationmod.quark.pickarange");
-        }
-        if(ModuleLoader.isFeatureEnabled(SlimeBucket.class)) {
-            addItemInfo(SLIME_BUCKET, "documentationmod.quark.slimebucket");
-        }
-        if(ModuleLoader.isFeatureEnabled(SoulPowder.class)) {
-            addItemInfo(SOUL_POWDER, "documentationmod.quark.soulpowder");
-        }
-        if(ModuleLoader.isFeatureEnabled(BlackAsh.class)) {
-            addItemInfo(BLACK_ASH, "documentationmod.quark.blackash");
-        }
-        if(ModuleLoader.isFeatureEnabled(EnderWatcher.class)) {
-            addItemInfo(ENDER_WATCHER, "documentationmod.quark.enderwatcher");
-        }
-        if(enableHat && hatIncreasesOreYield) {
-            addItemInfo(ARCHAEOLOGIST_HAT, "documentationmod.quark.archhat.ores");
-            if(sellHat) addItemInfo(ARCHAEOLOGIST_HAT, "documentationmod.quark.archhat.sell");
-            if(dropHat) addItemInfo(ARCHAEOLOGIST_HAT, "documentationmod.quark.archhat.drop");
-        }
-        if(ModuleLoader.isFeatureEnabled(CharcoalBlock.class)) {
-            addItemInfo(CHARCOAL_BLOCK, "documentationmod.quark.charcoalblock");
-        }
-        if(ModuleLoader.isFeatureEnabled(SugarBlock.class)) {
-            addItemInfo(SUGAR_BLOCK, "documentationmod.quark.sugarblock");
-        }
-        if(ModuleLoader.isFeatureEnabled(RedstoneInductor.class)) {
-            addItemInfo(REDSTONE_INDUCTOR, "documentationmod.quark.redstoneinductor");
-        }
-        if(ModuleLoader.isFeatureEnabled(Grate.class)) {
-            addItemInfo(GRATE, "documentationmod.quark.grate");
-        }
-        if(ModuleLoader.isFeatureEnabled(Rope.class)) {
-            addItemInfo(ROPE, "documentationmod.quark.rope");
-            addItemInfo(ROPE, "documentationmod.quark.rope.dispenser");
-        }
-        if(ModuleLoader.isFeatureEnabled(Gravisand.class)) {
-            addItemInfo(GRAVISAND, "documentationmod.quark.gravisand");
-        }
-        if(ModuleLoader.isFeatureEnabled(LitLamp.class)) {
-            addItemInfo(LIT_LAMP, "documentationmod.quark.litlamp");
-        }
-        if(ModuleLoader.isFeatureEnabled(GlassShards.class)) {
-            IntStream.range(0, 16).forEachOrdered(n -> addItemWithDamageInfo(GLASS_SHARDS, n, "documentationmod.quark.glassshard"));
-        }
-        if(ModuleLoader.isFeatureEnabled(HorseWhistle.class)) {
-            if (!horsesAreMagical) addItemInfo(HORSE_WHISTLE, "documentationmod.quark.horsewhistle");
-            if (horsesAreMagical) addItemInfo(HORSE_WHISTLE, "documentationmod.quark.horsewhistle.ibelieveinmagic");
-        }
+        if(debugModIsDocumented) System.out.println("Quark documented");
     }
 }
