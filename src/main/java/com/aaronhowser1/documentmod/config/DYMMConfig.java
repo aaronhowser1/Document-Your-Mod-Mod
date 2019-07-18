@@ -6,19 +6,20 @@ import net.minecraftforge.common.config.Config;
 @Config(modid=DocumentMod.MODID)
 public class DYMMConfig {
 
-    @Config.Comment("Add information tabs to items added by Quark?")
-    @Config.Name("Quark Info")
-    public static boolean useQuark = true;
-
-    @Config.Name("Quark's Vanilla Info")
-    @Config.Comment("Add information tabs to vanilla items that Quark changes?")
-    public static boolean useVanillaQuark = true;
-
-    @Config.Comment("Toggle each vanilla item's info tab")
-    @Config.Name("Vanilla Items Changed By Quark")
-    public static SubCategory vanillaitemschangedbyquark = new SubCategory();
+    @Config.Comment("All Quark settings")
+    @Config.Name("Quark")
+    public static SubCategory quarksubcat = new SubCategory();
 
     public static class SubCategory {
+
+        @Config.Comment("Add information tabs to items added by Quark?")
+        @Config.Name("Quark Info")
+        public boolean useQuark = true;
+
+        @Config.Name("Quark's Vanilla Info")
+        @Config.Comment("Add information tabs to vanilla items that Quark changes?")
+        public boolean useVanillaQuark = true;
+
         @Config.Comment("Say that Dispensers can plant Seeds?")
         public boolean infoDispenserSeeds = true;
         @Config.Comment("Say that Dispensers can place blocks?")
@@ -102,4 +103,9 @@ public class DYMMConfig {
         @Config.Comment("Say that you can right-click to harvest?")
         public boolean infoRightClickHarvest = true;
     }
+
+    @Config.Name("Nature's Compass info")
+    public static boolean useNaturesCompass = true;
+
+
 }

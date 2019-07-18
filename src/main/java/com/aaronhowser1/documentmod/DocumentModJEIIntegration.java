@@ -1,5 +1,6 @@
 package com.aaronhowser1.documentmod;
 
+import com.aaronhowser1.documentmod.naturescompass.NaturesCompass;
 import com.aaronhowser1.documentmod.quark.QuarkItems;
 import com.aaronhowser1.documentmod.quark.QuarkVanillaItems;
 import mezz.jei.api.IModPlugin;
@@ -22,11 +23,14 @@ public class DocumentModJEIIntegration implements IModPlugin
     public void register(IModRegistry r)
     {
         registry = r;
-        if(useQuark) {
+        if(quarksubcat.useQuark) {
             QuarkItems.init();
         }
-        if(useVanillaQuark) {
+        if(quarksubcat.useVanillaQuark) {
             QuarkVanillaItems.init();
+        }
+        if(useNaturesCompass) {
+            NaturesCompass.init();
         }
     }
     public static void addItemInfo(Item item, String desc)

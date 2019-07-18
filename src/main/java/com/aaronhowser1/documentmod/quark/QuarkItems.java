@@ -15,7 +15,7 @@ import vazkii.quark.world.feature.*;
 import java.util.stream.IntStream;
 
 import static com.aaronhowser1.documentmod.DocumentModJEIIntegration.*;
-import static com.aaronhowser1.documentmod.config.DYMMConfig.vanillaitemschangedbyquark;
+import static com.aaronhowser1.documentmod.config.DYMMConfig.*;
 import static vazkii.quark.automation.feature.MetalButtons.*;
 import static vazkii.quark.misc.feature.HorseWhistle.horsesAreMagical;
 import static vazkii.quark.world.feature.Archaeologist.*;
@@ -101,7 +101,7 @@ public class QuarkItems
         }
         if(ModuleLoader.isFeatureEnabled(IronLadders.class)) {
             addItemInfo(IRON_LADDER, "documentationmod.quark.ironladder");
-            if(vanillaitemschangedbyquark.infoLadder && ModuleLoader.isFeatureEnabled(DeployLaddersDown.class)) {
+            if(quarksubcat.infoLadder && ModuleLoader.isFeatureEnabled(DeployLaddersDown.class)) {
                 addItemInfo(IRON_LADDER, "documentationmod.quark.vanilla.ladder");
             }
         }

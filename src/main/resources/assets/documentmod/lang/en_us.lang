@@ -84,3 +84,5 @@ documentationmod.quark.vanilla.axesleaves=Axes will very quickly cut through Lea
 documentationmod.quark.vanilla.hoeaoe=Hoes will break blocks in a 5x5 area.
 documentationmod.quark.vanilla.sleepvote=Server admins can set it so only a percentage of players have to be asleep to skip the night instead of requiring everyone sleep.
 documentationmod.quark.vanilla.rightclickharvest=You can right click fully grown crops to harvest and replant them without breaking the block.
+
+documentationmod.naturescompass=Use to open a list of biomes. Select one from the list and it will point you towards the nearest one.

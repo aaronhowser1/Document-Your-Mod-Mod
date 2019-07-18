@@ -25,16 +25,16 @@ public class QuarkVanillaItems
     public static void init()
     {
         Item[] vanillaSeeds = {PUMPKIN_SEEDS, BEETROOT_SEEDS, WHEAT_SEEDS, MELON_SEEDS, Items.NETHER_WART};
-        if(vanillaitemschangedbyquark.infoDispenserSeeds && ModuleLoader.isFeatureEnabled(DispensersPlaceSeeds.class)) {
+        if(quarksubcat.infoDispenserSeeds && ModuleLoader.isFeatureEnabled(DispensersPlaceSeeds.class)) {
             addBlockInfo(DISPENSER, "documentationmod.quark.vanilla.dispenser.seeds");
             for (Item i: vanillaSeeds) {
                 addItemInfo(i, "documentationmod.quark.vanilla.dispenser.seeds");
             }
         }
-        if(vanillaitemschangedbyquark.infoDispenserBlocks && ModuleLoader.isFeatureEnabled(DispensersPlaceBlocks.class)) {
+        if(quarksubcat.infoDispenserBlocks && ModuleLoader.isFeatureEnabled(DispensersPlaceBlocks.class)) {
             addBlockInfo(DISPENSER, "documentationmod.quark.vanilla.dispenser.blocks");
         }
-        if(vanillaitemschangedbyquark.infoDispenserRecords && ModuleLoader.isFeatureEnabled(DispenserRecords.class)) {
+        if(quarksubcat.infoDispenserRecords && ModuleLoader.isFeatureEnabled(DispenserRecords.class)) {
             addBlockInfo(DISPENSER, "documentationmod.quark.vanilla.dispenser.records");
             addBlockInfo(JUKEBOX, "documentationmod.quark.vanilla.dispenser.records");
             Item[] records = {RECORD_13, RECORD_CAT, RECORD_BLOCKS, RECORD_CHIRP, RECORD_FAR, RECORD_MALL, RECORD_MELLOHI, RECORD_STAL, RECORD_STRAD, RECORD_WARD, RECORD_11, RECORD_WAIT};
@@ -42,100 +42,100 @@ public class QuarkVanillaItems
                 addItemInfo(i, "documentationmod.quark.vanilla.dispenser.records");
             }
         }
-        if(vanillaitemschangedbyquark.infoStickyPiston && ModuleLoader.isFeatureEnabled(PistonsMoveTEs.class)) {
+        if(quarksubcat.infoStickyPiston && ModuleLoader.isFeatureEnabled(PistonsMoveTEs.class)) {
             addBlockInfo(STICKY_PISTON, "documentationmod.quark.vanilla.piston.tileentities");
             addBlockInfo(PISTON, "documentationmod.quark.vanilla.piston.tileentities");
         }
-        if(vanillaitemschangedbyquark.infoLead && ModuleLoader.isFeatureEnabled(TieFences.class)) {
+        if(quarksubcat.infoLead && ModuleLoader.isFeatureEnabled(TieFences.class)) {
             addItemInfo(LEAD, "documentationmod.quark.vanilla.lead");
         }
         Item[] boats = {BOAT, SPRUCE_BOAT, BIRCH_BOAT, JUNGLE_BOAT, ACACIA_BOAT, DARK_OAK_BOAT};
         for (Item i: boats) {
-            if(vanillaitemschangedbyquark.infoBoat && ModuleLoader.isFeatureEnabled(ChestsInBoats.class)) {
+            if(quarksubcat.infoBoat && ModuleLoader.isFeatureEnabled(ChestsInBoats.class)) {
                 addItemInfo(i, "documentationmod.quark.vanilla.boat");
             }
         }
         Block[] shulkerBoxes = {WHITE_SHULKER_BOX, ORANGE_SHULKER_BOX, MAGENTA_SHULKER_BOX, LIGHT_BLUE_SHULKER_BOX, YELLOW_SHULKER_BOX, LIME_SHULKER_BOX, PINK_SHULKER_BOX, GRAY_SHULKER_BOX, SILVER_SHULKER_BOX, CYAN_SHULKER_BOX, PURPLE_SHULKER_BOX, BLUE_SHULKER_BOX, BROWN_SHULKER_BOX, GREEN_SHULKER_BOX, RED_SHULKER_BOX, BLACK_SHULKER_BOX};
         for (Block b: shulkerBoxes)
         {
-            if(vanillaitemschangedbyquark.infoShulkerBoxExplosion && ModuleLoader.isFeatureEnabled(BlastproofShulkerBoxes.class)) {
+            if(quarksubcat.infoShulkerBoxExplosion && ModuleLoader.isFeatureEnabled(BlastproofShulkerBoxes.class)) {
                 addBlockInfo(b, "documentationmod.quark.vanilla.shulker.explosion");
             }
-            if(vanillaitemschangedbyquark.infoShulkerBoxHover && ModuleLoader.isFeatureEnabled(ShulkerBoxTooltip.class)) {
+            if(quarksubcat.infoShulkerBoxHover && ModuleLoader.isFeatureEnabled(ShulkerBoxTooltip.class)) {
                 addBlockInfo(b, "documentationmod.quark.vanilla.shulker.hover");
             }
-            if(vanillaitemschangedbyquark.infoShulkerBoxAdd && ModuleLoader.isFeatureEnabled(RightClickAddToShulkerBox.class)) {
+            if(quarksubcat.infoShulkerBoxAdd && ModuleLoader.isFeatureEnabled(RightClickAddToShulkerBox.class)) {
                 addBlockInfo(b, "documentationmod.quark.vanilla.shulker.add");
             }
         }
-        if(vanillaitemschangedbyquark.infoCompass && ModuleLoader.isFeatureEnabled(CompassesWorkEverywhere.class)) {
+        if(quarksubcat.infoCompass && ModuleLoader.isFeatureEnabled(CompassesWorkEverywhere.class)) {
             addItemInfo(COMPASS, "documentationmod.quark.vanilla.compass");
         }
-        if(vanillaitemschangedbyquark.infoLadder && ModuleLoader.isFeatureEnabled(DeployLaddersDown.class)) {
+        if(quarksubcat.infoLadder && ModuleLoader.isFeatureEnabled(DeployLaddersDown.class)) {
             addBlockInfo(LADDER, "documentationmod.quark.vanilla.ladder");
         }
-        if(vanillaitemschangedbyquark.infoArmorStand && ModuleLoader.isFeatureEnabled(QuickArmorSwapping.class)) {
+        if(quarksubcat.infoArmorStand && ModuleLoader.isFeatureEnabled(QuickArmorSwapping.class)) {
             addItemInfo(ARMOR_STAND, "documentationmod.quark.vanilla.armorstand");
         }
-        if(vanillaitemschangedbyquark.infoSign && ModuleLoader.isFeatureEnabled(RightClickSignEdit.class)) {
+        if(quarksubcat.infoSign && ModuleLoader.isFeatureEnabled(RightClickSignEdit.class)) {
             addItemInfo(SIGN, "documentationmod.quark.vanilla.sign");
         }
-        if(vanillaitemschangedbyquark.infoEmeraldBlock && ModuleLoader.isFeatureEnabled(VillagerPursueEmeralds.class)) {
+        if(quarksubcat.infoEmeraldBlock && ModuleLoader.isFeatureEnabled(VillagerPursueEmeralds.class)) {
             addBlockInfo(EMERALD_BLOCK, "documentationmod.quark.vanilla.emeraldblock");
         }
-        if(vanillaitemschangedbyquark.infoElytra && ModuleLoader.isFeatureEnabled(DyableElytra.class)) {
+        if(quarksubcat.infoElytra && ModuleLoader.isFeatureEnabled(DyableElytra.class)) {
             addItemInfo(ELYTRA, "documentationmod.quark.vanilla.elytra");
         }
         if(ModuleLoader.isFeatureEnabled(PlaceVanillaDusts.class)) {
-            if(vanillaitemschangedbyquark.infoGlowstoneDust){
+            if(quarksubcat.infoGlowstoneDust){
                 addItemInfo(GLOWSTONE_DUST, "documentationmod.quark.vanilla.glowstonedust");
                 addItemInfo(GLOWSTONE_DUST_BLOCK, "documentationmod.quark.vanilla.glowstonedust");
             }
-            if(vanillaitemschangedbyquark.infoGunpowder){
+            if(quarksubcat.infoGunpowder){
                 addItemInfo(GUNPOWDER, "documentationmod.quark.vanilla.gunpowder");
                 addItemInfo(GUNPOWDER_BLOCK, "documentationmod.quark.vanilla.gunpowder");
             }
         }
-        if(vanillaitemschangedbyquark.infoDragonBreath && ModuleLoader.isFeatureEnabled(ThrowableDragonBreath.class)) {
+        if(quarksubcat.infoDragonBreath && ModuleLoader.isFeatureEnabled(ThrowableDragonBreath.class)) {
             addItemInfo(DRAGON_BREATH, "documentationmod.quark.vanilla.dragonbreath");
         }
-        if(vanillaitemschangedbyquark.infoMap && ModuleLoader.isFeatureEnabled(MapTooltip.class)) {
+        if(quarksubcat.infoMap && ModuleLoader.isFeatureEnabled(MapTooltip.class)) {
             addItemInfo(MAP, "documentationmod.quark.vanilla.map");
             addItemInfo(FILLED_MAP, "documentationmod.quark.vanilla.map");
         }
         //TODO figure out why the enchanted book doesn't work
-        if(vanillaitemschangedbyquark.infoEnchantedBook && ModuleLoader.isFeatureEnabled(EnchantedBooksShowItems.class)) {
+        if(quarksubcat.infoEnchantedBook && ModuleLoader.isFeatureEnabled(EnchantedBooksShowItems.class)) {
             addItemInfo(ENCHANTED_BOOK, "documentationmod.quark.vanilla.enchantedbook");
         }
-        if(vanillaitemschangedbyquark.infoItemFrames && ModuleLoader.isFeatureEnabled(FlatItemFrames.class)) {
+        if(quarksubcat.infoItemFrames && ModuleLoader.isFeatureEnabled(FlatItemFrames.class)) {
             addItemInfo(ITEM_FRAME, "documentationmod.quark.vanilla.itemframe");
             if (ModuleLoader.isFeatureEnabled(FlatItemFrames.class))
                 IntStream.range(0, 16).forEachOrdered(n -> addItemWithDamageInfo(COLORED_ITEM_FRAME, n, "documentationmod.quark.vanilla.itemframe"));
             if (ModuleLoader.isFeatureEnabled(GlassItemFrame.class))
                 addItemInfo(GLASS_ITEM_FRAME, "documentationmod.quark.vanilla.itemframe");
         }
-        if(vanillaitemschangedbyquark.infoQuarkBannerMotifs && ModuleLoader.isFeatureEnabled(MoreBanners.class)) {
+        if(quarksubcat.infoQuarkBannerMotifs && ModuleLoader.isFeatureEnabled(MoreBanners.class)) {
             IntStream.range(0,16).forEachOrdered(n -> addItemWithDamageInfo(BANNER, n, "documentationmod.quark.vanilla.banner.motifs"));
         }
-        if(vanillaitemschangedbyquark.infoBannerLayers && ModuleLoader.isFeatureEnabled(MoreBannerLayers.class)) {
+        if(quarksubcat.infoBannerLayers && ModuleLoader.isFeatureEnabled(MoreBannerLayers.class)) {
             IntStream.range(0,16).forEachOrdered(n -> addItemWithDamageInfo(BANNER, n, "documentationmod.quark.vanilla.banner.layers"));
         }
-        if(vanillaitemschangedbyquark.infoBannersOnBoats && ModuleLoader.isFeatureEnabled(BoatSails.class)) {
+        if(quarksubcat.infoBannersOnBoats && ModuleLoader.isFeatureEnabled(BoatSails.class)) {
             IntStream.range(0,16).forEachOrdered(n -> addItemWithDamageInfo(BANNER, n, "documentationmod.quark.vanilla.banner.boats"));
             for (Item i: boats) {
                 addItemInfo(i, "documentationmod.quark.vanilla.banner.boats");
             }
         }
-        if(vanillaitemschangedbyquark.infoColorItemNames && ModuleLoader.isFeatureEnabled(DyeItemNames.class)) {
+        if(quarksubcat.infoColorItemNames && ModuleLoader.isFeatureEnabled(DyeItemNames.class)) {
             IntStream.range(0,3).forEachOrdered(n -> addBlockWithDamageInfo(ANVIL, n, "documentationmod.quark.vanilla.dyeitemnames"));
         }
         Block[] vanillaStairs = {OAK_STAIRS, STONE_STAIRS, BRICK_STAIRS, STONE_BRICK_STAIRS, NETHER_BRICK_STAIRS, SANDSTONE_STAIRS, SPRUCE_STAIRS, BIRCH_STAIRS, JUNGLE_STAIRS, QUARTZ_STAIRS, ACACIA_STAIRS, DARK_OAK_STAIRS,RED_SANDSTONE_STAIRS, PURPUR_STAIRS};
         for (Block b: vanillaStairs) {
-            if (vanillaitemschangedbyquark.infoSitOnStairs && ModuleLoader.isFeatureEnabled(SitInStairs.class)) {
+            if (quarksubcat.infoSitOnStairs && ModuleLoader.isFeatureEnabled(SitInStairs.class)) {
                 addBlockInfo(b, "documentationmod.quark.vanilla.sitonstairs");
             }
         }
-        if(vanillaitemschangedbyquark.infoRightClickHarvest && ModuleLoader.isFeatureEnabled(RightClickHarvest.class)) {
+        if(quarksubcat.infoRightClickHarvest && ModuleLoader.isFeatureEnabled(RightClickHarvest.class)) {
             for (Item i: vanillaSeeds)
             {
                 addItemInfo(i, "documentationmod.quark.vanilla.rightclickharvest");
@@ -143,47 +143,47 @@ public class QuarkVanillaItems
         }
         Item[] animalFood = {Items.WHEAT, CARROT, POTATO, BEETROOT, WHEAT_SEEDS, PUMPKIN_SEEDS, BEETROOT_SEEDS, PUMPKIN_SEEDS, Items.NETHER_WART};
         for (Item i: animalFood) {
-            if(vanillaitemschangedbyquark.infoAnimalsEatFood && ModuleLoader.isFeatureEnabled(AnimalsEatFloorFood.class)) {
+            if(quarksubcat.infoAnimalsEatFood && ModuleLoader.isFeatureEnabled(AnimalsEatFloorFood.class)) {
                 addItemInfo(i, "documentationmod.quark.vanilla.animalseatfood");
             }
         }
-        if(vanillaitemschangedbyquark.infoPlaceBlazeRods && ModuleLoader.isFeatureEnabled(PlaceBlazeRods.class)) {
+        if(quarksubcat.infoPlaceBlazeRods && ModuleLoader.isFeatureEnabled(PlaceBlazeRods.class)) {
             addItemInfo(Items.BLAZE_ROD, "documentationmod.quark.vanilla.blazerod");
             addItemInfo(QuarkItems.BLAZE_ROD, "documentationmod.quark.vanilla.blazerod");
         }
-        if(vanillaitemschangedbyquark.infoPistonsMoveItems && ModuleLoader.isFeatureEnabled(PistonsPushPullItems.class)) {
+        if(quarksubcat.infoPistonsMoveItems && ModuleLoader.isFeatureEnabled(PistonsPushPullItems.class)) {
             addBlockInfo(PISTON, "documentationmod.quark.vanilla.pistonpush");
             addBlockInfo(STICKY_PISTON, "documentationmod.quark.vanilla.pistonpull");
         }
-        if(vanillaitemschangedbyquark.infoEndermiteShulkers && ModuleLoader.isFeatureEnabled(EndermitesIntoShulkers.class)) {
+        if(quarksubcat.infoEndermiteShulkers && ModuleLoader.isFeatureEnabled(EndermitesIntoShulkers.class)) {
             addBlockInfo(PURPUR_BLOCK, "documentationmod.quark.vanilla.endermitesintoshulkers");
         }
-        if(vanillaitemschangedbyquark.infoMapMarkers && ModuleLoader.isFeatureEnabled(MapMarkers.class)) {
+        if(quarksubcat.infoMapMarkers && ModuleLoader.isFeatureEnabled(MapMarkers.class)) {
             addItemInfo(MAP, "documentationmod.quark.vanilla.mapmarkers");
             addItemInfo(FILLED_MAP, "documentationmod.quark.vanilla.mapmarkers");
         }
-        if(vanillaitemschangedbyquark.infoNoteBlockInterface && ModuleLoader.isFeatureEnabled(NoteBlockInterface.class)) {
+        if(quarksubcat.infoNoteBlockInterface && ModuleLoader.isFeatureEnabled(NoteBlockInterface.class)) {
             addBlockInfo(NOTEBLOCK, "documentationmod.quark.vanilla.noteblockinterface");
         }
-        if(vanillaitemschangedbyquark.infoNoteBlockMobSounds && ModuleLoader.isFeatureEnabled(NoteBlocksMobSounds.class)) {
+        if(quarksubcat.infoNoteBlockMobSounds && ModuleLoader.isFeatureEnabled(NoteBlocksMobSounds.class)) {
             addBlockInfo(NOTEBLOCK, "documentationmod.quark.vanilla.noteblockmobs");
         }
-        if(vanillaitemschangedbyquark.infoPoisonBabies && ModuleLoader.isFeatureEnabled(PoisonPotatoUsage.class)) {
+        if(quarksubcat.infoPoisonBabies && ModuleLoader.isFeatureEnabled(PoisonPotatoUsage.class)) {
             addItemInfo(POISONOUS_POTATO, "documentationmod.quark.vanilla.poisonouspotato");
         }
-        if(vanillaitemschangedbyquark.infoChickensShed && ModuleLoader.isFeatureEnabled(ChickensShedFeathers.class)) {
+        if(quarksubcat.infoChickensShed && ModuleLoader.isFeatureEnabled(ChickensShedFeathers.class)) {
             addItemInfo(FEATHER, "documentationmod.quark.vanilla.shedfeathers");
         }
-        if(vanillaitemschangedbyquark.infoShearChickens && ModuleLoader.isFeatureEnabled(ShearableChickens.class)) {
+        if(quarksubcat.infoShearChickens && ModuleLoader.isFeatureEnabled(ShearableChickens.class)) {
             addItemInfo(FEATHER, "documentationmod.quark.vanilla.shearchicken");
         }
         Item[] doors = {Items.ACACIA_DOOR, Items.BIRCH_DOOR, Items.DARK_OAK_DOOR, Items.JUNGLE_DOOR, Items.OAK_DOOR, Items.SPRUCE_DOOR};
         for (Item i: doors) {
-            if(vanillaitemschangedbyquark.infoDoubleDoors && ModuleLoader.isFeatureEnabled(DoubleDoors.class)) {
+            if(quarksubcat.infoDoubleDoors && ModuleLoader.isFeatureEnabled(DoubleDoors.class)) {
                 addItemInfo(i, "documentationmod.quark.vanilla.doubledoors");
             }
         }
-        if(vanillaitemschangedbyquark.infoAxesLeaves && ModuleLoader.isFeatureEnabled(AxesBreakLeaves.class)) {
+        if(quarksubcat.infoAxesLeaves && ModuleLoader.isFeatureEnabled(AxesBreakLeaves.class)) {
             IntStream.range(0,4).forEachOrdered(n -> addBlockWithDamageInfo(LEAVES, n, "documentationmod.quark.vanilla.axesleaves"));
             IntStream.range(0,2).forEachOrdered(n -> addBlockWithDamageInfo(LEAVES2, n, "documentationmod.quark.vanilla.axesleaves"));
             Item[] axes = {WOODEN_AXE, STONE_AXE, IRON_AXE, GOLDEN_AXE, DIAMOND_AXE};
@@ -192,12 +192,12 @@ public class QuarkVanillaItems
             }
         }
         Item[] hoes = {WOODEN_HOE, STONE_HOE, IRON_HOE, GOLDEN_HOE, DIAMOND_HOE};
-        if(vanillaitemschangedbyquark.infoHoesAoE && ModuleLoader.isFeatureEnabled(HoeSickle.class)) {
+        if(quarksubcat.infoHoesAoE && ModuleLoader.isFeatureEnabled(HoeSickle.class)) {
             for (Item i: hoes) {
                 addItemInfo(i, "documentationmod.quark.vanilla.hoeaoe");
             }
         }
-        if(vanillaitemschangedbyquark.infoSleepVote && ModuleLoader.isFeatureEnabled(ImprovedSleeping.class)) {
+        if(quarksubcat.infoSleepVote && ModuleLoader.isFeatureEnabled(ImprovedSleeping.class)) {
             IntStream.range(0,16).forEachOrdered(n -> addItemWithDamageInfo(Items.BED, n, "documentationmod.quark.vanilla.sleepvote"));
         }
     }
