@@ -10,6 +10,7 @@ import vazkii.quark.decoration.feature.*;
 import vazkii.quark.misc.feature.*;
 import vazkii.quark.tweaks.feature.DeployLaddersDown;
 import vazkii.quark.tweaks.feature.GlassShards;
+import vazkii.quark.tweaks.feature.LookDownLadders;
 import vazkii.quark.vanity.feature.*;
 import vazkii.quark.world.feature.*;
 import java.util.stream.IntStream;
@@ -19,6 +20,7 @@ import static com.aaronhowser1.documentmod.config.DYMMConfig.*;
 import static vazkii.quark.automation.feature.MetalButtons.*;
 import static vazkii.quark.misc.feature.HorseWhistle.horsesAreMagical;
 import static vazkii.quark.world.feature.Archaeologist.*;
+import static vazkii.quark.world.feature.Wraiths.enableCurse;
 
 @GameRegistry.ObjectHolder("quark")
 public class QuarkItems
@@ -44,7 +46,7 @@ public class QuarkItems
     public static final Item RUNE = Items.AIR;
     public static final Item ENDERDRAGON_SCALE = Items.AIR;
     public static final Item ARROW_ENDER = Items.AIR;
-    public static final Item ARROW_EXPLSOSIVE= Items.AIR;
+    public static final Item ARROW_EXPLOSIVE= Items.AIR;
     public static final Item ARROW_TORCH = Items.AIR;
     public static final Item PARROT_EGG = Items.AIR;
     public static final Item PICKARANG = Items.AIR;
@@ -101,8 +103,11 @@ public class QuarkItems
         }
         if(ModuleLoader.isFeatureEnabled(IronLadders.class)) {
             addItemInfo(IRON_LADDER, "documentationmod.quark.ironladder");
-            if(quarksubcat.infoLadder && ModuleLoader.isFeatureEnabled(DeployLaddersDown.class)) {
-                addItemInfo(IRON_LADDER, "documentationmod.quark.vanilla.ladder");
+            if(quarksubcat.infoDeployLadder && ModuleLoader.isFeatureEnabled(DeployLaddersDown.class)) {
+                addItemInfo(IRON_LADDER, "documentationmod.quark.vanilla.ladder.deploy");
+            }
+            if(quarksubcat.infoSlideDownLadders && ModuleLoader.isFeatureEnabled(LookDownLadders.class)) {
+                addItemInfo(IRON_LADDER, "documentationmod.quark.vanilla.ladder.slide");
             }
         }
         if(ModuleLoader.isFeatureEnabled(TallowAndCandles.class)) {
@@ -120,7 +125,7 @@ public class QuarkItems
         if(ModuleLoader.isFeatureEnabled(Stonelings.class)) {
             addItemInfo(DIAMOND_HEART, "documentationmod.quark.diamondheart");
         }
-        if(ModuleLoader.isFeatureEnabled(Wraiths.class)) {
+        if(ModuleLoader.isFeatureEnabled(Wraiths.class) && enableCurse) {
             addItemInfo(SOUL_BEAD, "documentationmod.quark.soulbead");
         }
         if(ModuleLoader.isFeatureEnabled(AncientTomes.class)) {
@@ -134,7 +139,7 @@ public class QuarkItems
         }
         if(ModuleLoader.isFeatureEnabled(ExtraArrows.class)) {
             addItemInfo(ARROW_ENDER, "documentationmod.quark.enderarrow");
-            addItemInfo(ARROW_EXPLSOSIVE, "documentationmod.quark.explosivearrow");
+            addItemInfo(ARROW_EXPLOSIVE, "documentationmod.quark.explosivearrow");
             addItemInfo(ARROW_TORCH, "documentationmod.quark.torcharrow");
         }
 

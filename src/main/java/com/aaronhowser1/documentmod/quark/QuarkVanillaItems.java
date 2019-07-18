@@ -71,8 +71,11 @@ public class QuarkVanillaItems
         if(quarksubcat.infoCompass && ModuleLoader.isFeatureEnabled(CompassesWorkEverywhere.class)) {
             addItemInfo(COMPASS, "documentationmod.quark.vanilla.compass");
         }
-        if(quarksubcat.infoLadder && ModuleLoader.isFeatureEnabled(DeployLaddersDown.class)) {
-            addBlockInfo(LADDER, "documentationmod.quark.vanilla.ladder");
+        if(quarksubcat.infoDeployLadder && ModuleLoader.isFeatureEnabled(DeployLaddersDown.class)) {
+            addBlockInfo(LADDER, "documentationmod.quark.vanilla.ladder.deply");
+        }
+        if(quarksubcat.infoSlideDownLadders && ModuleLoader.isFeatureEnabled(LookDownLadders.class)) {
+            addBlockInfo(LADDER, "documentationmod.quark.vanilla.ladder.slide");
         }
         if(quarksubcat.infoArmorStand && ModuleLoader.isFeatureEnabled(QuickArmorSwapping.class)) {
             addItemInfo(ARMOR_STAND, "documentationmod.quark.vanilla.armorstand");

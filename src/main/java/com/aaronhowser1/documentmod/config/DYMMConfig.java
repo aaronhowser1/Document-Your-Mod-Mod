@@ -40,8 +40,10 @@ public class DYMMConfig {
         public boolean infoShulkerBoxAdd = true;
         @Config.Comment("Say that Compasses in other dimensions point towards the portal?")
         public boolean infoCompass = true;
-        @Config.Comment("Say that you can slide down Ladders and place them from the top?")
-        public boolean infoLadder = true;
+        @Config.Comment("Say that you can place Ladders from the top?")
+        public boolean infoDeployLadder = true;
+        @Config.Comment("Say that you can slide down Ladders?")
+        public boolean infoSlideDownLadders = true;
         @Config.Comment("Say that you can swap Armor Stand armor by sneak right clicking?")
         public boolean infoArmorStand = true;
         @Config.Comment("Say that Elytras can be dyed?")
