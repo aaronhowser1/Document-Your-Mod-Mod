@@ -109,5 +109,6 @@ public class DYMMConfig {
     @Config.Name("Nature's Compass info")
     public static boolean useNaturesCompass = true;
 
-
+    @Config.Name("Tinkers' Construct info")
+    public static boolean useTinkersConstruct = true;
 }

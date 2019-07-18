@@ -3,6 +3,7 @@ package com.aaronhowser1.documentmod;
 import com.aaronhowser1.documentmod.naturescompass.NaturesCompass;
 import com.aaronhowser1.documentmod.quark.QuarkItems;
 import com.aaronhowser1.documentmod.quark.QuarkVanillaItems;
+import com.aaronhowser1.documentmod.tinkersconstruct.TinkersConstruct;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.IModRegistry;
 import mezz.jei.api.JEIPlugin;
@@ -31,6 +32,9 @@ public class DocumentModJEIIntegration implements IModPlugin
         }
         if(useNaturesCompass) {
             NaturesCompass.init();
+        }
+        if(useTinkersConstruct) {
+            TinkersConstruct.init();
         }
     }
     public static void addItemInfo(Item item, String desc)

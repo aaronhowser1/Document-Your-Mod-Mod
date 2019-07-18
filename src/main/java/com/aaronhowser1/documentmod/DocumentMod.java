@@ -9,7 +9,11 @@ import org.apache.logging.log4j.Logger;
         modid = DocumentMod.MODID,
         name = DocumentMod.NAME,
         version = DocumentMod.VERSION,
-        dependencies = "required-after:jei@[1.12.2-4.15.0.268,);after:quark@[r1.5-167,);after:naturescompass;",
+        dependencies =
+                "required-after:jei@[1.12.2-4.15.0.268,);" +
+                "after:quark@[r1.5-167,);" +
+                "after:naturescompass;" +
+                "after:tconstruct;",
         clientSideOnly = true
 )
 
