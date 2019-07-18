@@ -111,4 +111,7 @@ public class DYMMConfig {
 
     @Config.Name("Tinkers' Construct info")
     public static boolean useTinkersConstruct = true;
+
+    @Config.Name("Twilight Forest info")
+    public static boolean useTwilightForest = true;
 }

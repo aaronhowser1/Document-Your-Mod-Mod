@@ -13,7 +13,8 @@ import org.apache.logging.log4j.Logger;
                 "required-after:jei@[1.12.2-4.15.0.268,);" +
                 "after:quark@[r1.5-167,);" +
                 "after:naturescompass;" +
-                "after:tconstruct;",
+                "after:tconstruct;" +
+                "after:twilightforest",
         clientSideOnly = true
 )
 
