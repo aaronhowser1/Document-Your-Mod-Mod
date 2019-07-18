@@ -4,6 +4,8 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+import java.util.stream.IntStream;
+
 import static com.aaronhowser1.documentmod.DocumentModJEIIntegration.*;
 import static com.aaronhowser1.documentmod.config.DYMMConfig.debugModIsDocumented;
 
@@ -51,6 +53,7 @@ public class TwilightForest {
     public static final Item TROPHY_PEDESTAL = Items.AIR;
     public static final Item AURORA_BLACK = Items.AIR;
     public static final Item CASTLE_DOOR = Items.AIR;
+    public static final Item UNCRAFTING_TABLE = Items.AIR;
 
     public static void init() {
         addItemInfo(TWILIGHT_SCEPTER, "documentationmod.twilightforest.twilightscepter");
@@ -118,7 +121,8 @@ public class TwilightForest {
         addItemWithDamageInfo(TOWER_DEVICE, 12, "documentationmod.twilightforest.carminitereactor");
         addItemInfo(TROPHY_PEDESTAL, "documentationmod.twilightforest.trophypedestal");
         addItemInfo(AURORA_BLACK, "documentationmod.twilightforest.aurora");
-        addItemInfo(CASTLE_DOOR, "documentationmod.twilightforest.castledoor");
+        IntStream.range(0,4).forEachOrdered(n -> addItemWithDamageInfo(CASTLE_DOOR, n, "documentationmod.twilightforest.castledoor"));
+        addItemInfo(UNCRAFTING_TABLE, "documentationmod.twilightforest.uncraftingtable");
 
         if(debugModIsDocumented) System.out.println("Twilight Forest documented");
     }

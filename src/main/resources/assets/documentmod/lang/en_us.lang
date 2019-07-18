@@ -186,6 +186,7 @@ documentationmod.twilightforest.carminitereactor=Surround with Redstone Blocks f
 documentationmod.twilightforest.trophypedestal=Trophy Pedestals block the way into the Goblin Knight Stronghold.\n\nPlace a boss Trophy on top of the Pedestal to open the door, letting you in.
 documentationmod.twilightforest.aurora=Make up the Aurora Palace on Glaciers.\n\nConstantly change color.
 documentationmod.twilightforest.castledoor=Right click a Castle Door and all connected Castle Doors will temporarily disappear, allowing entites to walk through them.\n\nAlso activates when given a Redstone signal.
+documentationmod.twilightforest.uncraftingtable=Allows you to uncraft an item, destroying it and returning the items used to make it.\n\nUncrafting takes a level of experience per item gained.
 
 documentationmod.waystone.waystone=You can teleport between all Waystones you've ever used, at the cost of experience depending on distance.
 documentationmod.waystone.return=The Return Scroll teleports you to the most recent Waystone you've used.\n\nThis uses up the Scroll.
