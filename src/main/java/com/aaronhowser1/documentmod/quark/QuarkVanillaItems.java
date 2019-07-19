@@ -72,7 +72,7 @@ public class QuarkVanillaItems
             addItemInfo(COMPASS, "documentationmod.quark.vanilla.compass");
         }
         if(quarksubcat.infoDeployLadder && ModuleLoader.isFeatureEnabled(DeployLaddersDown.class)) {
-            addBlockInfo(LADDER, "documentationmod.quark.vanilla.ladder.deply");
+            addBlockInfo(LADDER, "documentationmod.quark.vanilla.ladder.deploy");
         }
         if(quarksubcat.infoSlideDownLadders && ModuleLoader.isFeatureEnabled(LookDownLadders.class)) {
             addBlockInfo(LADDER, "documentationmod.quark.vanilla.ladder.slide");
@@ -150,11 +150,10 @@ public class QuarkVanillaItems
                 addItemInfo(i, "documentationmod.quark.vanilla.animalseatfood");
             }
         }
-//        Commented out as feature is not in current version, and so stops mod from loading
-//        if(quarksubcat.infoPlaceBlazeRods && ModuleLoader.isFeatureEnabled(PlaceBlazeRods.class)) {
-//            addItemInfo(Items.BLAZE_ROD, "documentationmod.quark.vanilla.blazerod");
-//            addItemInfo(QuarkItems.BLAZE_ROD, "documentationmod.quark.vanilla.blazerod");
-//        }
+        if(quarksubcat.infoPlaceBlazeRods && ModuleLoader.isFeatureEnabled(PlaceBlazeRods.class)) {
+            addItemInfo(Items.BLAZE_ROD, "documentationmod.quark.vanilla.blazerod");
+            addItemInfo(QuarkItems.BLAZE_ROD, "documentationmod.quark.vanilla.blazerod");
+        }
         if(quarksubcat.infoPistonsMoveItems && ModuleLoader.isFeatureEnabled(PistonsPushPullItems.class)) {
             addBlockInfo(PISTON, "documentationmod.quark.vanilla.pistonpush");
             addBlockInfo(STICKY_PISTON, "documentationmod.quark.vanilla.pistonpull");
