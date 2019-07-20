@@ -76,10 +76,10 @@ public class QuarkItems
         addItemInfo(TROWEL, "documentationmod.quark.trowel");
         addItemInfo(GLASS_ITEM_FRAME, "documentationmod.quark.glassitemframe");
         addItemInfo(IRON_LADDER, "documentationmod.quark.ironladder");
-        if(quarksubcat.infoDeployLadder && ModuleLoader.isFeatureEnabled(DeployLaddersDown.class)) {
+        if(ModuleLoader.isFeatureEnabled(DeployLaddersDown.class)) {
             addItemInfo(IRON_LADDER, "documentationmod.quark.vanilla.ladder.deploy");
         }
-        if(quarksubcat.infoSlideDownLadders && ModuleLoader.isFeatureEnabled(LookDownLadders.class)) {
+        if(ModuleLoader.isFeatureEnabled(LookDownLadders.class)) {
             addItemInfo(IRON_LADDER, "documentationmod.quark.vanilla.ladder.slide");
         }
         IntStream.range(0, 16).forEachOrdered(n -> addItemWithDamageInfo(CANDLE, n, "documentationmod.quark.candle"));
