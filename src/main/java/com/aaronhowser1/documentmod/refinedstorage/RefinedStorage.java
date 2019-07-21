@@ -52,6 +52,7 @@ public class RefinedStorage {
     public static final Item WRENCH = Items.AIR;
 
     public static void init() {
+        /*
         addItemInfo(CONTROLLER, "documentationmod.refinedstorage.controller");
         addItemWithDamageInfo(GRID,0,  "documentationmod.refinedstorage.grid");
         addItemWithDamageInfo(GRID,1,  "documentationmod.refinedstorage.craftinggrid");
@@ -114,6 +115,7 @@ public class RefinedStorage {
         addItemInfo(COVER, "documentationmod.refinedstorage.cover");
         addItemInfo(HOLLOW_COVER, "documentationmod.refinedstorage.hollowcover");
         addItemInfo(WRENCH, "documentationmod.refinedstorage.wrench");
+         */
 
         if(debugModIsDocumented) System.out.println("Refined Storage documented");
     }

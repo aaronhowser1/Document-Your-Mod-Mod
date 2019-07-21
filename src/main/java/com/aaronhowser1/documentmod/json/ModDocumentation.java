@@ -126,17 +126,17 @@ public final class ModDocumentation {
     }
 
     @Nonnull
-    private ItemStack getReferredStack() {
+    public ItemStack getReferredStack() {
         return this.itemStack.copy();
     }
 
     @Nonnull
-    private Map<String, List<String>> getTranslationKeys() {
+    public Map<String, List<String>> getTranslationKeys() {
         return ImmutableMap.copyOf(this.translationKeys);
     }
 
     @Nonnull
-    private List<String> getStringsFor(@Nonnull final String language) {
-        return ImmutableList.copyOf(this.translationKeys.getOrDefault(language, Lists.newArrayList()));
+    public List<String> getStringsFor(@Nonnull final String language) {
+        return ImmutableList.copyOf(this.translationKeys.getOrDefault(language, "en_us".equals(language)? Lists.newArrayList() : this.getStringsFor("en_us")));
     }
 }

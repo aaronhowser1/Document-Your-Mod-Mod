@@ -36,6 +36,7 @@ public enum DocumentationLoader {
     private static final Map<String, Boolean> CONFIGURATION_OPTION_CACHE = Maps.newHashMap();
     private static final Map<String, ConditionFactory> CONDITION_FACTORIES = Maps.newHashMap();
 
+    private ModContainer thisModContainer = null;
     private ProgressManager.ProgressBar bar = null;
 
     static {
@@ -45,6 +46,7 @@ public enum DocumentationLoader {
             final boolean actualValue = CONFIGURATION_OPTION_CACHE.computeIfAbsent(name, s -> {
                 try {
                     final Class<?> configClass = DYMMConfig.class;
+                    Object grabbingObject;
                     Field grabbingField;
                     if (name.contains(".")) {
                         final String[] path = name.split(Pattern.quote("."));
@@ -52,11 +54,13 @@ public enum DocumentationLoader {
                         final Field tmpField = configClass.getDeclaredField(path[0]);
                         final Object tmpObject = tmpField.get(null);
                         final Class<?> tmpClass = tmpObject.getClass();
+                        grabbingObject = tmpObject;
                         grabbingField = tmpClass.getDeclaredField(path[1]);
                     } else {
+                        grabbingObject = null;
                         grabbingField = configClass.getDeclaredField(name);
                     }
-                    final Boolean configStatus = (Boolean) grabbingField.get(null);
+                    final Boolean configStatus = (Boolean) grabbingField.get(grabbingObject);
                     if (configStatus == null) throw new ReflectiveOperationException();
                     return configStatus;
                 } catch (final ReflectiveOperationException e) {
@@ -97,16 +101,18 @@ public enum DocumentationLoader {
         DocumentationRegistry.INSTANCE.wipe();
         DocumentMod.logger.info("Reading JSON archive for mod documentation");
         this.bar = ProgressManager.push("Reading JSON documentation", Loader.instance().getActiveModList().size());
+        this.thisModContainer = Loader.instance().getActiveModList().stream().filter(item -> DocumentMod.MODID.equals(item.getModId())).findFirst().orElse(null);
         Loader.instance().getActiveModList().forEach(this::loadModDocumentation);
         ProgressManager.pop(this.bar);
         this.bar = null;
+        this.thisModContainer = null;
     }
 
     private void loadModDocumentation(@Nonnull final ModContainer modContainer) {
         this.bar.step(modContainer.getName());
         DocumentMod.logger.debug("Attempting to lookup mod documentation for mod " + modContainer.getName() + " (" + modContainer + ")");
         final String jsonFilesDirectory = "assets/" + modContainer.getModId() + "/dym";
-        final File sourceFile = modContainer.getSource();
+        final File sourceFile = this.thisModContainer.getSource();
 
         FileSystem fileSystem = null;
         try {

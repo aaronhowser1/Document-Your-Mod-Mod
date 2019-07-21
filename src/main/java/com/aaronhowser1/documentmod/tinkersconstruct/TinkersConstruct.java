@@ -52,7 +52,7 @@ public class TinkersConstruct{
     public static final Item SLIME_CONGEALED = Items.AIR;
 
     public static void init() {
-
+/*
         IntStream.range(0, 5).forEachOrdered(n -> addItemWithDamageInfo(SLIMESLING, n, "documentationmod.tconstruct.slimesling"));
         IntStream.range(0, 5).forEachOrdered(n -> addItemWithDamageInfo(SLIME_BOOTS, n, "documentationmod.tconstruct.slimeboots"));
         addItemInfo(PIGGYBACKPACK, "documentationmod.tconstruct.piggybackpack");
@@ -121,6 +121,8 @@ public class TinkersConstruct{
         addItemInfo(CROSSBOW, "documentationmod.tconstruct.tool.crossbow");
         addItemInfo(SHURIKEN, "documentationmod.tconstruct.tool.shuriken");
         addItemInfo(BOLT_CORE, "documentationmod.tconstruct.boltcore");
+
+ */
 
         if(debugModIsDocumented) System.out.println("Tinkers' Construct documented");
     }

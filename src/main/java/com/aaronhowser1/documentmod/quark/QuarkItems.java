@@ -65,56 +65,56 @@ public class QuarkItems
 
     public static void init()
     {
-        addItemInfo(CHUTE, "documentationmod.quark.chute");
-        addItemInfo(STURDY_STONE, "documentationmod.quark.sturdystone");
-        addItemInfo(GOLD_BUTTON, "documentationmod.quark.goldbutton");
-        addItemInfo(IRON_BUTTON, "documentationmod.quark.ironbutton");
-        addItemInfo(OBSIDIAN_PRESSURE_PLATE, "documentationmod.quark.obsidianpressureplate");
-        addItemInfo(IRON_ROD, "documentationmod.quark.ironrod");
-        addItemInfo(REDSTONE_RANDOMIZER, "documentationmod.quark.redstonerandomizer");
-        addItemInfo(RAIN_DETECTOR, "documentationmod.quark.weatherdetector");
-        addItemInfo(TROWEL, "documentationmod.quark.trowel");
-        addItemInfo(GLASS_ITEM_FRAME, "documentationmod.quark.glassitemframe");
-        addItemInfo(IRON_LADDER, "documentationmod.quark.ironladder");
+        //addItemInfo(CHUTE, "documentationmod.quark.chute");
+        //addItemInfo(STURDY_STONE, "documentationmod.quark.sturdystone");
+        //addItemInfo(GOLD_BUTTON, "documentationmod.quark.goldbutton");
+        //addItemInfo(IRON_BUTTON, "documentationmod.quark.ironbutton");
+        //addItemInfo(OBSIDIAN_PRESSURE_PLATE, "documentationmod.quark.obsidianpressureplate");
+        //addItemInfo(IRON_ROD, "documentationmod.quark.ironrod");
+        //addItemInfo(REDSTONE_RANDOMIZER, "documentationmod.quark.redstonerandomizer");
+        //addItemInfo(RAIN_DETECTOR, "documentationmod.quark.weatherdetector");
+        //addItemInfo(TROWEL, "documentationmod.quark.trowel");
+        //addItemInfo(GLASS_ITEM_FRAME, "documentationmod.quark.glassitemframe");
+        //addItemInfo(IRON_LADDER, "documentationmod.quark.ironladder");
         if(ModuleLoader.isFeatureEnabled(DeployLaddersDown.class)) {
-            addItemInfo(IRON_LADDER, "documentationmod.quark.vanilla.ladder.deploy");
+            //addItemInfo(IRON_LADDER, "documentationmod.quark.vanilla.ladder.deploy");
         }
         if(ModuleLoader.isFeatureEnabled(LookDownLadders.class)) {
-            addItemInfo(IRON_LADDER, "documentationmod.quark.vanilla.ladder.slide");
+            //addItemInfo(IRON_LADDER, "documentationmod.quark.vanilla.ladder.slide");
         }
-        IntStream.range(0, 16).forEachOrdered(n -> addItemWithDamageInfo(CANDLE, n, "documentationmod.quark.candle"));
-        addItemInfo(WITCH_HAT, "documentationmod.quark.witchhat");
-        addItemInfo(BIOTITE_ORE, "documentationmod.quark.biotiteore");
-        addItemInfo(SMOKER, "documentationmod.quark.smoker");
-        addItemInfo(DIAMOND_HEART, "documentationmod.quark.diamondheart");
-        if(enableCurse) addItemInfo(SOUL_BEAD, "documentationmod.quark.soulbead");
-        addItemInfo(ANCIENT_TOME, "documentationmod.quark.ancienttome");
-        IntStream.range(0, 16).forEachOrdered(n -> addItemWithDamageInfo(RUNE, n, "documentationmod.quark.rune"));
-        addItemInfo(ENDERDRAGON_SCALE, "documentationmod.quark.enderdragonscale");
-        addItemInfo(ARROW_ENDER, "documentationmod.quark.enderarrow");
-        addItemInfo(ARROW_EXPLOSIVE, "documentationmod.quark.explosivearrow");
-        addItemInfo(ARROW_TORCH, "documentationmod.quark.torcharrow");
-        IntStream.range(0,5).forEachOrdered(n-> addItemWithDamageInfo(PARROT_EGG, n, "documentationmod.quark.parrotegg"));
-        addItemInfo(PICKARANG, "documentationmod.quark.pickarange");
-        addItemInfo(SLIME_BUCKET, "documentationmod.quark.slimebucket");
-        addItemInfo(SOUL_POWDER, "documentationmod.quark.soulpowder");
-        addItemInfo(BLACK_ASH, "documentationmod.quark.blackash");
-        addItemInfo(ENDER_WATCHER, "documentationmod.quark.enderwatcher");
-        addItemInfo(ARCHAEOLOGIST_HAT, "documentationmod.quark.archhat.ores");
-        if(sellHat) addItemInfo(ARCHAEOLOGIST_HAT, "documentationmod.quark.archhat.sell");
-        if(dropHat) addItemInfo(ARCHAEOLOGIST_HAT, "documentationmod.quark.archhat.drop");
-        addItemInfo(CHARCOAL_BLOCK, "documentationmod.quark.charcoalblock");
-        addItemInfo(SUGAR_BLOCK, "documentationmod.quark.sugarblock");
-        addItemInfo(REDSTONE_INDUCTOR, "documentationmod.quark.redstoneinductor");
-        addItemInfo(GRATE, "documentationmod.quark.grate");
-        addItemInfo(ROPE, "documentationmod.quark.rope");
-        addItemInfo(ROPE, "documentationmod.quark.rope.dispenser");
-        addItemInfo(GRAVISAND, "documentationmod.quark.gravisand");
-        addItemInfo(LIT_LAMP, "documentationmod.quark.litlamp");
-        IntStream.range(0, 16).forEachOrdered(n -> addItemWithDamageInfo(GLASS_SHARDS, n, "documentationmod.quark.glassshard"));
-        if (!horsesAreMagical) addItemInfo(HORSE_WHISTLE, "documentationmod.quark.horsewhistle");
-        if (horsesAreMagical) addItemInfo(HORSE_WHISTLE, "documentationmod.quark.horsewhistle.ibelieveinmagic");
-        addItemInfo(IRON_CHAIN, "documentationmod.quark.ironchains");
+        //IntStream.range(0, 16).forEachOrdered(n -> addItemWithDamageInfo(CANDLE, n, "documentationmod.quark.candle"));
+        //addItemInfo(WITCH_HAT, "documentationmod.quark.witchhat");
+        //addItemInfo(BIOTITE_ORE, "documentationmod.quark.biotiteore");
+        //addItemInfo(SMOKER, "documentationmod.quark.smoker");
+        //addItemInfo(DIAMOND_HEART, "documentationmod.quark.diamondheart");
+        //if(enableCurse) addItemInfo(SOUL_BEAD, "documentationmod.quark.soulbead");
+        //addItemInfo(ANCIENT_TOME, "documentationmod.quark.ancienttome");
+        //IntStream.range(0, 16).forEachOrdered(n -> addItemWithDamageInfo(RUNE, n, "documentationmod.quark.rune"));
+        //addItemInfo(ENDERDRAGON_SCALE, "documentationmod.quark.enderdragonscale");
+        //addItemInfo(ARROW_ENDER, "documentationmod.quark.enderarrow");
+        //addItemInfo(ARROW_EXPLOSIVE, "documentationmod.quark.explosivearrow");
+        //addItemInfo(ARROW_TORCH, "documentationmod.quark.torcharrow");
+        //IntStream.range(0,5).forEachOrdered(n-> addItemWithDamageInfo(PARROT_EGG, n, "documentationmod.quark.parrotegg"));
+        //addItemInfo(PICKARANG, "documentationmod.quark.pickarange");
+        //addItemInfo(SLIME_BUCKET, "documentationmod.quark.slimebucket");
+        //addItemInfo(SOUL_POWDER, "documentationmod.quark.soulpowder");
+        //addItemInfo(BLACK_ASH, "documentationmod.quark.blackash");
+        //addItemInfo(ENDER_WATCHER, "documentationmod.quark.enderwatcher");
+        //addItemInfo(ARCHAEOLOGIST_HAT, "documentationmod.quark.archhat.ores");
+        //if(sellHat) addItemInfo(ARCHAEOLOGIST_HAT, "documentationmod.quark.archhat.sell");
+        //if(dropHat) addItemInfo(ARCHAEOLOGIST_HAT, "documentationmod.quark.archhat.drop");
+        //addItemInfo(CHARCOAL_BLOCK, "documentationmod.quark.charcoalblock");
+        //addItemInfo(SUGAR_BLOCK, "documentationmod.quark.sugarblock");
+        //addItemInfo(REDSTONE_INDUCTOR, "documentationmod.quark.redstoneinductor");
+        //addItemInfo(GRATE, "documentationmod.quark.grate");
+        //addItemInfo(ROPE, "documentationmod.quark.rope");
+        //addItemInfo(ROPE, "documentationmod.quark.rope.dispenser");
+        //addItemInfo(GRAVISAND, "documentationmod.quark.gravisand");
+        //addItemInfo(LIT_LAMP, "documentationmod.quark.litlamp");
+        //IntStream.range(0, 16).forEachOrdered(n -> addItemWithDamageInfo(GLASS_SHARDS, n, "documentationmod.quark.glassshard"));
+        //if (!horsesAreMagical) addItemInfo(HORSE_WHISTLE, "documentationmod.quark.horsewhistle");
+        //if (horsesAreMagical) addItemInfo(HORSE_WHISTLE, "documentationmod.quark.horsewhistle.ibelieveinmagic");
+        //addItemInfo(IRON_CHAINS, "documentationmod.quark.ironchains");
 
         if(debugModIsDocumented) System.out.println("Quark documented");
     }

@@ -56,6 +56,7 @@ public class TwilightForest {
     public static final Item UNCRAFTING_TABLE = Items.AIR;
 
     public static void init() {
+        /*
         addItemInfo(TWILIGHT_SCEPTER, "documentationmod.twilightforest.twilightscepter");
         addItemInfo(LIFEDRAIN_SCEPTER, "documentationmod.twilightforest.lifedrainscepter");
         addItemInfo(ZOMBIE_SCEPTER, "documentationmod.twilightforest.zombiescepter");
@@ -123,6 +124,8 @@ public class TwilightForest {
         addItemInfo(AURORA_BLACK, "documentationmod.twilightforest.aurora");
         IntStream.range(0,4).forEachOrdered(n -> addItemWithDamageInfo(CASTLE_DOOR, n, "documentationmod.twilightforest.castledoor"));
         addItemInfo(UNCRAFTING_TABLE, "documentationmod.twilightforest.uncraftingtable");
+
+         */
 
         if(debugModIsDocumented) System.out.println("Twilight Forest documented");
     }
