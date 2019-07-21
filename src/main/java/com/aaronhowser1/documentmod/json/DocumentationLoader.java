@@ -2,6 +2,10 @@ package com.aaronhowser1.documentmod.json;
 
 import com.aaronhowser1.documentmod.DocumentMod;
 import com.aaronhowser1.documentmod.config.DYMMConfig;
+import com.aaronhowser1.documentmod.json.conditions.DocumentModConfigurationOption;
+import com.aaronhowser1.documentmod.quark.QuarkBooleanFieldCheckerConditionFactory;
+import com.aaronhowser1.documentmod.quark.QuarkFeatureCheckingConditionFactory;
+import com.aaronhowser1.documentmod.quark.QuarkModuleCheckingConditionFactory;
 import com.google.common.collect.Maps;
 import com.google.gson.*;
 import net.minecraft.util.JsonUtils;
@@ -11,7 +15,6 @@ import net.minecraftforge.fml.common.ModContainer;
 import net.minecraftforge.fml.common.ProgressManager;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
-import vazkii.quark.base.module.Feature;
 import vazkii.quark.base.module.Module;
 import vazkii.quark.base.module.ModuleLoader;
 
@@ -19,82 +22,28 @@ import javax.annotation.Nonnull;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Field;
 import java.nio.file.FileSystem;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Map;
 import java.util.function.BooleanSupplier;
-import java.util.regex.Pattern;
 
 public enum DocumentationLoader {
     INSTANCE;
 
     private static final String CONDITIONS_KEY = "conditions";
 
-    private static final Map<String, Boolean> CONFIGURATION_OPTION_CACHE = Maps.newHashMap();
     private static final Map<String, ConditionFactory> CONDITION_FACTORIES = Maps.newHashMap();
 
     private ModContainer thisModContainer = null;
     private ProgressManager.ProgressBar bar = null;
 
     static {
-        CONDITION_FACTORIES.put("dym:configuration_option", (object, modContainer) -> {
-            final String name = JsonUtils.getString(object, "name");
-            final boolean value = JsonUtils.getBoolean(object, "value");
-            final boolean actualValue = CONFIGURATION_OPTION_CACHE.computeIfAbsent(name, s -> {
-                try {
-                    final Class<?> configClass = DYMMConfig.class;
-                    Object grabbingObject;
-                    Field grabbingField;
-                    if (name.contains(".")) {
-                        final String[] path = name.split(Pattern.quote("."));
-                        if (path.length != 2) throw new JsonSyntaxException("Configuration option must be at most one level deep");
-                        final Field tmpField = configClass.getDeclaredField(path[0]);
-                        final Object tmpObject = tmpField.get(null);
-                        final Class<?> tmpClass = tmpObject.getClass();
-                        grabbingObject = tmpObject;
-                        grabbingField = tmpClass.getDeclaredField(path[1]);
-                    } else {
-                        grabbingObject = null;
-                        grabbingField = configClass.getDeclaredField(name);
-                    }
-                    final Boolean configStatus = (Boolean) grabbingField.get(grabbingObject);
-                    if (configStatus == null) throw new ReflectiveOperationException();
-                    return configStatus;
-                } catch (final ReflectiveOperationException e) {
-                    throw new JsonParseException("Given configuration option '" + name + "' does not exist", e);
-                }
-            });
-            return () -> value == actualValue;
-        });
-        CONDITION_FACTORIES.put("quark:check_feature", (object, modContainer) -> {
-            if (Loader.isModLoaded("quark")) return () -> false;
-            final String className = JsonUtils.getString(object, "class");
-            try {
-                final Class<?> maybeClass = Class.forName(className);
-                final Class<?> featureClass = Class.forName("vazkii.quark.base.module.Feature");
-                if (!featureClass.isAssignableFrom(maybeClass)) throw new JsonParseException("Given class is not a feature class");
-                //noinspection unchecked
-                return () -> ModuleLoader.isFeatureEnabled((Class<? extends Feature>) maybeClass);
-            } catch (final ReflectiveOperationException e) {
-                throw new JsonParseException("Given class name does not exist: " + className);
-            }
-        });
-        CONDITION_FACTORIES.put("quark:check_module", (object, modContainer) -> {
-            if (Loader.isModLoaded("quark")) return () -> false;
-            final String className = JsonUtils.getString(object, "class");
-            try {
-                final Class<?> maybeClass = Class.forName(className);
-                final Class<?> moduleClass = Class.forName("vazkii.quark.base.module.Module");
-                if (!moduleClass.isAssignableFrom(maybeClass)) throw new JsonParseException("Given class is not a feature class");
-                //noinspection unchecked
-                return () -> ModuleLoader.isModuleEnabled((Class<? extends Module>) maybeClass);
-            } catch (final ReflectiveOperationException e) {
-                throw new JsonParseException("Given class name does not exist: " + className);
-            }
-        });
+        CONDITION_FACTORIES.put("dym:configuration_option", new DocumentModConfigurationOption());
+        CONDITION_FACTORIES.put("quark:check_feature", new QuarkFeatureCheckingConditionFactory());
+        CONDITION_FACTORIES.put("quark:check_module", new QuarkModuleCheckingConditionFactory());
+        CONDITION_FACTORIES.put("quark:check_boolean_field", new QuarkBooleanFieldCheckerConditionFactory());
     }
 
     public void loadFromJson() {
@@ -106,6 +55,7 @@ public enum DocumentationLoader {
         ProgressManager.pop(this.bar);
         this.bar = null;
         this.thisModContainer = null;
+        DocumentMod.logger.info("Done reading JSON archive");
         DocumentationRegistry.INSTANCE.dump();
     }
 
@@ -175,6 +125,7 @@ public enum DocumentationLoader {
             });
         } catch (final JsonParseException e) {
             DocumentMod.logger.error("An error has occurred while attempting to parse JSON for file " + path);
+            DocumentMod.logger.error("Error message: " + e.getMessage());
             DocumentMod.logger.error("Resource location where the issue happened: " + resourceLocation);
             DocumentMod.logger.error("The stacktrace will be printed to STDERR");
             e.printStackTrace(System.err);

@@ -53,10 +53,14 @@ public final class ModDocumentation {
 
         final Map<String, List<String>> translationKeys = parseTranslationKeys(JsonUtils.getJsonObject(object, "documentation"));
 
-        stacks.forEach(stack -> {
-            final ResourceLocation registryName = (stack.getMetadata() == 0)? name : new ResourceLocation(name + "_$_meta_" + stack.getMetadata());
+        for (int i = 0; i < stacks.size(); ++i) {
+            final ItemStack stack = stacks.get(i);
+            final String nameString = name.toString();
+            final String nameWithCounter = nameString + (stacks.size() > 1? "_$_counter_" + i : "");
+            final String nameWithMeta = nameWithCounter + (stack.getMetadata() == 0? "" : "_$_meta_" + stack.getMetadata());
+            final ResourceLocation registryName = new ResourceLocation(nameWithMeta);
             returningList.add(new ModDocumentation(stack, translationKeys, registryName));
-        });
+        }
 
         return ImmutableList.copyOf(returningList);
     }
