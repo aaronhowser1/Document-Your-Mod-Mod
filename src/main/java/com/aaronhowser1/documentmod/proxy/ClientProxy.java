@@ -5,6 +5,8 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.IReloadableResourceManager;
 import net.minecraftforge.client.resource.ISelectiveResourceReloadListener;
 import net.minecraftforge.client.resource.VanillaResourceType;
+import net.minecraftforge.fml.common.Loader;
+import net.minecraftforge.fml.common.LoaderState;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import javax.annotation.Nonnull;
@@ -15,9 +17,11 @@ public class ClientProxy extends CommonProxy {
         super.preInit(event);
         ((IReloadableResourceManager) Minecraft.getMinecraft().getResourceManager()).registerReloadListener(
                 (ISelectiveResourceReloadListener) (resourceManager, resourcePredicate) -> {
-            if (resourcePredicate.test(VanillaResourceType.LANGUAGES) || resourcePredicate.test(VanillaResourceType.TEXTURES)) {
-                DocumentationLoader.INSTANCE.loadFromJson();
-            }
-        });
+                    // Prevent a load that is too early, before registries have been initialized
+                    if (!Loader.instance().hasReachedState(LoaderState.INITIALIZATION)) return;
+                    if (resourcePredicate.test(VanillaResourceType.LANGUAGES) || resourcePredicate.test(VanillaResourceType.TEXTURES)) {
+                        DocumentationLoader.INSTANCE.loadFromJson();
+                    }
+                });
     }
 }

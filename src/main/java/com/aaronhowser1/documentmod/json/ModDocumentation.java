@@ -30,14 +30,18 @@ public final class ModDocumentation {
         BLOCK
     }
 
-    private static final ModDocumentation EMPTY_MOD_DOCUMENTATION = new ModDocumentation(ItemStack.EMPTY, Maps.newHashMap());
+    private static final ModDocumentation EMPTY_MOD_DOCUMENTATION = new ModDocumentation(ItemStack.EMPTY, Maps.newHashMap(), new ResourceLocation(DocumentMod.MODID, "empty"));
+    public static final ModDocumentation EMPTY = EMPTY_MOD_DOCUMENTATION;
 
     private final ItemStack itemStack;
     private final Map<String, List<String>> translationKeys;
+    private final ResourceLocation registryName;
 
-    private ModDocumentation(@Nonnull final ItemStack itemStack, @Nonnull final Map<String, List<String>> translationKeys) {
+    private ModDocumentation(@Nonnull final ItemStack itemStack, @Nonnull final Map<String, List<String>> translationKeys,
+                             @Nonnull final ResourceLocation registryName) {
         this.itemStack = itemStack;
         this.translationKeys = translationKeys;
+        this.registryName = registryName;
     }
 
     @Nonnull
@@ -49,7 +53,10 @@ public final class ModDocumentation {
 
         final Map<String, List<String>> translationKeys = parseTranslationKeys(JsonUtils.getJsonObject(object, "documentation"));
 
-        stacks.forEach(stack -> returningList.add(new ModDocumentation(stack, translationKeys)));
+        stacks.forEach(stack -> {
+            final ResourceLocation registryName = (stack.getMetadata() == 0)? name : new ResourceLocation(name + "_$_meta_" + stack.getMetadata());
+            returningList.add(new ModDocumentation(stack, translationKeys, registryName));
+        });
 
         return ImmutableList.copyOf(returningList);
     }
@@ -61,7 +68,7 @@ public final class ModDocumentation {
             if (!element.isJsonObject()) throw new JsonSyntaxException("for elements must be objects");
             final JsonObject jsonObject = element.getAsJsonObject();
             final ItemStack stack = parseItemStackJsonObject(jsonObject);
-            returningList.add(stack);
+            if (stack != null) returningList.add(stack);
         });
         return returningList;
     }
@@ -77,7 +84,7 @@ public final class ModDocumentation {
             case ITEM:
                 final Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation(registryName));
                 if (item == null || item == Items.AIR) {
-                    DocumentMod.logger.info("Item with given registry name '" + registryName + "' does not exist. Skipping");
+                    DocumentMod.logger.warn("Item with given registry name '" + registryName + "' does not exist. Skipping");
                 } else {
                     targetStack = new ItemStack(item, 1, metadata);
                 }
@@ -85,13 +92,13 @@ public final class ModDocumentation {
             case BLOCK:
                 final Block block = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(registryName));
                 if (block == null || block == Blocks.AIR) {
-                    DocumentMod.logger.info("Block with given registry name '" + registryName + "' does not exist. Skipping");
+                    DocumentMod.logger.warn("Block with given registry name '" + registryName + "' does not exist. Skipping");
                     targetStack = null;
                     break;
                 }
                 final ItemStack tmpStack = new ItemStack(Item.getItemFromBlock(block), 1, metadata);
                 if (tmpStack.isEmpty()) {
-                    DocumentMod.logger.info("Block '" + registryName + "' is not supported: does not have an ItemBlock");
+                    DocumentMod.logger.warn("Block '" + registryName + "' is not supported: does not have an ItemBlock");
                 } else {
                     targetStack = tmpStack;
                 }
@@ -140,6 +147,11 @@ public final class ModDocumentation {
             });
         });
         return map;
+    }
+
+    @Nonnull
+    public ResourceLocation getRegistryName() {
+        return this.registryName;
     }
 
     @Nonnull
