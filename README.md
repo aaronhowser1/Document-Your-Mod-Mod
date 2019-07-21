@@ -1,4 +1,4 @@
-Document Your Mod Mod
+[Document Your Mod Mod](https://www.curseforge.com/minecraft/mc-mods/document-your-mod-mod)
               
 JEI's information tab is actually the best thing added by any mod ever, and should be used by everything. Unfortunately, very few mods take advantage of it.
               
