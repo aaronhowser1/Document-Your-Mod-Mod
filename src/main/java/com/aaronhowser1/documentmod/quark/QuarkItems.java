@@ -61,7 +61,7 @@ public class QuarkItems
     public static final Item GLOWSTONE_DUST_BLOCK = Items.AIR;
     public static final Item GUNPOWDER_BLOCK = Items.AIR;
     public static final Item BLAZE_ROD = Items.AIR;
-    public static final Item IRON_CHAINS = Items.AIR;
+    public static final Item IRON_CHAIN = Items.AIR;
 
     public static void init()
     {
@@ -114,7 +114,7 @@ public class QuarkItems
         IntStream.range(0, 16).forEachOrdered(n -> addItemWithDamageInfo(GLASS_SHARDS, n, "documentationmod.quark.glassshard"));
         if (!horsesAreMagical) addItemInfo(HORSE_WHISTLE, "documentationmod.quark.horsewhistle");
         if (horsesAreMagical) addItemInfo(HORSE_WHISTLE, "documentationmod.quark.horsewhistle.ibelieveinmagic");
-        addItemInfo(IRON_CHAINS, "documentationmod.quark.ironchains");
+        addItemInfo(IRON_CHAIN, "documentationmod.quark.ironchains");
 
         if(debugModIsDocumented) System.out.println("Quark documented");
     }

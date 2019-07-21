@@ -146,10 +146,11 @@ public class QuarkVanillaItems
                 addItemInfo(i, "documentationmod.quark.vanilla.animalseatfood");
             }
         }
-        if(ModuleLoader.isFeatureEnabled(PlaceBlazeRods.class)) {
-            addItemInfo(Items.BLAZE_ROD, "documentationmod.quark.vanilla.blazerod");
-            addItemInfo(QuarkItems.BLAZE_ROD, "documentationmod.quark.vanilla.blazerod");
-        }
+//        Commented out until Quark 200 is out
+//        if(ModuleLoader.isFeatureEnabled(PlaceBlazeRods.class)) {
+//            addItemInfo(Items.BLAZE_ROD, "documentationmod.quark.vanilla.blazerod");
+//            addItemInfo(QuarkItems.BLAZE_ROD, "documentationmod.quark.vanilla.blazerod");
+//        }
         if(ModuleLoader.isFeatureEnabled(PistonsPushPullItems.class)) {
             addBlockInfo(PISTON, "documentationmod.quark.vanilla.pistonpush");
             addBlockInfo(STICKY_PISTON, "documentationmod.quark.vanilla.pistonpull");
