@@ -8,6 +8,7 @@ import net.minecraft.util.JsonUtils;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.ModContainer;
+import net.minecraftforge.fml.common.ProgressManager;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
 import vazkii.quark.base.module.Feature;
@@ -34,6 +35,8 @@ public enum DocumentationLoader {
 
     private static final Map<String, Boolean> CONFIGURATION_OPTION_CACHE = Maps.newHashMap();
     private static final Map<String, ConditionFactory> CONDITION_FACTORIES = Maps.newHashMap();
+
+    private ProgressManager.ProgressBar bar = null;
 
     static {
         CONDITION_FACTORIES.put("dym:configuration_option", (object, modContainer) -> {
@@ -93,10 +96,14 @@ public enum DocumentationLoader {
     public void loadFromJson() {
         DocumentationRegistry.INSTANCE.wipe();
         DocumentMod.logger.info("Reading JSON archive for mod documentation");
+        this.bar = ProgressManager.push("Reading JSON documentation", Loader.instance().getActiveModList().size());
         Loader.instance().getActiveModList().forEach(this::loadModDocumentation);
+        ProgressManager.pop(this.bar);
+        this.bar = null;
     }
 
     private void loadModDocumentation(@Nonnull final ModContainer modContainer) {
+        this.bar.step(modContainer.getName());
         DocumentMod.logger.debug("Attempting to lookup mod documentation for mod " + modContainer.getName() + " (" + modContainer + ")");
         final String jsonFilesDirectory = "assets/" + modContainer.getModId() + "/dym";
         final File sourceFile = modContainer.getSource();
