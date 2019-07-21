@@ -18,6 +18,7 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -40,13 +41,29 @@ public final class ModDocumentation {
     }
 
     @Nonnull
-    public static ModDocumentation create(@Nonnull final JsonObject object, @Nonnull final ResourceLocation name) {
-        final ItemStack stack = parseItemStackJsonObject(JsonUtils.getJsonObject(object, "for"));
-        if (stack == null || stack.isEmpty()) return EMPTY_MOD_DOCUMENTATION;
+    static List<ModDocumentation> create(@Nonnull final JsonObject object, @Nonnull final ResourceLocation name) {
+        final List<ItemStack> stacks = getItemStacksIntoList(JsonUtils.getJsonArray(object, "for"));
+        if (stacks.isEmpty()) return ImmutableList.of(EMPTY_MOD_DOCUMENTATION);
+
+        final List<ModDocumentation> returningList = Lists.newArrayList();
 
         final Map<String, List<String>> translationKeys = parseTranslationKeys(JsonUtils.getJsonObject(object, "documentation"));
 
-        return new ModDocumentation(stack, translationKeys);
+        stacks.forEach(stack -> returningList.add(new ModDocumentation(stack, translationKeys)));
+
+        return ImmutableList.copyOf(returningList);
+    }
+
+    @Nonnull
+    private static List<ItemStack> getItemStacksIntoList(@Nonnull final JsonArray jsonArray) {
+        final List<ItemStack> returningList = new ArrayList<>();
+        jsonArray.forEach(element -> {
+            if (!element.isJsonObject()) throw new JsonSyntaxException("for elements must be objects");
+            final JsonObject jsonObject = element.getAsJsonObject();
+            final ItemStack stack = parseItemStackJsonObject(jsonObject);
+            returningList.add(stack);
+        });
+        return returningList;
     }
 
     @Nullable

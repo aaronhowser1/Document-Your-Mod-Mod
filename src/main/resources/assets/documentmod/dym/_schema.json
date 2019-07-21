@@ -10,16 +10,18 @@
       "class": "quark.module.class"
     }
   ],
-  "for": {
-    "type": "item (or block)",
-    "registry_name": "minecraft:wood_log",
-    "metadata": 1,
-    "nbt": {
-      "Tags and the like here": [
-        "Arrays are supported"
-      ]
+  "for": [
+    {
+      "type": "item (or block)",
+      "registry_name": "minecraft:wood_log",
+      "metadata": 1,
+      "nbt": {
+        "Tags and the like here": [
+          "Arrays are supported"
+        ]
+      }
     }
-  },
+  ],
   "documentation": {
     "en_us": [
       "Something something something",

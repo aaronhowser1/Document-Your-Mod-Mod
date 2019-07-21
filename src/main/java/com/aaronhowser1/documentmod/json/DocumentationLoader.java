@@ -167,8 +167,9 @@ public enum DocumentationLoader {
             if (!this.processLoadingConditions(jsonObject, modContainer)) {
                 return;
             }
-            final ModDocumentation documentation = ModDocumentation.create(jsonObject, resourceLocation);
-            DocumentationRegistry.INSTANCE.registerForMod(modContainer.getModId(), documentation);
+            ModDocumentation.create(jsonObject, resourceLocation).forEach(documentation -> {
+                DocumentationRegistry.INSTANCE.registerForMod(modContainer.getModId(), documentation);
+            });
         } catch (final JsonParseException e) {
             DocumentMod.logger.error("An error has occurred while attempting to parse JSON for file " + path);
             DocumentMod.logger.error("Resource location where the issue happened: " + resourceLocation);
