@@ -91,6 +91,7 @@ public enum DocumentationLoader {
     }
 
     public void loadFromJson() {
+        DocumentationRegistry.INSTANCE.wipe();
         DocumentMod.logger.info("Reading JSON archive for mod documentation");
         Loader.instance().getActiveModList().forEach(this::loadModDocumentation);
     }

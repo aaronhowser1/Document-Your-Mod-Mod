@@ -1,5 +1,6 @@
 package com.aaronhowser1.documentmod.json;
 
+import com.aaronhowser1.documentmod.DocumentMod;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -26,5 +27,10 @@ public enum DocumentationRegistry {
     @Nonnull
     public List<ModDocumentation> getDocumentationForMod(@Nonnull final ModContainer modContainer) {
         return this.getDocumentationForMod(modContainer.getModId());
+    }
+
+    void wipe() {
+        REGISTRY.clear();
+        DocumentMod.logger.info("Documentation registry wiped");
     }
 }
