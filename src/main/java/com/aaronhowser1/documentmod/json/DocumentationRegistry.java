@@ -1,6 +1,7 @@
 package com.aaronhowser1.documentmod.json;
 
 import com.aaronhowser1.documentmod.DocumentMod;
+import com.aaronhowser1.documentmod.config.DYMMConfig;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -44,7 +45,16 @@ public enum DocumentationRegistry {
         return this.getDocumentationForMod(modContainer.getModId());
     }
 
+    void dumpSpam() {
+        DocumentMod.logger.info("Dumping registry: ");
+        REGISTRY.values().forEach(l -> l.forEach(e -> DocumentMod.logger.info("    " + e.getRegistryName() + " -> " + e)));
+    }
+
     void dump() {
+        if (DYMMConfig.debugModIsDocumented) {
+            this.dumpSpam();
+            return;
+        }
         DocumentMod.logger.debug("Dumping registry: ");
         REGISTRY.values().forEach(l -> l.forEach(e -> DocumentMod.logger.debug("    " + e.getRegistryName() + " -> " + e)));
     }
