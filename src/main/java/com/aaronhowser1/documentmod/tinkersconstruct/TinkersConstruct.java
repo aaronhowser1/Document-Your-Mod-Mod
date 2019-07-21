@@ -4,14 +4,12 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import vazkii.quark.base.module.ModuleLoader;
-import vazkii.quark.tweaks.feature.DeployLaddersDown;
 import vazkii.quark.tweaks.feature.LookDownLadders;
 
 import java.util.stream.IntStream;
 
 import static com.aaronhowser1.documentmod.DocumentModJEIIntegration.*;
 import static com.aaronhowser1.documentmod.config.DYMMConfig.debugModIsDocumented;
-import static com.aaronhowser1.documentmod.config.DYMMConfig.quarksubcat;
 
 @GameRegistry.ObjectHolder("tconstruct")
 public class TinkersConstruct{
@@ -97,7 +95,7 @@ public class TinkersConstruct{
         addItemWithDamageInfo(SLIME_GRASS, 9, "documentationmod.tconstruct.netherslimeislands");
         addItemWithDamageInfo(SLIME_GRASS, 14, "documentationmod.tconstruct.netherslimeislands");
         addItemWithDamageInfo(SLIME_CONGEALED, 4, "documentationmod.tconstruct.netherslimeislands");
-        if(quarksubcat.infoSlideDownLadders && ModuleLoader.isFeatureEnabled(LookDownLadders.class)) {
+        if(ModuleLoader.isFeatureEnabled(LookDownLadders.class)) {
             addItemInfo(STONE_LADDER, "documentationmod.quark.vanilla.ladder.slide");
         }
         //TODO: figure out how to add info to items if they have NBT
