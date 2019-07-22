@@ -1,0 +1,40 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.tweaks.feature.RightClickHarvest"
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "minecraft:pumpkin_seeds"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:beetroot_seeds"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:wheat_seeds"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:melon_seeds"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:nether_wart"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "You can right click fully grown crops to harvest and replant them without breaking the block."
+    ]
+  }
+}

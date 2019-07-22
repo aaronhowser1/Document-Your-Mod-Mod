@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:triple_bow"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Can drop from the Snow Queen.",
+      "",
+      "Shoots three vertically-aligned arrows."
+    ]
+  }
+}

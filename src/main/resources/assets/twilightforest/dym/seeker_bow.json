@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:seeker_bow"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Can drop from the Snow Queen.",
+      "",
+      "Arrows shot will bend towards hostile mobs."
+    ]
+  }
+}

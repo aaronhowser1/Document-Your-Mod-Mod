@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "refinedstorage:wireless_transmitter"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "When placed on a Cable, the Wireless Transmitter will allow Wireless Grids to connect to it.",
+      "",
+      "It has a range of 16 blocks, but can be upgraded with Range Upgrades."
+    ]
+  }
+}

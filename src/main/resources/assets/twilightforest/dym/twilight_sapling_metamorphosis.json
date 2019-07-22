@@ -1,0 +1,30 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:twilight_sapling",
+      "metadata": 6
+    },
+    {
+      "type": "item",
+      "registry_name": "twilightforest:magic_log_core",
+      "metadata": 1
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Can be found in Leaf Dungeons.",
+      "",
+      "The area around tree will slowly turn into an Enchanted Forest biome. Can be toggled by right clicking on the Heart of Transformation block.",
+      "",
+      "Breaking the Heart of Transformation block will destroy it."
+    ]
+  }
+}

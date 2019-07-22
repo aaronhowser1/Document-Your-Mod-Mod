@@ -1,0 +1,21 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:arrow_torch"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Places a Torch where it lands.",
+      "Can be fired from Dispensers."
+    ]
+  }
+}

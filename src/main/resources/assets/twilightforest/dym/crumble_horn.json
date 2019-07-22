@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:crumble_horn"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Given after giving the Questing Ram a Wool of every color.",
+      "",
+      "While being used, it will \"crumble\" nearby blocks. Stone will turn into Cobblestone, which turns into Gravel, etc."
+    ]
+  }
+}

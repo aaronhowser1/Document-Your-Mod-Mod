@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:witch_hat"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Highly enchantable, and provides 50% resistance to Potions of Harming."
+    ]
+  }
+}

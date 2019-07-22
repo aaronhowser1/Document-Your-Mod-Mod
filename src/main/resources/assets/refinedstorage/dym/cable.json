@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "refinedstorage:cable"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Connects blocks to the Controller."
+    ]
+  }
+}

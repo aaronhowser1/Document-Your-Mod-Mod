@@ -1,0 +1,76 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.vanity.feature.SitInStairs"
+    }
+  ],
+  "for": [
+    {
+      "type": "block",
+      "registry_name": "minecraft:oak_stairs"
+    },
+    {
+      "type": "block",
+      "registry_name": "minecraft:stone_stairs"
+    },
+    {
+      "type": "block",
+      "registry_name": "minecraft:brick_stairs"
+    },
+    {
+      "type": "block",
+      "registry_name": "minecraft:stone_brick_stairs"
+    },
+    {
+      "type": "block",
+      "registry_name": "minecraft:nether_brick_stairs"
+    },
+    {
+      "type": "block",
+      "registry_name": "minecraft:sandstone_stairs"
+    },
+    {
+      "type": "block",
+      "registry_name": "minecraft:spruce_stairs"
+    },
+    {
+      "type": "block",
+      "registry_name": "minecraft:birch_stairs"
+    },
+    {
+      "type": "block",
+      "registry_name": "minecraft:jungle_stairs"
+    },
+    {
+      "type": "block",
+      "registry_name": "minecraft:quartz_stairs"
+    },
+    {
+      "type": "block",
+      "registry_name": "minecraft:acacia_stairs"
+    },
+    {
+      "type": "block",
+      "registry_name": "minecraft:dark_oak_stairs"
+    },
+    {
+      "type": "block",
+      "registry_name": "minecraft:red_sandstone_stairs"
+    },
+    {
+      "type": "block",
+      "registry_name": "minecraft:purpur_stairs"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "You can sit on any Stairs that are facing upwards by right clicking them with an empty hand."
+    ]
+  }
+}

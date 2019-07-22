@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "refinedstorage:wireless_fluid_grid"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Acts like the Fluid Grid, but works anywhere in range of a Wireless Transmitter.",
+      "",
+      "Specify the storage system to connect to by right clicking the Wireless Fluid Grid on the Controller."
+    ]
+  }
+}

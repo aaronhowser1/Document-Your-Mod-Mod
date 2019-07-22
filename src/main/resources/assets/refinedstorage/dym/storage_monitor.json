@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "refinedstorage:storage_monitor"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Shows the current amount of a specific item in the storage system.",
+      "",
+      "Sneak right click with an empty hand and insert an item to make it show the amount of that item.",
+      "",
+      "Right click with that item to insert it directly to the system, and left click to extract it."
+    ]
+  }
+}

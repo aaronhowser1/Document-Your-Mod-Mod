@@ -1,0 +1,25 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "refinedstorage:controller"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "The brain of the storage system.",
+      "All other blocks in the network must be connected to the Controller, either by touching directly or connected via Cable.",
+      "",
+      "Energy should be provided through the Controller. You can open the Controller's GUI to see how much energy the system is using.",
+      "",
+      "You can only have one Controller in a system at a time."
+    ]
+  }
+}

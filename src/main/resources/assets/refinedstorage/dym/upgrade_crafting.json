@@ -1,0 +1,21 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "refinedstorage:upgrade",
+      "metadata": 3
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Allows devices such as the Exporter to automatically craft items if there are none in the system."
+    ]
+  }
+}

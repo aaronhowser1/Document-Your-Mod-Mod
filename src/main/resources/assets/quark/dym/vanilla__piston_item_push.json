@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.automation.feature.PistonsPushPullItems"
+    }
+  ],
+  "for": [
+    {
+      "type": "block",
+      "registry_name": "minecraft:piston"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "When a Piston extends, it will launch items in the direction it's facing."
+    ]
+  }
+}

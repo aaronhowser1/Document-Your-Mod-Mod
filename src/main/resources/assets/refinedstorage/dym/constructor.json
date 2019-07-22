@@ -1,0 +1,21 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "refinedstorage:constructor"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Places blocks/fluids or drops items from the storage system in the world.",
+      "Set what to place/drop in its GUI."
+    ]
+  }
+}

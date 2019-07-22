@@ -1,0 +1,21 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTinkersConstruct",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "tconstruct:throwball",
+      "metadata": 0
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Can be thrown, creates a light source where it lands."
+    ]
+  }
+}

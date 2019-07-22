@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:sturdy_stone"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Sturdy Stone can't be pushed by Pistons."
+    ]
+  }
+}

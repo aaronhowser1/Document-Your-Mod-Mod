@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:redstone_inductor"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "The Redstone Inductor has 3 inputs and 1 output. It outputs a signal whose strength is the sum of all the inputs."
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:fire_jet",
+      "metadata": 1
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Emits smoke particles from the top when given a Redstone signal."
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTinkersConstruct",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "tconstruct:crossbow",
+      "__comment": "Probably NBT?"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Fires Bolts.",
+      "Long range.",
+      "Slow reloading and needs to be reloaded after each shot.",
+      "High damage."
+    ]
+  }
+}

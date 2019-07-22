@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:rope"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Dispensers can place Rope on the bottom if there is already Rope at the top."
+    ]
+  }
+}

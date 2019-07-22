@@ -1,0 +1,26 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:magic_map_empty"
+    },
+    {
+      "type": "item",
+      "registry_name": "twilightforest:magic_map"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Shows the nearby biomes and structures in the Twilight Forest.",
+      "",
+      "Very useful for finding bosses."
+    ]
+  }
+}

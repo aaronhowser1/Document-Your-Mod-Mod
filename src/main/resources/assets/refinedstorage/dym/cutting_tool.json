@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "refinedstorage:cutting_tool"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Craft the Cutting Tool with a block to make Covers of that block."
+    ]
+  }
+}

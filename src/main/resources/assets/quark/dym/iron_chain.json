@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:iron_chain"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Used to link Minecarts/Boats together."
+    ]
+  }
+}

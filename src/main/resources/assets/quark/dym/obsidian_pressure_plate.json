@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:obsidian_pressure_plate"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Only triggers when used by a Player."
+    ]
+  }
+}

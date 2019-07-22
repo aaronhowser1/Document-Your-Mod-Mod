@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTinkersConstruct",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "tconstruct:kama",
+      "__comment": "Probably NBT?"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Can be used as Shears.",
+      "",
+      "Right clicking on crops and Sugarcane harvests and replants all fully grown plants in an area."
+    ]
+  }
+}

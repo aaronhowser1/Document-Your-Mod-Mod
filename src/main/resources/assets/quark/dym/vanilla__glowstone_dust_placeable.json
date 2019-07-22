@@ -1,0 +1,28 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.misc.feature.PlaceVanillaDusts"
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "minecraft:glowstone_dust"
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:glowstone_dust_block"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Can be placed like Redstone Dust to emit light, similar to a Torch."
+    ]
+  }
+}

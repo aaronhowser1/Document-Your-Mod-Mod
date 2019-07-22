@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:uncrafting_table"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Allows you to uncraft an item, destroying it and returning the items used to make it.",
+      "",
+      "Uncrafting takes a level of experience per item gained."
+    ]
+  }
+}

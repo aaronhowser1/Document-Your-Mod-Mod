@@ -1,0 +1,40 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.tweaks.feature.HoeSickle"
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "minecraft:wooden_hoe"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:stone_hoe"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:iron_hoe"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:golden_hoe"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:diamond_hoe"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Hoes will break blocks in a 5x5 area."
+    ]
+  }
+}

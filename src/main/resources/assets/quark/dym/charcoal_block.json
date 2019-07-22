@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:charcoal_block"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Blocks of Charcoal will burn forever, like Netherrack."
+    ]
+  }
+}

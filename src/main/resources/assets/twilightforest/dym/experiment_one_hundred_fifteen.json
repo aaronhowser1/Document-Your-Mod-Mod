@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:experiment_115"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Found in Dark Tower chests.",
+      "",
+      "Food item that restores a small amount of hunger. If you place 8 down on the ground and then click some Redstone on it, it will slowly regenerate when eaten."
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:trophy_pedestal"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Trophy Pedestals block the way into the Goblin Knight Stronghold.",
+      "",
+      "Place a boss Trophy on top of the Pedestal to open the door, letting you in."
+    ]
+  }
+}

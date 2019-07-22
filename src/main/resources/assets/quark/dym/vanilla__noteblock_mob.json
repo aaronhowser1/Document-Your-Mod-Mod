@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.misc.feature.NoteBlocksMobSounds"
+    }
+  ],
+  "for": [
+    {
+      "type": "block",
+      "registry_name": "minecraft:noteblock"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "If a Noteblock has a mob head on it, it will emit that its noise at the pitch set by the Noteblock."
+    ]
+  }
+}

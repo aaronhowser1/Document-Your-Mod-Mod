@@ -1,0 +1,26 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.world.feature.Archaeologist",
+      "field": "dropHat",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:archaeologist_hat"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Archaeologist Hats can drop from Archaeologist, which have a chance of spawning underground."
+    ]
+  }
+}

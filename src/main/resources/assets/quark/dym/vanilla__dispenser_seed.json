@@ -1,0 +1,44 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.automation.feature.DispensersPlaceSeeds"
+    }
+  ],
+  "for": [
+    {
+      "type": "block",
+      "registry_name": "minecraft:dispenser"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:pumpkin_seeds"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:beetroot_seeds"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:wheat_seeds"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:melon_seeds"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:nether_wart"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Dispensers can plant seeds onto all kinds of soil."
+    ]
+  }
+}

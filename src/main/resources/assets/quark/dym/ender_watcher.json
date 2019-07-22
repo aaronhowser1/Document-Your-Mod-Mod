@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:ender_watcher"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Gives off a Redstone signal when being looked at."
+    ]
+  }
+}

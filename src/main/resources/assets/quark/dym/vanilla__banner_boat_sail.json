@@ -1,0 +1,124 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.vanity.feature.BoatSails"
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "minecraft:banner",
+      "metadata": 0
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:banner",
+      "metadata": 1
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:banner",
+      "metadata": 2
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:banner",
+      "metadata": 3
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:banner",
+      "metadata": 4
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:banner",
+      "metadata": 5
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:banner",
+      "metadata": 6
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:banner",
+      "metadata": 7
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:banner",
+      "metadata": 8
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:banner",
+      "metadata": 9
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:banner",
+      "metadata": 10
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:banner",
+      "metadata": 11
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:banner",
+      "metadata": 12
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:banner",
+      "metadata": 13
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:banner",
+      "metadata": 14
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:banner",
+      "metadata": 15
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:boat"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:spruce_boat"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:birch_boat"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:jungle_boat"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:acacia_boat"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:dark_oak_boat"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Right click a Banner on a Boat to add it as a decorative sail."
+    ]
+  }
+}

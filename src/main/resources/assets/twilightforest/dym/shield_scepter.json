@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:shield_scepter"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Can drop from the Lich.",
+      "",
+      "Summons 5 floating shields around yourself or the targeted entity. Shields will negate all damage, but break after.",
+      "",
+      "When it runs out of charges, it can be recharged with a Golden Apple."
+    ]
+  }
+}

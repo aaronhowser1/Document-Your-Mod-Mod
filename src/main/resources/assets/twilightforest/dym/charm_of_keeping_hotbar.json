@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:charm_of_keeping_2"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "When you die, you spawn with your armor and everything in your hotbar, as long as the Charm is anywhere in your inventory. This destroys the Charm."
+    ]
+  }
+}

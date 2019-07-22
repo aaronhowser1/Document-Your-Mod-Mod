@@ -1,0 +1,70 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.tweaks.feature.AxesBreakLeaves"
+    }
+  ],
+  "for": [
+    {
+      "type": "block",
+      "registry_name": "minecraft:leaves",
+      "metadata": 0
+    },
+    {
+      "type": "block",
+      "registry_name": "minecraft:leaves",
+      "metadata": 1
+    },
+    {
+      "type": "block",
+      "registry_name": "minecraft:leaves",
+      "metadata": 2
+    },
+    {
+      "type": "block",
+      "registry_name": "minecraft:leaves",
+      "metadata": 3
+    },
+    {
+      "type": "block",
+      "registry_name": "minecraft:leaves2",
+      "metadata": 0
+    },
+    {
+      "type": "block",
+      "registry_name": "minecraft:leaves2",
+      "metadata": 1
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:wooden_axe"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:stone_axe"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:iron_axe"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:golden_axe"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:diamond_axe"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Axes will very quickly cut through Leaves."
+    ]
+  }
+}

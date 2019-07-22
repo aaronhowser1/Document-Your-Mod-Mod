@@ -1,0 +1,36 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTinkersConstruct",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_boots",
+      "metadata": 0
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_boots",
+      "metadata": 1
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_boots",
+      "metadata": 2
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_boots",
+      "metadata": 3
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Removes all falling damage and makes you bounce."
+    ]
+  }
+}

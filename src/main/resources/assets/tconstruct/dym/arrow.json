@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTinkersConstruct",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "tconstruct:arrow",
+      "__comment": "Probably NBT?"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Fired from Shortbows and Longbows.",
+      "",
+      "Damage depends more on the Bow than the Arrow in general."
+    ]
+  }
+}

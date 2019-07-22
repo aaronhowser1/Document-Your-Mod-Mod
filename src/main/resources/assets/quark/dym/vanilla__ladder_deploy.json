@@ -1,0 +1,28 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.tweaks.feature.DeployLaddersDown"
+    }
+  ],
+  "for": [
+    {
+      "type": "block",
+      "registry_name": "minecraft:ladder"
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:iron_ladder"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Using a Ladder on a Ladder will place it at the bottom."
+    ]
+  }
+}

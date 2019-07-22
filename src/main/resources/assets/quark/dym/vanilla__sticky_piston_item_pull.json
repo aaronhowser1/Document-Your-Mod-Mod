@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.automation.feature.PistonsPushPullItems"
+    }
+  ],
+  "for": [
+    {
+      "type": "block",
+      "registry_name": "minecraft:sticky_piston"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "When a Sticky Piston retracts, it will pull items towards itself."
+    ]
+  }
+}

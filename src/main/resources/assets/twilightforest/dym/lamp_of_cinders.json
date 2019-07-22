@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:lamp_of_cinders"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Found in the Giant Obsidian vault in Troll Caves.",
+      "",
+      "Burns Thorns."
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.decoration.feature.PlaceBlazeRods"
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "minecraft:blaze_rod"
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:blaze_rod"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "You can place Blaze Rods and they will give off light."
+    ]
+  }
+}

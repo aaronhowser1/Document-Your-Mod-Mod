@@ -1,0 +1,21 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTinkersConstruct",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "tconstruct:soil",
+      "metadata": 4
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Adds Smite to the weapon."
+    ]
+  }
+}

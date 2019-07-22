@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "refinedstorageaddons:wireless_crafting_grid",
+      "metadata": 1
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Acts like the Crafting Grid, but works anywhere in range of a Wireless Transmitter.",
+      "",
+      "Specify the storage system to connect to by right clicking the Wireless Crafting Grid on the Controller."
+    ]
+  }
+}

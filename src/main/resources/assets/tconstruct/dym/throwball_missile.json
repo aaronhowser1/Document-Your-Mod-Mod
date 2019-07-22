@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTinkersConstruct",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "tconstruct:throwball",
+      "metadata": 1
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Can be thrown, explodes into a giant crater where it lands.",
+      "",
+      "Items do not get destroyed by the explosion."
+    ]
+  }
+}

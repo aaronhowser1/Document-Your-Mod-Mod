@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:fire_jet",
+      "metadata": 3
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Can be found in Fire Swamps.",
+      "",
+      "Occasionally emits a pillar of fire, using up a Lava source block in a 3x3 area beneath it."
+    ]
+  }
+}

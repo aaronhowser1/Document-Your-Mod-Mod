@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "refinedstorage:cover"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Hides Cables by making them look like a different block on that side. Also blocks connections to other devices.",
+      "",
+      "Crafted by combining a Cutting Tool with a block."
+    ]
+  }
+}

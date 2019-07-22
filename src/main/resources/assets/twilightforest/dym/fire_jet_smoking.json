@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:fire_jet",
+      "metadata": 0
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Can be found in Fire Swamps.",
+      "",
+      "Constantly emits smoke particles from the top."
+    ]
+  }
+}

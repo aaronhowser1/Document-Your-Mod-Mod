@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.tweaks.feature.ChickensShedFeathers"
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "minecraft:feather"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Chickens will occasionally drop Feathers, similarly to Eggs."
+    ]
+  }
+}

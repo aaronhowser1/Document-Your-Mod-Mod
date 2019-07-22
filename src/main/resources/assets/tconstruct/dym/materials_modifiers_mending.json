@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTinkersConstruct",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "tconstruct:materials",
+      "metadata": 19
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Created by using a Ball of Moss on a Bookshelf.",
+      "",
+      "Gradually repairs tools using experience."
+    ]
+  }
+}

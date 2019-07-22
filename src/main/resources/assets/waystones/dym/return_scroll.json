@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useWaystone",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "waystones:return_scroll"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "The Return Scroll teleports you to the most recent Waystone you've used.",
+      "",
+      "This uses up the Scroll."
+    ]
+  }
+}

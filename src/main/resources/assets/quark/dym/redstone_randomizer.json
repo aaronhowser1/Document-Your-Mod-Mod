@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:redstone_randomizer"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "When the Redstone Randomizer receives a signal, it randomly sends a signal to either its left or right outputs."
+    ]
+  }
+}

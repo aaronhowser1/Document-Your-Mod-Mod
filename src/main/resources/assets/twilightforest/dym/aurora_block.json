@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:aurora_block"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Make up the Aurora Palace on Glaciers.",
+      "",
+      "Constantly change color."
+    ]
+  }
+}

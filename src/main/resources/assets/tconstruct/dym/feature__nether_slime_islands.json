@@ -1,0 +1,46 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTinkersConstruct",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_sapling",
+      "metadata": 2
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 4
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 9
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 14
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_dirt",
+      "metadata": 3
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_congealed",
+      "metadata": 4
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Spawn on Nether Slime Islands, which randomly generate on the surface of the Nether's Lava ocean."
+    ]
+  }
+}

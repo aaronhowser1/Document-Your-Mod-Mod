@@ -1,0 +1,26 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.tweaks.feature.ShearableChickens"
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "minecraft:feather"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Chickens can be sheared for 1 Feather, dealing half a heart of damage.",
+      "",
+      "Sheared Chickens will not drop Feathers when killed."
+    ]
+  }
+}

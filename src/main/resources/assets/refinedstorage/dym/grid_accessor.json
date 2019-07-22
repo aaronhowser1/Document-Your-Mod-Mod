@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "refinedstorage:grid",
+      "metadata": 0
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Open the Grid to access items stored in the system.",
+      "You can search for specific items in the search bar at the top."
+    ]
+  }
+}

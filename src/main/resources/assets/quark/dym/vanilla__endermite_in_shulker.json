@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.misc.feature.EndermitesIntoShulkers"
+    }
+  ],
+  "for": [
+    {
+      "type": "block",
+      "registry_name": "minecraft:purpur_block"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Endermites have a chance of burrowing into Purpur Blocks, turning them into Shulkers."
+    ]
+  }
+}

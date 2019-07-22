@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTinkersConstruct",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "tconstruct:shortbow",
+      "__comment": "Probably NBT?"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Fires faster and has faster movement speed while using compared to vanilla Bow.",
+      "Short range.",
+      "",
+      "Works best with lighter Arrows."
+    ]
+  }
+}

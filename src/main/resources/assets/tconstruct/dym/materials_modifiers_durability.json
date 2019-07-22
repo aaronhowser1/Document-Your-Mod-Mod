@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTinkersConstruct",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "tconstruct:materials",
+      "metadata": 14
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Adds a 10% chance to not consume durability.",
+      "",
+      "A tool with Reinforced X has infinite durability, and projectiles with Reinforced X will never run out."
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:tower_device",
+      "metadata": 12
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Surround with Redstone Blocks for a good time.",
+      "",
+      "DISCLAIMER: we are not responsible for loss of life or property."
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTinkersConstruct",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "tconstruct:longbow",
+      "__comment": "Probably NBT?"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Fires slower.",
+      "Much higher damage.",
+      "Long range.",
+      "",
+      "Works best with heavier arrows."
+    ]
+  }
+}

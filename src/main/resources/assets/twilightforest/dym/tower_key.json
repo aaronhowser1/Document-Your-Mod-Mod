@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:tower_key"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Unlocks Locked Vanishing Blocks. Find them by exploring the area surrounding the locked pathway."
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTinkersConstruct",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slimesling",
+      "metadata": 0
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slimesling",
+      "metadata": 1
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slimesling",
+      "metadata": 2
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slimesling",
+      "metadata": 3
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Hold right click and release while looking at a block to be flung in the opposite direction."
+    ]
+  }
+}

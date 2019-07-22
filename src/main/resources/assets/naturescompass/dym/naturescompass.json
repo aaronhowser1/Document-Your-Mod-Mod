@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useNaturesCompass",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "naturescompass:naturescompass"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Use to open a list of biomes. Select one from the list and the Compass will point towards the nearest instance of that biome."
+    ]
+  }
+}

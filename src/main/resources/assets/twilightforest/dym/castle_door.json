@@ -1,0 +1,38 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:castle_door",
+      "metadata": 0
+    },
+    {
+      "type": "item",
+      "registry_name": "twilightforest:castle_door",
+      "metadata": 1
+    },
+    {
+      "type": "item",
+      "registry_name": "twilightforest:castle_door",
+      "metadata": 2
+    },
+    {
+      "type": "item",
+      "registry_name": "twilightforest:castle_door",
+      "metadata": 3
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Right click a Castle Door and all connected Castle Doors will temporarily disappear, allowing entites to walk through them.",
+      "",
+      "Also activates when given a Redstone signal."
+    ]
+  }
+}

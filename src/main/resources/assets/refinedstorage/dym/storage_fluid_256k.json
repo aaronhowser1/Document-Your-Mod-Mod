@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "refinedstorage:fluid_storage",
+      "metadata": 1
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Stores 256,000 mB (256 buckets) of fluid.",
+      "",
+      "Essentially a 256k Fluid Storage Disk in block form."
+    ]
+  }
+}

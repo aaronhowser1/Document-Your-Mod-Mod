@@ -1,0 +1,96 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:candle",
+      "metadata": 0
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:candle",
+      "metadata": 1
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:candle",
+      "metadata": 2
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:candle",
+      "metadata": 3
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:candle",
+      "metadata": 4
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:candle",
+      "metadata": 5
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:candle",
+      "metadata": 6
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:candle",
+      "metadata": 7
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:candle",
+      "metadata": 8
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:candle",
+      "metadata": 9
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:candle",
+      "metadata": 10
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:candle",
+      "metadata": 11
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:candle",
+      "metadata": 12
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:candle",
+      "metadata": 13
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:candle",
+      "metadata": 14
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:candle",
+      "metadata": 15
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Comes in all 16 colors. If there is no block underneath, it will fall like sand. Candles are equal to half a Bookshelf for Enchanting Tables."
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "refinedstorage:upgrade",
+      "metadata": 7
+    },
+    {
+      "type": "item",
+      "registry_name": "refinedstorage:upgrade",
+      "metadata": 8
+    },
+    {
+      "type": "item",
+      "registry_name": "refinedstorage:upgrade",
+      "metadata": 9
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Enchants the Destructor with Fortune."
+    ]
+  }
+}

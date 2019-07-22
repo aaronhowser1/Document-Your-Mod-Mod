@@ -1,0 +1,56 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.automation.feature.AnimalsEatFloorFood"
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "minecraft:wheat"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:carrot"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:potato"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:beetroot"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:wheat_seeds"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:pumpkin_seeds"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:beetroot_seeds"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:pumpkin_seeds"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:nether_wart"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Animals will eat food that's been dropped on the ground, so you can automate animal breeding with Droppers."
+    ]
+  }
+}

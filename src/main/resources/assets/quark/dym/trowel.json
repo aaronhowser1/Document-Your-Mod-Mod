@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:trowel"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "When used, places a random block from your hotbar."
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "refinedstorage:network_receiver"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Network Transmitters connect to Network Receivers that have their Network Card. This allows the Network Receiver to connect to the Controller at the main location from anywhere else."
+    ]
+  }
+}

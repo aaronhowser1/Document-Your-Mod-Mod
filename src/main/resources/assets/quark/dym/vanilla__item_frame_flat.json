@@ -1,0 +1,110 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.decoration.feature.FlatItemFrames"
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "minecraft:item_frame"
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 0
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 1
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 2
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 3
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 4
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 5
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 6
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 7
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 8
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 9
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 10
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 11
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 12
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 13
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 14
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 15
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:glass_item_frame"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Item Frames can be placed on floors and ceilings.",
+      "",
+      "The top of the frame points North."
+    ]
+  }
+}

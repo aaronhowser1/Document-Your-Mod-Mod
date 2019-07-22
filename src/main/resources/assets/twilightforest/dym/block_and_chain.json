@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:block_and_chain"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "When used, throws a projectile that returns to you after going a certain distance.",
+      "",
+      "Deals 5 hearts of damage, and destroys any blocks it touches."
+    ]
+  }
+}

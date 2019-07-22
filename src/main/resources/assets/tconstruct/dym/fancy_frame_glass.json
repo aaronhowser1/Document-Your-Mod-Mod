@@ -1,0 +1,21 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTinkersConstruct",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "tconstruct:fancy_frame",
+      "metadata": 6
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Disappears when an item is placed in it, so you can only see the item."
+    ]
+  }
+}

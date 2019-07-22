@@ -1,0 +1,96 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:rune",
+      "metadata": 0
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:rune",
+      "metadata": 1
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:rune",
+      "metadata": 2
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:rune",
+      "metadata": 3
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:rune",
+      "metadata": 4
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:rune",
+      "metadata": 5
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:rune",
+      "metadata": 6
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:rune",
+      "metadata": 7
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:rune",
+      "metadata": 8
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:rune",
+      "metadata": 9
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:rune",
+      "metadata": 10
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:rune",
+      "metadata": 11
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:rune",
+      "metadata": 12
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:rune",
+      "metadata": 13
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:rune",
+      "metadata": 14
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:rune",
+      "metadata": 15
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Combine with enchanted items in an Anvil to change the color of the glow."
+    ]
+  }
+}

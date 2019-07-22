@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:ender_bow"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Can be found in the Aurora Palace.",
+      "",
+      "When you shoot a mob, it will swap your positions."
+    ]
+  }
+}

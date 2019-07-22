@@ -1,0 +1,35 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.vanity.feature.DyeItemNames"
+    }
+  ],
+  "for": [
+    {
+      "type": "block",
+      "registry_name": "minecraft:anvil",
+      "metadata": 0
+    },
+    {
+      "type": "block",
+      "registry_name": "minecraft:anvil",
+      "metadata": 1
+    },
+    {
+      "type": "block",
+      "registry_name": "minecraft:anvil",
+      "metadata": 2
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Combine any item with a dye in the Anvil to color its name in the tooltip."
+    ]
+  }
+}

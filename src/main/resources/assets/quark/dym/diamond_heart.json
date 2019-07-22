@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:diamond_heart"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Has a chance of dropping from Stonelings.",
+      "",
+      "Right click on a Stoneling to tame it, allowing it to hold your items, eat Stone, and follow you when you're holding a Diamond."
+    ]
+  }
+}

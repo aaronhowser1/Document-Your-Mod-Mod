@@ -1,0 +1,34 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.tweaks.feature.LookDownLadders"
+    }
+  ],
+  "for": [
+    {
+      "type": "block",
+      "registry_name": "minecraft:ladder"
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:iron_ladder"
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:stone_ladder"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "You can quickly slide down Ladders by looking down.",
+      "",
+      "You will also stop on Ladders if you open your inventory or chat."
+    ]
+  }
+}

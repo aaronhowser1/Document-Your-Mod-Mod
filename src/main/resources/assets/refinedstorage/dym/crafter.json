@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "refinedstorage:crafter"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Crafts items according to recipes set by the Patterns inside them.",
+      "",
+      "A Crafter facing a block will try to use that block for processing recipes.",
+      "A Crafter facing another Crafter will try to use the block that that Crafter is facing."
+    ]
+  }
+}

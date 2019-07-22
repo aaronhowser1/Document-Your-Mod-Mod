@@ -1,0 +1,30 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.automation.feature.PistonsMoveTEs"
+    }
+  ],
+  "for": [
+    {
+      "type": "block",
+      "registry_name": "minecraft:sticky_piston"
+    },
+    {
+      "type": "block",
+      "registry_name": "minecraft:piston"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Pistons can push and pull tile entities such as Furnaces and Chests.",
+      "",
+      "Some tile entities still can't be moved, like Mob Spawners."
+    ]
+  }
+}

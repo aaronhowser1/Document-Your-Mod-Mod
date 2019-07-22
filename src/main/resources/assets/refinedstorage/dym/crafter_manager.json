@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "refinedstorage:crafter_manager"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "The Crafter Manager allows you to see the Patterns in all Crafters connected to the Controller.",
+      "",
+      "Crafters connected to machines will be named after that machine, and Crafters that have been renamed in an Anvil will have that name."
+    ]
+  }
+}

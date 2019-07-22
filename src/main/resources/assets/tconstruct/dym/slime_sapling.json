@@ -1,0 +1,31 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTinkersConstruct",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_sapling",
+      "metadata": 0
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_sapling",
+      "metadata": 1
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_sapling",
+      "metadata": 2
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Grows into a tree made of Congealed Slime."
+    ]
+  }
+}

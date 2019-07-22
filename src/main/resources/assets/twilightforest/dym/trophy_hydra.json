@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:trophy",
+      "metadata": 2
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Dropped by the Hydra.",
+      "",
+      "Can be placed or worn on your head."
+    ]
+  }
+}

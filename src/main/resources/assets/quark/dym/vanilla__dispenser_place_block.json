@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.automation.feature.DispensersPlaceBlocks"
+    }
+  ],
+  "for": [
+    {
+      "type": "block",
+      "registry_name": "minecraft:dispenser"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Dispensers can place blocks into the world."
+    ]
+  }
+}

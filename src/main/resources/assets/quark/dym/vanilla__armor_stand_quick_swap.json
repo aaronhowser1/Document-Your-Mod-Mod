@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.tweaks.feature.QuickArmorSwapping"
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "minecraft:armor_stand"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Sneak right click an Armor Stand to swap all of your armor and the item in your offhand."
+    ]
+  }
+}

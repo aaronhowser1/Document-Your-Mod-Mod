@@ -1,0 +1,76 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.automation.feature.DispenserRecords"
+    }
+  ],
+  "for": [
+    {
+      "type": "block",
+      "registry_name": "minecraft:dispenser"
+    },
+    {
+      "type": "block",
+      "registry_name": "minecraft:jukebox"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:record_13"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:record_cat"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:record_blocks"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:record_chirp"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:record_far"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:record_mall"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:record_mellohi"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:record_stal"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:record_strad"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:record_ward"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:record_11"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:record_wait"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Dispensers can move Music Discs into and out of Jukeboxes."
+    ]
+  }
+}

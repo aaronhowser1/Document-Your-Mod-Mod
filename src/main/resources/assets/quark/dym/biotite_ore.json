@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:biotite_ore"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Biotite Ore generates on the main End island when an Ender Dragon dies."
+    ]
+  }
+}

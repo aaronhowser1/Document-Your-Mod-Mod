@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "refinedstorage:crafting_monitor"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Shows all currently running crafting tasks in the system."
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.world.feature.Wraiths",
+      "field": "enableCurse",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:soul_bead"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Has a chance of dropping from Wraiths, which spawn in the Nether.",
+      "",
+      "When used, inflicts the Curse debuff for 10 minutes. Monsters will spawn regardless of light level around the player during that time."
+    ]
+  }
+}

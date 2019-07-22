@@ -1,0 +1,30 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:twilight_sapling",
+      "metadata": 5
+    },
+    {
+      "type": "item",
+      "registry_name": "twilightforest:magic_log_core",
+      "metadata": 0
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Can be found in Leaf Dungeons.",
+      "",
+      "Speeds up plant growth around itself. Can be toggled by right clicking on the Timewood Clock block.",
+      "",
+      "Breaking the Timewood Clock block will destroy it."
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:smoker"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Emits smoke if there is no block above it.",
+      "",
+      "If there is a 1x1 chimney directly above it surrounded by solid blocks, the smoke will travel all the way to the top."
+    ]
+  }
+}

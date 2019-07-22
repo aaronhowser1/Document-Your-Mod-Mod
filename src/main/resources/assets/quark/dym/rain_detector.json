@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:rain_detector"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Provides a signal when it's being rained on. Can be inverted by right clicking."
+    ]
+  }
+}

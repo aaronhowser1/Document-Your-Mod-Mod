@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:maze_map_focus"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Found in chests in the Labyrinth."
+    ]
+  }
+}

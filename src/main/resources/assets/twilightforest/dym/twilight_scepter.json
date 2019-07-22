@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:twilight_scepter"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Can drop from the Lich.",
+      "",
+      "Shoots out a projectile that deals 2.5 hearts of damage.",
+      "",
+      "When it runs out of charges, it can be recharged with an Ender Pearl."
+    ]
+  }
+}

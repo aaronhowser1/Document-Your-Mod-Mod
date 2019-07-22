@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useWaystone",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "waystones:waystone"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "You can teleport between all Waystones you've ever used, at the cost of experience depending on distance."
+    ]
+  }
+}

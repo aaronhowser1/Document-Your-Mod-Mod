@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:black_ash"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Monsters cannot spawn on Wither Ash, or on the block above Wither Ash."
+    ]
+  }
+}

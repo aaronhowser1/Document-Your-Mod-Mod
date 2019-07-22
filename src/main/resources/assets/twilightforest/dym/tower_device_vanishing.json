@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:tower_device",
+      "metadata": 2
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Right click a Vanishing Block and all connected Vanishing Blocks will permanently disappear.",
+      "",
+      "Also activates when given a Redstone signal."
+    ]
+  }
+}

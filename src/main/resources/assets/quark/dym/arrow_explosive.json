@@ -1,0 +1,21 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:arrow_explosive"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Explodes where it hits.",
+      "Can be fired from Dispensers."
+    ]
+  }
+}

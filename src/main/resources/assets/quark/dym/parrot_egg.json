@@ -1,0 +1,41 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:parrot_egg",
+      "metadata": 0
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:parrot_egg",
+      "metadata": 1
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:parrot_egg",
+      "metadata": 2
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:parrot_egg",
+      "metadata": 3
+    },
+    {
+      "type": "item",
+      "registry_name": "quark:parrot_egg",
+      "metadata": 4
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Feeding Beetroot Seeds to a Parrot has a chance to make it hatch a Parrot Egg, which can be thrown to get a guaranteed Parrot of the same color."
+    ]
+  }
+}

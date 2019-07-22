@@ -1,0 +1,46 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.management.feature.ChestsInBoats"
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "minecraft:boat"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:spruce_boat"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:birch_boat"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:jungle_boat"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:acacia_boat"
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:dark_oak_boat"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Right click a Chest on a Boat to place it on the Boat.",
+      "",
+      "While in the Boat, opening your inventory will also open the Chest's inventory."
+    ]
+  }
+}

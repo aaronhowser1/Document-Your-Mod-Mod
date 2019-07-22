@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "refinedstorage:fluid_interface"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Fluids inserted into a Fluid Interface instantly go into the system.",
+      "",
+      "You can set fluids that will be provided to the Interface, which can be extracted by some other means."
+    ]
+  }
+}

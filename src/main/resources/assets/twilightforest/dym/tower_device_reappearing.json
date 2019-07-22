@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:tower_device",
+      "metadata": 0
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Right click a Reappearing Block and all connected Reappearing Blocks will temporarily disappear, allowing entities to walk through them.",
+      "",
+      "Also activates when given a Redstone signal."
+    ]
+  }
+}

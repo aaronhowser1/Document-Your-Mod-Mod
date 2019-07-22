@@ -1,0 +1,116 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTinkersConstruct",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_sapling",
+      "metadata": 0
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_sapling",
+      "metadata": 1
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 0
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 1
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 2
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 3
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 5
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 6
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 7
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 8
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 10
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 11
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 12
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 13
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_dirt",
+      "metadata": 0
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_dirt",
+      "metadata": 1
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_dirt",
+      "metadata": 2
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_congealed",
+      "metadata": 0
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_congealed",
+      "metadata": 1
+    },
+    {
+      "type": "item",
+      "registry_name": "tconstruct:slime_congealed",
+      "metadata": 2
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Spawn on Slime Islands, which randomly generate floating in the air in the Overworld."
+    ]
+  }
+}

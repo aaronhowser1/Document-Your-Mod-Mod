@@ -1,0 +1,21 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "refinedstorage:upgrade",
+      "metadata": 1
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Increases the range of a Wireless Transmitter by 8 blocks each."
+    ]
+  }
+}

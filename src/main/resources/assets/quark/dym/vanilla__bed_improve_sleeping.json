@@ -1,0 +1,100 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.tweaks.feature.ImprovedSleeping"
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "minecraft:bed",
+      "metadata": 0
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:bed",
+      "metadata": 1
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:bed",
+      "metadata": 2
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:bed",
+      "metadata": 3
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:bed",
+      "metadata": 4
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:bed",
+      "metadata": 5
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:bed",
+      "metadata": 6
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:bed",
+      "metadata": 7
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:bed",
+      "metadata": 8
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:bed",
+      "metadata": 9
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:bed",
+      "metadata": 10
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:bed",
+      "metadata": 11
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:bed",
+      "metadata": 12
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:bed",
+      "metadata": 13
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:bed",
+      "metadata": 14
+    },
+    {
+      "type": "item",
+      "registry_name": "minecraft:bed",
+      "metadata": 15
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Server admins can set it so only a percentage of players have to be asleep to skip the night instead of requiring everyone sleep."
+    ]
+  }
+}

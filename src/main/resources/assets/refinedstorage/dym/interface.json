@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "refinedstorage:interface"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Items inserted into an Interface instantly go into the system.",
+      "",
+      "You can set items that will be provided to the Interface, which can be extracted by some other means."
+    ]
+  }
+}

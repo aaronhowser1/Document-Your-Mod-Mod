@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "refinedstorage:hollow_cover"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Like the Cover, but it can connect to other devices."
+    ]
+  }
+}

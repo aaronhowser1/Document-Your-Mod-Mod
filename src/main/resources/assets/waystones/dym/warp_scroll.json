@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useWaystone",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "waystones:warp_scroll"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "The Warp Scroll allows you to teleport to any Waystone you've ever used from anywhere.",
+      "",
+      "This uses up the Scroll."
+    ]
+  }
+}

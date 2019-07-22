@@ -1,0 +1,34 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "twilightforest:transformation_powder"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Found in treasure chests in Hollow Hills.",
+      "",
+      "Swaps mobs between their Overworld and Twilight Forest versions.",
+      "",
+      "Cow ⬌ Deer",
+      "Pig ⬌ Boar",
+      "Sheep ⬌ Bighorn Sheep",
+      "Bat ⬌ Raven",
+      "Chicken ⬌ Penguin",
+      "Spider ⬌ Hedge Spider",
+      "Cave Spider ⬌ Swarm Spider",
+      "Blaze ⬌ Wraith",
+      "Villager ⬌ Redcap Goblin",
+      "Witch ⬌ Skeleton Druid",
+      "Zombie Pigman ⬌ Minotaur"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "item",
+      "registry_name": "quark:grate"
+    }
+  ],
+  "documentation": {
+    "en_us": [
+      "Items will fall through placed Grates.",
+      "",
+      "Mobs will not walk over them."
+    ]
+  }
+}
