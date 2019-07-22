@@ -6,10 +6,9 @@ import com.google.gson.JsonParseException;
 import net.minecraft.util.JsonUtils;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.ModContainer;
-import vazkii.quark.base.module.Module;
-import vazkii.quark.base.module.ModuleLoader;
 
 import javax.annotation.Nonnull;
+import java.lang.reflect.Method;
 import java.util.function.BooleanSupplier;
 
 public class QuarkModuleCheckingConditionFactory implements ConditionFactory {
@@ -24,7 +23,15 @@ public class QuarkModuleCheckingConditionFactory implements ConditionFactory {
             final Class<?> maybeClass = Class.forName(className);
             final Class<?> moduleClass = Class.forName("vazkii.quark.base.module.Module");
             if (!moduleClass.isAssignableFrom(maybeClass)) throw new JsonParseException("Given class is not a feature class");
-            return () -> ModuleLoader.isModuleEnabled((Class<? extends Module>) maybeClass);
+            final Class<?> moduleLoader = Class.forName("vazkii.quark.base.module.ModuleLoader");
+            final Method isModuleEnabled = moduleLoader.getDeclaredMethod("isModuleEnabled", Class.class);
+            return () -> {
+                try {
+                    return (boolean) isModuleEnabled.invoke(null, maybeClass);
+                } catch (final ReflectiveOperationException e) {
+                    return false;
+                }
+            };
         } catch (final ReflectiveOperationException e) {
             throw new JsonParseException("Given class name does not exist: " + className);
         }

@@ -1,7 +1,6 @@
 package com.aaronhowser1.documentmod.json;
 
 import com.aaronhowser1.documentmod.DocumentMod;
-import com.aaronhowser1.documentmod.config.DYMMConfig;
 import com.aaronhowser1.documentmod.json.conditions.DocumentModConfigurationOption;
 import com.aaronhowser1.documentmod.quark.QuarkBooleanFieldCheckerConditionFactory;
 import com.aaronhowser1.documentmod.quark.QuarkFeatureCheckingConditionFactory;
@@ -15,8 +14,6 @@ import net.minecraftforge.fml.common.ModContainer;
 import net.minecraftforge.fml.common.ProgressManager;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
-import vazkii.quark.base.module.Module;
-import vazkii.quark.base.module.ModuleLoader;
 
 import javax.annotation.Nonnull;
 import java.io.BufferedReader;
