@@ -82,7 +82,7 @@ public enum DocumentationLoader {
                 return;
             }
 
-            final Path finalRoot = root.toFile().toPath();
+            final Path finalRoot = root;
 
             Files.walk(root).forEach(file -> this.loadJsonFile(modContainer, file, finalRoot));
         } catch (IOException e) {
