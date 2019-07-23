@@ -1,32 +1,31 @@
 package com.aaronhowser1.documentmod.json;
 
 import com.aaronhowser1.documentmod.DocumentMod;
+import com.aaronhowser1.documentmod.json.stacks.BlockStackFactory;
+import com.aaronhowser1.documentmod.json.stacks.ItemStackFactory;
+import com.aaronhowser1.documentmod.quark.QuarkEnchantedBookStackFactory;
+import com.aaronhowser1.documentmod.tconstruct.TinkerNbtStackFactory;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
-import com.google.gson.*;
-import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
+import com.google.common.collect.Maps;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.JsonSyntaxException;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.*;
 import net.minecraft.util.JsonUtils;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import java.util.*;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public final class ModDocumentation {
 
-    public enum Type {
-        ITEM,
-        BLOCK
-    }
-
     private static final Random RANDOM = ThreadLocalRandom.current();
+    private static final Map<String, StackFactory> STACK_FACTORIES = Maps.newHashMap();
 
     private final ItemStack itemStack;
     private final List<String> translationKeys;
@@ -37,6 +36,13 @@ public final class ModDocumentation {
         this.itemStack = itemStack;
         this.translationKeys = translationKeys;
         this.registryName = registryName;
+    }
+
+    static {
+        STACK_FACTORIES.put("dym:item", new ItemStackFactory());
+        STACK_FACTORIES.put("dym:block", new BlockStackFactory());
+        STACK_FACTORIES.put("quark:enchantment_book", new QuarkEnchantedBookStackFactory());
+        STACK_FACTORIES.put("tconstruct:nbt_tool", new TinkerNbtStackFactory());
     }
 
     @Nonnull
@@ -62,7 +68,7 @@ public final class ModDocumentation {
             nameBuilder.append(".metadata.");
             nameBuilder.append(stack.getMetadata());
             nameBuilder.append(".$._hash__self_gen_");
-            nameBuilder.append(RANDOM.nextInt(Character.MAX_VALUE));
+            nameBuilder.append(RANDOM.nextInt(Integer.MAX_VALUE));
             final ResourceLocation registryName = new ResourceLocation(nameBuilder.toString());
             returningList.add(new ModDocumentation(stack, translationKeys, registryName));
         }
@@ -72,161 +78,24 @@ public final class ModDocumentation {
 
     @Nonnull
     private static List<ItemStack> getItemStacksIntoList(@Nonnull final JsonArray jsonArray) {
-        final List<ItemStack> returningList = new ArrayList<>();
+        final List<ItemStack> returningList = Lists.newArrayList();
         jsonArray.forEach(element -> {
             if (!element.isJsonObject()) throw new JsonSyntaxException("for elements must be objects");
             final JsonObject jsonObject = element.getAsJsonObject();
-            final ItemStack stack = parseItemStackJsonObject(jsonObject);
-            if (stack != null) returningList.add(stack);
+            final List<ItemStack> stack = parseItemStackJsonObject(jsonObject);
+            if (!stack.isEmpty()) returningList.addAll(stack);
         });
         return returningList;
     }
 
-    @Nullable
-    private static ItemStack parseItemStackJsonObject(@Nonnull final JsonObject jsonObject) {
-        final Type type = Type.valueOf(JsonUtils.getString(jsonObject, "type").toUpperCase(Locale.ENGLISH));
-        final String registryName = JsonUtils.getString(jsonObject, "registry_name");
-        final int metadata = JsonUtils.getInt(jsonObject, "metadata", 0);
-        final NBTTagCompound base = parseNbt(jsonObject);
-        ItemStack targetStack = null;
-        switch (type) {
-            case ITEM:
-                final Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation(registryName));
-                if (item == null || item == Items.AIR) {
-                    DocumentMod.logger.warn("Item with given registry name '" + registryName + "' does not exist. Skipping");
-                } else {
-                    targetStack = new ItemStack(item, 1, metadata);
-                }
-                break;
-            case BLOCK:
-                final Block block = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(registryName));
-                if (block == null || block == Blocks.AIR) {
-                    DocumentMod.logger.warn("Block with given registry name '" + registryName + "' does not exist. Skipping");
-                    targetStack = null;
-                    break;
-                }
-                final ItemStack tmpStack = new ItemStack(Item.getItemFromBlock(block), 1, metadata);
-                if (tmpStack.isEmpty()) {
-                    DocumentMod.logger.warn("Block '" + registryName + "' is not supported: does not have an ItemBlock");
-                } else {
-                    targetStack = tmpStack;
-                }
+    @Nonnull
+    private static List<ItemStack> parseItemStackJsonObject(@Nonnull final JsonObject jsonObject) {
+        final String type = JsonUtils.getString(jsonObject, "type");
+        final StackFactory stackFactory = STACK_FACTORIES.getOrDefault(type, STACK_FACTORIES.getOrDefault("dym:" + type, null));
+        if (stackFactory == null) {
+            throw new JsonParseException("Unable to find stack factory for given type " + type);
         }
-        if (targetStack == null) {
-            return null;
-        }
-        if (base != null) {
-            targetStack.deserializeNBT(base);
-        }
-        return targetStack;
-    }
-
-    @Nullable
-    private static NBTTagCompound parseNbt(@Nonnull final JsonObject jsonObject) {
-        if (!jsonObject.has("nbt")) return null;
-        if (!jsonObject.get("nbt").isJsonObject()) throw new JsonSyntaxException("nbt must be an object!");
-
-        final NBTTagCompound compound = new NBTTagCompound();
-        compound.setString("id", "minecraft:air");
-        compound.setByte("Count", (byte) 1);
-        compound.setShort("Damage", (short) 0);
-
-        final JsonObject nbt = jsonObject.get("nbt").getAsJsonObject();
-        final NBTTagCompound tag = new NBTTagCompound();
-
-        parseNbtTagCompound(nbt, tag, 0);
-
-        compound.setTag("tag", tag);
-
-        return compound;
-    }
-
-    private static void parseNbtTagCompound(@Nonnull final JsonObject jsonObject, @Nonnull final NBTTagCompound compound, final int recursionLevel) {
-        if (recursionLevel >= 10) {
-            throw new JsonSyntaxException("You're more than 10 levels deep! This is a bit too much for NBT, you know?");
-        }
-        jsonObject.entrySet().forEach(entry -> {
-            final String key = entry.getKey();
-            final JsonObject value = JsonUtils.getJsonObject(entry.getValue(), key);
-            parseNbtTag(compound, key, value, recursionLevel + 1);
-        });
-    }
-
-    private static void parseNbtTag(@Nonnull final NBTTagCompound compound, @Nonnull final String key, @Nonnull final JsonObject value, final int recursionLevel) {
-        if (recursionLevel >= 10) {
-            throw new JsonSyntaxException("You're more than 10 levels deep! This is a bit too much for NBT, you know?");
-        }
-        final String nbtType = JsonUtils.getString(value, "type");
-        switch (nbtType) {
-            case "end":
-                compound.setTag(key, new NBTTagEnd());
-                break;
-            case "byte":
-                compound.setByte(key, (byte) JsonUtils.getInt(value, "value"));
-                break;
-            case "short":
-                compound.setShort(key, (short) JsonUtils.getInt(value, "value"));
-                break;
-            case "int":
-                compound.setInteger(key, JsonUtils.getInt(value, "value"));
-                break;
-            case "long":
-                compound.setLong(key, (long) JsonUtils.getInt(value, "value"));
-                break;
-            case "float":
-                compound.setFloat(key, JsonUtils.getFloat(value, "value"));
-                break;
-            case "double":
-                compound.setDouble(key, (double) JsonUtils.getFloat(value, "value"));
-                break;
-            case "byte_array":
-                final JsonArray jsonByteArray = JsonUtils.getJsonArray(value, "value");
-                final byte[] byteArray = new byte[jsonByteArray.size()];
-                for (int i = 0; i < byteArray.length; ++i) {
-                    byteArray[i] = (byte) JsonUtils.getInt(jsonByteArray.get(i), key + "[" + i + "]");
-                }
-                compound.setByteArray(key, byteArray);
-                break;
-            case "string":
-                compound.setString(key, JsonUtils.getString(value, "value"));
-                break;
-            case "list":
-                final JsonArray jsonTagListArray = JsonUtils.getJsonArray(value, "value");
-                final NBTTagList nbtTagList = new NBTTagList();
-                for (int i = 0; i < jsonTagListArray.size(); ++i) {
-                    final NBTTagCompound throwAwayCompound = new NBTTagCompound();
-                    final String throwAwayKey = "item_" + i;
-                    final JsonObject nbtTag = JsonUtils.getJsonObject(jsonTagListArray.get(i), key + "[" + i + "]");
-                    parseNbtTag(throwAwayCompound, throwAwayKey, nbtTag, recursionLevel + 1);
-                    nbtTagList.appendTag(throwAwayCompound.getTag(throwAwayKey));
-                }
-                compound.setTag(key, nbtTagList);
-                break;
-            case "compound":
-                final NBTTagCompound childCompound = new NBTTagCompound();
-                parseNbtTagCompound(JsonUtils.getJsonObject(value, "value"), childCompound, recursionLevel + 1);
-                compound.setTag(key, childCompound);
-                break;
-            case "int_array":
-                final JsonArray jsonIntArray = JsonUtils.getJsonArray(value, "value");
-                final int[] intArray = new int[jsonIntArray.size()];
-                for (int i = 0; i < intArray.length; ++i) {
-                    intArray[i] = JsonUtils.getInt(jsonIntArray.get(i), key + "[" + i + "]");
-                }
-                compound.setIntArray(key, intArray);
-                break;
-            case "long_array":
-                final JsonArray jsonLongArray = JsonUtils.getJsonArray(value, "value");
-                final long[] longArray = new long[jsonLongArray.size()];
-                for (int i = 0; i < longArray.length; ++i) {
-                    longArray[i] = (long) JsonUtils.getInt(jsonLongArray.get(i), key + "[" + i + "]");
-                }
-                final NBTTagLongArray nbtTagLongArray = new NBTTagLongArray(longArray);
-                compound.setTag(key, nbtTagLongArray);
-                break;
-            default:
-                throw new JsonParseException("The given type " + nbtType + " is not a valid NBT type");
-        }
+        return stackFactory.parseFromJson(jsonObject);
     }
 
     @Nonnull

@@ -8,9 +8,8 @@
   ],
   "for": [
     {
-      "type": "item",
-      "registry_name": "tconstruct:excavator",
-      "__comment": "Probably NBT?"
+      "type": "tconstruct:nbt_tool",
+      "registry_name": "tconstruct:excavator"
     }
   ],
   "documentation": [

@@ -12,9 +12,7 @@
   ],
   "for": [
     {
-      "type": "item",
-      "registry_name": "minecraft:enchanted_book",
-      "__comment": "NBT? Maybe?"
+      "type": "quark:enchantment_book"
     }
   ],
   "documentation": [
