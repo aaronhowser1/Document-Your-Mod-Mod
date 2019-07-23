@@ -96,13 +96,7 @@
       }
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Something something something",
-      "Java Java Java"
-    ],
-    "de_de": [
-      "Das ist Deutsch"
-    ]
-  }
+  "documentation": [
+    "document.lang.asd"
+  ]
 }

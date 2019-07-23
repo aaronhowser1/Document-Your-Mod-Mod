@@ -12,11 +12,7 @@
       "registry_name": "waystones:warp_scroll"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "The Warp Scroll allows you to teleport to any Waystone you've ever used from anywhere.",
-      "",
-      "This uses up the Scroll."
-    ]
-  }
+  "documentation": [
+    "dym.doc.waystones.warp_scroll"
+  ]
 }

@@ -36,9 +36,7 @@
       "registry_name": "minecraft:spruce_door"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Doors placed together will open together."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.door_double"
+  ]
 }

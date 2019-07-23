@@ -12,9 +12,7 @@
       "registry_name": "quark:pickarang"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Breaks the block it hits when thrown, and returns with the drop."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.pickarang"
+  ]
 }

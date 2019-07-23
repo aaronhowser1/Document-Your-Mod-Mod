@@ -10,4 +10,9 @@ public class CommonProxy {
     public void preInit(@Nonnull final FMLPreInitializationEvent event) {}
     public void init(@Nonnull final FMLInitializationEvent event) {}
     public void postInit(@Nonnull final FMLPostInitializationEvent event) {}
+
+    @SuppressWarnings("BooleanMethodIsAlwaysInverted")
+    public boolean canTranslate(@Nonnull final String key) {
+        return true; // There is no way to check on the server
+    }
 }

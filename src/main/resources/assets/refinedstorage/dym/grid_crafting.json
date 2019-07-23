@@ -13,9 +13,7 @@
       "metadata": 1
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Functions like the Grid, but has a 3x3 crafting grid."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.grid_crafting"
+  ]
 }

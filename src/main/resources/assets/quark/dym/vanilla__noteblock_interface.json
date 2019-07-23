@@ -16,11 +16,7 @@
       "registry_name": "minecraft:noteblock"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Right clicking a Noteblock will open a piano-style interface. You can click on a piano key to set it to that note.",
-      "",
-      "You can also press the eight leftmost letter keys on your keyboard to play the keys."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.noteblock_interface"
+  ]
 }

@@ -12,11 +12,7 @@
       "registry_name": "refinedstorage:disk_drive"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Stores Storage Disks and Fluid Storage Disks.",
-      "",
-      "Higher priority Disk Drives will get items before lower priority Disk Drives."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.disk_drive"
+  ]
 }

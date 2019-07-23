@@ -20,9 +20,7 @@
       "registry_name": "quark:glowstone_dust_block"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Can be placed like Redstone Dust to emit light, similar to a Torch."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.glowstone_dust_placeable"
+  ]
 }

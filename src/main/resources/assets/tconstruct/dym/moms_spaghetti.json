@@ -12,11 +12,7 @@
       "registry_name": "tconstruct:moms_spaghetti"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Add Beetroot Soup \"sauce\" and any three cooked meats in the Tool Station to fully prepare it.",
-      "",
-      "Can be eaten 100 times."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.moms_spaghetti"
+  ]
 }

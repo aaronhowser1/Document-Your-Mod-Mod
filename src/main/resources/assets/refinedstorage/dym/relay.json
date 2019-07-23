@@ -12,9 +12,7 @@
       "registry_name": "refinedstorage:relay"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Relays act like Cables that disconnect when given a Redstone signal."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.relay"
+  ]
 }

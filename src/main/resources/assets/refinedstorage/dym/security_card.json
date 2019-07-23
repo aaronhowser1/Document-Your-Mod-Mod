@@ -12,11 +12,7 @@
       "registry_name": "refinedstorage:security_card"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Can be bound to a player by right clicking and then inserted into a Security Manager to set their permissions.",
-      "",
-      "If there is no player bound, it will set the permissions for players that don't have a bound Security Card."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.security_card"
+  ]
 }

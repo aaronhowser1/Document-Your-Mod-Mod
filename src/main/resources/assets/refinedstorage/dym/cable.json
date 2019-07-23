@@ -12,9 +12,7 @@
       "registry_name": "refinedstorage:cable"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Connects blocks to the Controller."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.cable"
+  ]
 }

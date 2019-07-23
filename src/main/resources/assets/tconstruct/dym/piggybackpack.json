@@ -12,11 +12,7 @@
       "registry_name": "tconstruct:piggybackpack"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Right click on a mob to pick it up, equipping the item in your Chestplate slot.",
-      "",
-      "Take the Piggybackpack out of your Chestplate slot to put the mob back down."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.piggybackpack"
+  ]
 }

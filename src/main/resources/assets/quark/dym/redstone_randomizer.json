@@ -12,9 +12,7 @@
       "registry_name": "quark:redstone_randomizer"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "When the Redstone Randomizer receives a signal, it randomly sends a signal to either its left or right outputs."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.redstone_randomizer"
+  ]
 }

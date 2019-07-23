@@ -16,9 +16,7 @@
       "registry_name": "minecraft:compass"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "While in the Nether or End, Compasses will point towards the Portal that took you there."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.compass_everywhere"
+  ]
 }

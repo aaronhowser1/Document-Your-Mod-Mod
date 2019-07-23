@@ -13,11 +13,7 @@
       "__comment": "Probably NBT?"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Fired from Shortbows and Longbows.",
-      "",
-      "Damage depends more on the Bow than the Arrow in general."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.arrow"
+  ]
 }

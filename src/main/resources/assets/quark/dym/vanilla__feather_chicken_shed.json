@@ -16,9 +16,7 @@
       "registry_name": "minecraft:feather"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Chickens will occasionally drop Feathers, similarly to Eggs."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.feather_chicken_shed"
+  ]
 }

@@ -13,11 +13,7 @@
       "metadata": 0
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Can be found in Fire Swamps.",
-      "",
-      "Constantly emits smoke particles from the top."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.fire_jet_smoking"
+  ]
 }

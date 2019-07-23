@@ -12,9 +12,7 @@
       "registry_name": "refinedstorage:cutting_tool"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Craft the Cutting Tool with a block to make Covers of that block."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.cutting_tool"
+  ]
 }

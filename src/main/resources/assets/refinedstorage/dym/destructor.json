@@ -12,13 +12,7 @@
       "registry_name": "refinedstorage:destructor"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Breaks the block/fluid in front of it and puts them in the storage system.",
-      "You can set a whitelist or a blacklist and if it works with items or fluids in its GUI.",
-      "You can also set it to pick up items instead of breaking blocks.",
-      "",
-      "You can give it enchantments with Upgrades."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.destructor"
+  ]
 }

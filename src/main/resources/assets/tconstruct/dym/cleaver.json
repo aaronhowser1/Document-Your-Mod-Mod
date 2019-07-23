@@ -13,12 +13,7 @@
       "__comment": "Probably NBT?"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "High damage.",
-      "Low speed.",
-      "Can't use offhand.",
-      "Has Beheading II by default."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.cleaver"
+  ]
 }

@@ -18,9 +18,7 @@
       "registry_name": "quark:horse_whistle"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "When you use a Horse Whistle, nearby tamed Horses will teleport to you."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.horse_whistle.accept_magic"
+  ]
 }

@@ -12,11 +12,7 @@
       "registry_name": "quark:archaeologist_hat"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "The Archaeologist Hat gives a chance to mine extra ores while worn.",
-      "",
-      "This only applies to ores that are affected by the Fortune enchantment."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.archaeologist_hat"
+  ]
 }

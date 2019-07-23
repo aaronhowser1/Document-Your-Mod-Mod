@@ -12,12 +12,7 @@
       "registry_name": "refinedstorage:exporter"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Pulls items/fluids out of the storage system and puts them into the inventory it is facing.",
-      "",
-      "You can set a whitelist or a blacklist and if it works with items or fluids in its GUI.",
-      "You can also set to ignore NBT and metadata."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.exporter"
+  ]
 }

@@ -12,13 +12,7 @@
       "registry_name": "twilightforest:peacock_fan"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Rarely found in medium/large Hollow Hills.",
-      "",
-      "Blows away entities when used.",
-      "",
-      "When used while jumping, it flings you into the air."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.peacock_fan"
+  ]
 }

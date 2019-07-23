@@ -13,10 +13,7 @@
       "__comment": "Probably NBT?"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Short range.",
-      "Can be thrown from offhand."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.shuriken"
+  ]
 }

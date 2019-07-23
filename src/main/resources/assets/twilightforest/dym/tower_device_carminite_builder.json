@@ -13,11 +13,7 @@
       "metadata": 6
     }
   ],
-  "documentation": {
-    "en_us": [
-      "When a Carminite Builder gets a Redstone signal, it will start building a bridge in the direction you are facing. You can walk along it and it will turn if you turn your head.",
-      "",
-      "After reaching its limit (17 blocks), it will slowly disappear starting at the Builder."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.tower_device_carminite_builder"
+  ]
 }

@@ -16,9 +16,7 @@
       "registry_name": "minecraft:sticky_piston"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "When a Sticky Piston retracts, it will pull items towards itself."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.sticky_piston_item_pull"
+  ]
 }

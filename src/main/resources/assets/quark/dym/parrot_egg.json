@@ -33,9 +33,7 @@
       "metadata": 4
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Feeding Beetroot Seeds to a Parrot has a chance to make it hatch a Parrot Egg, which can be thrown to get a guaranteed Parrot of the same color."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.parrot_egg"
+  ]
 }

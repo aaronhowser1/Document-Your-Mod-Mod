@@ -13,11 +13,7 @@
       "metadata": 2
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Right click a Vanishing Block and all connected Vanishing Blocks will permanently disappear.",
-      "",
-      "Also activates when given a Redstone signal."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.tower_device_vanishing"
+  ]
 }

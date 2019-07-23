@@ -12,9 +12,7 @@
       "registry_name": "quark:glass_item_frame"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Disappears when an item is placed in it, so you can only see the item."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.glass_item_frame"
+  ]
 }

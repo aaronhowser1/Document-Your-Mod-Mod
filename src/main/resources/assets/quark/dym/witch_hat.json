@@ -12,9 +12,7 @@
       "registry_name": "quark:witch_hat"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Highly enchantable, and provides 50% resistance to Potions of Harming."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.witch_hat"
+  ]
 }

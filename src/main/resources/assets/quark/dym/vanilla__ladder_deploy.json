@@ -20,9 +20,7 @@
       "registry_name": "quark:iron_ladder"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Using a Ladder on a Ladder will place it at the bottom."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.ladder_deploy"
+  ]
 }

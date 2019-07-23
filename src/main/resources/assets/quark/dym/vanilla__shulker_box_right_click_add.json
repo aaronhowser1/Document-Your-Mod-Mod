@@ -76,9 +76,7 @@
       "registry_name": "minecraft:black_shulker_box"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "While holding an item in your cursor, you can right click a Shulker Box in your inventory to directly insert it without having the Shulker Box down."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.shulker_box_right_click_add"
+  ]
 }

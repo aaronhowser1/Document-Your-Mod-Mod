@@ -12,11 +12,7 @@
       "registry_name": "twilightforest:ice_bow"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Can be found in the Aurora Palace.",
-      "",
-      "Inflicts Frosted III on targets for 10 seconds, slowing them down. Can be repaired with Packed Ice in an Anvil."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.ice_bow"
+  ]
 }

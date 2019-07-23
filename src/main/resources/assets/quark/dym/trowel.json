@@ -12,9 +12,7 @@
       "registry_name": "quark:trowel"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "When used, places a random block from your hotbar."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.trowel"
+  ]
 }

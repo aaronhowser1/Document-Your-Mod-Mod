@@ -12,9 +12,7 @@
       "registry_name": "quark:iron_ladder"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Iron Ladders can stand freely without a block behind them, as long as the top block does."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.iron_ladder"
+  ]
 }

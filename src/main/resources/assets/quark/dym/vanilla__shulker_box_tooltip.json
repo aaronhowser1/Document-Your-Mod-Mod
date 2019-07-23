@@ -76,9 +76,7 @@
       "registry_name": "minecraft:black_shulker_box"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "You can hover over a Shulker Box in your inventory to see the contents."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.shulker_box_tooltip"
+  ]
 }

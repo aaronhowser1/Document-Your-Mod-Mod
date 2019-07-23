@@ -92,9 +92,7 @@
       "metadata": 15
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Server admins can set it so only a percentage of players have to be asleep to skip the night instead of requiring everyone sleep."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.bed_improve_sleeping"
+  ]
 }

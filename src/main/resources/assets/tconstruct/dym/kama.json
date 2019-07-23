@@ -13,11 +13,7 @@
       "__comment": "Probably NBT?"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Can be used as Shears.",
-      "",
-      "Right clicking on crops and Sugarcane harvests and replants all fully grown plants in an area."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.kama"
+  ]
 }

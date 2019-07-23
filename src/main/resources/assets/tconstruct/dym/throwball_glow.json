@@ -13,9 +13,7 @@
       "metadata": 0
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Can be thrown, creates a light source where it lands."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.throwball_glow"
+  ]
 }

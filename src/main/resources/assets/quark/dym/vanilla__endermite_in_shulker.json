@@ -16,9 +16,7 @@
       "registry_name": "minecraft:purpur_block"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Endermites have a chance of burrowing into Purpur Blocks, turning them into Shulkers."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.endermite_in_shulker"
+  ]
 }

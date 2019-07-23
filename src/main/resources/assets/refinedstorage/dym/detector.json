@@ -12,11 +12,7 @@
       "registry_name": "refinedstorage:detector"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Detectors emit a Redstone signal if the amount of a specified item/fluid is greater, lower, or exactly a specific amount.",
-      "",
-      "Set the item/fluid, the amount, and the criteria in its GUI."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.detector"
+  ]
 }

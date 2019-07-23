@@ -13,13 +13,7 @@
       "__comment": "Probably NBT?"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Lower damage.",
-      "Higher speed.",
-      "Can't use offhand.",
-      "Can right click to hop backwards.",
-      "Ignores 50% of enemy armor."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.rapier"
+  ]
 }

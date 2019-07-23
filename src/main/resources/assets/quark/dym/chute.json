@@ -12,9 +12,7 @@
       "registry_name": "quark:chute"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "When items are pushed into a Chute, the items get dropped out of the exact center of the bottom."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.chute"
+  ]
 }

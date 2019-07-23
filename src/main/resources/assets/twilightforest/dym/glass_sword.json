@@ -12,11 +12,7 @@
       "registry_name": "twilightforest:glass_sword"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Can be found in the Aurora Palace.",
-      "",
-      "Does 20 hearts of damage, but breaks after a single use."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.glass_sword"
+  ]
 }

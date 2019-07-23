@@ -13,11 +13,7 @@
       "metadata": 1
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Can be thrown, explodes into a giant crater where it lands.",
-      "",
-      "Items do not get destroyed by the explosion."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.throwball_missile"
+  ]
 }

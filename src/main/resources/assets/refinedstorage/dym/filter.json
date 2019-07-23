@@ -12,12 +12,7 @@
       "registry_name": "refinedstorage:filter"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Can be inserted into Grids to only show items according to its filter.",
-      "",
-      "Edit the filter by right clicking it and adding items/fluids.",
-      "You can set it to be a whitelist or a blacklist."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.filter"
+  ]
 }

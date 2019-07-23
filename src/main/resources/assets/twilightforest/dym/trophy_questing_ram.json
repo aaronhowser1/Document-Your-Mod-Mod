@@ -13,11 +13,7 @@
       "metadata": 8
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Given after giving the Questing Ram a Wool of every color.",
-      "",
-      "Can be placed or worn on your head."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.trophy_questing_ram"
+  ]
 }

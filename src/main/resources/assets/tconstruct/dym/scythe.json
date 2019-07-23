@@ -13,11 +13,7 @@
       "__comment": "Probably NBT?"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Breaks plants in a 3x3 area. Right clicking on crops and Sugarcane harvests and replants all fully grown plants in an area.",
-      "",
-      "Hits mobs in an area."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.scythe"
+  ]
 }

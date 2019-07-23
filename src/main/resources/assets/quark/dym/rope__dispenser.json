@@ -12,9 +12,7 @@
       "registry_name": "quark:rope"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Dispensers can place Rope on the bottom if there is already Rope at the top."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.rope.dispenser"
+  ]
 }

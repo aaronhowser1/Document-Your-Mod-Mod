@@ -12,9 +12,7 @@
       "registry_name": "refinedstorage:portable_grid"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Works like a backpack combined with a Grid when you insert a Storage Disk in the top right slot (or a Fluid Grid, if you insert a Fluid Storage Disk)."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.portable_grid"
+  ]
 }

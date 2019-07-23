@@ -18,13 +18,7 @@
       "metadata": 2
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Can be found in Leaf Dungeons.",
-      "",
-      "The Miner's Tree will slowly pull ores from the surrounding area towards itself, like the Ore Magnet. Can be toggled by right clicking on the Minewood Core block.",
-      "",
-      "Breaking the Minewood Core block will destroy it."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.twilight_sapling_miner"
+  ]
 }

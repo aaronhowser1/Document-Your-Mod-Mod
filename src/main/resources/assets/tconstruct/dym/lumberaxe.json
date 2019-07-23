@@ -13,9 +13,7 @@
       "__comment": "Probably NBT?"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Chops down entire trees at once."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.lumberaxe"
+  ]
 }

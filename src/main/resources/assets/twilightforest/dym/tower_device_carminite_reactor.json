@@ -13,11 +13,7 @@
       "metadata": 12
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Surround with Redstone Blocks for a good time.",
-      "",
-      "DISCLAIMER: we are not responsible for loss of life or property."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.tower_device_carminite_reactor"
+  ]
 }

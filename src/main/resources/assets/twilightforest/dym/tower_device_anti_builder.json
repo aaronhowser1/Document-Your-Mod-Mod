@@ -13,9 +13,7 @@
       "metadata": 9
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Anti-builders spawn in certain rooms in the Dark Tower. They will prevent you from building or breaking blocks in a 9x9x9 area around themselves, until they are broken."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.tower_device_anti_builder"
+  ]
 }

@@ -12,9 +12,7 @@
       "registry_name": "quark:iron_button"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "When pressed, emits a 5 second signal."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.iron_button"
+  ]
 }

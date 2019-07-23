@@ -28,11 +28,7 @@
       "metadata": 3
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Right click a Castle Door and all connected Castle Doors will temporarily disappear, allowing entites to walk through them.",
-      "",
-      "Also activates when given a Redstone signal."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.castle_door"
+  ]
 }

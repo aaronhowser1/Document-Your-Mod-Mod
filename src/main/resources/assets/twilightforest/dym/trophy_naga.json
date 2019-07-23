@@ -13,11 +13,7 @@
       "metadata": 0
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Dropped by the Naga.",
-      "",
-      "Can be placed or worn on your head."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.trophy_naga"
+  ]
 }

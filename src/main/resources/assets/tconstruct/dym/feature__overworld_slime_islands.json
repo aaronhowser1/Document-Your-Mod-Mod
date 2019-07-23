@@ -108,9 +108,7 @@
       "metadata": 2
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Spawn on Slime Islands, which randomly generate floating in the air in the Overworld."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.feature.overworld_slime_islands"
+  ]
 }

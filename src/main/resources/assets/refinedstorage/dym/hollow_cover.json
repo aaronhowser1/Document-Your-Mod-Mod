@@ -12,9 +12,7 @@
       "registry_name": "refinedstorage:hollow_cover"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Like the Cover, but it can connect to other devices."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.hollow_cover"
+  ]
 }

@@ -16,9 +16,7 @@
       "registry_name": "minecraft:noteblock"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "If a Noteblock has a mob head on it, it will emit that its noise at the pitch set by the Noteblock."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.noteblock_mob"
+  ]
 }

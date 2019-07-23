@@ -12,11 +12,7 @@
       "registry_name": "refinedstorage:wireless_grid"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Acts like the Grid, but works anywhere in range of a Wireless Transmitter.",
-      "",
-      "Specify the storage system to connect to by right clicking the Wireless Grid on the Controller."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.wireless_grid"
+  ]
 }

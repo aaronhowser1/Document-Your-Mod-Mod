@@ -88,9 +88,7 @@
       "metadata": 15
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Comes in all 16 colors. If there is no block underneath, it will fall like sand. Candles are equal to half a Bookshelf for Enchanting Tables."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.candle"
+  ]
 }

@@ -13,9 +13,7 @@
       "metadata": 1
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Emits smoke particles from the top when given a Redstone signal."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.fire_jet_smoking_encased"
+  ]
 }

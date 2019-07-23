@@ -13,9 +13,7 @@
       "metadata": 4
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Allows devices like the Importer/Exporter to move stacks of an item at once instead of one at a time."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.upgrade_stack"
+  ]
 }

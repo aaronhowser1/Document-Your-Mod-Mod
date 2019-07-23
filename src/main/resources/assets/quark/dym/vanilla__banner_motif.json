@@ -92,9 +92,7 @@
       "metadata": 15
     }
   ],
-  "documentation": {
-    "en_us": [
-      "There are new Banner motifs that can be made with Dragon Heads, Eyes of Ender, Iron Swords, and Iron Chestplates."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.banner_motif"
+  ]
 }

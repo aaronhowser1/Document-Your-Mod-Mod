@@ -16,9 +16,7 @@
       "registry_name": "minecraft:emerald_block"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Villagers will follow players holding a Block of Emerald."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.emerald_villager"
+  ]
 }

@@ -68,9 +68,7 @@
       "registry_name": "minecraft:purpur_stairs"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "You can sit on any Stairs that are facing upwards by right clicking them with an empty hand."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.stair_as_chair"
+  ]
 }

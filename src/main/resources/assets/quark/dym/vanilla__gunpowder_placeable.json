@@ -20,11 +20,7 @@
       "registry_name": "quark:gunpowder_block"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Can be placed like Redstone Dust and ignited with a Flint and Steel. The Fire will spread along the Gunpowder at 2 blocks a second.",
-      "",
-      "Placing on Netherrack makes it go twice as fast."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.gunpowder_placeable"
+  ]
 }

@@ -12,11 +12,7 @@
       "registry_name": "twilightforest:uncrafting_table"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Allows you to uncraft an item, destroying it and returning the items used to make it.",
-      "",
-      "Uncrafting takes a level of experience per item gained."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.uncrafting_table"
+  ]
 }

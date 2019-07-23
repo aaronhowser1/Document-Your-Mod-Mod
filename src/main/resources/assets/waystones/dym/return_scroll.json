@@ -12,11 +12,7 @@
       "registry_name": "waystones:return_scroll"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "The Return Scroll teleports you to the most recent Waystone you've used.",
-      "",
-      "This uses up the Scroll."
-    ]
-  }
+  "documentation": [
+    "dym.doc.waystones.return_scroll"
+  ]
 }

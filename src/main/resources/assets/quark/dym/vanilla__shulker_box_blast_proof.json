@@ -76,9 +76,7 @@
       "registry_name": "minecraft:black_shulker_box"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Shulker Boxes are explosion-proof."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.shulker_box_blast_proof"
+  ]
 }

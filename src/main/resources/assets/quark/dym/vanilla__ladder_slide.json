@@ -24,11 +24,7 @@
       "registry_name": "tconstruct:stone_ladder"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "You can quickly slide down Ladders by looking down.",
-      "",
-      "You will also stop on Ladders if you open your inventory or chat."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.ladder_slide"
+  ]
 }

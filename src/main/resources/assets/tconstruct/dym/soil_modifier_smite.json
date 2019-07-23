@@ -13,9 +13,7 @@
       "metadata": 4
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Adds Smite to the weapon."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.soil_modifier_smite"
+  ]
 }

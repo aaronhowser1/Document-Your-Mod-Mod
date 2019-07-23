@@ -12,13 +12,7 @@
       "registry_name": "waystones:bound_scroll"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "The Bound Scroll teleports you to the Waystone you've bound it to.",
-      "",
-      "Bind the Scroll to a Waystone by holding sneak and right clicking on it.",
-      "",
-      "This uses up the Scroll."
-    ]
-  }
+  "documentation": [
+    "dym.doc.waystones.bound_scroll"
+  ]
 }

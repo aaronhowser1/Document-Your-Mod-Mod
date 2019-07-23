@@ -16,9 +16,7 @@
       "registry_name": "minecraft:dragon_breath"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Can be thrown to replace nearby Stone with End Stone."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.dragon_breath_throw"
+  ]
 }

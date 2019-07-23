@@ -12,13 +12,7 @@
       "registry_name": "refinedstorage:writer"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Writers can take items, fluids, energy, and/or Redstone signals from connected Readers and then output it to to the world.",
-      "",
-      "Open the Writer and select the name that the Reader is set to.",
-      "",
-      "The Writer does not automatically insert items or fluids into the block in front of it, you have to extract them with some form of automation (Hoppers etc)."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.writer"
+  ]
 }

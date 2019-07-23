@@ -20,9 +20,7 @@
       "registry_name": "minecraft:map"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "You can hover over a filled Map in your inventory to see its contents."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.map_tooltip"
+  ]
 }

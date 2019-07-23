@@ -39,7 +39,7 @@ public class DocumentMod
     public static Logger logger;
 
     @SidedProxy(modId = DocumentMod.MODID, clientSide = "com.aaronhowser1.documentmod.proxy.ClientProxy", serverSide = "com.aaronhowser1.documentmod.proxy.CommonProxy")
-    private static CommonProxy proxy;
+    public static CommonProxy proxy;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
@@ -57,10 +57,5 @@ public class DocumentMod
     public void postInit(@Nonnull final FMLPostInitializationEvent event) {
         DocumentationLoader.INSTANCE.loadFromJson();
         proxy.postInit(event);
-    }
-
-    @Nonnull
-    public CommonProxy getProxy() {
-        return proxy;
     }
 }

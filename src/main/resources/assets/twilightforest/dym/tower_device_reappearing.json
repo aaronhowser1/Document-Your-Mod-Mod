@@ -13,11 +13,7 @@
       "metadata": 0
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Right click a Reappearing Block and all connected Reappearing Blocks will temporarily disappear, allowing entities to walk through them.",
-      "",
-      "Also activates when given a Redstone signal."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.tower_device_reappearing"
+  ]
 }

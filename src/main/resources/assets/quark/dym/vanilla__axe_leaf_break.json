@@ -62,9 +62,7 @@
       "registry_name": "minecraft:diamond_axe"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Axes will very quickly cut through Leaves."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.axe_leaf_break"
+  ]
 }

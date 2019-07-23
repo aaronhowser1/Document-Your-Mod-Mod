@@ -12,9 +12,7 @@
       "registry_name": "twilightforest:charm_of_life_2"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Prevents death once while anywhere in your inventory, healing you to full health. It also gives you Restoration IV, Resistance, and Fire Resistance for 30 seconds."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.charm_of_life_full"
+  ]
 }

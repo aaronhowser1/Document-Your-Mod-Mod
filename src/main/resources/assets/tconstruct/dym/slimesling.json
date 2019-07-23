@@ -28,9 +28,7 @@
       "metadata": 3
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Hold right click and release while looking at a block to be flung in the opposite direction."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.slimesling"
+  ]
 }

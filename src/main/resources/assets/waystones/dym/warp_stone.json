@@ -12,11 +12,7 @@
       "registry_name": "waystones:warp_stone"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "The Warp Stone allows you to teleport to any Waystone you've ever used from anywhere.",
-      "",
-      "This does not use up the Stone, but it has a fairly long cooldown."
-    ]
-  }
+  "documentation": [
+    "dym.doc.waystones.warp_stone"
+  ]
 }

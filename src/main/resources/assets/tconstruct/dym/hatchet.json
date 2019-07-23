@@ -13,11 +13,7 @@
       "__comment": "Probably NBT?"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Breaks Wood and Leaves.",
-      "",
-      "Disables Shields."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.hatchet"
+  ]
 }

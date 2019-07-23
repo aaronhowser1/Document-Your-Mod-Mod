@@ -12,11 +12,7 @@
       "registry_name": "refinedstorage:pattern"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Stores crafting recipes, set in the Pattern Grid.",
-      "",
-      "Goes in a Crafter."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.pattern"
+  ]
 }

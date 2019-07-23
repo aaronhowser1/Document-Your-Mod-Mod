@@ -12,11 +12,7 @@
       "registry_name": "quark:slime_bucket"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Right click a Slime with a Bucket to put the Slime in a Bucket.",
-      "",
-      "While in your inventory, it will hop around when you are in a Slime chunk."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.slime_bucket"
+  ]
 }

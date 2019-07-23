@@ -36,11 +36,7 @@
       "registry_name": "minecraft:dark_oak_boat"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Right click a Chest on a Boat to place it on the Boat.",
-      "",
-      "While in the Boat, opening your inventory will also open the Chest's inventory."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.boat_carry_chest"
+  ]
 }

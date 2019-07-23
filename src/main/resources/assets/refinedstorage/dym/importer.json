@@ -12,11 +12,7 @@
       "registry_name": "refinedstorage:importer"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Pulls items/fluids out of the inventory it is facing and puts them into the storage system.",
-      "",
-      "You can set a whitelist or a blacklist and if it works with items or fluids in its GUI."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.importer"
+  ]
 }

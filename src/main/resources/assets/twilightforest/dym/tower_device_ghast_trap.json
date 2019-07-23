@@ -13,11 +13,7 @@
       "metadata": 10
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Ghast Traps are very useful in the fight against the Ur-Ghast.",
-      "",
-      "Kill the Carminite Ghastlings around the traps to charge them, then wait for the Ur-Ghast to fly above it. Give it a Redstone signal and it will deal massive damage."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.tower_device_ghast_trap"
+  ]
 }

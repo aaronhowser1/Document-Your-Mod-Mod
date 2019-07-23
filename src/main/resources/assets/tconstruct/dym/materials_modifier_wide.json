@@ -13,9 +13,7 @@
       "metadata": 12
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Adds 1 block to the horizontal radius for breaking blocks."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.materials_modifier_wide"
+  ]
 }

@@ -116,9 +116,7 @@
       "registry_name": "minecraft:dark_oak_boat"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Right click a Banner on a Boat to add it as a decorative sail."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.banner_boat_sail"
+  ]
 }

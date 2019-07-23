@@ -9,13 +9,10 @@
   "for": [
     {
       "type": "item",
-      "registry_name": "tconstruct:bolt_core",
-      "__comment": "Probably NBT?"
+      "registry_name": "tconstruct:bolt_core"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Bolt Cores are made by putting Arrow Shafts into the Casting Table and pouring the head material onto it."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.bolt_core"
+  ]
 }

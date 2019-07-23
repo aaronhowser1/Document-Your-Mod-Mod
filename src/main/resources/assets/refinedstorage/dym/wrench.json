@@ -12,9 +12,7 @@
       "registry_name": "refinedstorage:wrench"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Rotates blocks and breaks Covers."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.wrench"
+  ]
 }

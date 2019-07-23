@@ -16,9 +16,7 @@
       "registry_name": "minecraft:armor_stand"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Sneak right click an Armor Stand to swap all of your armor and the item in your offhand."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.armor_stand_quick_swap"
+  ]
 }

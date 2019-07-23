@@ -12,11 +12,7 @@
       "registry_name": "twilightforest:aurora_block"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Make up the Aurora Palace on Glaciers.",
-      "",
-      "Constantly change color."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.aurora_block"
+  ]
 }

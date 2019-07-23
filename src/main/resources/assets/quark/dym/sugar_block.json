@@ -12,9 +12,7 @@
       "registry_name": "quark:sugar_block"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Sugar Blocks will fall like Sand and Gravel, and disappear when they touch Water."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.sugar_block"
+  ]
 }

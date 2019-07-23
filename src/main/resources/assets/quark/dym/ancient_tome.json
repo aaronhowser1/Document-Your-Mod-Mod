@@ -12,10 +12,7 @@
       "registry_name": "quark:ancient_tome"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Rare loot in dungeons.",
-      "Combine with an Enchanted Book of the same enchantment and level to create an Enchanted Book one level above the usual max, which can be applied to items."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.ancient_tome"
+  ]
 }

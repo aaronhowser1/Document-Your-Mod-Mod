@@ -92,9 +92,7 @@
       "metadata": 15
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Banners can have up to 16 layers."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.banner_layer"
+  ]
 }

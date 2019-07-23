@@ -88,9 +88,7 @@
       "metadata": 15
     }
   ],
-  "documentation": {
-    "en_us": [
-      "When Glass is broken, it will drop some Glass Shards which can be crafted back into Glass."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.glass_shards"
+  ]
 }

@@ -16,9 +16,7 @@
       "registry_name": "minecraft:lead"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Leads can connect two Fences, instead of only a Fence and a Mob."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.fence_tie"
+  ]
 }

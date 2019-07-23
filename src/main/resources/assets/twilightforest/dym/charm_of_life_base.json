@@ -12,11 +12,7 @@
       "registry_name": "twilightforest:charm_of_life_1"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Found in random chests.",
-      "",
-      "Prevents death once while anywhere in your inventory, healing you to 4 hearts and giving Restoration for 10 seconds."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.charm_of_life_base"
+  ]
 }

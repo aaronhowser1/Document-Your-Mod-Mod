@@ -12,11 +12,7 @@
       "registry_name": "quark:grate"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Items will fall through placed Grates.",
-      "",
-      "Mobs will not walk over them."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.grate"
+  ]
 }

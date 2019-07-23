@@ -12,9 +12,7 @@
       "registry_name": "quark:soul_powder"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Right click in the Nether to create a spirit that will fly in the direction of the nearest Nether Fortress."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.soul_powder"
+  ]
 }

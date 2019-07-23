@@ -12,9 +12,7 @@
       "registry_name": "refinedstorage:network_card"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Right click the Network Card on the Network receiver, then insert it into the Network Transmitter to connect them."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.network_card"
+  ]
 }

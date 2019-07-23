@@ -12,13 +12,7 @@
       "registry_name": "twilightforest:zombie_scepter"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Can drop from the Lich.",
-      "",
-      "Spawns an allied Zombie to defend you. They die after 60 seconds.",
-      "",
-      "When it runs out of charges, it can be recharged with Rotten Flesh and a Potion of Strength."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.zombie_scepter"
+  ]
 }

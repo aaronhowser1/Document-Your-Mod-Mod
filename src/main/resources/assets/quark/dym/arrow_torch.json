@@ -12,10 +12,7 @@
       "registry_name": "quark:arrow_torch"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Places a Torch where it lands.",
-      "Can be fired from Dispensers."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.arrow_torch"
+  ]
 }

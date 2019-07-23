@@ -13,11 +13,7 @@
       "metadata": 2
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Stores 16,000 items.",
-      "",
-      "Goes in the Disk Drive."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.storage_disk_16k"
+  ]
 }

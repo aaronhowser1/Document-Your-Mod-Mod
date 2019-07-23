@@ -68,9 +68,7 @@
       "registry_name": "minecraft:record_wait"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Dispensers can move Music Discs into and out of Jukeboxes."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.dispenser_record"
+  ]
 }

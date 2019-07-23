@@ -18,9 +18,7 @@
       "metadata": 4
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Act like Vanishing Blocks, but you need to unlock them with a Tower Key. Explore the surrounding area in the dungeon to find them."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.tower_device_vanishing_locked"
+  ]
 }

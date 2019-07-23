@@ -13,12 +13,11 @@
   "for": [
     {
       "type": "item",
-      "registry_name": "minecraft:enchanted_book"
+      "registry_name": "minecraft:enchanted_book",
+      "__comment": "NBT? Maybe?"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "You can hover over an Enchanted Book in your inventory to see what types of item it can be enchanted with."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.enchanted_book_item"
+  ]
 }

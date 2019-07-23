@@ -16,9 +16,7 @@
       "registry_name": "minecraft:dispenser"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Dispensers can place blocks into the world."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.dispenser_place_block"
+  ]
 }

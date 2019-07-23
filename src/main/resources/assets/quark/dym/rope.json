@@ -12,17 +12,7 @@
       "registry_name": "quark:rope"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Rope Coils can be placed on the bottom of blocks and act like Ladders.",
-      "",
-      "You can right click on the top block to place more on the bottom.",
-      "",
-      "Once you've placed enough Rope Coils to reach the bottom, you can right click the top Rope with an empty hand to pull the block under the bottom Rope up to you.",
-      "",
-      "You can also right click with a Rope Coil while a block is attached to the bottom to lower it back down.",
-      "",
-      "Breaking a Rope Coil will also break all Rope Coils beneath it."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.rope"
+  ]
 }

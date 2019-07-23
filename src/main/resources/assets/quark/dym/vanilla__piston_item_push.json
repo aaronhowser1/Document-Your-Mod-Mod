@@ -16,9 +16,7 @@
       "registry_name": "minecraft:piston"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "When a Piston extends, it will launch items in the direction it's facing."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.piston_item_push"
+  ]
 }

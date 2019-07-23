@@ -13,12 +13,7 @@
       "metadata": 3
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Open the Grid to access fluids stored in the system.",
-      "",
-      "Insert fluids by dragging a filled Bucket into it.",
-      "Extract fluids by clicking on a fluid while you have an empty Bucket either in your inventory or in the storage network."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.grid_fluid"
+  ]
 }

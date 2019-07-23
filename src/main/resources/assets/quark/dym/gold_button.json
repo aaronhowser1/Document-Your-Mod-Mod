@@ -12,9 +12,7 @@
       "registry_name": "quark:gold_button"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "When pressed, emits a 2 tick long signal."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.gold_button"
+  ]
 }

@@ -28,9 +28,7 @@
       "metadata": 3
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Removes all falling damage and makes you bounce."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.slime_boots"
+  ]
 }

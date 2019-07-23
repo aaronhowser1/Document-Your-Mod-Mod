@@ -12,9 +12,7 @@
       "registry_name": "twilightforest:maze_map_focus"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Found in chests in the Labyrinth."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.maze_map_focus"
+  ]
 }

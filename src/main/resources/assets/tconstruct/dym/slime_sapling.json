@@ -23,9 +23,7 @@
       "metadata": 2
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Grows into a tree made of Congealed Slime."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.slime_sapling"
+  ]
 }

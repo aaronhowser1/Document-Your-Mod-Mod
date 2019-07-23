@@ -12,9 +12,7 @@
       "registry_name": "quark:sturdy_stone"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Sturdy Stone can't be pushed by Pistons."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.sturdy_stone"
+  ]
 }

@@ -16,9 +16,7 @@
       "registry_name": "twilightforest:ore_map"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Shows the locations of ores at the depth it was first used in."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.ore_map"
+  ]
 }

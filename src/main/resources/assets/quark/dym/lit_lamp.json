@@ -12,9 +12,7 @@
       "registry_name": "quark:lit_lamp"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Always lit regardless of Redstone."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.lit_lamp"
+  ]
 }

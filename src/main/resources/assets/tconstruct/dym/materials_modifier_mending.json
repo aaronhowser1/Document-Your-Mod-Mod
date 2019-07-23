@@ -13,11 +13,7 @@
       "metadata": 19
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Created by using a Ball of Moss on a Bookshelf.",
-      "",
-      "Gradually repairs tools using experience."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.materials_modifier_mending"
+  ]
 }

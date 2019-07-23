@@ -12,9 +12,7 @@
       "registry_name": "refinedstorage:disk_manipulator"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "The Disk Manipulator can quickly move items/fluids into or out of Storage Disks from the storage network."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.disk_manipulator"
+  ]
 }

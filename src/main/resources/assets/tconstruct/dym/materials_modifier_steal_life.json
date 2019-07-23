@@ -10,12 +10,10 @@
     {
       "type": "item",
       "registry_name": "tconstruct:materials",
-      "metadata": 16
+      "metadata": 17
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Adds Silk Touch to the tool."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.materials_modifier_steal_life"
+  ]
 }

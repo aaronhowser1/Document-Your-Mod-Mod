@@ -12,13 +12,7 @@
       "registry_name": "twilightforest:moonworm_queen"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Found in Hollow Hill chests.",
-      "",
-      "When charged and released, shoots out a glowing Moonworm that attaches to whatever block it hits, acting like a light source.",
-      "",
-      "When it runs out of Moonworms, you can fill it back up with 3 Torchberries."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.moonworm_queen"
+  ]
 }

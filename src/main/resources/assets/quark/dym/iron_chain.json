@@ -12,9 +12,7 @@
       "registry_name": "quark:iron_chain"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Used to link Minecarts/Boats together."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.iron_chain"
+  ]
 }

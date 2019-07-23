@@ -12,9 +12,7 @@
       "registry_name": "quark:enderdragon_scale"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Craft with the Elytra to duplicate it."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.enderdragon_scale"
+  ]
 }

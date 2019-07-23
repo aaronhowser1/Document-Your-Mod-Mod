@@ -13,11 +13,7 @@
       "__comment": "Probably NBT?"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Lower damage.",
-      "Lower speed.",
-      "Can be used as a shield in either hand. Reflects projectiles in the direction you're facing when holding right click."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.battlesign"
+  ]
 }

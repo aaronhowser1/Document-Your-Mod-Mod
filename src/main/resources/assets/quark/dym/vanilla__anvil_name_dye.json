@@ -27,9 +27,7 @@
       "metadata": 2
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Combine any item with a dye in the Anvil to color its name in the tooltip."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.anvil_name_dye"
+  ]
 }

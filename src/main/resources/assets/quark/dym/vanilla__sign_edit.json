@@ -16,9 +16,7 @@
       "registry_name": "minecraft:sign"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "You can right click a placed Sign to edit it."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.sign_edit"
+  ]
 }

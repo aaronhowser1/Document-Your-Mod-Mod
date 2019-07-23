@@ -116,7 +116,6 @@ public enum DocumentationLoader {
                 return;
             }
             ModDocumentation.create(jsonObject, resourceLocation).forEach(documentation -> {
-                if (documentation == ModDocumentation.EMPTY) return; // Skip registering an empty mod documentation object
                 DocumentMod.logger.trace("Registering ModDocumentation object " + documentation.getRegistryName());
                 DocumentationRegistry.INSTANCE.registerForMod(modContainer.getModId(), documentation);
             });

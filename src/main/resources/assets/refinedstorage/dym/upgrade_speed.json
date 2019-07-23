@@ -13,9 +13,7 @@
       "metadata": 2
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Increases the speed of the devices it is installed on."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.upgrade_speed"
+  ]
 }

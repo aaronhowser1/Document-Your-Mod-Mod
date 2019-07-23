@@ -32,9 +32,7 @@
       "registry_name": "minecraft:nether_wart"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "You can right click fully grown crops to harvest and replant them without breaking the block."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.seed_harvest"
+  ]
 }

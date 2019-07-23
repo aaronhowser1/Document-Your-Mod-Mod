@@ -12,13 +12,7 @@
       "registry_name": "twilightforest:ore_magnet"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Found in Hollow Hill chests.",
-      "",
-      "When charged and released on the ground, it brings nearby ores to the surface.",
-      "",
-      "Has only 12 durability, so you may want to enchant it with Mending."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.ore_magnet"
+  ]
 }

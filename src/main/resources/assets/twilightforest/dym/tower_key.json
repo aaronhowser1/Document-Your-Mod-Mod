@@ -12,9 +12,7 @@
       "registry_name": "twilightforest:tower_key"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Unlocks Locked Vanishing Blocks. Find them by exploring the area surrounding the locked pathway."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.tower_key"
+  ]
 }

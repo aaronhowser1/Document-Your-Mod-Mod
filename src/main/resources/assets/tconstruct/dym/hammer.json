@@ -13,11 +13,7 @@
       "__comment": "Probably NBT?"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Breaks stone-based blocks in a 3x3 area.",
-      "",
-      "Does extra damage to undead mobs."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.hammer"
+  ]
 }

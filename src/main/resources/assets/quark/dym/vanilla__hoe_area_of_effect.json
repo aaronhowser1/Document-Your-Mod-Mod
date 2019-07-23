@@ -32,9 +32,7 @@
       "registry_name": "minecraft:diamond_hoe"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Hoes will break blocks in a 5x5 area."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.hoe_area_of_effect"
+  ]
 }

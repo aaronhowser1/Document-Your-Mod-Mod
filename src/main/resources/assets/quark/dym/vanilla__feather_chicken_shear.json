@@ -16,11 +16,7 @@
       "registry_name": "minecraft:feather"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Chickens can be sheared for 1 Feather, dealing half a heart of damage.",
-      "",
-      "Sheared Chickens will not drop Feathers when killed."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.feather_chicken_shear"
+  ]
 }

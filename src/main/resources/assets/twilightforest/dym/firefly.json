@@ -12,13 +12,7 @@
       "registry_name": "twilightforest:firefly"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Randomly generate on trees in the Twilight Forest.",
-      "",
-      "Act as a light source.",
-      "",
-      "Can be worn on your head."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.firefly"
+  ]
 }

@@ -13,11 +13,7 @@
       "metadata": 0
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Stores 64,000 mB (64 buckets) of fluid.",
-      "",
-      "Essentially a 64k Fluid Storage Disk in block form."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.storage_fluid_64k"
+  ]
 }

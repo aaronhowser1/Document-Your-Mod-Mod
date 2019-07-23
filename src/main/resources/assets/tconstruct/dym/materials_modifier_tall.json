@@ -10,12 +10,10 @@
     {
       "type": "item",
       "registry_name": "tconstruct:materials",
-      "metadata": 17
+      "metadata": 13
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Heals you when you damage mobs."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.materials_modifier_tall"
+  ]
 }

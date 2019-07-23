@@ -38,9 +38,7 @@
       "metadata": 4
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Spawn on Nether Slime Islands, which randomly generate on the surface of the Nether's Lava ocean."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.feature.nether_slime_islands"
+  ]
 }

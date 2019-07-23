@@ -16,9 +16,7 @@
       "registry_name": "minecraft:poisonous_potato"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Feeding a baby animal a Poisonous Potato has a chance of poisoning it, which also prevents it from aging into an adult."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.poisonous_potato_usage"
+  ]
 }

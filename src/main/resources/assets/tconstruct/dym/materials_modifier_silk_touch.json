@@ -10,12 +10,10 @@
     {
       "type": "item",
       "registry_name": "tconstruct:materials",
-      "metadata": 13
+      "metadata": 16
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Adds 1 block to the vertical radius for breaking blocks."
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.materials_modifier_silk_touch"
+  ]
 }

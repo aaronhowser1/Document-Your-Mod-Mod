@@ -13,15 +13,7 @@
       "metadata": 2
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Allows you to set Patterns for Crafters. Pattens go in the top slot on the right.",
-      "",
-      "If the recipe is a regular crafting recipe, just put it in the 3x3 crafting grid and then click the arrow on the right.",
-      "",
-      "If it's a special recipe (like a Furnace recipe), click the Processing checkbox and then tell it the inputs and the outputs.",
-      "",
-      "You can click the Oredict checkbox to allow it to use the Ore Dictionary."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.grid_pattern"
+  ]
 }

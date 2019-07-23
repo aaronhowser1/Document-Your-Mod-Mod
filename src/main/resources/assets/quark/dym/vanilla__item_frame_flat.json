@@ -100,11 +100,7 @@
       "registry_name": "quark:glass_item_frame"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Item Frames can be placed on floors and ceilings.",
-      "",
-      "The top of the frame points North."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.item_frame_flat"
+  ]
 }

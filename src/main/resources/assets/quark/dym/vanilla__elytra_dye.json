@@ -16,9 +16,7 @@
       "registry_name": "minecraft:elytra"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "You can dye Elytras."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.elytra_dye"
+  ]
 }

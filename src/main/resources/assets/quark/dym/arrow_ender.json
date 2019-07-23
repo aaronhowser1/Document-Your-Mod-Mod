@@ -12,9 +12,7 @@
       "registry_name": "quark:arrow_ender"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Teleports the player to where it landed."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.arrow_ender"
+  ]
 }

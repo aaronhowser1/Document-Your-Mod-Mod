@@ -18,13 +18,7 @@
       "metadata": 1
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Can be found in Leaf Dungeons.",
-      "",
-      "The area around tree will slowly turn into an Enchanted Forest biome. Can be toggled by right clicking on the Heart of Transformation block.",
-      "",
-      "Breaking the Heart of Transformation block will destroy it."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.twilight_sapling_metamorphosis"
+  ]
 }

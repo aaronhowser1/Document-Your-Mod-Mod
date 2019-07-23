@@ -12,10 +12,7 @@
       "registry_name": "quark:arrow_explosive"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Explodes where it hits.",
-      "Can be fired from Dispensers."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.arrow_explosive"
+  ]
 }

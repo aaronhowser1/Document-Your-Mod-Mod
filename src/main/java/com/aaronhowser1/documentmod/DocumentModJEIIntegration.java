@@ -2,6 +2,7 @@ package com.aaronhowser1.documentmod;
 
 import com.aaronhowser1.documentmod.config.DYMMConfig;
 import com.aaronhowser1.documentmod.json.DocumentationRegistry;
+import com.aaronhowser1.documentmod.json.ModDocumentation;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.IModRegistry;
 import mezz.jei.api.JEIPlugin;
@@ -19,15 +20,19 @@ public class DocumentModJEIIntegration implements IModPlugin
     public void register(@Nonnull IModRegistry r)
     {
         Loader.instance().getActiveModList().forEach(container -> {
-            DocumentationRegistry.INSTANCE.getDocumentationForMod(container).forEach(modDocumentation -> {
-                final String language = Minecraft.getMinecraft().gameSettings.language;
-                final List<String> strings = modDocumentation.getStringsFor(language);
+            final List<ModDocumentation> modDocumentations = DocumentationRegistry.INSTANCE.getDocumentationForMod(container);
+            modDocumentations.forEach(modDocumentation -> {
+                final List<String> strings = modDocumentation.getTranslationKeys();
                 if (!strings.isEmpty()) {
                     final String[] stringsArray = strings.toArray(new String[0]);
                     r.addIngredientInfo(modDocumentation.getReferredStack(), VanillaTypes.ITEM, stringsArray);
                 }
             });
-            if (DYMMConfig.debugModIsDocumented) DocumentMod.logger.info("Mod " + container.getName() + " is documented");
+            if (DYMMConfig.debugModIsDocumented && !modDocumentations.isEmpty()) {
+                DocumentMod.logger.info("Mod candidate " + container.getName() + " is documented");
+            } else if (DYMMConfig.debugModIsDocumented) {
+                DocumentMod.logger.info("No documentation found for mod candidate " + container.getName());
+            }
         });
     }
 }

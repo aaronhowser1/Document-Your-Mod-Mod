@@ -36,9 +36,7 @@
       "registry_name": "minecraft:nether_wart"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Dispensers can plant seeds onto all kinds of soil."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.dispenser_seed"
+  ]
 }

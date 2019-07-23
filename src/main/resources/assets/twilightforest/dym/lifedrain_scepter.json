@@ -12,13 +12,7 @@
       "registry_name": "twilightforest:lifedrain_scepter"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Can drop from the Lich.",
-      "",
-      "Drains 1-4 health from the mob you use it on, giving the health to you.",
-      "",
-      "When it runs out of charges, it can be recharged with a Fermented Spider Eye."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.lifedrain_scepter"
+  ]
 }

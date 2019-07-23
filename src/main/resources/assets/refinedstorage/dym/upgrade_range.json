@@ -13,9 +13,7 @@
       "metadata": 1
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Increases the range of a Wireless Transmitter by 8 blocks each."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.upgrade_range"
+  ]
 }

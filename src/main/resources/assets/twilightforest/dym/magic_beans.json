@@ -12,13 +12,7 @@
       "registry_name": "twilightforest:magic_beans"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Found in Obsidian vaults in Troll Caves.",
-      "",
-      "When planted on Uberous Soil, they grow into giant bean stalks that you can climb up to cloud-level.",
-      "",
-      "Useful for reaching the Cloud Cottage."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.magic_beans"
+  ]
 }

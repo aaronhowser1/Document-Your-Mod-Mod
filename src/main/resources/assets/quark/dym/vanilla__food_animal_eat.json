@@ -48,9 +48,7 @@
       "registry_name": "minecraft:nether_wart"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Animals will eat food that's been dropped on the ground, so you can automate animal breeding with Droppers."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.vanilla.food_animal_eat"
+  ]
 }

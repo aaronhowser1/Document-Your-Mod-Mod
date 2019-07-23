@@ -12,9 +12,7 @@
       "registry_name": "quark:black_ash"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Monsters cannot spawn on Wither Ash, or on the block above Wither Ash."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.black_ash"
+  ]
 }

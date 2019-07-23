@@ -12,9 +12,7 @@
       "registry_name": "quark:charcoal_block"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Blocks of Charcoal will burn forever, like Netherrack."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.charcoal_block"
+  ]
 }

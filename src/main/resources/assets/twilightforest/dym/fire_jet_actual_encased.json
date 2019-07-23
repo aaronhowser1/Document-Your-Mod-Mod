@@ -13,11 +13,7 @@
       "metadata": 6
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Emits a pillar of fire when given a Redstone signal.",
-      "",
-      "It does not need Lava source blocks beneath it."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.fire_jet_actual_encased"
+  ]
 }

@@ -28,11 +28,7 @@
       "metadata": 3
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Pushes all entities in the direction it is flowing.",
-      "",
-      "You can also place them on walls and ceilings!"
-    ]
-  }
+  "documentation": [
+    "dym.doc.tconstruct.slime_channel"
+  ]
 }

@@ -88,9 +88,7 @@
       "metadata": 15
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Combine with enchanted items in an Anvil to change the color of the glow."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.rune"
+  ]
 }

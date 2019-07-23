@@ -12,9 +12,7 @@
       "registry_name": "quark:obsidian_pressure_plate"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Only triggers when used by a Player."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.obsidian_pressure_plate"
+  ]
 }

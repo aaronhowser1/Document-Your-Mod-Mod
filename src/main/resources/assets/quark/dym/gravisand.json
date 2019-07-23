@@ -12,9 +12,7 @@
       "registry_name": "quark:gravisand"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Gravisand only falls when given a Redstone signal. If it gets a Redstone signal and it can't fall, it will float up."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.gravisand"
+  ]
 }

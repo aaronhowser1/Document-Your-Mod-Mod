@@ -12,11 +12,7 @@
       "registry_name": "twilightforest:lamp_of_cinders"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Found in the Giant Obsidian vault in Troll Caves.",
-      "",
-      "Burns Thorns."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.lamp_of_cinders"
+  ]
 }

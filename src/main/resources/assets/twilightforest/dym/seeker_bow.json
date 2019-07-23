@@ -12,11 +12,7 @@
       "registry_name": "twilightforest:seeker_bow"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Can drop from the Snow Queen.",
-      "",
-      "Arrows shot will bend towards hostile mobs."
-    ]
-  }
+  "documentation": [
+    "dym.doc.twilightforest.seeker_bow"
+  ]
 }

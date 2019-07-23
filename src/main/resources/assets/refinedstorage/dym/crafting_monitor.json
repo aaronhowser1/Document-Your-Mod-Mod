@@ -12,9 +12,7 @@
       "registry_name": "refinedstorage:crafting_monitor"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Shows all currently running crafting tasks in the system."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.crafting_monitor"
+  ]
 }

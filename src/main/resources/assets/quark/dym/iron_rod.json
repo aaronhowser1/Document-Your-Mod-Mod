@@ -12,9 +12,7 @@
       "registry_name": "quark:iron_rod"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Breaks blocks when pushed into them with a Piston."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.iron_rod"
+  ]
 }

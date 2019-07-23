@@ -18,9 +18,7 @@
       "registry_name": "quark:archaeologist_hat"
     }
   ],
-  "documentation": {
-    "en_us": [
-      "You can buy the Archaeologist Hat from Archaeologists, which have a chance of spawning underground."
-    ]
-  }
+  "documentation": [
+    "dym.doc.quark.archaeologist_hat.selling"
+  ]
 }

@@ -13,9 +13,7 @@
       "metadata": 6
     }
   ],
-  "documentation": {
-    "en_us": [
-      "Enchants the Destructor with Silk Touch."
-    ]
-  }
+  "documentation": [
+    "dym.doc.refinedstorage.upgrade_silk_touch"
+  ]
 }
