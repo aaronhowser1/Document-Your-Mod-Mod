@@ -8,7 +8,7 @@
   ],
   "for": [
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "twilightforest:glass_sword"
     }
   ],

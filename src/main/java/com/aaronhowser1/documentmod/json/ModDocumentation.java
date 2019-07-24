@@ -2,9 +2,9 @@ package com.aaronhowser1.documentmod.json;
 
 import com.aaronhowser1.documentmod.DocumentMod;
 import com.aaronhowser1.documentmod.json.stacks.BlockStackFactory;
+import com.aaronhowser1.documentmod.json.stacks.EnchantedBookStackFactory;
+import com.aaronhowser1.documentmod.json.stacks.ItemAllNbtInSearchStackFactory;
 import com.aaronhowser1.documentmod.json.stacks.ItemStackFactory;
-import com.aaronhowser1.documentmod.quark.QuarkEnchantedBookStackFactory;
-import com.aaronhowser1.documentmod.tconstruct.TinkerNbtStackFactory;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -20,12 +20,12 @@ import javax.annotation.Nonnull;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 public final class ModDocumentation {
 
-    private static final Random RANDOM = ThreadLocalRandom.current();
-    private static final Map<String, StackFactory> STACK_FACTORIES = Maps.newHashMap();
+    private static final Random RANDOM = new Random(2003576509854125L);
+    private static final List<Long> ALREADY_GENERATED_RANDOMS = Lists.newArrayList();
+    private static final Map<ResourceLocation, StackFactory> STACK_FACTORIES = Maps.newHashMap();
 
     private final ItemStack itemStack;
     private final List<String> translationKeys;
@@ -39,10 +39,10 @@ public final class ModDocumentation {
     }
 
     static {
-        STACK_FACTORIES.put("dym:item", new ItemStackFactory());
-        STACK_FACTORIES.put("dym:block", new BlockStackFactory());
-        STACK_FACTORIES.put("quark:enchantment_book", new QuarkEnchantedBookStackFactory());
-        STACK_FACTORIES.put("tconstruct:nbt_tool", new TinkerNbtStackFactory());
+        STACK_FACTORIES.put(new ResourceLocation(DocumentMod.MODID, "item"), new ItemStackFactory());
+        STACK_FACTORIES.put(new ResourceLocation(DocumentMod.MODID, "block"), new BlockStackFactory());
+        STACK_FACTORIES.put(new ResourceLocation(DocumentMod.MODID, "enchanted_book"), new EnchantedBookStackFactory());
+        STACK_FACTORIES.put(new ResourceLocation(DocumentMod.MODID, "item_all_nbt_in_search"), new ItemAllNbtInSearchStackFactory());
     }
 
     @Nonnull
@@ -68,12 +68,21 @@ public final class ModDocumentation {
             nameBuilder.append(".metadata.");
             nameBuilder.append(stack.getMetadata());
             nameBuilder.append(".$._hash__self_gen_");
-            nameBuilder.append(RANDOM.nextInt(Integer.MAX_VALUE));
+            nameBuilder.append(generateRandom());
             final ResourceLocation registryName = new ResourceLocation(nameBuilder.toString());
             returningList.add(new ModDocumentation(stack, translationKeys, registryName));
         }
 
         return ImmutableList.copyOf(returningList);
+    }
+
+    private static long generateRandom() {
+        long value;
+        do {
+            value = Math.abs(RANDOM.nextLong());
+        } while (ALREADY_GENERATED_RANDOMS.contains(value));
+        ALREADY_GENERATED_RANDOMS.add(value);
+        return value;
     }
 
     @Nonnull
@@ -91,7 +100,9 @@ public final class ModDocumentation {
     @Nonnull
     private static List<ItemStack> parseItemStackJsonObject(@Nonnull final JsonObject jsonObject) {
         final String type = JsonUtils.getString(jsonObject, "type");
-        final StackFactory stackFactory = STACK_FACTORIES.getOrDefault(type, STACK_FACTORIES.getOrDefault("dym:" + type, null));
+        if (type.trim().isEmpty()) throw new JsonSyntaxException("Type cannot be empty");
+        if (type.indexOf(':') == -1) throw new JsonSyntaxException("Missing namespace for type '" + type + "'");
+        final StackFactory stackFactory = STACK_FACTORIES.getOrDefault(new ResourceLocation(type), null);
         if (stackFactory == null) {
             throw new JsonParseException("Unable to find stack factory for given type " + type);
         }

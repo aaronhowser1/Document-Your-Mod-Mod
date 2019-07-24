@@ -12,39 +12,39 @@
   ],
   "for": [
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:wheat"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:carrot"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:potato"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:beetroot"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:wheat_seeds"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:pumpkin_seeds"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:beetroot_seeds"
     },
     {
-      "type": "item",
-      "registry_name": "minecraft:pumpkin_seeds"
+      "type": "dym:item",
+      "registry_name": "minecraft:melon_seeds"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:nether_wart"
     }
   ],

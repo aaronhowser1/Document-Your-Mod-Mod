@@ -14,7 +14,7 @@
   ],
   "for": [
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "quark:archaeologist_hat"
     }
   ],

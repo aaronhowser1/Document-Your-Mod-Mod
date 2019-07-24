@@ -12,7 +12,7 @@
   ],
   "for": [
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:poisonous_potato"
     }
   ],

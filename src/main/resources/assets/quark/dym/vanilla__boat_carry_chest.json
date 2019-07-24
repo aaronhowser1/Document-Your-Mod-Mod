@@ -12,27 +12,27 @@
   ],
   "for": [
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:boat"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:spruce_boat"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:birch_boat"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:jungle_boat"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:acacia_boat"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:dark_oak_boat"
     }
   ],

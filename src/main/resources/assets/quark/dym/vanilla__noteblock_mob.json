@@ -12,7 +12,7 @@
   ],
   "for": [
     {
-      "type": "block",
+      "type": "dym:block",
       "registry_name": "minecraft:noteblock"
     }
   ],

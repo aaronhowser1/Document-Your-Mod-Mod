@@ -12,53 +12,53 @@
   ],
   "for": [
     {
-      "type": "block",
+      "type": "dym:block",
       "registry_name": "minecraft:leaves",
       "metadata": 0
     },
     {
-      "type": "block",
+      "type": "dym:block",
       "registry_name": "minecraft:leaves",
       "metadata": 1
     },
     {
-      "type": "block",
+      "type": "dym:block",
       "registry_name": "minecraft:leaves",
       "metadata": 2
     },
     {
-      "type": "block",
+      "type": "dym:block",
       "registry_name": "minecraft:leaves",
       "metadata": 3
     },
     {
-      "type": "block",
+      "type": "dym:block",
       "registry_name": "minecraft:leaves2",
       "metadata": 0
     },
     {
-      "type": "block",
+      "type": "dym:block",
       "registry_name": "minecraft:leaves2",
       "metadata": 1
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:wooden_axe"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:stone_axe"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:iron_axe"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:golden_axe"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:diamond_axe"
     }
   ],

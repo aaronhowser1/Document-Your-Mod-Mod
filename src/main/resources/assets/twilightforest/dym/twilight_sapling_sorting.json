@@ -8,12 +8,12 @@
   ],
   "for": [
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "twilightforest:twilight_sapling",
       "metadata": 8
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "twilightforest:magic_log_core",
       "metadata": 3
     }

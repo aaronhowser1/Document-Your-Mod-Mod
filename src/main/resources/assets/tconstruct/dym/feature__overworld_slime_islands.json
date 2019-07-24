@@ -8,102 +8,102 @@
   ],
   "for": [
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "tconstruct:slime_sapling",
       "metadata": 0
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "tconstruct:slime_sapling",
       "metadata": 1
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "tconstruct:slime_grass",
       "metadata": 0
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "tconstruct:slime_grass",
       "metadata": 1
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "tconstruct:slime_grass",
       "metadata": 2
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "tconstruct:slime_grass",
       "metadata": 3
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "tconstruct:slime_grass",
       "metadata": 5
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "tconstruct:slime_grass",
       "metadata": 6
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "tconstruct:slime_grass",
       "metadata": 7
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "tconstruct:slime_grass",
       "metadata": 8
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "tconstruct:slime_grass",
       "metadata": 10
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "tconstruct:slime_grass",
       "metadata": 11
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "tconstruct:slime_grass",
       "metadata": 12
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "tconstruct:slime_grass",
       "metadata": 13
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "tconstruct:slime_dirt",
       "metadata": 0
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "tconstruct:slime_dirt",
       "metadata": 1
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "tconstruct:slime_dirt",
       "metadata": 2
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "tconstruct:slime_congealed",
       "metadata": 0
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "tconstruct:slime_congealed",
       "metadata": 1
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "tconstruct:slime_congealed",
       "metadata": 2
     }

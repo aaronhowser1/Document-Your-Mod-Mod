@@ -12,11 +12,11 @@
   ],
   "for": [
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:gunpowder"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "quark:gunpowder_block"
     }
   ],

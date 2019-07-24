@@ -12,7 +12,7 @@
   ],
   "for": [
     {
-      "type": "item (or block)",
+      "type": "dym:item",
       "registry_name": "minecraft:wood_log",
       "metadata": 1,
       "nbt": {
@@ -97,6 +97,9 @@
     }
   ],
   "documentation": [
-    "document.lang.asd"
+    "dym.doc.minecraft.wood_log"
+  ],
+  "tooltip": [
+    "dym.tip.minecraft.wood_log"
   ]
 }

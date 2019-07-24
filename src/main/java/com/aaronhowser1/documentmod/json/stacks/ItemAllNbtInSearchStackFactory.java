@@ -1,4 +1,4 @@
-package com.aaronhowser1.documentmod.tconstruct;
+package com.aaronhowser1.documentmod.json.stacks;
 
 import com.aaronhowser1.documentmod.DocumentMod;
 import com.aaronhowser1.documentmod.json.StackFactory;
@@ -16,7 +16,7 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import javax.annotation.Nonnull;
 import java.util.List;
 
-public class TinkerNbtStackFactory implements StackFactory {
+public class ItemAllNbtInSearchStackFactory implements StackFactory {
     @Nonnull
     @Override
     public List<ItemStack> parseFromJson(@Nonnull final JsonObject jsonObject) {
@@ -26,10 +26,8 @@ public class TinkerNbtStackFactory implements StackFactory {
             DocumentMod.logger.warn("Tinker item with given registry name '" + registryName + "' does not exist. Skipping");
             return ImmutableList.of();
         }
-        final CreativeTabs[] tabs = itemBase.getCreativeTabs();
-        final CreativeTabs targetTab = (tabs.length >= 1)? tabs[0] : CreativeTabs.SEARCH;
         final NonNullList<ItemStack> itemStacks = NonNullList.create();
-        itemBase.getSubItems(targetTab, itemStacks);
+        itemBase.getSubItems(CreativeTabs.SEARCH, itemStacks);
         return ImmutableList.copyOf(itemStacks);
     }
 }

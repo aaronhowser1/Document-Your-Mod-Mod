@@ -8,7 +8,7 @@
   ],
   "for": [
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "refinedstorage:network_card"
     }
   ],

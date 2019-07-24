@@ -12,82 +12,82 @@
   ],
   "for": [
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:banner",
       "metadata": 0
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:banner",
       "metadata": 1
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:banner",
       "metadata": 2
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:banner",
       "metadata": 3
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:banner",
       "metadata": 4
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:banner",
       "metadata": 5
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:banner",
       "metadata": 6
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:banner",
       "metadata": 7
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:banner",
       "metadata": 8
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:banner",
       "metadata": 9
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:banner",
       "metadata": 10
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:banner",
       "metadata": 11
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:banner",
       "metadata": 12
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:banner",
       "metadata": 13
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:banner",
       "metadata": 14
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:banner",
       "metadata": 15
     }

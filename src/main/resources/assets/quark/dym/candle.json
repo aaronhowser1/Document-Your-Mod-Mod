@@ -8,82 +8,82 @@
   ],
   "for": [
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "quark:candle",
       "metadata": 0
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "quark:candle",
       "metadata": 1
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "quark:candle",
       "metadata": 2
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "quark:candle",
       "metadata": 3
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "quark:candle",
       "metadata": 4
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "quark:candle",
       "metadata": 5
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "quark:candle",
       "metadata": 6
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "quark:candle",
       "metadata": 7
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "quark:candle",
       "metadata": 8
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "quark:candle",
       "metadata": 9
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "quark:candle",
       "metadata": 10
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "quark:candle",
       "metadata": 11
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "quark:candle",
       "metadata": 12
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "quark:candle",
       "metadata": 13
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "quark:candle",
       "metadata": 14
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "quark:candle",
       "metadata": 15
     }

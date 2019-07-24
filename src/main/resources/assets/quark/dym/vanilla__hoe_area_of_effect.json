@@ -12,23 +12,23 @@
   ],
   "for": [
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:wooden_hoe"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:stone_hoe"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:iron_hoe"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:golden_hoe"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:diamond_hoe"
     }
   ],

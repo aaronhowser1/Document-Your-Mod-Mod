@@ -1,4 +1,4 @@
-package com.aaronhowser1.documentmod.quark;
+package com.aaronhowser1.documentmod.json.stacks;
 
 import com.aaronhowser1.documentmod.json.StackFactory;
 import com.google.common.collect.ImmutableList;
@@ -11,7 +11,7 @@ import net.minecraft.util.NonNullList;
 import javax.annotation.Nonnull;
 import java.util.List;
 
-public class QuarkEnchantedBookStackFactory implements StackFactory {
+public class EnchantedBookStackFactory implements StackFactory {
     @Nonnull
     @Override
     public List<ItemStack> parseFromJson(@Nonnull final JsonObject jsonObject) {

@@ -8,12 +8,12 @@
   ],
   "for": [
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "twilightforest:tower_device",
       "metadata": 2
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "twilightforest:tower_device",
       "metadata": 4
     }

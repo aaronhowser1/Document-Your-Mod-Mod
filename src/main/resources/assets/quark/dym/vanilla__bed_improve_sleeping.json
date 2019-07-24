@@ -12,82 +12,82 @@
   ],
   "for": [
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:bed",
       "metadata": 0
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:bed",
       "metadata": 1
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:bed",
       "metadata": 2
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:bed",
       "metadata": 3
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:bed",
       "metadata": 4
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:bed",
       "metadata": 5
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:bed",
       "metadata": 6
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:bed",
       "metadata": 7
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:bed",
       "metadata": 8
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:bed",
       "metadata": 9
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:bed",
       "metadata": 10
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:bed",
       "metadata": 11
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:bed",
       "metadata": 12
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:bed",
       "metadata": 13
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:bed",
       "metadata": 14
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:bed",
       "metadata": 15
     }

@@ -12,15 +12,15 @@
   ],
   "for": [
     {
-      "type": "block",
+      "type": "dym:block",
       "registry_name": "minecraft:ladder"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "quark:iron_ladder"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "tconstruct:stone_ladder"
     }
   ],

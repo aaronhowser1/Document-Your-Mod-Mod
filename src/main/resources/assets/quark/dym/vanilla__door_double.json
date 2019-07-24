@@ -12,27 +12,27 @@
   ],
   "for": [
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:acacia_door"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:birch_door"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:dark_oak_door"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:jungle_door"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:wooden_door"
     },
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "minecraft:spruce_door"
     }
   ],

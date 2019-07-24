@@ -8,7 +8,7 @@
   ],
   "for": [
     {
-      "type": "tconstruct:nbt_tool",
+      "type": "dym:item_all_nbt_in_search",
       "registry_name": "tconstruct:shovel"
     }
   ],

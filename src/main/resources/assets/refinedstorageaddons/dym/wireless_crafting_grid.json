@@ -8,7 +8,7 @@
   ],
   "for": [
     {
-      "type": "item",
+      "type": "dym:item",
       "registry_name": "refinedstorageaddons:wireless_crafting_grid",
       "metadata": 1
     }

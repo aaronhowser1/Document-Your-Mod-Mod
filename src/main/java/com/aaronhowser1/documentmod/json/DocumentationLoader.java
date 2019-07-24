@@ -1,6 +1,7 @@
 package com.aaronhowser1.documentmod.json;
 
 import com.aaronhowser1.documentmod.DocumentMod;
+import com.aaronhowser1.documentmod.ModId;
 import com.aaronhowser1.documentmod.json.conditions.DocumentModConfigurationOption;
 import com.aaronhowser1.documentmod.quark.QuarkBooleanFieldCheckerConditionFactory;
 import com.aaronhowser1.documentmod.quark.QuarkFeatureCheckingConditionFactory;
@@ -31,16 +32,16 @@ public enum DocumentationLoader {
 
     private static final String CONDITIONS_KEY = "conditions";
 
-    private static final Map<String, ConditionFactory> CONDITION_FACTORIES = Maps.newHashMap();
+    private static final Map<ResourceLocation, ConditionFactory> CONDITION_FACTORIES = Maps.newHashMap();
 
     private ModContainer thisModContainer = null;
     private ProgressManager.ProgressBar bar = null;
 
     static {
-        CONDITION_FACTORIES.put("dym:configuration_option", new DocumentModConfigurationOption());
-        CONDITION_FACTORIES.put("quark:check_feature", new QuarkFeatureCheckingConditionFactory());
-        CONDITION_FACTORIES.put("quark:check_module", new QuarkModuleCheckingConditionFactory());
-        CONDITION_FACTORIES.put("quark:check_boolean_field", new QuarkBooleanFieldCheckerConditionFactory());
+        CONDITION_FACTORIES.put(new ResourceLocation(ModId.DOCUMENT_YOUR_MOD_MOD, "configuration_option"), new DocumentModConfigurationOption());
+        CONDITION_FACTORIES.put(new ResourceLocation(ModId.QUARK, "check_feature"), new QuarkFeatureCheckingConditionFactory());
+        CONDITION_FACTORIES.put(new ResourceLocation(ModId.QUARK, "check_module"), new QuarkModuleCheckingConditionFactory());
+        CONDITION_FACTORIES.put(new ResourceLocation(ModId.QUARK, "check_boolean_field"), new QuarkBooleanFieldCheckerConditionFactory());
     }
 
     public void loadFromJson() {
@@ -100,6 +101,7 @@ public enum DocumentationLoader {
             DocumentMod.logger.debug("Found non-json file in " + relativePath + ". Skipping");
             return;
         }
+
         // This is the example file we have built, there is no reason to load it
         if (relativePath.toString().contains("_schema.json") && DocumentMod.MODID.equals(modContainer.getModId())) {
             DocumentMod.logger.debug("Skipping schema loading in " + relativePath + " for mod id " + DocumentMod.MODID);
@@ -107,6 +109,13 @@ public enum DocumentationLoader {
         }
 
         final String name = FilenameUtils.removeExtension(relativePath.toString()).replaceAll("\\\\", "/");
+
+        // "pattern.json" is a reserved name in JSON-land, so we cannot allow it
+        if ("pattern".equals(name)) {
+            throw new IllegalStateException("File name 'pattern.json' is invalid.\nThat name is reserved in JSON and has a special meaning " +
+                    "that does not apply to this case.\nPlease remove or rename the invalid file.\nPath: " + relativePath);
+        }
+
         final ResourceLocation resourceLocation = new ResourceLocation(modContainer.getModId(), name);
 
         try (final BufferedReader reader = Files.newBufferedReader(path)) {
@@ -149,7 +158,8 @@ public enum DocumentationLoader {
     private ConditionFactory getConditionFactory(@Nonnull final JsonObject jsonObject) {
         final String type = JsonUtils.getString(jsonObject, "type");
         if (type.trim().isEmpty()) throw new JsonSyntaxException("Condition type cannot be blank");
-        final ConditionFactory conditionFactory = CONDITION_FACTORIES.get(type);
+        if (type.indexOf(':') == -1) throw new JsonSyntaxException("Missing namespace for the condition type");
+        final ConditionFactory conditionFactory = CONDITION_FACTORIES.get(new ResourceLocation(type));
         if (conditionFactory == null) throw new JsonParseException("Condition type given '" + type + "' is not known");
         return conditionFactory;
     }

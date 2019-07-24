@@ -12,11 +12,11 @@
   ],
   "for": [
     {
-      "type": "block",
+      "type": "dym:block",
       "registry_name": "minecraft:sticky_piston"
     },
     {
-      "type": "block",
+      "type": "dym:block",
       "registry_name": "minecraft:piston"
     }
   ],
