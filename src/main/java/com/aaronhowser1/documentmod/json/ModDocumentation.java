@@ -15,9 +15,13 @@ import com.google.gson.JsonSyntaxException;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.JsonUtils;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.TextFormatting;
+import org.apache.commons.lang3.tuple.ImmutablePair;
+import org.apache.commons.lang3.tuple.Pair;
 
 import javax.annotation.Nonnull;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Random;
 
@@ -29,12 +33,14 @@ public final class ModDocumentation {
 
     private final ItemStack itemStack;
     private final List<String> translationKeys;
+    private final List<Pair<TextFormatting, String>> tooltipKeys;
     private final ResourceLocation registryName;
 
     private ModDocumentation(@Nonnull final ItemStack itemStack, @Nonnull final List<String> translationKeys,
-                             @Nonnull final ResourceLocation registryName) {
+                             @Nonnull final List<Pair<TextFormatting, String>> tooltipKeys, @Nonnull final ResourceLocation registryName) {
         this.itemStack = itemStack;
         this.translationKeys = translationKeys;
+        this.tooltipKeys = tooltipKeys;
         this.registryName = registryName;
     }
 
@@ -53,9 +59,10 @@ public final class ModDocumentation {
         final List<ModDocumentation> returningList = Lists.newArrayList();
 
         final List<String> translationKeys = parseTranslationKeys(JsonUtils.getJsonArray(object, "documentation"));
+        final List<Pair<TextFormatting, String>> tooltipKeys = parseTooltipKeys(object);
 
         if (stacks.size() == 1) {
-            returningList.add(new ModDocumentation(stacks.get(0), translationKeys, name));
+            returningList.add(new ModDocumentation(stacks.get(0), translationKeys, tooltipKeys, name));
             return ImmutableList.copyOf(returningList);
         }
 
@@ -70,7 +77,7 @@ public final class ModDocumentation {
             nameBuilder.append(".$._hash__self_gen_");
             nameBuilder.append(generateRandom());
             final ResourceLocation registryName = new ResourceLocation(nameBuilder.toString());
-            returningList.add(new ModDocumentation(stack, translationKeys, registryName));
+            returningList.add(new ModDocumentation(stack, translationKeys, tooltipKeys, registryName));
         }
 
         return ImmutableList.copyOf(returningList);
@@ -122,6 +129,42 @@ public final class ModDocumentation {
     }
 
     @Nonnull
+    private static List<Pair<TextFormatting, String>> parseTooltipKeys(@Nonnull final JsonObject object) {
+        if (!object.has("tooltip")) return ImmutableList.of();
+        return parseTooltipKeys(JsonUtils.getJsonArray(object, "tooltip"));
+    }
+
+    @Nonnull
+    private static List<Pair<TextFormatting, String>> parseTooltipKeys(@Nonnull final JsonArray array) {
+        final List<Pair<TextFormatting, String>> list = Lists.newArrayList();
+        array.forEach(element -> {
+            final Pair<TextFormatting, String> pair;
+            if (element.isJsonPrimitive()) {
+                // It is a string
+                final String string = JsonUtils.getString(element, "tooltip[?]");
+                pair = ImmutablePair.of(null, string);
+            } else if (element.isJsonObject()) {
+                final JsonObject jsonObject = element.getAsJsonObject();
+                final String key = JsonUtils.getString(jsonObject, "key");
+                final String formatting = JsonUtils.getString(jsonObject, "formatting");
+                TextFormatting textFormatting;
+                try {
+                    textFormatting = TextFormatting.valueOf(formatting.toUpperCase(Locale.ENGLISH));
+                } catch (final IllegalArgumentException e) {
+                    DocumentMod.logger.warn("No such formatting value exists for " + formatting + "! Reverting to no formatting: please check your JSON files");
+                    textFormatting = null;
+                }
+                pair = ImmutablePair.of(textFormatting, key);
+            } else {
+                throw new JsonSyntaxException("Array elements of tooltip can be only Strings or Objects");
+            }
+            if (!DocumentMod.proxy.canTranslate(pair.getRight())) DocumentMod.logger.warn("Found non-translated key " + pair.getRight() + ". Please check your language file");
+            list.add(pair);
+        });
+        return list;
+    }
+
+    @Nonnull
     public ResourceLocation getRegistryName() {
         return this.registryName;
     }
@@ -136,11 +179,17 @@ public final class ModDocumentation {
         return ImmutableList.copyOf(this.translationKeys);
     }
 
+    @Nonnull
+    public List<Pair<TextFormatting, String>> getTooltipKeys() {
+        return ImmutableList.copyOf(this.tooltipKeys);
+    }
+
     @Override
     public String toString() {
         return "ModDocumentation(" + this.hashCode() + "){" +
                 "itemStack=" + this.itemStack +
                 ", translationKeys=" + this.translationKeys +
+                ", tooltipKeys=" + this.tooltipKeys +
                 ", registryName=" + this.registryName +
                 '}';
     }

@@ -5,10 +5,13 @@
 # Each specifier is separated using double underscores
 # All the entries are ordered in (ascending) alphabetical order.
 
-# Nature's Compass
+# Nature's Compass -> Documentation
 dym.doc.naturescompass.naturescompass=Use to open a list of biomes. Select one from the list and the Compass will point towards the nearest instance of that biome.
 
-# Quark
+# Nature's Compass -> Tooltip
+dym.tip.naturescompass.naturescompass=Find Biomes
+
+# Quark -> Documentation
 dym.doc.quark.ancient_tome=Rare loot in dungeons.\nCombine with an Enchanted Book of the same enchantment and level to create an Enchanted Book one level above the usual max, which can be applied to items.
 dym.doc.quark.archaeologist_hat=The Archaeologist Hat gives a chance to mine extra ores while worn.\n\nThis only applies to ores that are affected by the Fortune enchantment.
 dym.doc.quark.archaeologist_hat.dropping=Archaeologist Hats can drop from Archaeologist, which have a chance of spawning underground.
@@ -54,7 +57,7 @@ dym.doc.quark.sugar_block=Sugar Blocks will fall like Sand and Gravel, and disap
 dym.doc.quark.trowel=When used, places a random block from your hotbar.
 dym.doc.quark.witch_hat=Highly enchantable, and provides 50% resistance to Potions of Harming.
 
-# Quark Vanilla (Separated for convenience)
+# Quark Vanilla (Separated for convenience) -> Documentation
 dym.doc.quark.vanilla.anvil_name_dye=Combine any item with a dye in the Anvil to color its name in the tooltip.
 dym.doc.quark.vanilla.armor_stand_quick_swap=Sneak right click an Armor Stand to swap all of your armor and the item in your offhand.
 dym.doc.quark.vanilla.axe_leaf_break=Axes will very quickly cut through Leaves.
@@ -99,7 +102,7 @@ dym.doc.quark.vanilla.sign_edit=You can right click a placed Sign to edit it.
 dym.doc.quark.vanilla.stair_as_chair=You can sit on any Stairs that are facing upwards by right clicking them with an empty hand.
 dym.doc.quark.vanilla.sticky_piston_item_pull=When a Sticky Piston retracts, it will pull items towards itself.
 
-# Refined Storage
+# Refined Storage -> Documentation
 dym.doc.refinedstorage.cable=Connects blocks to the Controller.
 dym.doc.refinedstorage.constructor=Places blocks/fluids or drops items from the storage system in the world.\nSet what to place/drop in its GUI.
 dym.doc.refinedstorage.controller=The brain of the storage system.\nAll other blocks in the network must be connected to the Controller, either by touching directly or connected via Cable.\n\nEnergy should be provided through the Controller. You can open the Controller's GUI to see how much energy the system is using.\n\nYou can only have one Controller in a system at a time.
@@ -161,10 +164,10 @@ dym.doc.refinedstorage.wireless_transmitter=When placed on a Cable, the Wireless
 dym.doc.refinedstorage.wrench=Rotates blocks and breaks Covers.
 dym.doc.refinedstorage.writer=Writers can take items, fluids, energy, and/or Redstone signals from connected Readers and then output it to to the world.\n\nOpen the Writer and select the name that the Reader is set to.\n\nThe Writer does not automatically insert items or fluids into the block in front of it, you have to extract them with some form of automation (Hoppers etc).
 
-# Refined Storage Addons
+# Refined Storage Addons -> Documentation
 dym.doc.refinedstorageaddons.wireless_crafting_grid=Acts like the Crafting Grid, but works anywhere in range of a Wireless Transmitter.\n\nSpecify the storage system to connect to by right clicking the Wireless Crafting Grid on the Controller.
 
-# Tinkers' Construct
+# Tinkers' Construct -> Documentation
 dym.doc.tconstruct.arrow=Fired from Shortbows and Longbows.\n\nDamage depends more on the Bow than the Arrow in general.
 dym.doc.tconstruct.battlesign=Lower damage.\Lower speed.\nCan be used as a shield in either hand. Reflects projectiles in the direction you're facing when holding right click.
 dym.doc.tconstruct.bolt=Fired from Crossbows.\nIgnores 50% of armor.
@@ -206,7 +209,7 @@ dym.doc.tconstruct.soil_modifier_smite=Adds Smite to the weapon.
 dym.doc.tconstruct.throwball_glow=Can be thrown, creates a light source where it lands.
 dym.doc.tconstruct.throwball_missile=Can be thrown, explodes into a giant crater where it lands.\n\nItems do not get destroyed by the explosion.
 
-# Twilight Forest
+# Twilight Forest -> Documentation
 dym.doc.twilightforest.aurora_block=Make up the Aurora Palace on Glaciers.\n\nConstantly change color.
 dym.doc.twilightforest.block_and_chain=When used, throws a projectile that returns to you after going a certain distance.\n\nDeals 5 hearts of damage, and destroys any blocks it touches.
 dym.doc.twilightforest.castle_door=Right click a Castle Door and all connected Castle Doors will temporarily disappear, allowing entites to walk through them.\n\nAlso activates when given a Redstone signal.
@@ -266,7 +269,7 @@ dym.doc.twilightforest.twilight_scepter=Can drop from the Lich.\n\nShoots out a 
 dym.doc.twilightforest.uncrafting_table=Allows you to uncraft an item, destroying it and returning the items used to make it.\n\nUncrafting takes a level of experience per item gained.
 dym.doc.twilightforest.zombie_scepter=Can drop from the Lich.\n\nSpawns an allied Zombie to defend you. They die after 60 seconds.\n\nWhen it runs out of charges, it can be recharged with Rotten Flesh and a Potion of Strength.
 
-# Waystones
+# Waystones -> Documentation
 dym.doc.waystones.bound_scroll=The Bound Scroll teleports you to the Waystone you've bound it to.\n\nBind the Scroll to a Waystone by holding sneak and right clicking on it.\n\nThis uses up the Scroll.
 dym.doc.waystones.return_scroll=The Return Scroll teleports you to the most recent Waystone you've used.\n\nThis uses up the Scroll.
 dym.doc.waystones.warp_scroll=The Warp Scroll allows you to teleport to any Waystone you've ever used from anywhere.\n\nThis uses up the Scroll.

@@ -100,6 +100,15 @@
     "dym.doc.minecraft.wood_log"
   ],
   "tooltip": [
-    "dym.tip.minecraft.wood_log"
+    {
+      "key": "dym.tip.minecraft.wood_log_obfuscated",
+      "formatting": "obfuscated"
+    },
+    "dym.tip.minecraft.wood_log",
+    {
+      "key": "dym.tip.minecraft.wood_log_colored",
+      "formatting": "blue",
+      "__comment": "Basically refer to TextFormatting for \"formatting\" key"
+    }
   ]
 }

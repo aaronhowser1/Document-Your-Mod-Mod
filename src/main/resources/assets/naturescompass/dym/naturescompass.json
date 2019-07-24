@@ -14,5 +14,8 @@
   ],
   "documentation": [
     "dym.doc.naturescompass.naturescompass"
+  ],
+  "tooltip": [
+    "dym.tip.naturescompass.naturescompass"
   ]
 }
