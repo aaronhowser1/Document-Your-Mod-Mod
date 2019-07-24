@@ -37,7 +37,7 @@ import java.util.stream.Collectors;
 )
 public class DocumentMod
 {
-    public static final String MODID = "documentmod";
+    public static final String MODID = "dym";
     public static final String NAME = "Document Your Mod Mod";
     public static final String VERSION = "@VERSION@";
 

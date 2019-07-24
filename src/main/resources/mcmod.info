@@ -1,6 +1,6 @@
 [
 {
-  "modid": "documentmod",
+  "modid": "dym",
   "name": "Document Your Mod Mod",
   "description": "Adds JEI Information tabs to things that need it.",
   "version": "${version}",
