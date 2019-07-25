@@ -1,0 +1,18 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "refinedstorage:disk_manipulator"
+    }
+  ],
+  "documentation": [
+    "dym.doc.refinedstorage.disk_manipulator"
+  ]
+}

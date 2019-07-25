@@ -1,0 +1,18 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "twilightforest:experiment_115"
+    }
+  ],
+  "documentation": [
+    "dym.doc.twilightforest.experiment_one_hundred_fifteen"
+  ]
+}

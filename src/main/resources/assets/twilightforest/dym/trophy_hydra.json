@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "twilightforest:trophy",
+      "metadata": 2
+    }
+  ],
+  "documentation": [
+    "dym.doc.twilightforest.trophy_hydra"
+  ]
+}

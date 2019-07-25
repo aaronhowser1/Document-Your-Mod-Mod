@@ -1,0 +1,68 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.tweaks.feature.AxesBreakLeaves"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:block",
+      "registry_name": "minecraft:leaves",
+      "metadata": 0
+    },
+    {
+      "type": "dym:block",
+      "registry_name": "minecraft:leaves",
+      "metadata": 1
+    },
+    {
+      "type": "dym:block",
+      "registry_name": "minecraft:leaves",
+      "metadata": 2
+    },
+    {
+      "type": "dym:block",
+      "registry_name": "minecraft:leaves",
+      "metadata": 3
+    },
+    {
+      "type": "dym:block",
+      "registry_name": "minecraft:leaves2",
+      "metadata": 0
+    },
+    {
+      "type": "dym:block",
+      "registry_name": "minecraft:leaves2",
+      "metadata": 1
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:wooden_axe"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:stone_axe"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:iron_axe"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:golden_axe"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:diamond_axe"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.axe_leaf_break"
+  ]
+}

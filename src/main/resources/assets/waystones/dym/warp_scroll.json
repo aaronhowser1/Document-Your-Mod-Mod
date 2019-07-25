@@ -1,0 +1,18 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useWaystone",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "waystones:warp_scroll"
+    }
+  ],
+  "documentation": [
+    "dym.doc.waystones.warp_scroll"
+  ]
+}

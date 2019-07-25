@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "twilightforest:tower_device",
+      "metadata": 10
+    }
+  ],
+  "documentation": [
+    "dym.doc.twilightforest.tower_device_ghast_trap"
+  ]
+}

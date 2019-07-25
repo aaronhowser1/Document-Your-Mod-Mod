@@ -2,9 +2,14 @@ buildscript {
     repositories {
         jcenter()
         maven { url = "https://files.minecraftforge.net/maven" }
+        maven {
+            name 'OpenMods Third Party'
+            url 'http://repo.openmods.info/artifactory/simple/thirdparty'
+        }
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+        classpath group: 'net.thesilkminer.gradle.translationchecker', name: 'TranslationChecker', version: '1.1'
     }
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
@@ -47,9 +52,6 @@ repositories {
 }
 
 dependencies {
-    compile "vazkii.autoreglib:AutoRegLib:${arl_version}"
-    compile "vazkii.quark:Quark:${quark_version}"
-    deobfProvided "vazkii.quark:Quark:${quark_version}:api"
     // compile against the JEI API but do not include it at runtime
     deobfProvided "mezz.jei:jei_${mc_version}:${jei_version}:api"
     // at runtime, use the full JEI jar
@@ -74,4 +76,15 @@ processResources {
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
     }
+}
+
+task updateTranslations(type: net.thesilkminer.gradle.plugin.translationchecker.tasks.TranslationCheckTask) {
+    modId = "documentmod"
+    templateFileName = "en_us.lang"
+}
+
+task checkTranslations(type: net.thesilkminer.gradle.plugin.translationchecker.tasks.TranslationCheckTask) {
+    modId = "documentmod"
+    dryRun = true
+    templateFileName = "en_us.lang"
 }

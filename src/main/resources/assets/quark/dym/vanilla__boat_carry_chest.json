@@ -1,0 +1,42 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.management.feature.ChestsInBoats"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:boat"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:spruce_boat"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:birch_boat"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:jungle_boat"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:acacia_boat"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:dark_oak_boat"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.boat_carry_chest"
+  ]
+}

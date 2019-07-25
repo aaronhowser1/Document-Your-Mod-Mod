@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "twilightforest:maze_map_empty"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "twilightforest:maze_map"
+    }
+  ],
+  "documentation": [
+    "dym.doc.twilightforest.maze_map"
+  ]
+}

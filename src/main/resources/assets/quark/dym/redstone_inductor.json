@@ -1,0 +1,18 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "quark:redstone_inductor"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.redstone_inductor"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "refinedstorage:fluid_storage",
+      "metadata": 1
+    }
+  ],
+  "documentation": [
+    "dym.doc.refinedstorage.storage_fluid_256k"
+  ]
+}

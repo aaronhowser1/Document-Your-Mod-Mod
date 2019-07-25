@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.misc.feature.PoisonPotatoUsage"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:poisonous_potato"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.poisonous_potato_usage"
+  ]
+}

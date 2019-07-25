@@ -1,0 +1,54 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.automation.feature.AnimalsEatFloorFood"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:wheat"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:carrot"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:potato"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:beetroot"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:wheat_seeds"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:pumpkin_seeds"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:beetroot_seeds"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:melon_seeds"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:nether_wart"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.food_animal_eat"
+  ]
+}

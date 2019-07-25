@@ -1,0 +1,106 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.decoration.feature.FlatItemFrames"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:item_frame"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 1
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 2
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 3
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 4
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 5
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 6
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 7
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 8
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 9
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 10
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 11
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 12
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 13
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 14
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_item_frame",
+      "metadata": 15
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:glass_item_frame"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.item_frame_flat"
+  ]
+}

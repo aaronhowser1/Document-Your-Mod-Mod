@@ -1,0 +1,18 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "twilightforest:seeker_bow"
+    }
+  ],
+  "documentation": [
+    "dym.doc.twilightforest.seeker_bow"
+  ]
+}

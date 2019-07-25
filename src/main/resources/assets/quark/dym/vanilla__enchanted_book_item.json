@@ -1,0 +1,21 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.client.feature.EnchantedBooksShowItems"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:enchanted_book"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.enchanted_book_item"
+  ]
+}

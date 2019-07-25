@@ -1,0 +1,18 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "twilightforest:ore_magnet"
+    }
+  ],
+  "documentation": [
+    "dym.doc.twilightforest.ore_magnet"
+  ]
+}

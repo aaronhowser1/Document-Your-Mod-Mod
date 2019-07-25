@@ -1,0 +1,94 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "quark:rune",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:rune",
+      "metadata": 1
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:rune",
+      "metadata": 2
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:rune",
+      "metadata": 3
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:rune",
+      "metadata": 4
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:rune",
+      "metadata": 5
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:rune",
+      "metadata": 6
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:rune",
+      "metadata": 7
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:rune",
+      "metadata": 8
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:rune",
+      "metadata": 9
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:rune",
+      "metadata": 10
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:rune",
+      "metadata": 11
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:rune",
+      "metadata": 12
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:rune",
+      "metadata": 13
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:rune",
+      "metadata": 14
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:rune",
+      "metadata": 15
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.rune"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "twilightforest:twilight_sapling",
+      "metadata": 7
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "twilightforest:magic_log_core",
+      "metadata": 2
+    }
+  ],
+  "documentation": [
+    "dym.doc.twilightforest.twilight_sapling_miner"
+  ]
+}

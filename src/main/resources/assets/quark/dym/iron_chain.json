@@ -1,0 +1,18 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "quark:iron_chain"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.iron_chain"
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTinkersConstruct",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:slime_sapling",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:slime_sapling",
+      "metadata": 1
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 1
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 2
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 3
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 5
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 6
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 7
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 8
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 10
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 11
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 12
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 13
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:slime_dirt",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:slime_dirt",
+      "metadata": 1
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:slime_dirt",
+      "metadata": 2
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:slime_congealed",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:slime_congealed",
+      "metadata": 1
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:slime_congealed",
+      "metadata": 2
+    }
+  ],
+  "documentation": [
+    "dym.doc.tconstruct.feature.overworld_slime_islands"
+  ]
+}

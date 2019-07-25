@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "refinedstorage:storage",
+      "metadata": 0
+    }
+  ],
+  "documentation": [
+    "dym.doc.refinedstorage.storage_normal_1k"
+  ]
+}

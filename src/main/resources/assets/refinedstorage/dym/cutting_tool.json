@@ -1,0 +1,18 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "refinedstorage:cutting_tool"
+    }
+  ],
+  "documentation": [
+    "dym.doc.refinedstorage.cutting_tool"
+  ]
+}

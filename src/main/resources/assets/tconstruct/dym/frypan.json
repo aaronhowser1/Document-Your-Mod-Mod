@@ -1,0 +1,18 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTinkersConstruct",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item_all_nbt_in_search",
+      "registry_name": "tconstruct:frypan"
+    }
+  ],
+  "documentation": [
+    "dym.doc.tconstruct.frypan"
+  ]
+}

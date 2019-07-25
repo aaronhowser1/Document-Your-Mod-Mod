@@ -36,6 +36,9 @@ public class DYMMConfig {
     @Config.Name("Refined Storage info")
     public static boolean useRefinedStorage = true;
 
-    @Config.Name("Debug")
+    @Config.Name("Debug - Mod Documented")
     public static boolean debugModIsDocumented = false;
+
+    @Config.Name("Debug - Not Documented Items")
+    public static boolean debugItemsNoEntry = false;
 }

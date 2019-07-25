@@ -1,0 +1,18 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "twilightforest:lamp_of_cinders"
+    }
+  ],
+  "documentation": [
+    "dym.doc.twilightforest.lamp_of_cinders"
+  ]
+}

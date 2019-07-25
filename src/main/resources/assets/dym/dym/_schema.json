@@ -1,0 +1,114 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "configuration_setting",
+      "value": true
+    },
+    {
+      "type": "quark:check_module",
+      "class": "quark.module.class"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:wood_log",
+      "metadata": 1,
+      "nbt": {
+        "0": {
+          "type": "end"
+        },
+        "1": {
+          "type": "byte",
+          "value": 32
+        },
+        "2": {
+          "type": "short",
+          "value": 457
+        },
+        "3": {
+          "type": "int",
+          "value": 1245
+        },
+        "4": {
+          "type": "long",
+          "value": 154674
+        },
+        "5": {
+          "type": "float",
+          "value": 54.7
+        },
+        "6": {
+          "type": "double",
+          "value": 54.7784534
+        },
+        "7": {
+          "type": "byte_array",
+          "value": [
+            12,
+            4,
+            84
+          ]
+        },
+        "8": {
+          "type": "string",
+          "value": "String?"
+        },
+        "9": {
+          "type": "list",
+          "value": [
+            {
+              "type": "int",
+              "value": 69
+            },
+            {
+              "type": "string",
+              "value": "is a great number"
+            }
+          ]
+        },
+        "10": {
+          "type": "compound",
+          "value": {
+            "CJ": {
+              "type": "string",
+              "value": "Here we go again!"
+            }
+          }
+        },
+        "11": {
+          "type": "int_array",
+          "value": [
+            552,
+            485,
+            456
+          ]
+        },
+        "12": {
+          "type": "long_array",
+          "value": [
+            415456,
+            544654,
+            1315
+          ]
+        }
+      }
+    }
+  ],
+  "documentation": [
+    "dym.doc.minecraft.wood_log"
+  ],
+  "tooltip": [
+    {
+      "key": "dym.tip.minecraft.wood_log_obfuscated",
+      "formatting": "obfuscated"
+    },
+    "dym.tip.minecraft.wood_log",
+    {
+      "key": "dym.tip.minecraft.wood_log_colored",
+      "formatting": "blue",
+      "__comment": "Basically refer to TextFormatting for \"formatting\" key"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "twilightforest:transformation_powder"
+    }
+  ],
+  "documentation": [
+    "dym.doc.twilightforest.transformation_powder"
+  ]
+}

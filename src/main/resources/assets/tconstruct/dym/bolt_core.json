@@ -1,0 +1,18 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTinkersConstruct",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:bolt_core"
+    }
+  ],
+  "documentation": [
+    "dym.doc.tconstruct.bolt_core"
+  ]
+}

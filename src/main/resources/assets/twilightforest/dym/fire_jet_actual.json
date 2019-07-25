@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTwilightForest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "twilightforest:fire_jet",
+      "metadata": 3
+    }
+  ],
+  "documentation": [
+    "dym.doc.twilightforest.fire_jet_actual"
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.decoration.feature.MoreBanners"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:banner",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:banner",
+      "metadata": 1
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:banner",
+      "metadata": 2
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:banner",
+      "metadata": 3
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:banner",
+      "metadata": 4
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:banner",
+      "metadata": 5
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:banner",
+      "metadata": 6
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:banner",
+      "metadata": 7
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:banner",
+      "metadata": 8
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:banner",
+      "metadata": 9
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:banner",
+      "metadata": 10
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:banner",
+      "metadata": 11
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:banner",
+      "metadata": 12
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:banner",
+      "metadata": 13
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:banner",
+      "metadata": 14
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:banner",
+      "metadata": 15
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.banner_motif"
+  ]
+}

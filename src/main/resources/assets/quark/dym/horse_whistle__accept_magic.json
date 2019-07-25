@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.misc.feature.HorseWhistle",
+      "field": "horsesAreMagical",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "quark:horse_whistle"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.horse_whistle.accept_magic"
+  ]
+}

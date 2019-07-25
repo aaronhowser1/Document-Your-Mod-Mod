@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "refinedstorage:upgrade",
+      "metadata": 4
+    }
+  ],
+  "documentation": [
+    "dym.doc.refinedstorage.upgrade_stack"
+  ]
+}

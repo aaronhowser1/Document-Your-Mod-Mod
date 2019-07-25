@@ -1,0 +1,26 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.decoration.feature.PlaceBlazeRods"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:blaze_rod"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:blaze_rod"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.blaze_rod_place"
+  ]
+}

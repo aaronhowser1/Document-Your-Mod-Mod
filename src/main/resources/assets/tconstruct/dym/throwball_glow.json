@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useTinkersConstruct",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:throwball",
+      "metadata": 0
+    }
+  ],
+  "documentation": [
+    "dym.doc.tconstruct.throwball_glow"
+  ]
+}

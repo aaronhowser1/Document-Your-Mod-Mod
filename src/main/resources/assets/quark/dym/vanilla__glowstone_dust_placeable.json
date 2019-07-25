@@ -1,0 +1,26 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.misc.feature.PlaceVanillaDusts"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:glowstone_dust"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:glowstone_dust_block"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.glowstone_dust_placeable"
+  ]
+}

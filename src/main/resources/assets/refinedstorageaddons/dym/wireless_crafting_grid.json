@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useRefinedStorage",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "refinedstorageaddons:wireless_crafting_grid",
+      "metadata": 1
+    }
+  ],
+  "documentation": [
+    "dym.doc.refinedstorageaddons.wireless_crafting_grid"
+  ]
+}

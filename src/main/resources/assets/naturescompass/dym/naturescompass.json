@@ -1,0 +1,21 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useNaturesCompass",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "naturescompass:naturescompass"
+    }
+  ],
+  "documentation": [
+    "dym.doc.naturescompass.naturescompass"
+  ],
+  "tooltip": [
+    "dym.tip.naturescompass.naturescompass"
+  ]
+}

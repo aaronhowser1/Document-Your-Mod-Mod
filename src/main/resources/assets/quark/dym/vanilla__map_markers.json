@@ -1,0 +1,26 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.misc.feature.MapMarkers"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:filled_map"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:map"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.map_markers"
+  ]
+}

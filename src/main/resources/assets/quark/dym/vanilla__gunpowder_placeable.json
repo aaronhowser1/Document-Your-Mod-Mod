@@ -1,0 +1,26 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quarksubcat.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.misc.feature.PlaceVanillaDusts"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:gunpowder"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:gunpowder_block"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.gunpowder_placeable"
+  ]
+}
