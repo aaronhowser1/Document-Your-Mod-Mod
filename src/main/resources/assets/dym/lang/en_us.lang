@@ -174,7 +174,7 @@ dym.doc.tconstruct.bolt=Fired from Crossbows.\nIgnores 50% of armor.
 dym.doc.tconstruct.bolt_core=Bolt Cores are made by putting Arrow Shafts into the Casting Table and pouring the head material onto it.
 dym.doc.tconstruct.broadsword=Average damage.\nAverage speed.\nCan use offhand.\nCan hit multiple nearby enemies if attack cooldown is completed.
 dym.doc.tconstruct.cleaver=High damage.\nLow speed.\nCan't use offhand.\nHas Beheading II by default.
-dym.doc.tconstruct.crossbow=Fires Bolts.\nLong range.\nSlow reloating and needs to be reloaded after each shot.\nHigh damage.
+dym.doc.tconstruct.crossbow=Fires Bolts.\nLong range.\nSlow reloading and needs to be reloaded after each shot.\nHigh damage.
 dym.doc.tconstruct.excavator=Breaks soft blocks like Dirt in a 3x3 area.\n\nCan right click on Grass to make Grass Pahts in a 3x3 area.
 dym.doc.tconstruct.fancy_frame_glass=Disappears when an item is placed in it, so you can only see the item.
 dym.doc.tconstruct.feature.nether_slime_islands=Spawn on Nether Slime Islands, which randomly generate on the surface of the Nether's Lava ocean.
@@ -207,7 +207,7 @@ dym.doc.tconstruct.slime_sapling=Grows into a tree made of Congealed Slime.
 dym.doc.tconstruct.slimesling=Hold right click and release while looking at a block to be flung in the opposite direction.
 dym.doc.tconstruct.soil_modifier_smite=Adds Smite to the weapon.
 dym.doc.tconstruct.throwball_glow=Can be thrown, creates a light source where it lands.
-dym.doc.tconstruct.throwball_missile=Can be thrown, explodes into a giant crater where it lands.\n\nItems do not get destroyed by the explosion.
+dym.doc.tconstruct.throwball_missile=Can be thrown, exploding into a giant crater where it lands.\n\nItems do not get destroyed by the explosion.
 
 # Twilight Forest -> Documentation
 dym.doc.twilightforest.aurora_block=Make up the Aurora Palace on Glaciers.\n\nConstantly change color.

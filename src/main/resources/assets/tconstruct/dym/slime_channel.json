@@ -26,6 +26,11 @@
       "type": "dym:item",
       "registry_name": "tconstruct:slime_channel",
       "metadata": 3
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:slime_channel",
+      "metadata": 4
     }
   ],
   "documentation": [

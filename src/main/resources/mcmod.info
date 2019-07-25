@@ -7,7 +7,7 @@
   "mcversion": "${mcversion}",
   "url": "https://github.com/aaronhowser1/Document-Your-Mod-Mod",
   "updateUrl": "",
-  "authorList": ["aaronhowser1"],
+  "authorList": ["aaronhowser1", "TheSilkMiner"],
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
