@@ -9,10 +9,10 @@
   "for": [
     {
       "type": "dym:item_all_nbt_in_search",
-      "registry_name": "tconstruct:bolt_core"
+      "registry_name": "tconstruct:toolforge"
     }
   ],
   "documentation": [
-    "dym.doc.tconstruct.bolt_core"
+    "dym.doc.tconstruct.tool_forge"
   ]
 }

@@ -8,11 +8,12 @@
   ],
   "for": [
     {
-      "type": "dym:item_all_nbt_in_search",
-      "registry_name": "tconstruct:bolt_core"
+      "type": "dym:item",
+      "registry_name": "tconstruct:tooltables",
+      "metadata": 0
     }
   ],
   "documentation": [
-    "dym.doc.tconstruct.bolt_core"
+    "dym.doc.tconstruct.crafting_station"
   ]
 }
