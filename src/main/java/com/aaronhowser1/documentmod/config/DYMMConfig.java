@@ -36,6 +36,9 @@ public class DYMMConfig {
     @Config.Name("Refined Storage info")
     public static boolean useRefinedStorage = true;
 
+    @Config.Name("Iron Chest info")
+    public static boolean useIronChest = true;
+
     @Config.Name("Debug - Mod Documented")
     public static boolean debugModIsDocumented = false;
 

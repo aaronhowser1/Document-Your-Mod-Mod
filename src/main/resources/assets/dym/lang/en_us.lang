@@ -5,6 +5,17 @@
 # Each specifier is separated using double underscores
 # All the entries are ordered in (ascending) alphabetical order.
 
+# Iron Chest -> Tooltip
+dym.tip.ironchest.copper_to_iron=Used to upgrade a Copper Chest to an Iron Chest
+dym.tip.ironchest.copper_to_silver=Used to upgrade a Copper Chest to a Silver Chest
+dym.tip.ironchest.diamond_to_crystal=Used to upgrade a Diamond Chest to a Crystal Chest
+dym.tip.ironchest.diamond_to_obsidian=Used to upgrade a Diamond Chest to an Obsidian Chest
+dym.tip.ironchest.gold_to_iron=Used to upgrade a Gold Chest to a Diamond Chest
+dym.tip.ironchest.iron_to_gold=Used to upgrade an Iron chest to a Gold chest
+dym.tip.ironchest.silver_to_gold=Used to upgrade a Silver Chest to a Gold Chest
+dym.tip.ironchest.wood_to_iron=Used to upgrade a wooden Chest to an Iron Chest
+dym.tip.ironchest.wood_to_copper=Used to upgrade a wooden Chest to a Copper Chest
+
 # Nature's Compass -> Documentation
 dym.doc.naturescompass.naturescompass=Use to open a list of biomes. Select one from the list and the Compass will point towards the nearest instance of that biome.
 

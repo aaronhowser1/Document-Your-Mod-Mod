@@ -15,6 +15,7 @@ public final class ModId {
     public static final String TINKERS_CONSTRUCT = "tconstruct";
     public static final String TWILIGHT_FOREST = "twilightforest";
     public static final String WAYSTONES = "waystones";
+    public static final String IRONCHEST = "ironchest";
 
     private ModId() {}
 }

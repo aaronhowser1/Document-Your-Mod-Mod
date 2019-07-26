@@ -1,0 +1,18 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useIronChest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "ironchest:copper_silver_chest_upgrade"
+    }
+  ],
+  "tooltip": [
+    "dym.tip.ironchest.copper_to_silver"
+  ]
+}
