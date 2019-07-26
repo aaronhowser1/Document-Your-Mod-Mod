@@ -26,6 +26,11 @@
       "type": "dym:item",
       "registry_name": "tconstruct:slimesling",
       "metadata": 3
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "tconstruct:slimesling",
+      "metadata": 4
     }
   ],
   "documentation": [
