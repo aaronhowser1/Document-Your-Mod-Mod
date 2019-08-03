@@ -12,6 +12,9 @@
       "registry_name": "ironchest:gold_diamond_chest_upgrade"
     }
   ],
+  "documentation": [
+    "dym.doc.ironchest.gold_to_diamond"
+  ],
   "tooltip": [
     "dym.tip.ironchest.gold_to_diamond"
   ]

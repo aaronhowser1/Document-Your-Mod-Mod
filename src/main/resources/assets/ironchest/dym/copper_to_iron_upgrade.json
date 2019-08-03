@@ -12,6 +12,9 @@
       "registry_name": "ironchest:copper_iron_chest_upgrade"
     }
   ],
+  "documentation": [
+    "dym.doc.ironchest.copper_to_iron"
+  ],
   "tooltip": [
     "dym.tip.ironchest.copper_to_iron"
   ]

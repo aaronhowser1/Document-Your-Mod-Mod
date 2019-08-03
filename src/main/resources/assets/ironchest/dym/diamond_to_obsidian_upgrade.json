@@ -12,6 +12,9 @@
       "registry_name": "ironchest:diamond_obsidian_chest_upgrade"
     }
   ],
+  "documentation": [
+    "dym.doc.ironchest.diamond_to_obsidian"
+  ],
   "tooltip": [
     "dym.tip.ironchest.diamond_to_obsidian"
   ]

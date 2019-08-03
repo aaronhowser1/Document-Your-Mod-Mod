@@ -12,6 +12,9 @@
       "registry_name": "ironchest:iron_gold_chest_upgrade"
     }
   ],
+  "documentation": [
+    "dym.doc.ironchest.iron_to_gold"
+  ],
   "tooltip": [
     "dym.tip.ironchest.iron_to_gold"
   ]

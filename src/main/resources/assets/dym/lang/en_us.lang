@@ -5,6 +5,25 @@
 # Each specifier is separated using double underscores
 # All the entries are ordered in (ascending) alphabetical order.
 
+# Iron Chest -> Documentation
+dym.doc.ironchest.copper_chest=5 rows of 9 slots for a total of 45 slots.
+dym.doc.ironchest.copper_to_iron=Right click on a Copper Chest to turn it into an Iron Chest without breaking it.
+dym.doc.ironchest.copper_to_silver=Right click on a Copper Chest to turn it into a Silver Chest without breaking it.
+dym.doc.ironchest.crystal_chest=You can see the contained items from outside the GUI.
+dym.doc.ironchest.diamond_chest=9 rows of 12 slots for a total of 108 slots.
+dym.doc.ironchest.diamond_to_crystal=Right click on a Diamond Chest to turn it into a Crystal Chest without breaking it.
+dym.doc.ironchest.diamond_to_obsidian=Right click on a Diamond Chest to turn it into an Obsidian Chest without breaking it.
+dym.doc.ironchest.dirt_chest=Over powered.
+dym.doc.ironchest.gold_chest=9 rows of 9 slots for a total of 81 slots.
+dym.doc.ironchest.gold_to_diamond=Right click on a Gold Chest to turn it into a Diamond Chest without breaking it.
+dym.doc.ironchest.iron_chest=6 rows of 9 slots for a total of 54 slots.
+dym.doc.ironchest.iron_to_gold=Right click on an Iron Chest to turn it into a Gold Chest without breaking it.
+dym.doc.ironchest.obsidian_chest=Resists explosions.
+dym.doc.ironchest.silver_chest=8 rows of 9 slots for a total of 72 slots.
+dym.doc.ironchest.silver_to_gold=Right click on a Silver Chest to turn it into a Gold Chest without breaking it.
+dym.doc.ironchest.wood_to_iron=Right click on a Chest to turn it into an Iron Chest without breaking it.
+dym.doc.ironchest.wood_to_copper=Right click on a Chest to turn it into a Copper Chest without breaking it.
+
 # Iron Chest -> Tooltip
 dym.tip.ironchest.copper_to_iron=Used to upgrade a Copper Chest to an Iron Chest
 dym.tip.ironchest.copper_to_silver=Used to upgrade a Copper Chest to a Silver Chest

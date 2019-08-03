@@ -9,13 +9,11 @@
   "for": [
     {
       "type": "dym:item",
-      "registry_name": "ironchest:silver_gold_chest_upgrade"
+      "registry_name": "ironchest:iron_chest",
+      "metadata": 0
     }
   ],
   "documentation": [
-    "dym.doc.ironchest.silver_to_gold"
-  ],
-  "tooltip": [
-    "dym.tip.ironchest.silver_to_gold"
+    "dym.doc.ironchest.iron_chest"
   ]
 }

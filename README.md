@@ -18,7 +18,8 @@ The list of mods that are currently supported are:
 * Refined Storage
 * Refined Storage Addons
 * Nature's Compass
-* Waystone
+* Waystones
+* Iron Chests
 
 "But Aaron, isn't this basically a glorified CraftTweaker script?"
 

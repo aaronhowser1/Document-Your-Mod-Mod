@@ -1,0 +1,94 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "useIronChest",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+    "registry_name": "ironchest:iron_shulker_box_white",
+    "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "ironchest:iron_shulker_box_orange",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "ironchest:iron_shulker_box_magenta",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "ironchest:iron_shulker_box_light_blue",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "ironchest:iron_shulker_box_yellow",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "ironchest:iron_shulker_box_lime",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "ironchest:iron_shulker_box_pink",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "ironchest:iron_shulker_box_gray",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "ironchest:iron_shulker_box_silver",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "ironchest:iron_shulker_box_cyan",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "ironchest:iron_shulker_box_purple",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "ironchest:iron_shulker_box_blue",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "ironchest:iron_shulker_box_brown",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "ironchest:iron_shulker_box_green",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "ironchest:iron_shulker_box_red",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "ironchest:iron_shulker_box_black",
+      "metadata": 0
+    }
+  ],
+  "documentation": [
+    "dym.doc.ironchest.iron_chest"
+  ]
+}
