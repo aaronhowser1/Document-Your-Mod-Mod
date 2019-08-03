@@ -9,7 +9,7 @@
   "for": [
     {
       "type": "dym:item",
-      "registry_name": "quark:iron_chain"
+      "registry_name": "quark:chain"
     }
   ],
   "documentation": [

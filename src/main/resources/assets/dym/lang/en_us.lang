@@ -54,6 +54,7 @@ dym.doc.quark.black_ash=Monsters cannot spawn on Wither Ash, or on the block abo
 dym.doc.quark.candle=Comes in all 16 colors. If there is no block underneath, it will fall like sand. Candles are equal to half a Bookshelf for Enchanting Tables.
 dym.doc.quark.charcoal_block=Blocks of Charcoal will burn forever, like Netherrack.
 dym.doc.quark.chute=When items are pushed into a Chute, the items get dropped out of the exact center of the bottom.
+dym.doc.quark.color_slime=Colored Slime blocks will not move Slime blocks of other colors when moved by a Piston.
 dym.doc.quark.diamond_heart=Has a chance of dropping from Stonelings.\n\nRight click on a Stoneling to tame it, allowing it to hold your items, eat Stone, and follow you when you're holding a Diamond.
 dym.doc.quark.ender_watcher=Gives off a Redstone signal when being looked at.
 dym.doc.quark.enderdragon_scale=Craft with the Elytra to duplicate it.
