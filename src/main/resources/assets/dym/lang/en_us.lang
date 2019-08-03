@@ -39,7 +39,7 @@ dym.tip.ironchest.wood_to_copper=Used to upgrade a wooden Chest to a Copper Ches
 dym.doc.naturescompass.naturescompass=Use to open a list of biomes. Select one from the list and the Compass will point towards the nearest instance of that biome.
 
 # Nature's Compass -> Tooltip
-dym.tip.naturescompass.naturescompass=Find Biomes
+dym.tip.naturescompass.naturescompass=Finds biomes
 
 # Quark -> Documentation
 dym.doc.quark.ancient_tome=Rare loot in dungeons.\nCombine with an Enchanted Book of the same enchantment and level to create an Enchanted Book one level above the usual max, which can be applied to items.
