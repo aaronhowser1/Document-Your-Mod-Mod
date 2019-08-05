@@ -313,4 +313,3 @@ dym.doc.waystones.return_scroll=The Return Scroll teleports you to the most rece
 dym.doc.waystones.warp_scroll=The Warp Scroll allows you to teleport to any Waystone you've ever used from anywhere.\n\nThis uses up the Scroll.
 dym.doc.waystones.warp_stone=The Warp Stone allows you to teleport to any Waystone you've ever used from anywhere.\n\nThis does not use up the Stone, but it has a fairly long cooldown.
 dym.doc.waystones.waystone=You can teleport between all Waystones you've ever used, at the cost of experience depending on distance.
-
