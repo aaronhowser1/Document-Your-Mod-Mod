@@ -5,6 +5,7 @@ import com.aaronhowser1.documentmod.json.stacks.BlockStackFactory;
 import com.aaronhowser1.documentmod.json.stacks.EnchantedBookStackFactory;
 import com.aaronhowser1.documentmod.json.stacks.ItemAllNbtInSearchStackFactory;
 import com.aaronhowser1.documentmod.json.stacks.ItemStackFactory;
+import com.aaronhowser1.documentmod.utility.TranslationUtility;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -122,7 +123,7 @@ public final class ModDocumentation {
         final List<String> translationKeys = Lists.newArrayList();
         for (int i = 0; i < array.size(); ++i) {
             final String key = JsonUtils.getString(array.get(i), "documentation[" + i + "]");
-            if (!DocumentMod.proxy.canTranslate(key)) DocumentMod.logger.warn("Found non-translated key " + key + ". Please check your language file");
+            if (!TranslationUtility.INSTANCE.canTranslate(key)) DocumentMod.logger.warn("Found non-translated key " + key + ". Please check your language file");
             translationKeys.add(key);
         }
         return translationKeys;
@@ -158,7 +159,7 @@ public final class ModDocumentation {
             } else {
                 throw new JsonSyntaxException("Array elements of tooltip can be only Strings or Objects");
             }
-            if (!DocumentMod.proxy.canTranslate(pair.getRight())) DocumentMod.logger.warn("Found non-translated key " + pair.getRight() + ". Please check your language file");
+            if (!TranslationUtility.INSTANCE.canTranslate(pair.getRight())) DocumentMod.logger.warn("Found non-translated key " + pair.getRight() + ". Please check your language file");
             list.add(pair);
         });
         return list;

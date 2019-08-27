@@ -6,6 +6,7 @@ public final class ModId {
     public static final String AUTOREG_LIB = "autoreglib";
     public static final String CONNECTED_TEXTURES_MOD = "ctm";
     public static final String DOCUMENT_YOUR_MOD_MOD = DocumentMod.MODID;
+    public static final String IRONCHEST = "ironchest";
     public static final String JUST_ENOUGH_ITEMS = "jei";
     public static final String MANTLE = "mantle";
     public static final String NATURES_COMPASS = "naturescompass";
@@ -15,7 +16,6 @@ public final class ModId {
     public static final String TINKERS_CONSTRUCT = "tconstruct";
     public static final String TWILIGHT_FOREST = "twilightforest";
     public static final String WAYSTONES = "waystones";
-    public static final String IRONCHEST = "ironchest";
 
     private ModId() {}
 }

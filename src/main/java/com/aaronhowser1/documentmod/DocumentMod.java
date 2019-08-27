@@ -3,9 +3,10 @@ package com.aaronhowser1.documentmod;
 import com.aaronhowser1.documentmod.config.DYMMConfig;
 import com.aaronhowser1.documentmod.json.DocumentationLoader;
 import com.aaronhowser1.documentmod.json.DocumentationRegistry;
-import com.aaronhowser1.documentmod.proxy.CommonProxy;
-import net.minecraftforge.fml.common.*;
-import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.Loader;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.ModContainer;
+import net.minecraftforge.fml.common.ProgressManager;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -38,40 +39,31 @@ import java.util.stream.Collectors;
 public class DocumentMod
 {
     public static final String MODID = "dym";
-    public static final String NAME = "Document Your Mod Mod";
-    public static final String VERSION = "@VERSION@";
+    static final String NAME = "Document Your Mod Mod";
+    static final String VERSION = "@VERSION@";
 
     @Mod.Instance(MODID)
     public static DocumentMod instance;
 
     public static Logger logger;
 
-    @SidedProxy(modId = DocumentMod.MODID, clientSide = "com.aaronhowser1.documentmod.proxy.ClientProxy", serverSide = "com.aaronhowser1.documentmod.proxy.CommonProxy")
-    public static CommonProxy proxy;
-
     private boolean hasChecked = false;
 
-    @EventHandler
+    @Mod.EventHandler
     public void preInit(@Nonnull final FMLPreInitializationEvent event) {
         logger = event.getModLog();
-        proxy.preInit(event);
     }
 
-    @EventHandler
-    public void init(@Nonnull final FMLInitializationEvent event) {
-        proxy.init(event);
-    }
+    @Mod.EventHandler
+    public void init(@Nonnull final FMLInitializationEvent event) {}
 
-    @EventHandler
+    @Mod.EventHandler
     public void postInit(@Nonnull final FMLPostInitializationEvent event) {
         DocumentationLoader.INSTANCE.loadFromJson();
-        proxy.postInit(event);
     }
 
-    @EventHandler
+    @Mod.EventHandler
     public void loadComplete(@Nonnull final FMLLoadCompleteEvent event) {
-        proxy.loadComplete(event);
-
         if (this.hasChecked) return;
         this.hasChecked = true;
 
