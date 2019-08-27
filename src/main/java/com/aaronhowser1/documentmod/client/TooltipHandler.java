@@ -14,13 +14,14 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.relauncher.Side;
 import org.apache.commons.lang3.tuple.Pair;
 
 import javax.annotation.Nonnull;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-@Mod.EventBusSubscriber(modid = DocumentMod.MODID)
+@Mod.EventBusSubscriber(modid = DocumentMod.MODID, value = Side.CLIENT)
 public final class TooltipHandler {
 
     private static final LoadingCache<ResourceLocation, List<Pair<TextFormatting, String>>> CACHE;

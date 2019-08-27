@@ -49,9 +49,10 @@ public class DocumentMod
     @SidedProxy(modId = DocumentMod.MODID, clientSide = "com.aaronhowser1.documentmod.proxy.ClientProxy", serverSide = "com.aaronhowser1.documentmod.proxy.CommonProxy")
     public static CommonProxy proxy;
 
+    private boolean hasChecked = false;
+
     @EventHandler
-    public void preInit(FMLPreInitializationEvent event)
-    {
+    public void preInit(@Nonnull final FMLPreInitializationEvent event) {
         logger = event.getModLog();
         proxy.preInit(event);
     }
@@ -70,6 +71,9 @@ public class DocumentMod
     @EventHandler
     public void loadComplete(@Nonnull final FMLLoadCompleteEvent event) {
         proxy.loadComplete(event);
+
+        if (this.hasChecked) return;
+        this.hasChecked = true;
 
         final Consumer<String> loggingMethod = (DYMMConfig.debugItemsNoEntry)? logger::warn : logger::trace;
         final ProgressManager.ProgressBar bar = ProgressManager.push("Detecting undocumented items", Loader.instance().getActiveModList().size());
