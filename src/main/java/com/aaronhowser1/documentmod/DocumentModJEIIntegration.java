@@ -17,15 +17,16 @@ import java.util.List;
 public class DocumentModJEIIntegration implements IModPlugin
 {
     @Override
-    public void register(@Nonnull IModRegistry r)
-    {
+    public void register(@Nonnull final IModRegistry registry) {
         Loader.instance().getActiveModList().forEach(container -> {
             final List<ModDocumentation> modDocumentations = DocumentationRegistry.INSTANCE.getDocumentationForMod(container);
             modDocumentations.forEach(modDocumentation -> {
                 final List<String> strings = modDocumentation.getTranslationKeys();
                 if (!strings.isEmpty()) {
                     final String[] stringsArray = strings.toArray(new String[0]);
-                    r.addIngredientInfo(modDocumentation.getReferredStack(), VanillaTypes.ITEM, stringsArray);
+                    modDocumentation.getReferredStacks().forEach(stack -> {
+                        registry.addIngredientInfo(stack, VanillaTypes.ITEM, stringsArray);
+                    });
                 }
             });
             if (DYMMConfig.debugModIsDocumented && !modDocumentations.isEmpty()) {

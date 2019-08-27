@@ -9,6 +9,7 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
@@ -19,6 +20,7 @@ import org.apache.commons.lang3.tuple.Pair;
 
 import javax.annotation.Nonnull;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 @Mod.EventBusSubscriber(modid = DocumentMod.MODID, value = Side.CLIENT)
@@ -37,8 +39,12 @@ public final class TooltipHandler {
                     @Override
                     public List<Pair<TextFormatting, String>> load(@Nonnull final ResourceLocation key) {
                         return DocumentationRegistry.INSTANCE.getDocumentationForMod(key.getNamespace()).stream()
-                                .filter(it -> it.getReferredStack().getItem().getRegistryName() != null
-                                        && it.getReferredStack().getItem().getRegistryName().equals(key))
+                                .filter(it -> it.getReferredStacks().stream()
+                                        .map(ItemStack::getItem)
+                                        .map(Item::getRegistryName)
+                                        .filter(Objects::nonNull)
+                                        .anyMatch(key::equals)
+                                )
                                 .map(ModDocumentation::getTooltipKeys)
                                 .findFirst()
                                 .orElseGet(ImmutableList::of);

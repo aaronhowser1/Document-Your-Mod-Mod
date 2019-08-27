@@ -1,8 +1,8 @@
 package com.aaronhowser1.documentmod;
 
 import com.aaronhowser1.documentmod.config.DYMMConfig;
-import com.aaronhowser1.documentmod.json.DocumentationLoader;
 import com.aaronhowser1.documentmod.json.DocumentationRegistry;
+import com.aaronhowser1.documentmod.json.ModDocumentation;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.ModContainer;
@@ -14,6 +14,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.ImmutableTriple;
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.annotation.Nonnull;
@@ -43,24 +44,21 @@ public class DocumentMod
     static final String VERSION = "@VERSION@";
 
     @Mod.Instance(MODID)
+    @SuppressWarnings("unused")
     public static DocumentMod instance;
 
-    public static Logger logger;
+    public static Logger logger = LogManager.getLogger(MODID); // Exactly what FMLPreInitializationEvent#getModLog does
 
     private boolean hasChecked = false;
 
     @Mod.EventHandler
-    public void preInit(@Nonnull final FMLPreInitializationEvent event) {
-        logger = event.getModLog();
-    }
+    public void preInit(@Nonnull final FMLPreInitializationEvent event) {}
 
     @Mod.EventHandler
     public void init(@Nonnull final FMLInitializationEvent event) {}
 
     @Mod.EventHandler
-    public void postInit(@Nonnull final FMLPostInitializationEvent event) {
-        DocumentationLoader.INSTANCE.loadFromJson();
-    }
+    public void postInit(@Nonnull final FMLPostInitializationEvent event) {}
 
     @Mod.EventHandler
     public void loadComplete(@Nonnull final FMLLoadCompleteEvent event) {
@@ -86,7 +84,11 @@ public class DocumentMod
                 .map(triple -> triple.getMiddle().stream()
                         .map(it -> ImmutableTriple.of(
                                 triple.getLeft(), it, triple.getRight().stream()
-                                        .filter(entry -> it.equals(entry.getReferredStack().getItem().getRegistryName()))
+                                        //.filter(entry -> it.equals(entry.getReferredStack().getItem().getRegistryName()))
+                                        .map(ModDocumentation::getReferredStacks)
+                                        .flatMap(Collection::stream)
+                                        .map(stack -> stack.getItem().getRegistryName())
+                                        .filter(it::equals)
                                         .findFirst()
                         )).collect(Collectors.toList())
                 )
