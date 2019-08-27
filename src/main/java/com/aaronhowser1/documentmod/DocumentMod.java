@@ -27,14 +27,7 @@ import java.util.stream.Collectors;
         modid = DocumentMod.MODID,
         name = DocumentMod.NAME,
         version = DocumentMod.VERSION,
-        dependencies =
-                "required-after:jei@[1.12.2-4.15.0.268,);" +
-                "after:quark@[r1.5-167,);" +
-                "after:naturescompass;" +
-                "after:tconstruct;" +
-                "after:twilightforest;" +
-                "after:refinedstorage;" +
-                "after:waystones;",
+        dependencies = "required-after:jei@[1.12.2-4.15.0.268,);",
         clientSideOnly = true
 )
 public class DocumentMod
