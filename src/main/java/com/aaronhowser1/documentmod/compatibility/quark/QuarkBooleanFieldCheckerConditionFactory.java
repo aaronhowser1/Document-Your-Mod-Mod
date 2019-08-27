@@ -1,6 +1,6 @@
-package com.aaronhowser1.documentmod.quark;
+package com.aaronhowser1.documentmod.compatibility.quark;
 
-import com.aaronhowser1.documentmod.json.ConditionFactory;
+import com.aaronhowser1.documentmod.json.factory.condition.ConditionFactory;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonSyntaxException;

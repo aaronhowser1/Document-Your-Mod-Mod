@@ -1,7 +1,6 @@
-package com.aaronhowser1.documentmod.json.conditions;
+package com.aaronhowser1.documentmod.json.factory.condition;
 
 import com.aaronhowser1.documentmod.config.DYMMConfig;
-import com.aaronhowser1.documentmod.json.ConditionFactory;
 import com.google.common.collect.Maps;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;

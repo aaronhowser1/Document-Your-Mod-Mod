@@ -1,3 +1,7 @@
 {
-  "asd": "fuck"
+  "condition": {
+    "check_boolean_field": "com.aaronhowser1.documentmod.compatibility.quark.QuarkBooleanFieldCheckerConditionFactory",
+    "check_feature": "com.aaronhowser1.documentmod.compatibility.quark.QuarkFeatureCheckingConditionFactory",
+    "check_module": "com.aaronhowser1.documentmod.compatibility.quark.QuarkModuleCheckingConditionFactory"
+  }
 }

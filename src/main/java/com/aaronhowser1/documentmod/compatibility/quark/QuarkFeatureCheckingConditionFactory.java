@@ -1,6 +1,6 @@
-package com.aaronhowser1.documentmod.quark;
+package com.aaronhowser1.documentmod.compatibility.quark;
 
-import com.aaronhowser1.documentmod.json.ConditionFactory;
+import com.aaronhowser1.documentmod.json.factory.condition.ConditionFactory;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import net.minecraft.util.JsonUtils;
@@ -11,7 +11,7 @@ import javax.annotation.Nonnull;
 import java.lang.reflect.Method;
 import java.util.function.BooleanSupplier;
 
-public class QuarkModuleCheckingConditionFactory implements ConditionFactory {
+public class QuarkFeatureCheckingConditionFactory implements ConditionFactory {
 
     @Nonnull
     @Override
@@ -21,13 +21,13 @@ public class QuarkModuleCheckingConditionFactory implements ConditionFactory {
         final String className = JsonUtils.getString(object, "class");
         try {
             final Class<?> maybeClass = Class.forName(className);
-            final Class<?> moduleClass = Class.forName("vazkii.quark.base.module.Module");
-            if (!moduleClass.isAssignableFrom(maybeClass)) throw new JsonParseException("Given class is not a feature class");
+            final Class<?> featureClass = Class.forName("vazkii.quark.base.module.Feature");
+            if (!featureClass.isAssignableFrom(maybeClass)) throw new JsonParseException("Given class is not a feature class");
             final Class<?> moduleLoader = Class.forName("vazkii.quark.base.module.ModuleLoader");
-            final Method isModuleEnabled = moduleLoader.getDeclaredMethod("isModuleEnabled", Class.class);
+            final Method isFeatureEnabled = moduleLoader.getDeclaredMethod("isFeatureEnabled", Class.class);
             return () -> {
                 try {
-                    return (boolean) isModuleEnabled.invoke(null, maybeClass);
+                    return (boolean) isFeatureEnabled.invoke(null, maybeClass);
                 } catch (final ReflectiveOperationException e) {
                     return false;
                 }

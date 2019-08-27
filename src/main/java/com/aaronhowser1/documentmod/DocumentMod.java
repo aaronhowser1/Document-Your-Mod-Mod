@@ -84,7 +84,6 @@ public class DocumentMod
                 .map(triple -> triple.getMiddle().stream()
                         .map(it -> ImmutableTriple.of(
                                 triple.getLeft(), it, triple.getRight().stream()
-                                        //.filter(entry -> it.equals(entry.getReferredStack().getItem().getRegistryName()))
                                         .map(ModDocumentation::getReferredStacks)
                                         .flatMap(Collection::stream)
                                         .map(stack -> stack.getItem().getRegistryName())

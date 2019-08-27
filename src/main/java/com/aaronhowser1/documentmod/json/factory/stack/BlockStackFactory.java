@@ -1,7 +1,6 @@
-package com.aaronhowser1.documentmod.json.stacks;
+package com.aaronhowser1.documentmod.json.factory.stack;
 
 import com.aaronhowser1.documentmod.DocumentMod;
-import com.aaronhowser1.documentmod.json.StackFactory;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;

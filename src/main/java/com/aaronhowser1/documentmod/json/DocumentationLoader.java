@@ -1,13 +1,11 @@
 package com.aaronhowser1.documentmod.json;
 
 import com.aaronhowser1.documentmod.DocumentMod;
-import com.aaronhowser1.documentmod.ModId;
 import com.aaronhowser1.documentmod.config.DYMMConfig;
-import com.aaronhowser1.documentmod.json.conditions.DocumentModConfigurationOption;
+import com.aaronhowser1.documentmod.json.factory.condition.ConditionFactory;
 import com.aaronhowser1.documentmod.json.factory.Factory;
-import com.aaronhowser1.documentmod.quark.QuarkBooleanFieldCheckerConditionFactory;
-import com.aaronhowser1.documentmod.quark.QuarkFeatureCheckingConditionFactory;
-import com.aaronhowser1.documentmod.quark.QuarkModuleCheckingConditionFactory;
+import com.aaronhowser1.documentmod.json.factory.nbt.NbtTagFactory;
+import com.aaronhowser1.documentmod.json.factory.stack.StackFactory;
 import com.aaronhowser1.documentmod.utility.TriConsumer;
 import com.aaronhowser1.documentmod.utility.TriPredicate;
 import com.google.common.collect.Lists;
@@ -28,9 +26,11 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Constructor;
 import java.nio.file.FileSystem;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
@@ -45,20 +45,30 @@ import java.util.function.Consumer;
 public enum DocumentationLoader {
     INSTANCE;
 
+    private static final String JSON_FACTORIES_CONDITION_TAG = "condition";
+    private static final String JSON_FACTORIES_STACK_TAG = "stack";
+    private static final String JSON_FACTORIES_NBT_TAG = "nbt";
+
     private static final String CONDITIONS_KEY = "conditions";
 
     private static final Map<Class<? extends Factory<?>>, Map<ResourceLocation, Factory<?>>> FACTORIES = Maps.newHashMap();
-    private static final Map<ResourceLocation, ConditionFactory> CONDITION_FACTORIES = Maps.newHashMap();
 
     private IForgeRegistry<ModDocumentation> registry = null;
     private ModContainer thisModContainer = null;
     private ProgressManager.ProgressBar bar = null;
 
-    static {
-        CONDITION_FACTORIES.put(new ResourceLocation(ModId.DOCUMENT_YOUR_MOD_MOD, "configuration_option"), new DocumentModConfigurationOption());
-        CONDITION_FACTORIES.put(new ResourceLocation(ModId.QUARK, "check_feature"), new QuarkFeatureCheckingConditionFactory());
-        CONDITION_FACTORIES.put(new ResourceLocation(ModId.QUARK, "check_module"), new QuarkModuleCheckingConditionFactory());
-        CONDITION_FACTORIES.put(new ResourceLocation(ModId.QUARK, "check_boolean_field"), new QuarkBooleanFieldCheckerConditionFactory());
+    @Nullable
+    public <T extends Factory<T>> T getFactory(@Nonnull final Class<T> type, @Nonnull final ResourceLocation name) {
+        final Map<ResourceLocation, Factory<?>> tmp = FACTORIES.get(type);
+        if (tmp == null) return null;
+        try {
+            @SuppressWarnings("unchecked")
+            final Factory<T> factory = (Factory<T>) tmp.get(name);
+            if (factory == null) return null;
+            return factory.asT();
+        } catch (@Nonnull final ClassCastException e) {
+            return null;
+        }
     }
 
     public void loadAndRegister(@Nonnull final IForgeRegistry<ModDocumentation> registry) {
@@ -110,9 +120,53 @@ public enum DocumentationLoader {
     }
 
     private void loadFactories(@Nonnull final ModContainer container, @Nonnull final JsonObject object) {
-        DocumentMod.logger.trace("Found factories file for mod " + container.getModId() + ". Proceeding with loading now");
-        // TODO
-        DocumentMod.logger.error("TODO " + container);
+        DocumentMod.logger.info("Found factories file for mod " + container.getModId() + ". Proceeding with loading now");
+        object.entrySet().forEach(entry -> {
+            final String name = entry.getKey();
+            if (JSON_FACTORIES_CONDITION_TAG.equals(name)) {
+                final JsonObject conditionFactories = JsonUtils.getJsonObject(entry.getValue(), JSON_FACTORIES_CONDITION_TAG);
+                conditionFactories.entrySet().forEach(factory -> this.loadAndRegisterFactory(container, factory, ConditionFactory.class));
+            } else if (JSON_FACTORIES_NBT_TAG.equals(name)) {
+                final JsonObject nbtFactories = JsonUtils.getJsonObject(entry.getValue(), JSON_FACTORIES_NBT_TAG);
+                nbtFactories.entrySet().forEach(factory -> this.loadAndRegisterFactory(container, factory, NbtTagFactory.class));
+            } else if (JSON_FACTORIES_STACK_TAG.equals(name)) {
+                final JsonObject stackFactories = JsonUtils.getJsonObject(entry.getValue(), JSON_FACTORIES_STACK_TAG);
+                stackFactories.entrySet().forEach(factory -> this.loadAndRegisterFactory(container, factory, StackFactory.class));
+            } else {
+                DocumentMod.logger.warn("Ignoring unknown factory type '" + name + "' for mod '" + container.getModId() + "'");
+            }
+        });
+    }
+
+    private <T extends Factory<T>> void loadAndRegisterFactory(@Nonnull final ModContainer container,
+                                                               @Nonnull final Map.Entry<String, JsonElement> entry,
+                                                               @Nonnull final Class<T> type) {
+        final ResourceLocation name = new ResourceLocation(container.getModId(), entry.getKey());
+        final String className = JsonUtils.getString(entry.getValue(), entry.getKey());
+        final T factory = this.initFactoryClass(className, type);
+        final Map<ResourceLocation, Factory<?>> factoryMap = FACTORIES.computeIfAbsent(type, key -> Maps.newHashMap());
+        if (factoryMap.get(name) != null) {
+            throw new JsonParseException("A factory with the given name already exists: " + name + " (class: " + factoryMap.get(name) + ")");
+        }
+        factoryMap.put(name, factory);
+    }
+
+    private <T extends Factory<T>> T initFactoryClass(@Nonnull final String name, @Nonnull final Class<T> type) {
+        try {
+            final Class<?> tClass = Class.forName(name);
+            if (!type.isAssignableFrom(tClass)) {
+                throw new JsonParseException("The given class " + name + " is not an instance of type " + type.getName());
+            }
+            @SuppressWarnings("unchecked")
+            final Constructor<T> constructor = ((Class<T>) tClass).getConstructor();
+            return constructor.newInstance();
+        } catch (@Nonnull final ClassNotFoundException e) {
+            throw new JsonParseException("Class " + name + " does not exist", e);
+        } catch (@Nonnull final InstantiationException | IllegalAccessException e) {
+            throw new JsonParseException("Class " + name + " cannot be instantiated. Make sure that it has a default public constructor", e);
+        } catch (@Nonnull final ReflectiveOperationException e) {
+            throw new JsonParseException("An error occurred while loading factory " + name, e);
+        }
     }
 
     private void dumpLoadedFactories() {
@@ -172,7 +226,6 @@ public enum DocumentationLoader {
     private void loadJsonDocumentationFile(@Nonnull final ModContainer modContainer, @Nonnull final Path path, @Nonnull final Path root, @Nonnull final List<ModDocumentation> list) {
         this.loadJsonFile(modContainer, path, root, (container, relativePath, name) -> {
             if (Objects.isNull(container) || Objects.isNull(relativePath) || Objects.isNull(name)) return false;
-            // This is the example file we have built, there is no reason to load it
             if (name.startsWith("_")) {
                 DocumentMod.logger.debug("Skipping loading of file " + relativePath + " for mod id " + container.getModId());
                 return false;
@@ -211,7 +264,7 @@ public enum DocumentationLoader {
         final String type = JsonUtils.getString(jsonObject, "type");
         if (type.trim().isEmpty()) throw new JsonSyntaxException("Condition type cannot be blank");
         if (type.indexOf(':') == -1) throw new JsonSyntaxException("Missing namespace for the condition type");
-        final ConditionFactory conditionFactory = CONDITION_FACTORIES.get(new ResourceLocation(type));
+        final ConditionFactory conditionFactory = this.getFactory(ConditionFactory.class, new ResourceLocation(type));
         if (conditionFactory == null) throw new JsonParseException("Condition type given '" + type + "' is not known");
         return conditionFactory;
     }

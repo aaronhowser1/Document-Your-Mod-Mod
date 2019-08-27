@@ -1,4 +1,14 @@
 {
-  "test": {},
-  "test2": {}
+  "condition": {
+    "configuration_option": "com.aaronhowser1.documentmod.json.factory.condition.DocumentModConfigurationOption"
+  },
+  "stack": {
+    "block": "com.aaronhowser1.documentmod.json.factory.stack.BlockStackFactory",
+    "enchanted_book": "com.aaronhowser1.documentmod.json.factory.stack.EnchantedBookStackFactory",
+    "item": "com.aaronhowser1.documentmod.json.factory.stack.ItemStackFactory",
+    "item_all_nbt_in_search": "com.aaronhowser1.documentmod.json.factory.stack.ItemAllNbtInSearchStackFactory"
+  },
+  "nbt": {
+
+  }
 }

@@ -1,14 +1,10 @@
 package com.aaronhowser1.documentmod.json;
 
 import com.aaronhowser1.documentmod.DocumentMod;
-import com.aaronhowser1.documentmod.json.stacks.BlockStackFactory;
-import com.aaronhowser1.documentmod.json.stacks.EnchantedBookStackFactory;
-import com.aaronhowser1.documentmod.json.stacks.ItemAllNbtInSearchStackFactory;
-import com.aaronhowser1.documentmod.json.stacks.ItemStackFactory;
+import com.aaronhowser1.documentmod.json.factory.stack.StackFactory;
 import com.aaronhowser1.documentmod.utility.TranslationUtility;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
@@ -25,12 +21,9 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 public final class ModDocumentation extends IForgeRegistryEntry.Impl<ModDocumentation> {
-
-    private static final Map<ResourceLocation, StackFactory> STACK_FACTORIES = Maps.newHashMap();
 
     private final List<ItemStack> itemStacks;
     private final List<String> translationKeys;
@@ -42,13 +35,6 @@ public final class ModDocumentation extends IForgeRegistryEntry.Impl<ModDocument
         this.translationKeys = ImmutableList.copyOf(translationKeys);
         this.tooltipKeys = ImmutableList.copyOf(tooltipKeys);
         this.setRegistryName(registryName);
-    }
-
-    static {
-        STACK_FACTORIES.put(new ResourceLocation(DocumentMod.MODID, "item"), new ItemStackFactory());
-        STACK_FACTORIES.put(new ResourceLocation(DocumentMod.MODID, "block"), new BlockStackFactory());
-        STACK_FACTORIES.put(new ResourceLocation(DocumentMod.MODID, "enchanted_book"), new EnchantedBookStackFactory());
-        STACK_FACTORIES.put(new ResourceLocation(DocumentMod.MODID, "item_all_nbt_in_search"), new ItemAllNbtInSearchStackFactory());
     }
 
     @Nullable
@@ -79,7 +65,7 @@ public final class ModDocumentation extends IForgeRegistryEntry.Impl<ModDocument
         final String type = JsonUtils.getString(jsonObject, "type");
         if (type.trim().isEmpty()) throw new JsonSyntaxException("Type cannot be empty");
         if (type.indexOf(':') == -1) throw new JsonSyntaxException("Missing namespace for type '" + type + "'");
-        final StackFactory stackFactory = STACK_FACTORIES.getOrDefault(new ResourceLocation(type), null);
+        final StackFactory stackFactory = DocumentationLoader.INSTANCE.getFactory(StackFactory.class, new ResourceLocation(type));
         if (stackFactory == null) {
             throw new JsonParseException("Unable to find stack factory for given type " + type);
         }

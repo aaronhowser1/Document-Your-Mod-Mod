@@ -1,7 +1,6 @@
-package com.aaronhowser1.documentmod.json.stacks;
+package com.aaronhowser1.documentmod.json.factory.stack;
 
 import com.aaronhowser1.documentmod.DocumentMod;
-import com.aaronhowser1.documentmod.json.StackFactory;
 import com.google.common.collect.ImmutableList;
 import com.google.gson.JsonObject;
 import net.minecraft.creativetab.CreativeTabs;
