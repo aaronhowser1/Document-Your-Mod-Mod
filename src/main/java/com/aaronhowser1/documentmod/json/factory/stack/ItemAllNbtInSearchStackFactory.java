@@ -18,11 +18,11 @@ import java.util.List;
 public class ItemAllNbtInSearchStackFactory implements StackFactory {
     @Nonnull
     @Override
-    public List<ItemStack> parseFromJson(@Nonnull final JsonObject jsonObject) {
+    public List<ItemStack> parseFromJson(@Nonnull final JsonObject jsonObject, @Nonnull final ResourceLocation name) {
         final String registryName = JsonUtils.getString(jsonObject, "registry_name");
         final Item itemBase = ForgeRegistries.ITEMS.getValue(new ResourceLocation(registryName));
         if (itemBase == null || itemBase == Items.AIR) {
-            DocumentMod.logger.warn("Tinker item with given registry name '" + registryName + "' does not exist. Skipping");
+            DocumentMod.logger.warn("In entry '" + name + ": NBT-based item with given registry name '" + registryName + "' does not exist; skipping");
             return ImmutableList.of();
         }
         final NonNullList<ItemStack> itemStacks = NonNullList.create();

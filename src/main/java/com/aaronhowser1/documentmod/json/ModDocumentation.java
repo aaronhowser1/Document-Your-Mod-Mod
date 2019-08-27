@@ -39,29 +39,29 @@ public final class ModDocumentation extends IForgeRegistryEntry.Impl<ModDocument
 
     @Nullable
     static ModDocumentation create(@Nonnull final JsonObject object, @Nonnull final ResourceLocation name) {
-        final List<ItemStack> stacks = getItemStacksIntoList(JsonUtils.getJsonArray(object, "for"));
+        final List<ItemStack> stacks = getItemStacksIntoList(JsonUtils.getJsonArray(object, "for"), name);
         if (stacks.isEmpty()) return null;
 
-        final List<String> translationKeys = parseTranslationKeys(JsonUtils.getJsonArray(object, "documentation"));
-        final List<Pair<TextFormatting, String>> tooltipKeys = parseTooltipKeys(object);
+        final List<String> translationKeys = parseTranslationKeys(object, name);
+        final List<Pair<TextFormatting, String>> tooltipKeys = parseTooltipKeys(object, name);
 
         return new ModDocumentation(stacks.stream().map(ItemStack::copy).collect(Collectors.toList()), translationKeys, tooltipKeys, name);
     }
 
     @Nonnull
-    private static List<ItemStack> getItemStacksIntoList(@Nonnull final JsonArray jsonArray) {
+    private static List<ItemStack> getItemStacksIntoList(@Nonnull final JsonArray jsonArray, @Nonnull final ResourceLocation name) {
         final List<ItemStack> returningList = Lists.newArrayList();
         jsonArray.forEach(element -> {
             if (!element.isJsonObject()) throw new JsonSyntaxException("for elements must be objects");
             final JsonObject jsonObject = element.getAsJsonObject();
-            final List<ItemStack> stack = parseItemStackJsonObject(jsonObject);
+            final List<ItemStack> stack = parseItemStackJsonObject(jsonObject, name);
             if (!stack.isEmpty()) returningList.addAll(stack);
         });
         return returningList;
     }
 
     @Nonnull
-    private static List<ItemStack> parseItemStackJsonObject(@Nonnull final JsonObject jsonObject) {
+    private static List<ItemStack> parseItemStackJsonObject(@Nonnull final JsonObject jsonObject, @Nonnull final ResourceLocation name) {
         final String type = JsonUtils.getString(jsonObject, "type");
         if (type.trim().isEmpty()) throw new JsonSyntaxException("Type cannot be empty");
         if (type.indexOf(':') == -1) throw new JsonSyntaxException("Missing namespace for type '" + type + "'");
@@ -69,29 +69,40 @@ public final class ModDocumentation extends IForgeRegistryEntry.Impl<ModDocument
         if (stackFactory == null) {
             throw new JsonParseException("Unable to find stack factory for given type " + type);
         }
-        return stackFactory.parseFromJson(jsonObject);
+        return stackFactory.parseFromJson(jsonObject, name);
     }
 
     @Nonnull
-    private static List<String> parseTranslationKeys(@Nonnull final JsonArray array) {
+    private static List<String> parseTranslationKeys(@Nonnull final JsonObject object, @Nonnull final ResourceLocation name) {
+        if (!object.has("documentation")) {
+            DocumentMod.logger.warn("Found entry '" + name + "' without documentation. This is not supported! The entry will be loaded, but it may cause errors");
+            return ImmutableList.of();
+        }
+        return parseTranslationKeys(JsonUtils.getJsonArray(object, "documentation"), name);
+    }
+
+    @Nonnull
+    private static List<String> parseTranslationKeys(@Nonnull final JsonArray array, @Nonnull final ResourceLocation name) {
         if (array.size() <= 0) throw new JsonSyntaxException("The documentation array must contain at least one string");
         final List<String> translationKeys = Lists.newArrayList();
         for (int i = 0; i < array.size(); ++i) {
             final String key = JsonUtils.getString(array.get(i), "documentation[" + i + "]");
-            if (!TranslationUtility.INSTANCE.canTranslate(key)) DocumentMod.logger.warn("Found non-translated key " + key + ". Please check your language file");
+            if (!TranslationUtility.INSTANCE.canTranslate(key)) {
+                DocumentMod.logger.warn("Found non-translated key '" + key + "' in entry '" + name + "'. Please check your language file");
+            }
             translationKeys.add(key);
         }
         return translationKeys;
     }
 
     @Nonnull
-    private static List<Pair<TextFormatting, String>> parseTooltipKeys(@Nonnull final JsonObject object) {
+    private static List<Pair<TextFormatting, String>> parseTooltipKeys(@Nonnull final JsonObject object, @Nonnull final ResourceLocation name) {
         if (!object.has("tooltip")) return ImmutableList.of();
-        return parseTooltipKeys(JsonUtils.getJsonArray(object, "tooltip"));
+        return parseTooltipKeys(JsonUtils.getJsonArray(object, "tooltip"), name);
     }
 
     @Nonnull
-    private static List<Pair<TextFormatting, String>> parseTooltipKeys(@Nonnull final JsonArray array) {
+    private static List<Pair<TextFormatting, String>> parseTooltipKeys(@Nonnull final JsonArray array, @Nonnull final ResourceLocation name) {
         final List<Pair<TextFormatting, String>> list = Lists.newArrayList();
         array.forEach(element -> {
             final Pair<TextFormatting, String> pair;
@@ -107,14 +118,16 @@ public final class ModDocumentation extends IForgeRegistryEntry.Impl<ModDocument
                 try {
                     textFormatting = TextFormatting.valueOf(formatting.toUpperCase(Locale.ENGLISH));
                 } catch (final IllegalArgumentException e) {
-                    DocumentMod.logger.warn("No such formatting value exists for " + formatting + "! Reverting to no formatting: please check your JSON files");
+                    DocumentMod.logger.warn("No such formatting value exists for " + formatting + "! Reverting to no formatting: please check the JSON for '" + name + "'");
                     textFormatting = null;
                 }
                 pair = ImmutablePair.of(textFormatting, key);
             } else {
                 throw new JsonSyntaxException("Array elements of tooltip can be only Strings or Objects");
             }
-            if (!TranslationUtility.INSTANCE.canTranslate(pair.getRight())) DocumentMod.logger.warn("Found non-translated key " + pair.getRight() + ". Please check your language file");
+            if (!TranslationUtility.INSTANCE.canTranslate(pair.getRight())) {
+                DocumentMod.logger.warn("Found non-translated key '" + pair.getRight() + "' in entry '" + name + "'. Please check your language file");
+            }
             list.add(pair);
         });
         return list;

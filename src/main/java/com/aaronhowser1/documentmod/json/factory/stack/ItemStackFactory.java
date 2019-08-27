@@ -25,11 +25,11 @@ public class ItemStackFactory implements StackFactory {
 
     @Nonnull
     @Override
-    public List<ItemStack> parseFromJson(@Nonnull final JsonObject jsonObject) {
+    public List<ItemStack> parseFromJson(@Nonnull final JsonObject jsonObject, @Nonnull final ResourceLocation name) {
         final String registryName = JsonUtils.getString(jsonObject, "registry_name");
         final int metadata = JsonUtils.getInt(jsonObject, "metadata", 0);
         final NBTTagCompound base = this.parseNbt(jsonObject);
-        final Item item = this.getItemFromRegistryName(registryName);
+        final Item item = this.getItemFromRegistryName(registryName, name);
         if (item == null) return ImmutableList.of();
         final ItemStack targetStack = new ItemStack(item, 1, metadata);
         if (base != null) {
@@ -39,10 +39,10 @@ public class ItemStackFactory implements StackFactory {
     }
 
     @Nullable
-    protected Item getItemFromRegistryName(@Nonnull final String registryName) {
+    protected Item getItemFromRegistryName(@Nonnull final String registryName, @Nonnull final ResourceLocation name) {
         final Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation(registryName));
         if (item == null || item == Items.AIR) {
-            DocumentMod.logger.warn("Item with given registry name '" + registryName + "' does not exist. Skipping");
+            DocumentMod.logger.warn("In entry '" + name + "': Item with given registry name '" + registryName + "' does not exist; skipping");
             return null;
         }
         return item;
