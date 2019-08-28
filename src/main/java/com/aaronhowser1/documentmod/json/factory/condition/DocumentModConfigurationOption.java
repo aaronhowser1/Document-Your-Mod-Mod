@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.function.BooleanSupplier;
 import java.util.regex.Pattern;
 
-public class DocumentModConfigurationOption implements ConditionFactory {
+public final class DocumentModConfigurationOption implements ConditionFactory {
 
     private static final Map<String, Boolean> CONFIGURATION_OPTION_CACHE = Maps.newHashMap();
 

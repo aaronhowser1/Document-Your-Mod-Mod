@@ -10,6 +10,22 @@
       "class": "quark.module.class"
     }
   ],
+  "requirements": [
+    {
+      "order": "before",
+      "required": true,
+      "registry_name": "dym:something_here"
+    },
+    {
+      "order": "after",
+      "required": false,
+      "registry_name": "or:anything_really"
+    },
+    {
+      "order": "after",
+      "registry_name": "as_long_as:it_is_name_spaced"
+    }
+  ],
   "for": [
     {
       "type": "dym:item",
@@ -33,7 +49,8 @@
         },
         "4": {
           "type": "long",
-          "value": 154674
+          "value": 154674,
+          "__comment": "Value can also be a string"
         },
         "5": {
           "type": "float",
@@ -41,7 +58,8 @@
         },
         "6": {
           "type": "double",
-          "value": 54.7784534
+          "value": 54.7784534,
+          "__comment": "Value can also be a string"
         },
         "7": {
           "type": "byte_array",
@@ -91,7 +109,8 @@
             415456,
             544654,
             1315
-          ]
+          ],
+          "__comment": "Each element of value can also be a string"
         }
       }
     }
