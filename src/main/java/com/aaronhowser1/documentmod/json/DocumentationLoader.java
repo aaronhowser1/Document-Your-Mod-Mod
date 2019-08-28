@@ -24,6 +24,7 @@ import net.minecraftforge.fml.common.ProgressManager;
 import net.minecraftforge.registries.IForgeRegistry;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
+import r.cpw.mods.fml.common.toposort.DocumentationSorter;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -41,6 +42,7 @@ import java.util.Objects;
 import java.util.function.BiConsumer;
 import java.util.function.BooleanSupplier;
 import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 public enum DocumentationLoader {
     INSTANCE;
@@ -80,7 +82,9 @@ public enum DocumentationLoader {
     private void loadFromJson() {
         DocumentMod.logger.info("Attempting to load data-driven mod documentation");
         this.loadFactoriesFromJson();
-        this.loadDocumentationFromJson();
+        final List<ModDocumentation> documentation = this.loadDocumentationFromJson();
+        final List<ModDocumentation> sortedDocumentation = this.sortModDocumentation(documentation);
+        this.registerDocumentationToRegistry(sortedDocumentation);
     }
 
     private void loadFactoriesFromJson() {
@@ -179,18 +183,27 @@ public enum DocumentationLoader {
         });
     }
 
-    private void loadDocumentationFromJson() {
+    @Nonnull
+    private List<ModDocumentation> loadDocumentationFromJson() {
         DocumentMod.logger.info("Reading JSON archive for mod documentation");
         this.bar = ProgressManager.push("Reading JSON documentation", Loader.instance().getActiveModList().size());
         this.thisModContainer = Loader.instance().getActiveModList().stream().filter(item -> DocumentMod.MODID.equals(item.getModId())).findFirst().orElse(null);
-        Loader.instance().getActiveModList().forEach(this::loadModDocumentation);
+
+        final List<ModDocumentation> documentation = Loader.instance().getActiveModList().stream()
+                .map(this::loadModDocumentation)
+                .flatMap(List::stream)
+                .collect(Collectors.toList());
+
         ProgressManager.pop(this.bar);
         this.bar = null;
         this.thisModContainer = null;
         DocumentMod.logger.info("Done reading JSON archive");
+
+        return documentation;
     }
 
-    private void loadModDocumentation(@Nonnull final ModContainer modContainer) {
+    @Nonnull
+    private List<ModDocumentation> loadModDocumentation(@Nonnull final ModContainer modContainer) {
         this.bar.step(modContainer.getName());
 
         // Since setRegistryName spams when it finds a prefix that is not the one of the current mod container
@@ -213,10 +226,10 @@ public enum DocumentationLoader {
             this.loadModDocumentationForSource(modContainer, this.thisModContainer.getSource(), documentation);
         }
 
-        documentation.forEach(it -> this.registry.register(it));
-
         // And let's revert things so that it appears that nothing has been done
         Loader.instance().setActiveModContainer(previous);
+
+        return documentation;
     }
 
     private void loadModDocumentationForSource(@Nonnull final ModContainer container, @Nonnull final File sourceFile, @Nonnull final List<ModDocumentation> list) {
@@ -244,6 +257,46 @@ public enum DocumentationLoader {
             }
             list.add(doc);
         });
+    }
+
+    @Nonnull
+    private List<ModDocumentation> sortModDocumentation(@Nonnull final List<ModDocumentation> documentation) {
+        DocumentMod.logger.info("Sorting documentation data");
+
+        final Map<ResourceLocation, ModDocumentation> namedLookup = Maps.newHashMap();
+        documentation.forEach(item -> namedLookup.put(Objects.requireNonNull(item.getRegistryName()), item));
+
+        final DocumentationSorter sorter = new DocumentationSorter(documentation, namedLookup);
+        final List<ModDocumentation> sortedDocumentation = sorter.sort();
+
+        DocumentMod.logger.info("Sorting completed");
+
+        DocumentMod.logger.info("Checking for not-satisfied required requirements"); // Weird wording I know
+        sortedDocumentation.stream()
+                .map(ModDocumentation::getRequirements)
+                .flatMap(List::stream)
+                .filter(Requirement::isRequired)
+                .distinct()
+                .map(Requirement::getReferredRegistryName)
+                .filter(name -> !namedLookup.containsKey(name))
+                .findAny()
+                .ifPresent(it -> {
+                    throw new JsonParseException("The requirement specified by one or more entries is not satisfied.\nDepends on: " + it);
+                });
+        DocumentMod.logger.info("Check completed");
+
+        return sortedDocumentation;
+    }
+
+    private void registerDocumentationToRegistry(@Nonnull final List<ModDocumentation> documentation) {
+        DocumentMod.logger.info("Registering " + documentation.size() + " mod documentations to registry");
+        final ProgressManager.ProgressBar bar = ProgressManager.push("Registering mod documentation", documentation.size());
+        documentation.forEach(item -> {
+            bar.step(Objects.toString(item.getRegistryName()));
+            this.registry.register(item);
+        });
+        ProgressManager.pop(bar);
+        DocumentMod.logger.info("Registration completed successfully");
     }
 
     private boolean processLoadingConditions(@Nonnull final JsonObject jsonObject, @Nonnull final ModContainer modContainer) {

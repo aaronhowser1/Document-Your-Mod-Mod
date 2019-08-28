@@ -6,6 +6,7 @@ import com.aaronhowser1.documentmod.utility.TranslationUtility;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonSyntaxException;
@@ -16,6 +17,7 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.registries.IForgeRegistryEntry;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
+import r.cpw.mods.fml.common.toposort.DocumentationSorter;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -28,13 +30,28 @@ public final class ModDocumentation extends IForgeRegistryEntry.Impl<ModDocument
     private final List<ItemStack> itemStacks;
     private final List<String> translationKeys;
     private final List<Pair<TextFormatting, String>> tooltipKeys;
+    private final List<Requirement> requirements;
 
     private ModDocumentation(@Nonnull final List<ItemStack> itemStack, @Nonnull final List<String> translationKeys,
-                             @Nonnull final List<Pair<TextFormatting, String>> tooltipKeys, @Nonnull final ResourceLocation registryName) {
+                             @Nonnull final List<Pair<TextFormatting, String>> tooltipKeys, @Nonnull final List<Requirement> requirements,
+                             @Nonnull final ResourceLocation registryName) {
         this.itemStacks = ImmutableList.copyOf(itemStack);
         this.translationKeys = ImmutableList.copyOf(translationKeys);
         this.tooltipKeys = ImmutableList.copyOf(tooltipKeys);
+        this.requirements = ImmutableList.copyOf(requirements);
         this.setRegistryName(registryName);
+    }
+
+    @Nonnull
+    public static ModDocumentation createForSorting(@Nonnull final String name) {
+        final StackTraceElement[] elements = new Throwable().fillInStackTrace().getStackTrace();
+        final String className = elements[1].getClassName();
+        final String methodName = elements[1].getMethodName();
+        if (!DocumentationSorter.class.getName().equals(className) || (!"<init>".equals(methodName) && !"lambda$buildGraph$0".equals(methodName))) {
+            throw new IllegalStateException("Attempted to access unsafe builder through non-whitelisted method '" + methodName + "' in class '" + className + "'");
+        }
+        DocumentMod.logger.trace("Mod documentation sorter asked for '" + name + "' to be constructed");
+        return new ModDocumentation(ImmutableList.of(), ImmutableList.of(), ImmutableList.of(), ImmutableList.of(), new ResourceLocation(DocumentMod.MODID, name));
     }
 
     @Nullable
@@ -44,8 +61,9 @@ public final class ModDocumentation extends IForgeRegistryEntry.Impl<ModDocument
 
         final List<String> translationKeys = parseTranslationKeys(object, name);
         final List<Pair<TextFormatting, String>> tooltipKeys = parseTooltipKeys(object, name);
+        final List<Requirement> requirements = parseRequirements(object, name);
 
-        return new ModDocumentation(stacks.stream().map(ItemStack::copy).collect(Collectors.toList()), translationKeys, tooltipKeys, name);
+        return new ModDocumentation(stacks.stream().map(ItemStack::copy).collect(Collectors.toList()), translationKeys, tooltipKeys, requirements, name);
     }
 
     @Nonnull
@@ -83,7 +101,6 @@ public final class ModDocumentation extends IForgeRegistryEntry.Impl<ModDocument
 
     @Nonnull
     private static List<String> parseTranslationKeys(@Nonnull final JsonArray array, @Nonnull final ResourceLocation name) {
-        if (array.size() <= 0) throw new JsonSyntaxException("The documentation array must contain at least one string");
         final List<String> translationKeys = Lists.newArrayList();
         for (int i = 0; i < array.size(); ++i) {
             final String key = JsonUtils.getString(array.get(i), "documentation[" + i + "]");
@@ -104,11 +121,12 @@ public final class ModDocumentation extends IForgeRegistryEntry.Impl<ModDocument
     @Nonnull
     private static List<Pair<TextFormatting, String>> parseTooltipKeys(@Nonnull final JsonArray array, @Nonnull final ResourceLocation name) {
         final List<Pair<TextFormatting, String>> list = Lists.newArrayList();
-        array.forEach(element -> {
+        for (int i = 0; i < array.size(); i++) {
+            final JsonElement element = array.get(i);
             final Pair<TextFormatting, String> pair;
             if (element.isJsonPrimitive()) {
                 // It is a string
-                final String string = JsonUtils.getString(element, "tooltip[?]");
+                final String string = JsonUtils.getString(element, "tooltip[" + i + "]");
                 pair = ImmutablePair.of(null, string);
             } else if (element.isJsonObject()) {
                 final JsonObject jsonObject = element.getAsJsonObject();
@@ -129,8 +147,25 @@ public final class ModDocumentation extends IForgeRegistryEntry.Impl<ModDocument
                 DocumentMod.logger.warn("Found non-translated key '" + pair.getRight() + "' in entry '" + name + "'. Please check your language file");
             }
             list.add(pair);
-        });
+        }
         return list;
+    }
+
+    @Nonnull
+    private static List<Requirement> parseRequirements(@Nonnull final JsonObject object, @Nonnull final ResourceLocation name) {
+        if (!object.has("requirements")) return ImmutableList.of();
+        return parseRequirements(JsonUtils.getJsonArray(object, "requirements"), name);
+    }
+
+    @Nonnull
+    private static List<Requirement> parseRequirements(@Nonnull final JsonArray array, @Nonnull final ResourceLocation name) {
+        final List<Requirement> requirements = Lists.newArrayList();
+        for (int i = 0; i < array.size(); i++) {
+            final JsonObject object = JsonUtils.getJsonObject(array.get(i), "requirements[" + i + "]");
+            final Requirement requirement = Requirement.buildRequirement(object, name);
+            requirements.add(requirement);
+        }
+        return requirements;
     }
 
     @Nonnull
@@ -148,12 +183,18 @@ public final class ModDocumentation extends IForgeRegistryEntry.Impl<ModDocument
         return ImmutableList.copyOf(this.tooltipKeys);
     }
 
+    @Nonnull
+    public List<Requirement> getRequirements() {
+        return ImmutableList.copyOf(this.requirements);
+    }
+
     @Override
     public String toString() {
-        return "ModDocumentation(" + this.hashCode() + "){" +
+        return "ModDocumentation(" + this.getRegistryName() + "/" + this.hashCode() + "){" +
                 "itemStacks=" + this.itemStacks +
                 ", translationKeys=" + this.translationKeys +
                 ", tooltipKeys=" + this.tooltipKeys +
+                ", requirements=" + this.requirements +
                 '}';
     }
 }
