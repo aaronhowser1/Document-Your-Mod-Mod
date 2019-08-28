@@ -57,7 +57,10 @@ public final class ModDocumentation extends IForgeRegistryEntry.Impl<ModDocument
     @Nullable
     static ModDocumentation create(@Nonnull final JsonObject object, @Nonnull final ResourceLocation name) {
         final List<ItemStack> stacks = getItemStacksIntoList(JsonUtils.getJsonArray(object, "for"), name);
-        if (stacks.isEmpty()) return null;
+        if (stacks.isEmpty()) {
+            DocumentMod.logger.warn("No matching stacks found for entry '" + name + "'. It will now be skipped");
+            return null;
+        }
 
         final List<String> translationKeys = parseTranslationKeys(object, name);
         final List<Pair<TextFormatting, String>> tooltipKeys = parseTooltipKeys(object, name);

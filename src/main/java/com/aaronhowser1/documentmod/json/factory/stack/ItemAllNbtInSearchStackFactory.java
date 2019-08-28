@@ -2,6 +2,7 @@ package com.aaronhowser1.documentmod.json.factory.stack;
 
 import com.aaronhowser1.documentmod.DocumentMod;
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Lists;
 import com.google.gson.JsonObject;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
@@ -25,8 +26,17 @@ public class ItemAllNbtInSearchStackFactory implements StackFactory {
             DocumentMod.logger.warn("In entry '" + name + ": NBT-based item with given registry name '" + registryName + "' does not exist; skipping");
             return ImmutableList.of();
         }
-        final NonNullList<ItemStack> itemStacks = NonNullList.create();
-        itemBase.getSubItems(CreativeTabs.SEARCH, itemStacks);
+        final NonNullList<ItemStack> nonNullList = NonNullList.create();
+        itemBase.getSubItems(CreativeTabs.SEARCH, nonNullList);
+        final List<ItemStack> itemStacks = Lists.newArrayList();
+        if (jsonObject.has("metadata")) {
+            final int metadata = JsonUtils.getInt(jsonObject, "metadata");
+            nonNullList.forEach(stack -> {
+                if (stack.getMetadata() == metadata) itemStacks.add(stack);
+            });
+        } else {
+            itemStacks.addAll(nonNullList);
+        }
         return ImmutableList.copyOf(itemStacks);
     }
 }

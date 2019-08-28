@@ -74,8 +74,12 @@ public enum DocumentationLoader {
     }
 
     public void loadAndRegister(@Nonnull final IForgeRegistry<ModDocumentation> registry) {
+        this.loadAndRegister(registry, this::loadFromJson);
+    }
+
+    private void loadAndRegister(@Nonnull final IForgeRegistry<ModDocumentation> registry, @Nonnull final Runnable run) {
         this.registry = registry;
-        this.loadFromJson();
+        run.run();
         this.registry = null;
     }
 
@@ -123,6 +127,7 @@ public enum DocumentationLoader {
                 (modContainer, jsonObject, resourceLocation) -> this.loadFactories(Objects.requireNonNull(modContainer), Objects.requireNonNull(jsonObject)));
     }
 
+    @SuppressWarnings("unchecked")
     private void loadFactories(@Nonnull final ModContainer container, @Nonnull final JsonObject object) {
         DocumentMod.logger.info("Found factories file for mod " + container.getModId() + ". Proceeding with loading now");
         object.entrySet().forEach(entry -> {

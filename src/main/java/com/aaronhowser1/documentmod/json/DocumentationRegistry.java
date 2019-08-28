@@ -3,16 +3,11 @@ package com.aaronhowser1.documentmod.json;
 import com.aaronhowser1.documentmod.DocumentMod;
 import com.aaronhowser1.documentmod.config.DYMMConfig;
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.ModContainer;
 import net.minecraftforge.registries.IForgeRegistry;
 
 import javax.annotation.Nonnull;
 import java.util.List;
-import java.util.Map;
-import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
@@ -24,6 +19,10 @@ public enum DocumentationRegistry {
     public void setRegistry(@Nonnull final IForgeRegistry<ModDocumentation> attempt) throws IllegalAccessException {
         if (registry != null) throw new IllegalAccessException("Attempted to replace ModDocumentation registry!\nCurrent: " + registry + "\nAttempt: " + attempt);
         registry = attempt;
+    }
+
+    public IForgeRegistry<ModDocumentation> getRegistry() {
+        return registry;
     }
 
     @Nonnull
