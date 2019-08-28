@@ -6,6 +6,13 @@
       "value": true
     }
   ],
+  "requirements": [
+    {
+      "order": "after",
+      "required": true,
+      "registry_name": "quark:rope"
+    }
+  ],
   "for": [
     {
       "type": "dym:item",

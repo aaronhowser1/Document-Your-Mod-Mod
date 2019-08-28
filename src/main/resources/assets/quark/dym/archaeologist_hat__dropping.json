@@ -12,6 +12,13 @@
       "value": true
     }
   ],
+  "requirements": [
+    {
+      "order": "after",
+      "required": true,
+      "registry_name": "quark:archaeologist_hat"
+    }
+  ],
   "for": [
     {
       "type": "dym:item",
