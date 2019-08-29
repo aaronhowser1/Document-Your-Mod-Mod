@@ -247,7 +247,7 @@ public enum DocumentationLoader {
         this.loadJsonFile(modContainer, path, root, (container, relativePath, name) -> {
             if (Objects.isNull(container) || Objects.isNull(relativePath) || Objects.isNull(name)) return false;
             if (name.startsWith("_")) {
-                DocumentMod.logger.debug("Skipping loading of file " + relativePath + " for mod id " + container.getModId());
+                DocumentMod.logger.debug("Skipping loading of file '" + relativePath + "' for mod id '" + container.getModId() + "'");
                 return false;
             }
             return true;
@@ -259,7 +259,7 @@ public enum DocumentationLoader {
             }
             final ModDocumentation doc = ModDocumentation.create(jsonObject, resourceLocation);
             if (doc.getRegistryName() == null) {
-                DocumentMod.logger.error("Found null name for mod documentation object identified by " + resourceLocation + ". This will cause errors later on!");
+                DocumentMod.logger.error("Found null name for mod documentation object identified by '" + resourceLocation + "'. This will cause errors later on!");
             }
             list.add(doc);
             if (doc.isReloadable()) {
@@ -349,7 +349,7 @@ public enum DocumentationLoader {
             }
 
             if (root == null || !Files.exists(root)) {
-                DocumentMod.logger.trace("No documentation directory exists, skipping");
+                DocumentMod.logger.trace("No documentation directory exists in '" + sourceFile + "', skipping");
                 return;
             }
 
@@ -370,7 +370,7 @@ public enum DocumentationLoader {
                               @Nonnull final TriConsumer<ModContainer, JsonObject, ResourceLocation> consumer) {
         final Path relativePath = root.relativize(path);
         if (!"json".equalsIgnoreCase(FilenameUtils.getExtension(relativePath.toString()))) {
-            DocumentMod.logger.debug("Found non-json file in " + relativePath + ". Skipping");
+            DocumentMod.logger.debug("Found non-json file '" + relativePath + "'. Skipping");
             return;
         }
 
@@ -387,6 +387,8 @@ public enum DocumentationLoader {
         }
 
         final ResourceLocation resourceLocation = new ResourceLocation(container.getModId(), name);
+
+        DocumentMod.logger.trace("Loading JSON file '" + name + "' as '" + resourceLocation + "'");
 
         try (final BufferedReader reader = Files.newBufferedReader(path)) {
             final JsonObject jsonObject = JsonUtils.fromJson(new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create(), reader, JsonObject.class);

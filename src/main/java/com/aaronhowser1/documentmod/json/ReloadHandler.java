@@ -47,7 +47,7 @@ public enum ReloadHandler {
 
     private void reloadModDocumentation(@Nonnull final ModDocumentation doc, @Nonnull final JsonObject obj, @Nullable final ResourceLocation name) {
         if (name == null) throw new IllegalStateException("Found Mod documentation without a registry name at this stage! This is impossible!");
-        DocumentMod.logger.debug("Reloading " + name);
+        DocumentMod.logger.debug("Reloading '" + name + "'");
         this.bar.step(name.toString());
         final ModDocumentation tmpDoc = this.constructTemporaryDocumentation(obj, name);
         this.moveItems(tmpDoc, doc, name);
@@ -65,7 +65,7 @@ public enum ReloadHandler {
 
     private void moveItems(@Nonnull final ModDocumentation from, @Nonnull final ModDocumentation to, @Nonnull final ResourceLocation name) {
         final List<ItemStack> stacks = ImmutableList.copyOf(from.getReferredStacks());
-        DocumentMod.logger.trace("Attempting to move " + stacks.size() + " ItemStack instances from " + from.getRegistryName() + " to " + to.getRegistryName());
+        DocumentMod.logger.trace("Attempting to move " + stacks.size() + " ItemStack instances from '" + from.getRegistryName() + "' to '" + to.getRegistryName() + "'");
         final Field itemStacks = this.reflectAndGetStacks(to, name);
         if (itemStacks == null) return;
         if (!this.setNewStacks(to, itemStacks, stacks, name)) return;
@@ -83,7 +83,9 @@ public enum ReloadHandler {
             @SuppressWarnings("unchecked")
             final List<ItemStack> oldStacks = (List<ItemStack>) itemStacks.get(documentation);
             itemStacks.set(documentation, ImmutableList.copyOf(newStacks));
-            DocumentMod.logger.trace("Successfully replaced old stacks " + oldStacks + " with new stacks " + newStacks);
+            DocumentMod.logger.trace("Successfully replaced " + oldStacks.size() + " with " + newStacks.size() + " new stacks");
+            DocumentMod.logger.trace(" Old stacks: " + oldStacks);
+            DocumentMod.logger.trace(" Mew stacks: " + newStacks);
             return true;
         } catch (@Nonnull final ReflectiveOperationException e) {
             DocumentMod.logger.warn("Unable to reload entry '" + name + "'. It will now be skipped and the error printed to STDERR");
