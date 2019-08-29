@@ -8,9 +8,9 @@ public class DYMMConfig {
 
     @Config.Comment("All Quark settings")
     @Config.Name("Quark")
-    public static SubCategory quarksubcat = new SubCategory();
+    public static Quark quarksubcat = new Quark();
 
-    public static class SubCategory {
+    public static class Quark {
 
         @Config.Comment("Add information tabs to items added by Quark?")
         @Config.Name("Quark Info")
@@ -19,6 +19,10 @@ public class DYMMConfig {
         @Config.Name("Quark's Vanilla Info")
         @Config.Comment("Add information tabs to vanilla items that Quark changes?")
         public boolean useVanillaQuark = true;
+
+        @Config.Name("Quark Module/Feature Info")
+        @Config.Comment("Add information regarding which module and feature add a specific behavior or functionality?")
+        public boolean useModuleFeature = true;
     }
 
     @Config.Name("Nature's Compass info")

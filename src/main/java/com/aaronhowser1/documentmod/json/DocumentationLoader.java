@@ -8,6 +8,7 @@ import com.aaronhowser1.documentmod.json.factory.nbt.NbtTagFactory;
 import com.aaronhowser1.documentmod.json.factory.stack.StackFactory;
 import com.aaronhowser1.documentmod.utility.TriConsumer;
 import com.aaronhowser1.documentmod.utility.TriPredicate;
+import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.gson.GsonBuilder;
@@ -54,6 +55,7 @@ public enum DocumentationLoader {
     private static final String CONDITIONS_KEY = "conditions";
 
     private static final Map<Class<? extends Factory<?>>, Map<ResourceLocation, Factory<?>>> FACTORIES = Maps.newHashMap();
+    private static final Map<ModDocumentation, JsonObject> RELOAD_NEEDED_MOD_DOCUMENTATIONS = Maps.newHashMap();
 
     private IForgeRegistry<ModDocumentation> registry = null;
     private ModContainer thisModContainer = null;
@@ -256,11 +258,13 @@ public enum DocumentationLoader {
                 return;
             }
             final ModDocumentation doc = ModDocumentation.create(jsonObject, resourceLocation);
-            if (doc == null) return;
             if (doc.getRegistryName() == null) {
                 DocumentMod.logger.error("Found null name for mod documentation object identified by " + resourceLocation + ". This will cause errors later on!");
             }
             list.add(doc);
+            if (doc.isReloadable()) {
+                RELOAD_NEEDED_MOD_DOCUMENTATIONS.put(doc, jsonObject);
+            }
         });
     }
 
@@ -399,5 +403,10 @@ public enum DocumentationLoader {
             DocumentMod.logger.warn("This file will be skipped. The exception will be printed now to STDERR");
             e.printStackTrace(System.err);
         }
+    }
+
+    @Nonnull
+    Map<ModDocumentation, JsonObject> getReloadNeeded() {
+        return ImmutableMap.copyOf(RELOAD_NEEDED_MOD_DOCUMENTATIONS);
     }
 }

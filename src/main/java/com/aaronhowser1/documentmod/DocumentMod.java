@@ -3,6 +3,7 @@ package com.aaronhowser1.documentmod;
 import com.aaronhowser1.documentmod.config.DYMMConfig;
 import com.aaronhowser1.documentmod.json.DocumentationRegistry;
 import com.aaronhowser1.documentmod.json.ModDocumentation;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.ModContainer;
@@ -51,7 +52,9 @@ public class DocumentMod
     public void init(@Nonnull final FMLInitializationEvent event) {}
 
     @Mod.EventHandler
-    public void postInit(@Nonnull final FMLPostInitializationEvent event) {}
+    public void postInit(@Nonnull final FMLPostInitializationEvent event) {
+        MinecraftForge.EVENT_BUS.post(new RegistrationHandler.ReloadModDocumentationEvent());
+    }
 
     @Mod.EventHandler
     public void loadComplete(@Nonnull final FMLLoadCompleteEvent event) {

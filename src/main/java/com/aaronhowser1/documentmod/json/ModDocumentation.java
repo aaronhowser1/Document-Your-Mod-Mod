@@ -23,6 +23,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public final class ModDocumentation extends IForgeRegistryEntry.Impl<ModDocumentation> {
@@ -31,14 +32,16 @@ public final class ModDocumentation extends IForgeRegistryEntry.Impl<ModDocument
     private final List<String> translationKeys;
     private final List<Pair<TextFormatting, String>> tooltipKeys;
     private final List<Requirement> requirements;
+    private final boolean reload;
 
     private ModDocumentation(@Nonnull final List<ItemStack> itemStack, @Nonnull final List<String> translationKeys,
                              @Nonnull final List<Pair<TextFormatting, String>> tooltipKeys, @Nonnull final List<Requirement> requirements,
-                             @Nonnull final ResourceLocation registryName) {
+                             final boolean reload, @Nonnull final ResourceLocation registryName) {
         this.itemStacks = ImmutableList.copyOf(itemStack);
         this.translationKeys = ImmutableList.copyOf(translationKeys);
         this.tooltipKeys = ImmutableList.copyOf(tooltipKeys);
         this.requirements = ImmutableList.copyOf(requirements);
+        this.reload = reload;
         this.setRegistryName(registryName);
     }
 
@@ -51,22 +54,31 @@ public final class ModDocumentation extends IForgeRegistryEntry.Impl<ModDocument
             throw new IllegalStateException("Attempted to access unsafe builder through non-whitelisted method '" + methodName + "' in class '" + className + "'");
         }
         DocumentMod.logger.trace("Mod documentation sorter asked for '" + name + "' to be constructed");
-        return new ModDocumentation(ImmutableList.of(), ImmutableList.of(), ImmutableList.of(), ImmutableList.of(), new ResourceLocation(DocumentMod.MODID, name));
+        return new ModDocumentation(ImmutableList.of(), ImmutableList.of(), ImmutableList.of(), ImmutableList.of(), false, new ResourceLocation(DocumentMod.MODID, name));
     }
 
-    @Nullable
+    @Nonnull
     static ModDocumentation create(@Nonnull final JsonObject object, @Nonnull final ResourceLocation name) {
+        final boolean reloadNeeded = getReloadNeeded(object, name);
         final List<ItemStack> stacks = getItemStacksIntoList(JsonUtils.getJsonArray(object, "for"), name);
         if (stacks.isEmpty()) {
-            DocumentMod.logger.warn("No matching stacks found for entry '" + name + "'. It will now be skipped");
-            return null;
+            DocumentMod.logger.warn("No matching stacks found for entry '" + name + "': it will be registered anyway");
         }
 
+        final List<ItemStack> itemStacks = stacks.stream().map(ItemStack::copy).collect(Collectors.toList());
         final List<String> translationKeys = parseTranslationKeys(object, name);
         final List<Pair<TextFormatting, String>> tooltipKeys = parseTooltipKeys(object, name);
         final List<Requirement> requirements = parseRequirements(object, name);
 
-        return new ModDocumentation(stacks.stream().map(ItemStack::copy).collect(Collectors.toList()), translationKeys, tooltipKeys, requirements, name);
+        return new ModDocumentation(itemStacks, translationKeys, tooltipKeys, requirements, reloadNeeded, name);
+    }
+
+    private static boolean getReloadNeeded(@Nonnull final JsonObject object, @Nonnull final ResourceLocation name) {
+        if (!object.has("needs_reload")) return false;
+        final String needsReload = JsonUtils.getString(object, "needs_reload");
+        if (!"post_init".equals(needsReload)) return false; // This will be a silent fail, but that's what we want
+        DocumentMod.logger.warn("Found reload needed documentation entry '" + name + "'. This won't be supported by us: reloading should be used only as a last-resort!");
+        return true;
     }
 
     @Nonnull
@@ -185,10 +197,27 @@ public final class ModDocumentation extends IForgeRegistryEntry.Impl<ModDocument
     public List<Pair<TextFormatting, String>> getTooltipKeys() {
         return ImmutableList.copyOf(this.tooltipKeys);
     }
-
     @Nonnull
     public List<Requirement> getRequirements() {
         return ImmutableList.copyOf(this.requirements);
+    }
+
+    boolean isReloadable() {
+        return this.reload;
+    }
+
+    // Explicitly overriding with super so that I don't make the mistake again of overriding
+    // these representations again. Forge Registry need to keep these strictly with the
+    // object representations, so with equals based on identity and hashCode on the memory
+    // location.
+    @Override
+    public boolean equals(@Nullable final Object o) {
+        return super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 
     @Override
@@ -198,6 +227,7 @@ public final class ModDocumentation extends IForgeRegistryEntry.Impl<ModDocument
                 ", translationKeys=" + this.translationKeys +
                 ", tooltipKeys=" + this.tooltipKeys +
                 ", requirements=" + this.requirements +
+                ", isReloadable=" + this.reload +
                 '}';
     }
 }

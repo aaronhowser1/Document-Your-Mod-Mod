@@ -6,6 +6,7 @@ import net.minecraft.util.JsonUtils;
 import net.minecraft.util.ResourceLocation;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.util.Objects;
 
 public final class Requirement {
@@ -63,10 +64,10 @@ public final class Requirement {
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(@Nullable final Object o) {
         if (this == o) return true;
         if (o == null || this.getClass() != o.getClass()) return false;
-        Requirement that = (Requirement) o;
+        final Requirement that = (Requirement) o;
         return this.isRequired == that.isRequired &&
                 this.ordering == that.ordering &&
                 this.referredRegistryName.equals(that.referredRegistryName);
