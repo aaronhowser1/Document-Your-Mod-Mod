@@ -6,6 +6,7 @@
     "block": "com.aaronhowser1.documentmod.json.factory.stack.BlockStackFactory",
     "enchanted_book": "com.aaronhowser1.documentmod.json.factory.stack.EnchantedBookStackFactory",
     "item": "com.aaronhowser1.documentmod.json.factory.stack.ItemStackFactory",
+    "item_meta_range": "com.aaronhowser1.documentmod.json.factory.stack.ItemMetaRangeStackFactory",
     "item_searchable_nbt": "com.aaronhowser1.documentmod.json.factory.stack.ItemSearchableNbtFactory"
   },
   "nbt": {
