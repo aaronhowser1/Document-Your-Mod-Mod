@@ -16,7 +16,7 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import javax.annotation.Nonnull;
 import java.util.List;
 
-public class ItemAllNbtInSearchStackFactory implements StackFactory {
+public class ItemSearchableNbtFactory implements StackFactory {
     @Nonnull
     @Override
     public List<ItemStack> parseFromJson(@Nonnull final JsonObject jsonObject, @Nonnull final ResourceLocation name) {
