@@ -8,7 +8,7 @@ public class DYMMConfig {
 
     @Config.Comment("All Quark settings")
     @Config.Name("Quark")
-    public static Quark quarksubcat = new Quark();
+    public static Quark quark = new Quark();
 
     public static class Quark {
 

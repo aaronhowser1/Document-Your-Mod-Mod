@@ -2,7 +2,7 @@
   "conditions": [
     {
       "type": "dym:configuration_option",
-      "name": "quarksubcat.useVanillaQuark",
+      "name": "quark.useVanillaQuark",
       "value": true
     },
     {
