@@ -3,6 +3,7 @@ package com.aaronhowser1.documentmod;
 import com.aaronhowser1.documentmod.api.utility.ContainerFinder;
 import com.aaronhowser1.documentmod.config.DYMMConfig;
 import com.aaronhowser1.documentmod.event.ChangeMetadataEvent;
+import com.aaronhowser1.documentmod.event.LoadFinishedEvent;
 import com.aaronhowser1.documentmod.event.ReloadModDocumentationEvent;
 import com.aaronhowser1.documentmod.json.DocumentationRegistry;
 import com.aaronhowser1.documentmod.json.ModDocumentation;
@@ -59,36 +60,6 @@ public class DocumentMod
         if (this.hasChecked) return;
         this.hasChecked = true;
 
-        final Consumer<String> loggingMethod = (DYMMConfig.debugItemsNoEntry)? logger::warn : logger::trace;
-        final ProgressManager.ProgressBar bar = ProgressManager.push("Detecting undocumented items", Loader.instance().getActiveModList().size());
-        // Okay, ready for the spam?
-        Loader.instance().getActiveModList().stream()
-                .map(ModContainer::getModId)
-                .peek(bar::step)
-                .map(modId -> ImmutablePair.of(modId, DocumentationRegistry.INSTANCE.getDocumentationForMod(modId)))
-                .filter(pair -> !pair.getRight().isEmpty())
-                .map(pair -> ImmutableTriple.of(
-                        pair.getLeft(),
-                        ForgeRegistries.ITEMS.getEntries().stream()
-                                .filter(it -> it.getKey().getNamespace().equals(pair.getLeft()))
-                                .map(Map.Entry::getKey)
-                                .collect(Collectors.toList()),
-                        pair.getRight())
-                )
-                .map(triple -> triple.getMiddle().stream()
-                        .map(it -> ImmutableTriple.of(
-                                triple.getLeft(), it, triple.getRight().stream()
-                                        .map(ModDocumentation::getReferredStacks)
-                                        .flatMap(Collection::stream)
-                                        .map(stack -> stack.getItem().getRegistryName())
-                                        .filter(it::equals)
-                                        .findFirst()
-                        )).collect(Collectors.toList())
-                )
-                .flatMap(Collection::stream)
-                .filter(triple -> !triple.getRight().isPresent())
-                .map(triple -> "Found undocumented item '" + triple.getMiddle() + "' within the documented mod '" + triple.getLeft() + "'")
-                .forEach(loggingMethod);
-        ProgressManager.pop(bar);
+        MinecraftForge.EVENT_BUS.post(new LoadFinishedEvent());
     }
 }
