@@ -150,7 +150,7 @@ final class TopologicalSort
     private static <T> DirectedGraph<T> reverse(@Nonnull final DirectedGraph<T> graph) {
         final DirectedGraph<T> result = new DirectedGraph<>();
         graph.forEach(result::addNode);
-        graph.forEach(from -> graph.edgesFrom(from).forEach(to -> result.addEdge(from, to)));
+        graph.forEach(from -> graph.edgesFrom(from).forEach(to -> result.addEdge(to, from)));
         return result;
     }
 

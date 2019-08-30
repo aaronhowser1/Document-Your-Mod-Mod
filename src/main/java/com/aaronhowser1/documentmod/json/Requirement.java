@@ -35,15 +35,9 @@ public final class Requirement {
 
     @Nonnull
     private static Ordering parseOrdering(@Nonnull final String string, @Nonnull final ResourceLocation parentName) {
-        // The following switch will appear to have the clauses reversed. In reality this is caused from a
-        // difference in perspective between the JSON file and the Requirement code. While the JSON entries
-        // refer to the entry in question, describing the order from the perspective of it; the code refers
-        // to the actual loading order of entries. So, for example, if an entry X specifies in its requirements
-        // block that it must be loaded after Y, then Y must be loaded before X. Since a requirement object
-        // does not refer to X, but rather to Y, it makes sense for this order to be reversed.
         switch (string) {
-            case "before": return Ordering.AFTER;
-            case "after": return Ordering.BEFORE;
+            case "before": return Ordering.BEFORE;
+            case "after": return Ordering.AFTER;
         }
         throw new JsonSyntaxException("In entry '" + parentName + "', the string '" + string + "' is not a valid ordering. It must be either 'before' or 'after'");
     }
