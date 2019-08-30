@@ -3,12 +3,15 @@ package com.aaronhowser1.documentmod.api.utility;
 import com.google.common.base.Preconditions;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.fml.common.ModContainer;
+import org.apache.commons.lang3.StringUtils;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 @SuppressWarnings("WeakerAccess")
 public final class DocumentedModEntry {
@@ -27,6 +30,7 @@ public final class DocumentedModEntry {
     }
 
     @Nonnull
+    @SuppressWarnings("unused")
     public static DocumentedModEntry from(@Nonnull final ModContainer container, @Nonnull final String... supportedVersions) {
         return of(container.getModId(), container.getName(), supportedVersions);
     }
@@ -56,11 +60,12 @@ public final class DocumentedModEntry {
         if (container == null) return this.getDisplayableStringWithoutContainer();
         return this.wrapInBuilder(builder -> {
             final boolean documented = this.isVersionDocumented(container);
+            final TextFormatting color = documented? TextFormatting.GREEN : TextFormatting.YELLOW;
 
-            builder.append(documented? TextFormatting.GREEN : TextFormatting.YELLOW);
+            builder.append(color);
             builder.append(container.getName());
             builder.append(" version ");
-            builder.append(container.getDisplayVersion());
+            builder.append(this.getDisplayableVersion(container.getDisplayVersion(), color));
 
             if (documented) {
                 builder.append(" (Fully supported)");
@@ -68,7 +73,7 @@ public final class DocumentedModEntry {
             }
 
             builder.append(" (Documentation may be out of date - ");
-            this.appendSupportedVersions(builder);
+            this.appendSupportedVersions(builder, color);
             builder.append(")");
         });
     }
@@ -79,7 +84,7 @@ public final class DocumentedModEntry {
             builder.append(TextFormatting.RED);
             builder.append(this.name);
             builder.append(" (Not installed - ");
-            this.appendSupportedVersions(builder);
+            this.appendSupportedVersions(builder, TextFormatting.RED);
             builder.append(")");
         });
     }
@@ -93,10 +98,12 @@ public final class DocumentedModEntry {
         return builder.toString();
     }
 
-    private void appendSupportedVersions(@Nonnull final StringBuilder builder) {
+    private void appendSupportedVersions(@Nonnull final StringBuilder builder, @Nonnull final TextFormatting color) {
         builder.append(MOD_ACRONYM);
         builder.append(" supports: ");
-        builder.append(String.join(", ", this.supportedVersions));
+        builder.append(this.supportedVersions.stream()
+                .map(it -> this.getDisplayableVersion(it, color))
+                .collect(Collectors.joining(", ")));
     }
 
     @Nonnull
@@ -104,5 +111,17 @@ public final class DocumentedModEntry {
         if (s.startsWith("1.12.2-")) return s.substring("1.12.2-".length());
         else if (s.startsWith("1.12.2")) return s.substring("1.12.2".length());
         else return s;
+    }
+
+    @Nonnull
+    private String getDisplayableVersion(@Nonnull final String containerString, @Nonnull final TextFormatting color) {
+        final int dots = StringUtils.countMatches(containerString, '.');
+        if (dots < 3) return containerString;
+        // Basically MC's color formatter decides to blow himself up when a string contains 3 dots or more, probably
+        // because it identifies it as an IP and... it doesn't want to have IPs colored? Who the fuck knows? Anyway,
+        // we are going to split the string every dot and add the color back again. Hopefully this avoids weird issues.
+        final String[] split = containerString.split(Pattern.quote("."));
+        final String colorAdder = "" + TextFormatting.RESET + color;
+        return Arrays.stream(split).collect(Collectors.joining("." + colorAdder, "", colorAdder));
     }
 }
