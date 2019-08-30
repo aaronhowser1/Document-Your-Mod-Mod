@@ -3,7 +3,7 @@ package com.aaronhowser1.documentmod.config;
 import com.aaronhowser1.documentmod.DocumentMod;
 import net.minecraftforge.common.config.Config;
 
-@Config(modid=DocumentMod.MODID)
+@Config(modid=DocumentMod.MOD_ID)
 public class DYMMConfig {
 
     @Config.Comment("All Quark settings")

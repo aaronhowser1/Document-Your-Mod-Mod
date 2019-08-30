@@ -25,7 +25,7 @@ import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
-@Mod.EventBusSubscriber(modid = DocumentMod.MODID, value = Side.CLIENT)
+@Mod.EventBusSubscriber(modid = DocumentMod.MOD_ID, value = Side.CLIENT)
 public final class TooltipHandler {
 
     private static final LoadingCache<ResourceLocation, List<ModDocumentation>> MOD_DOCUMENTATION_CACHE;

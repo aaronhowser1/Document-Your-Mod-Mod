@@ -5,7 +5,7 @@ public final class ModId {
 
     public static final String AUTOREG_LIB = "autoreglib";
     public static final String CONNECTED_TEXTURES_MOD = "ctm";
-    public static final String DOCUMENT_YOUR_MOD_MOD = DocumentMod.MODID;
+    public static final String DOCUMENT_YOUR_MOD_MOD = DocumentMod.MOD_ID;
     public static final String IRONCHEST = "ironchest";
     public static final String JUST_ENOUGH_ITEMS = "jei";
     public static final String MANTLE = "mantle";

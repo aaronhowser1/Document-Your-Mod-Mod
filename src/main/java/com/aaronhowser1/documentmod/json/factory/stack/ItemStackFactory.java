@@ -60,7 +60,7 @@ public class ItemStackFactory implements StackFactory {
 
         @SuppressWarnings("unchecked")
         final NbtTagFactory<NBTTagCompound> compoundParseFactory = DocumentationLoader.INSTANCE.getFactory(NbtTagFactory.class,
-                new ResourceLocation(DocumentMod.MODID, "compound"));
+                new ResourceLocation(DocumentMod.MOD_ID, "compound"));
 
         compound.setTag("tag", Objects.requireNonNull(compoundParseFactory).parseFromJson(nbt, name, 0));
 

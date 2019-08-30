@@ -1,7 +1,9 @@
 package com.aaronhowser1.documentmod;
 
-import com.aaronhowser1.documentmod.client.DescriptionChangingHandler;
+import com.aaronhowser1.documentmod.api.utility.ContainerFinder;
 import com.aaronhowser1.documentmod.config.DYMMConfig;
+import com.aaronhowser1.documentmod.event.ChangeMetadataEvent;
+import com.aaronhowser1.documentmod.event.ReloadModDocumentationEvent;
 import com.aaronhowser1.documentmod.json.DocumentationRegistry;
 import com.aaronhowser1.documentmod.json.ModDocumentation;
 import net.minecraftforge.common.MinecraftForge;
@@ -22,24 +24,17 @@ import org.apache.logging.log4j.Logger;
 import javax.annotation.Nonnull;
 import java.util.Collection;
 import java.util.Map;
-import java.util.Objects;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
-@Mod(
-        modid = DocumentMod.MODID,
-        name = DocumentMod.NAME,
-        version = DocumentMod.VERSION,
-        dependencies = "required-after:jei@[1.12.2-4.15.0.268,);",
-        clientSideOnly = true
-)
+@Mod(modid = DocumentMod.MOD_ID, name = DocumentMod.NAME, version = DocumentMod.VERSION, dependencies = "required-after:jei@[1.12.2-4.15.0.268,);", clientSideOnly = true)
 public class DocumentMod
 {
-    public static final String MODID = "dym";
+    public static final String MOD_ID = "dym";
     static final String NAME = "Document Your Mod Mod";
     static final String VERSION = "@VERSION@";
 
-    @Mod.Instance(MODID)
+    @Mod.Instance(MOD_ID)
     @SuppressWarnings("unused")
     public static DocumentMod instance;
 
@@ -55,8 +50,8 @@ public class DocumentMod
 
     @Mod.EventHandler
     public void postInit(@Nonnull final FMLPostInitializationEvent event) {
-        MinecraftForge.EVENT_BUS.post(new RegistrationHandler.ReloadModDocumentationEvent());
-        MinecraftForge.EVENT_BUS.post(new DescriptionChangingHandler.ChangeDescriptionEvent(Objects.requireNonNull(Loader.instance().activeModContainer()).getMetadata()));
+        MinecraftForge.EVENT_BUS.post(new ReloadModDocumentationEvent());
+        MinecraftForge.EVENT_BUS.post(new ChangeMetadataEvent(ContainerFinder.INSTANCE.ensureContainerFromId(MOD_ID).getMetadata()));
     }
 
     @Mod.EventHandler

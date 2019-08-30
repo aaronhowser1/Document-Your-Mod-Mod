@@ -23,7 +23,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Locale;
-import java.util.Objects;
 import java.util.stream.Collectors;
 
 public final class ModDocumentation extends IForgeRegistryEntry.Impl<ModDocumentation> {
@@ -54,7 +53,7 @@ public final class ModDocumentation extends IForgeRegistryEntry.Impl<ModDocument
             throw new IllegalStateException("Attempted to access unsafe builder through non-whitelisted method '" + methodName + "' in class '" + className + "'");
         }
         DocumentMod.logger.trace("Mod documentation sorter asked for '" + name + "' to be constructed");
-        return new ModDocumentation(ImmutableList.of(), ImmutableList.of(), ImmutableList.of(), ImmutableList.of(), false, new ResourceLocation(DocumentMod.MODID, name));
+        return new ModDocumentation(ImmutableList.of(), ImmutableList.of(), ImmutableList.of(), ImmutableList.of(), false, new ResourceLocation(DocumentMod.MOD_ID, name));
     }
 
     @Nonnull

@@ -1,5 +1,6 @@
 package com.aaronhowser1.documentmod;
 
+import com.aaronhowser1.documentmod.event.ReloadModDocumentationEvent;
 import com.aaronhowser1.documentmod.json.DocumentationLoader;
 import com.aaronhowser1.documentmod.json.DocumentationRegistry;
 import com.aaronhowser1.documentmod.json.ModDocumentation;
@@ -13,13 +14,8 @@ import net.minecraftforge.registries.RegistryBuilder;
 
 import javax.annotation.Nonnull;
 
-@Mod.EventBusSubscriber(modid = DocumentMod.MODID)
+@Mod.EventBusSubscriber(modid = DocumentMod.MOD_ID)
 public final class RegistrationHandler {
-
-    @SuppressWarnings("WeakerAccess") // Fuck you Forge, needing to have events public
-    public static class ReloadModDocumentationEvent extends Event {
-        public ReloadModDocumentationEvent() {}
-    }
 
     private RegistrationHandler() {}
 
@@ -27,7 +23,7 @@ public final class RegistrationHandler {
     public static void onNewRegistry(@Nonnull final RegistryEvent.NewRegistry event) {
         try {
             DocumentationRegistry.INSTANCE.setRegistry(new RegistryBuilder<ModDocumentation>()
-                    .setName(new ResourceLocation(DocumentMod.MODID, "documentation"))
+                    .setName(new ResourceLocation(DocumentMod.MOD_ID, "documentation"))
                     .setType(ModDocumentation.class)
                     .setMaxID(Integer.MAX_VALUE >> 5)
                     .disableSaving()

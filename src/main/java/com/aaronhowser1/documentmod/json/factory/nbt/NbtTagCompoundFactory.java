@@ -32,7 +32,7 @@ public final class NbtTagCompoundFactory extends NbtTagValueRequiringFactory<NBT
             final JsonObject compoundValue = JsonUtils.getJsonObject(entry.getValue(), key);
             final String type = JsonUtils.getString(compoundValue, "type");
             @SuppressWarnings("unchecked")
-            final NbtTagFactory<?> factory = DocumentationLoader.INSTANCE.getFactory(NbtTagFactory.class, new ResourceLocation(DocumentMod.MODID, type));
+            final NbtTagFactory<?> factory = DocumentationLoader.INSTANCE.getFactory(NbtTagFactory.class, new ResourceLocation(DocumentMod.MOD_ID, type));
             if (factory == null) {
                 throw new JsonSyntaxException("Unable to find NBT factory for NBT type '" + type + "'. Is it a valid NBT type?");
             }

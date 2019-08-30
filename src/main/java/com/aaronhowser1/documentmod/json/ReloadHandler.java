@@ -55,7 +55,7 @@ public enum ReloadHandler {
 
     @Nonnull
     private ModDocumentation constructTemporaryDocumentation(@Nonnull final JsonObject object, @Nonnull final ResourceLocation name) {
-        final ResourceLocation tmpName = new ResourceLocation(DocumentMod.MODID, "__$__.reload.__$__." + name.toString().replace(':', '.'));
+        final ResourceLocation tmpName = new ResourceLocation(DocumentMod.MOD_ID, "__$__.reload.__$__." + name.toString().replace(':', '.'));
         final ModDocumentation doc = ModDocumentation.create(object, tmpName);
         if (!doc.isReloadable()) {
             throw new IllegalArgumentException("Attempted to reload a non-reloadable resource! This is a SERIOUS error!");

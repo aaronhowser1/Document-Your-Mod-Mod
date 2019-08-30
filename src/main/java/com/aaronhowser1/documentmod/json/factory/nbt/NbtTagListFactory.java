@@ -23,7 +23,7 @@ public final class NbtTagListFactory extends NbtTagValueRequiringFactory<NBTTagL
             final JsonObject nbtTag = JsonUtils.getJsonObject(jsonList.get(i), "value[" + i + "]");
             final String type = JsonUtils.getString(nbtTag, "type");
             @SuppressWarnings("unchecked")
-            final NbtTagFactory<?> factory = DocumentationLoader.INSTANCE.getFactory(NbtTagFactory.class, new ResourceLocation(DocumentMod.MODID, type));
+            final NbtTagFactory<?> factory = DocumentationLoader.INSTANCE.getFactory(NbtTagFactory.class, new ResourceLocation(DocumentMod.MOD_ID, type));
             if (factory == null) {
                 throw new JsonSyntaxException("Unable to find NBT factory for NBT type '" + type + "'. Is it a valid NBT type?");
             }

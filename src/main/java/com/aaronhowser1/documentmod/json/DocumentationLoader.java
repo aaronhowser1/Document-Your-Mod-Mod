@@ -1,6 +1,7 @@
 package com.aaronhowser1.documentmod.json;
 
 import com.aaronhowser1.documentmod.DocumentMod;
+import com.aaronhowser1.documentmod.api.utility.ContainerFinder;
 import com.aaronhowser1.documentmod.config.DYMMConfig;
 import com.aaronhowser1.documentmod.json.factory.condition.ConditionFactory;
 import com.aaronhowser1.documentmod.json.factory.Factory;
@@ -96,7 +97,7 @@ public enum DocumentationLoader {
     private void loadFactoriesFromJson() {
         DocumentMod.logger.info("Finding and registering factories");
         this.bar = ProgressManager.push("Loading JSON factories", Loader.instance().getActiveModList().size());
-        this.thisModContainer = Loader.instance().getActiveModList().stream().filter(item -> DocumentMod.MODID.equals(item.getModId())).findFirst().orElse(null);
+        this.thisModContainer = ContainerFinder.INSTANCE.findContainerFromId(DocumentMod.MOD_ID);
         Loader.instance().getActiveModList().forEach(this::loadFactoriesForMod);
         ProgressManager.pop(this.bar);
         this.bar = null;
@@ -194,7 +195,7 @@ public enum DocumentationLoader {
     private List<ModDocumentation> loadDocumentationFromJson() {
         DocumentMod.logger.info("Reading JSON archive for mod documentation");
         this.bar = ProgressManager.push("Reading JSON documentation", Loader.instance().getActiveModList().size());
-        this.thisModContainer = Loader.instance().getActiveModList().stream().filter(item -> DocumentMod.MODID.equals(item.getModId())).findFirst().orElse(null);
+        this.thisModContainer = ContainerFinder.INSTANCE.findContainerFromId(DocumentMod.MOD_ID);
 
         final List<ModDocumentation> documentation = Loader.instance().getActiveModList().stream()
                 .map(this::loadModDocumentation)
