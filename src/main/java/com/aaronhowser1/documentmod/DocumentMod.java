@@ -1,5 +1,6 @@
 package com.aaronhowser1.documentmod;
 
+import com.aaronhowser1.documentmod.client.DescriptionChangingHandler;
 import com.aaronhowser1.documentmod.config.DYMMConfig;
 import com.aaronhowser1.documentmod.json.DocumentationRegistry;
 import com.aaronhowser1.documentmod.json.ModDocumentation;
@@ -21,6 +22,7 @@ import org.apache.logging.log4j.Logger;
 import javax.annotation.Nonnull;
 import java.util.Collection;
 import java.util.Map;
+import java.util.Objects;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
@@ -41,7 +43,7 @@ public class DocumentMod
     @SuppressWarnings("unused")
     public static DocumentMod instance;
 
-    public static Logger logger = LogManager.getLogger(MODID); // Exactly what FMLPreInitializationEvent#getModLog does
+    public static Logger logger = LogManager.getLogger("Document Your Mod Mod"); // Exactly what FMLPreInitializationEvent#getModLog does
 
     private boolean hasChecked = false;
 
@@ -54,6 +56,7 @@ public class DocumentMod
     @Mod.EventHandler
     public void postInit(@Nonnull final FMLPostInitializationEvent event) {
         MinecraftForge.EVENT_BUS.post(new RegistrationHandler.ReloadModDocumentationEvent());
+        MinecraftForge.EVENT_BUS.post(new DescriptionChangingHandler.ChangeDescriptionEvent(Objects.requireNonNull(Loader.instance().activeModContainer()).getMetadata()));
     }
 
     @Mod.EventHandler
