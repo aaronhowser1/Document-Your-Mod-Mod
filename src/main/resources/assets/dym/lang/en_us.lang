@@ -247,7 +247,7 @@ dym.doc.tconstruct.stencil_table=The Stencil Table is where you turn turn Blank 
 dym.doc.tconstruct.throwball_glow=Can be thrown, creates a light source where it lands.
 dym.doc.tconstruct.throwball_missile=Can be thrown, exploding into a giant crater where it lands.\n\nItems do not get destroyed by the explosion.
 dym.doc.tconstruct.tool_forge=Allows you to make all tools.\nYou can make the Tool Forge out of any block of metal, but this is only aesthetic.\n\nThe tools it can make that the Tool Station can't are:\nHammer\nExcavator\nLumber Axe\nScythe\nCleaver\nLongbow\nCrossbow\nBolt\nShuriken
-dym.doc.tconstruct.tool_station=Allows you to make simple tools. The tools it can make are:\nPickaxe\nShovel\nHatchet\nMattock\nKama\nBroadsword\nLongsword\nRapier\nFrying Pan\nBattlesign\nShortbow\nArrow
+dym.doc.tconstruct.tool_station=Allows you to make simple tools.\n\nThe tools it can make are:\nPickaxe\nShovel\nHatchet\nMattock\nKama\nBroadsword\nLongsword\nRapier\nFrying Pan\nBattlesign\nShortbow\nArrow
 
 # Twilight Forest -> Documentation
 dym.doc.twilightforest.aurora_block=Make up the Aurora Palace on Glaciers.\n\nConstantly change color.
