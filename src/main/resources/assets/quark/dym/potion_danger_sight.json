@@ -1,0 +1,94 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:potion",
+      "nbt": {
+        "Potion": {
+          "type": "string",
+          "value": "quark:danger_sight"
+        }
+      }
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:tipped_arrow",
+      "nbt": {
+        "Potion": {
+          "type": "string",
+          "value": "quark:danger_sight"
+        }
+      }
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:splash_potion",
+      "nbt": {
+        "Potion": {
+          "type": "string",
+          "value": "quark:danger_sight"
+        }
+      }
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:lingering_potion",
+      "nbt": {
+        "Potion": {
+          "type": "string",
+          "value": "quark:danger_sight"
+        }
+      }
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:potion",
+      "nbt": {
+        "Potion": {
+          "type": "string",
+          "value": "quark:long_danger_sight"
+        }
+      }
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:tipped_arrow",
+      "nbt": {
+        "Potion": {
+          "type": "string",
+          "value": "quark:long_danger_sight"
+        }
+      }
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:splash_potion",
+      "nbt": {
+        "Potion": {
+          "type": "string",
+          "value": "quark:long_danger_sight"
+        }
+      }
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:lingering_potion",
+      "nbt": {
+        "Potion": {
+          "type": "string",
+          "value": "quark:long_danger_sight"
+        }
+      }
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.potion_danger_sight"
+  ]
+}
