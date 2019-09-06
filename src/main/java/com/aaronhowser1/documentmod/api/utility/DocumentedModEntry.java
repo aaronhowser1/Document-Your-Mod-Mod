@@ -63,6 +63,7 @@ public final class DocumentedModEntry {
             final TextFormatting color = documented? TextFormatting.GREEN : TextFormatting.YELLOW;
 
             builder.append(color);
+            builder.append("- ");
             builder.append(container.getName());
             builder.append(" version ");
             builder.append(this.getDisplayableVersion(container.getDisplayVersion(), color));
@@ -81,17 +82,18 @@ public final class DocumentedModEntry {
     @Nonnull
     private String getDisplayableStringWithoutContainer() {
         return this.wrapInBuilder(builder -> {
-            builder.append(TextFormatting.RED);
+            builder.append(TextFormatting.DARK_GRAY);
+            builder.append("- ");
             builder.append(this.name);
             builder.append(" (Not installed - ");
-            this.appendSupportedVersions(builder, TextFormatting.RED);
+            this.appendSupportedVersions(builder, TextFormatting.DARK_GRAY);
             builder.append(")");
         });
     }
 
     @Nonnull
     private String wrapInBuilder(@Nonnull final Consumer<StringBuilder> builderConsumer) {
-        final StringBuilder builder = new StringBuilder("- ");
+        final StringBuilder builder = new StringBuilder();
         builderConsumer.accept(builder);
         builder.append(TextFormatting.RESET);
         builder.append('\n');
