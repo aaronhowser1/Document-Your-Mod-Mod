@@ -1,0 +1,45 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.world.feature.UndergroundBiomes",
+      "field": "firestoneEnabled",
+      "value": true
+    }
+  ],
+  "requirements": [
+    {
+      "order": "after",
+      "registry_name": "quark:firestone",
+      "required": true
+    },
+    {
+      "order": "after",
+      "registry_name": "quark:firestone_stair_slab"
+    },
+    {
+      "order": "after",
+      "registry_name": "quark:firestone_wall"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "quark:biome_cobblestone",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:biome_brick",
+      "metadata": 0
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.firestone_brick"
+  ]
+}

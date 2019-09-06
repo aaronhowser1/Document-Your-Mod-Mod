@@ -1,0 +1,184 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.building.feature.HardenedClayTiles",
+      "field": "enableStainedClay",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.building.feature.HardenedClayTiles",
+      "field": "enableStairsAndSlabs",
+      "value": true
+    }
+  ],
+  "requirements": [
+    {
+      "order": "after",
+      "registry_name": "quark:hardened_clay_tiles",
+      "required": true
+    },
+    {
+      "order": "after",
+      "registry_name": "quark:hardened_clay_tiles_stair_slab",
+      "required": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "quark:hardened_clay_tiles"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:hardened_clay_tiles_stairs"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:hardened_clay_tiles_slab"
+    },
+    {
+      "type": "dym:item_meta_range",
+      "registry_name": "quark:stained_clay_tiles",
+      "metadata_begin": 0,
+      "metadata_end": 15
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_white_stairs"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_orange_stairs"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_magenta_stairs"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_light_blue_stairs"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_yellow_stairs"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_lime_stairs"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_pink_stairs"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_gray_stairs"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_silver_stairs"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_cyan_stairs"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_purple_stairs"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_blue_stairs"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_brown_stairs"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_green_stairs"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_red_stairs"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_black_stairs"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_white_slab"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_orange_slab"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_magenta_slab"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_light_blue_slab"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_yellow_slab"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_lime_slab"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_pink_slab"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_gray_slab"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_silver_slab"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_cyan_slab"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_purple_slab"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_blue_slab"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_brown_slab"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_green_slab"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_red_slab"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stained_clay_tiles_black_slab"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.stained_clay_tiles_stair_slab"
+  ]
+}

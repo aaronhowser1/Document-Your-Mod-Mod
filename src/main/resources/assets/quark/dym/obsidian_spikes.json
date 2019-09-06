@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.world.feature.NetherObsidianSpikes"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:obsidian"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.obsidian_spikes"
+  ]
+}

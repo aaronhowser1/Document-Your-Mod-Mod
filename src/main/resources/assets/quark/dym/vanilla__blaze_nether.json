@@ -1,0 +1,33 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.world.feature.NaturalBlazesInNether"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:spawn_egg",
+      "nbt": {
+        "EntityTag": {
+          "type": "compound",
+          "value": {
+            "id": {
+              "type": "string",
+              "value": "minecraft:blaze"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.blaze_nether"
+  ]
+}

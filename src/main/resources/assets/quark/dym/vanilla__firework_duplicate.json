@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.vanity.feature.FireworkCloning"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:fireworks"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.firework_duplicate"
+  ]
+}

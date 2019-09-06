@@ -1,0 +1,70 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.client.feature.RandomAnimalTextures"
+    }
+  ],
+  "requirements": [
+    {
+      "order": "after",
+      "registry_name": "quark:vanilla__texture_animal_random",
+      "required": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:spawn_egg",
+      "nbt": {
+        "EntityTag": {
+          "type": "compound",
+          "value": {
+            "id": {
+              "type": "string",
+              "value": "minecraft:cow"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:spawn_egg",
+      "nbt": {
+        "EntityTag": {
+          "type": "compound",
+          "value": {
+            "id": {
+              "type": "string",
+              "value": "minecraft:pig"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:spawn_egg",
+      "nbt": {
+        "EntityTag": {
+          "type": "compound",
+          "value": {
+            "id": {
+              "type": "string",
+              "value": "minecraft:chicken"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.texture_animal_shiny"
+  ]
+}

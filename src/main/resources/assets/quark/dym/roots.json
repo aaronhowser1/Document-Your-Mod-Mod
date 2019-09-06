@@ -1,0 +1,30 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "quark:roots"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:roots_blue_flower"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:roots_black_flower"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:roots_white_flower"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.roots"
+  ]
+}

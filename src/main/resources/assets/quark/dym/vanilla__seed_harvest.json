@@ -13,15 +13,36 @@
   "for": [
     {
       "type": "dym:item",
+      "registry_name": "minecraft:wheat"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:carrot"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:potato"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:beetroot"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:wheat_seeds"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:dye",
+      "metadata": 3
+    },
+    {
+      "type": "dym:item",
       "registry_name": "minecraft:pumpkin_seeds"
     },
     {
       "type": "dym:item",
       "registry_name": "minecraft:beetroot_seeds"
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "minecraft:wheat_seeds"
     },
     {
       "type": "dym:item",

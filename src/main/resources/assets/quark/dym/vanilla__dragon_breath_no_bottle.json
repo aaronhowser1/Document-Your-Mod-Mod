@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.tweaks.feature.DragonsBreathBottleless"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:dragon_breath"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.dragon_breath_no_bottle"
+  ]
+}

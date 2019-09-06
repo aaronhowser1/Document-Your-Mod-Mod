@@ -1,0 +1,18 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "quark:frog_leg"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.frog_leg"
+  ]
+}

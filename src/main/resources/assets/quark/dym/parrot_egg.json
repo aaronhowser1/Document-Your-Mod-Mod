@@ -8,29 +8,25 @@
   ],
   "for": [
     {
-      "type": "dym:item",
+      "type": "dym:item_meta_range",
       "registry_name": "quark:parrot_egg",
-      "metadata": 0
+      "metadata_begin": 0,
+      "metadata_end": 4
     },
     {
       "type": "dym:item",
-      "registry_name": "quark:parrot_egg",
-      "metadata": 1
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:parrot_egg",
-      "metadata": 2
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:parrot_egg",
-      "metadata": 3
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:parrot_egg",
-      "metadata": 4
+      "registry_name": "minecraft:spawn_egg",
+      "nbt": {
+        "EntityTag": {
+          "type": "compound",
+          "value": {
+            "id": {
+              "type": "string",
+              "value": "minecraft:parrot"
+            }
+          }
+        }
+      }
     }
   ],
   "documentation": [

@@ -14,6 +14,18 @@
     {
       "type": "dym:item",
       "registry_name": "minecraft:elytra"
+    },
+    {
+      "type": "dym:item_meta_range",
+      "registry_name": "minecraft:dye",
+      "metadata_begin": 0,
+      "metadata_end": 15
+    },
+    {
+      "type": "dym:item_meta_range",
+      "registry_name": "quark:root_dye",
+      "metadata_begin": 0,
+      "metadata_end": 2
     }
   ],
   "documentation": [

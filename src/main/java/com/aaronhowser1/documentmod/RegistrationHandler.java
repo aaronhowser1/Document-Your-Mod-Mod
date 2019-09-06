@@ -95,7 +95,7 @@ public final class RegistrationHandler {
                 .filter(triple -> !triple.getRight().isPresent())
                 .map(triple -> "Found undocumented item '" + triple.getMiddle() + "' within the documented mod '" + triple.getLeft() + "'")
                 .forEach(loggingMethod);
-        
+
         ProgressManager.pop(bar);
     }
 }

@@ -1,0 +1,42 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.world.feature.UndergroundBiomes",
+      "field": "cobbedstoneEnabled",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.world.feature.UndergroundBiomes",
+      "field": "enableWalls",
+      "value": true
+    }
+  ],
+  "requirements": [
+    {
+      "order": "after",
+      "registry_name": "quark:cobbedstone",
+      "required": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "quark:biome_cobblestone",
+      "metadata": 2
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:cobbed_stone_wall"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.cobbedstone_wall"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.tweaks.feature.StackableItems"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:minecart"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:chest_minecart"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:furnace_minecart"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:tnt_minecart"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:hopper_minecart"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:command_block_minecart"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:mushroom_stew"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:rabbit_stew"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:beetroot_soup"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:saddle"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.stack"
+  ]
+}

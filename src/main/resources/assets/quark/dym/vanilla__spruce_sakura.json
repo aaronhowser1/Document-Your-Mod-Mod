@@ -1,0 +1,39 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.world.feature.TreeVariants"
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.world.feature.TreeVariants",
+      "field": "enableSakura",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:log",
+      "metadata": 1
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:variant_leaves",
+      "metadata": 1
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:variant_sapling",
+      "metadata": 1
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.spruce_sakura"
+  ]
+}

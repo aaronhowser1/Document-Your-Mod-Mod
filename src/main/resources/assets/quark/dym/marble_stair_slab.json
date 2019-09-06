@@ -1,0 +1,41 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.world.feature.RevampStoneGen",
+      "field": "enableStairsAndSlabs",
+      "value": true
+    }
+  ],
+  "requirements": [
+    {
+      "order": "after",
+      "registry_name": "quark:marble",
+      "required": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item_meta_range",
+      "registry_name": "quark:marble",
+      "metadata_begin": 0,
+      "metadata_end": 1
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stone_marble_slab"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stone_marble_stairs"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.marble_stair_slab"
+  ]
+}

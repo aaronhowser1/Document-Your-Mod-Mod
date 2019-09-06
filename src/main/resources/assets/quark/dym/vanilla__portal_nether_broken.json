@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.world.feature.BrokenNetherPortals"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:block",
+      "registry_name": "minecraft:obsidian"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.portal_nether_broken"
+  ]
+}

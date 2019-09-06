@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.building.feature.SandyBricks",
+      "field": "enableWalls",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "quark:sandy_bricks_wall"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.sandy_bricks_wall"
+  ]
+}

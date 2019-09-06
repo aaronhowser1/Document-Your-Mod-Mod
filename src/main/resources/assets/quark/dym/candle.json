@@ -8,84 +8,10 @@
   ],
   "for": [
     {
-      "type": "dym:item",
+      "type": "dym:item_meta_range",
       "registry_name": "quark:candle",
-      "metadata": 0
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:candle",
-      "metadata": 1
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:candle",
-      "metadata": 2
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:candle",
-      "metadata": 3
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:candle",
-      "metadata": 4
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:candle",
-      "metadata": 5
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:candle",
-      "metadata": 6
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:candle",
-      "metadata": 7
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:candle",
-      "metadata": 8
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:candle",
-      "metadata": 9
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:candle",
-      "metadata": 10
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:candle",
-      "metadata": 11
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:candle",
-      "metadata": 12
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:candle",
-      "metadata": 13
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:candle",
-      "metadata": 14
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:candle",
-      "metadata": 15
+      "metadata_begin": 0,
+      "metadata_end": 15
     }
   ],
   "documentation": [

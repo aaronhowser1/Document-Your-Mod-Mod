@@ -14,6 +14,21 @@
     {
       "type": "dym:block",
       "registry_name": "minecraft:emerald_block"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:spawn_egg",
+      "nbt": {
+        "EntityTag": {
+          "type": "compound",
+          "value": {
+            "id": {
+              "type": "string",
+              "value": "minecraft:villager"
+            }
+          }
+        }
+      }
     }
   ],
   "documentation": [

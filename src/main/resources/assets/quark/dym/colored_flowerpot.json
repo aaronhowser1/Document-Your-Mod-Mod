@@ -1,0 +1,82 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:flower_pot"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_flowerpot_white"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_flowerpot_orange"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_flowerpot_magenta"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_flowerpot_light_blue"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_flowerpot_yellow"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_flowerpot_lime"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_flowerpot_pink"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_flowerpot_gray"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_flowerpot_silver"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_flowerpot_cyan"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_flowerpot_purple"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_flowerpot_blue"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_flowerpot_brown"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_flowerpot_green"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_flowerpot_red"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:colored_flowerpot_black"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.colored_flowerpot"
+  ]
+}

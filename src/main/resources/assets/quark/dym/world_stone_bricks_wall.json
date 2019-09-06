@@ -1,0 +1,65 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.building.feature.WorldStoneBricks",
+      "field": "enableWalls",
+      "value": true
+    }
+  ],
+  "requirements": [
+    {
+      "order": "after",
+      "registry_name": "quark:world_stone_bricks",
+      "required": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item_meta_range",
+      "registry_name": "quark:world_stone_bricks",
+      "metadata_begin": 0,
+      "metadata_end": 7
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stone_granite_bricks_wall"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stone_diorite_bricks_wall"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stone_andesite_bricks_wall"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stone_basalt_bricks_wall"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stone_marble_bricks_wall"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stone_limestone_bricks_wall"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stone_jasper_bricks_wall"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stone_slate_bricks_wall"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.world_stone_bricks_wall"
+  ]
+}

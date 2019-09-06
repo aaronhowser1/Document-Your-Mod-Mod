@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item_meta_range",
+      "registry_name": "quark:marble",
+      "metadata_begin": 0,
+      "metadata_end": 1
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.marble"
+  ]
+}

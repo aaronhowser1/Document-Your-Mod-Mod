@@ -1,0 +1,58 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.tweaks.feature.JumpBoostStepAssist"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:potion",
+      "nbt": {
+        "Potion": {
+          "type": "string",
+          "value": "minecraft:strong_leaping"
+        }
+      }
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:splash_potion",
+      "nbt": {
+        "Potion": {
+          "type": "string",
+          "value": "minecraft:strong_leaping"
+        }
+      }
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:lingering_potion",
+      "nbt": {
+        "Potion": {
+          "type": "string",
+          "value": "minecraft:strong_leaping"
+        }
+      }
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:tipped_arrow",
+      "nbt": {
+        "Potion": {
+          "type": "string",
+          "value": "minecraft:strong_leaping"
+        }
+      }
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.jump_boost_step_assist"
+  ]
+}

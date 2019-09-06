@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.management.feature.BetterCraftShifting"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:block",
+      "registry_name": "minecraft:crafting_table"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.crafting_quick_stack"
+  ]
+}

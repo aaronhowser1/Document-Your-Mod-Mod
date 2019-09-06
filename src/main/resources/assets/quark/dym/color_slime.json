@@ -8,28 +8,10 @@
   ],
   "for": [
     {
-      "type": "dym:item",
+      "type": "dym:item_meta_range",
       "registry_name": "quark:color_slime",
-      "metadata": 0
-    },{
-      "type": "dym:item",
-      "registry_name": "quark:color_slime",
-      "metadata": 1
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:color_slime",
-      "metadata": 2
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:color_slime",
-      "metadata": 3
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:color_slime",
-      "metadata": 4
+      "metadata_begin": 0,
+      "metadata_end": 4
     }
   ],
   "documentation": [

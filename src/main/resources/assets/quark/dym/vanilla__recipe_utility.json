@@ -1,0 +1,42 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.misc.feature.UtilityRecipes"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:block",
+      "registry_name": "minecraft:dispenser"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:repeater"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:chest_minecart"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:furnace_minecart"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:tnt_minecart"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:hopper_minecart"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.recipe_utility"
+  ]
+}

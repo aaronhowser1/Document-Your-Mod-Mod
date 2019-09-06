@@ -1,0 +1,40 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.decoration.feature.VariedButtonsAndPressurePlates",
+      "field": "enableButtons",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "quark:spruce_button"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:birch_button"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:jungle_button"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:acacia_button"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:dark_oak_button"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.varied_buttons"
+  ]
+}

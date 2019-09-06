@@ -13,6 +13,10 @@
   "for": [
     {
       "type": "dym:enchanted_book"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:ancient_tome"
     }
   ],
   "documentation": [

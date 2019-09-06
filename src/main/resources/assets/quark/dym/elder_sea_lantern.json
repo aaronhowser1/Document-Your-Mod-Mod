@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.world.feature.UndergroundBiomes",
+      "field": "elderPrismarineEnabled",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "quark:elder_sea_lantern"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.elder_sea_lantern"
+  ]
+}

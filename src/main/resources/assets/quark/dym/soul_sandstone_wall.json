@@ -1,0 +1,36 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.building.feature.SoulSandstone",
+      "field": "enableWalls",
+      "value": true
+    }
+  ],
+  "requirements": [
+    {
+      "order": "after",
+      "registry_name": "quark:soul_sandstone",
+      "required": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "quark:soul_sandstone",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:soul_sandstone_wall"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.soul_sandstone_wall"
+  ]
+}

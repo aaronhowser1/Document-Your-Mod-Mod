@@ -1,0 +1,18 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "quark:monster_box"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.monster_box"
+  ]
+}

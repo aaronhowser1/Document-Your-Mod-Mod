@@ -19,10 +19,6 @@ public class DYMMConfig {
         @Config.Name("Quark's Vanilla Info")
         @Config.Comment("Add information tabs to vanilla items that Quark changes?")
         public boolean useVanillaQuark = true;
-
-        @Config.Name("Quark Module/Feature Info")
-        @Config.Comment("Add information regarding which module and feature add a specific behavior or functionality?")
-        public boolean useModuleFeature = true;
     }
 
     @Config.Name("Nature's Compass info")

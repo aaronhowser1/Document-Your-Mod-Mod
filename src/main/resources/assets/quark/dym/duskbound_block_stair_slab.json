@@ -1,0 +1,39 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.building.feature.DuskboundBlocks",
+      "field": "enableStairsAndSlabs",
+      "value": true
+    }
+  ],
+  "requirements": [
+    {
+      "order": "after",
+      "registry_name": "quark:duskbound_block",
+      "required": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "quark:duskbound_block"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:duskbound_block_stairs"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:duskbound_block_slab"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.duskbound_block_stair_slab"
+  ]
+}

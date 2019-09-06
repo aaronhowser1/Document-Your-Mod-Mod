@@ -1,0 +1,25 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.world.feature.UndergroundBiomes",
+      "field": "icystoneEnabled",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "quark:biome_cobblestone",
+      "metadata": 1
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.permafrost"
+  ]
+}

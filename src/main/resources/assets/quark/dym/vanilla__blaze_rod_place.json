@@ -14,10 +14,6 @@
     {
       "type": "dym:item",
       "registry_name": "minecraft:blaze_rod"
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:blaze_rod"
     }
   ],
   "documentation": [

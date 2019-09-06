@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "quark:iron_plate",
+      "metadata": 0
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.iron_plate"
+  ]
+}

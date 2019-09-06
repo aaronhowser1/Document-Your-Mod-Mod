@@ -1,0 +1,48 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.tweaks.feature.PatTheDogs"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:spawn_egg",
+      "nbt": {
+        "EntityTag": {
+          "type": "compound",
+          "value": {
+            "id": {
+              "type": "string",
+              "value": "minecraft:wolf"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:spawn_egg",
+      "nbt": {
+        "EntityTag": {
+          "type": "compound",
+          "value": {
+            "id": {
+              "type": "string",
+              "value": "quark:foxhound"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.dog_pat"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.tweaks.feature.DirtToPath"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:block",
+      "registry_name": "minecraft:dirt"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:wooden_shovel"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:stone_shovel"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:iron_shovel"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:golden_shovel"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:diamond_shovel"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.dirt_path"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.building.feature.DuskboundBlocks",
+      "field": "enableWalls",
+      "value": true
+    }
+  ],
+  "requirements": [
+    {
+      "order": "after",
+      "registry_name": "quark:duskbound_block",
+      "required": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "quark:duskbound_block"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:duskbound_block_wall"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.duskbound_block_wall"
+  ]
+}

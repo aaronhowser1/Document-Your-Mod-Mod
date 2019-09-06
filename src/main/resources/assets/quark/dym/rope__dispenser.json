@@ -4,6 +4,12 @@
       "type": "dym:configuration_option",
       "name": "quark.useQuark",
       "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.decoration.feature.Rope",
+      "field": "enableDispenser",
+      "value": true
     }
   ],
   "requirements": [

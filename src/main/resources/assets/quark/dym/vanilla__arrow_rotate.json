@@ -1,0 +1,46 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.management.feature.RotateArrowTypes"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:bow"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:arrow"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:spectral_arrow"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:tipped_arrow"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:arrow_ender"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:arrow_explosive"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:arrow_torch"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.arrow_rotate"
+  ]
+}

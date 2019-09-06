@@ -1,0 +1,54 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "quark:stone_speleothem"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:granite_speleothem"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:diorite_speleothem"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:andesite_speleothem"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:netherrack_speleothem"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:basalt_speleothem"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:marble_speleothem"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:limestone_speleothem"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:jasper_speleothem"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:slate_speleothem"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.speleothem"
+  ]
+}

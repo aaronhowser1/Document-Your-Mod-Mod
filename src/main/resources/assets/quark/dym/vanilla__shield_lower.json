@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.client.feature.LessIntrusiveShields"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:shield"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.shield_lower"
+  ]
+}

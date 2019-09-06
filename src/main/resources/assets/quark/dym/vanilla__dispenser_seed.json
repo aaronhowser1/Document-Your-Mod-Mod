@@ -34,6 +34,23 @@
     {
       "type": "dym:item",
       "registry_name": "minecraft:nether_wart"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:potato"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:carrot"
+    },
+    {
+      "type": "dym:block",
+      "registry_name": "minecraft:chorus_flower"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:dye",
+      "metadata": 3
     }
   ],
   "documentation": [

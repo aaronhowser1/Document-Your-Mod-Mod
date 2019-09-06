@@ -14,6 +14,34 @@
     {
       "type": "dym:item",
       "registry_name": "minecraft:lead"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:fence"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:nether_brick_fence"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:spruce_fence"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:birch_fence"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:jungle_fence"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:dark_oak_fence"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:acacia_fence"
     }
   ],
   "documentation": [

@@ -1,0 +1,57 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.building.feature.MoreSandstone",
+      "field": "enableStairsAndSlabs",
+      "value": true
+    }
+  ],
+  "requirements": [
+    {
+      "order": "after",
+      "registry_name": "quark:sandstone_new",
+      "required": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item_meta_range",
+      "registry_name": "quark:sandstone_new",
+      "metadata_begin": 0,
+      "metadata_end": 3
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:sandstone_bricks_stairs"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:red_sandstone_bricks_stairs"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:sandstone_smooth_slab"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:sandstone_bricks_slab"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:red_sandstone_smooth_slab"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:red_sandstone_bricks_slab"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.sandstone_new_stair_slab"
+  ]
+}

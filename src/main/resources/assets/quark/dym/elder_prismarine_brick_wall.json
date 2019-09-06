@@ -1,0 +1,47 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.world.feature.UndergroundBiomes",
+      "field": "elderPrismarineEnabled",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.world.feature.UndergroundBiomes",
+      "field": "enableWalls",
+      "value": true
+    }
+  ],
+  "requirements": [
+    {
+      "order": "after",
+      "registry_name": "quark:elder_prismarine_brick",
+      "required": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "quark:elder_prismarine",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:elder_prismarine",
+      "metadata": 1
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:elder_prismarine_bricks_wall"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.elder_prismarine_brick_wall"
+  ]
+}

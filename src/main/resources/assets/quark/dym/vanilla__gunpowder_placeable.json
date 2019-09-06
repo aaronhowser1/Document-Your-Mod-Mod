@@ -8,16 +8,18 @@
     {
       "type": "quark:check_feature",
       "class": "vazkii.quark.misc.feature.PlaceVanillaDusts"
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.misc.feature.PlaceVanillaDusts",
+      "field": "enableGunpowder",
+      "value": true
     }
   ],
   "for": [
     {
       "type": "dym:item",
       "registry_name": "minecraft:gunpowder"
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "quark:gunpowder_block"
     }
   ],
   "documentation": [

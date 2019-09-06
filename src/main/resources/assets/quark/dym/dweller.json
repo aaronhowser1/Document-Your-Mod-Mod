@@ -1,0 +1,33 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.world.feature.DepthMobs"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:spawn_egg",
+      "nbt": {
+        "EntityTag": {
+          "type": "compound",
+          "value": {
+            "id": {
+              "type": "string",
+              "value": "quark:dweller"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.dweller"
+  ]
+}

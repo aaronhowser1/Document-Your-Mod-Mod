@@ -1,0 +1,66 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.tweaks.feature.MinecartInteraction"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:block",
+      "registry_name": "minecraft:chest"
+    },
+    {
+      "type": "dym:block",
+      "registry_name": "minecraft:tnt"
+    },
+    {
+      "type": "dym:block",
+      "registry_name": "minecraft:furnace"
+    },
+    {
+      "type": "dym:block",
+      "registry_name": "minecraft:hopper"
+    },
+    {
+      "type": "dym:block",
+      "registry_name": "minecraft:mob_spawner"
+    },
+    {
+      "type": "dym:block",
+      "registry_name": "minecraft:command_block"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:minecart"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:chest_minecart"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:furnace_minecart"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:tnt_minecart"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:hopper_minecart"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:command_block_minecart"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.minecart_convert"
+  ]
+}

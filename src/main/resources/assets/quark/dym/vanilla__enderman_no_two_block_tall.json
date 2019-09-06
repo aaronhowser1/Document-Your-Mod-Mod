@@ -1,0 +1,33 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.tweaks.feature.EndermenAntiCheese"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:spawn_egg",
+      "nbt": {
+        "EntityTag": {
+          "type": "compound",
+          "value": {
+            "id": {
+              "type": "string",
+              "value": "minecraft:enderman"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.enderman_no_two_block_tall"
+  ]
+}

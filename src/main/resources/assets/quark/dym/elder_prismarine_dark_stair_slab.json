@@ -1,0 +1,51 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.world.feature.UndergroundBiomes",
+      "field": "elderPrismarineEnabled",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.world.feature.UndergroundBiomes",
+      "field": "enableStairsAndSlabs",
+      "value": true
+    }
+  ],
+  "requirements": [
+    {
+      "order": "after",
+      "registry_name": "quark:elder_prismarine_dark",
+      "required": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "quark:elder_prismarine",
+      "metadata": 0
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:elder_prismarine",
+      "metadata": 2
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:elder_prismarine_dark_slab"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:elder_prismarine_dark_stairs"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.elder_prismarine_dark_stair_slab"
+  ]
+}

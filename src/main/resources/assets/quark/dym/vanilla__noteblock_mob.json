@@ -14,6 +14,36 @@
     {
       "type": "dym:block",
       "registry_name": "minecraft:noteblock"
+    },
+    {
+      "__comment": "Skeleton",
+      "type": "dym:item",
+      "registry_name": "minecraft:skull",
+      "metadata": 0
+    },
+    {
+      "__comment": "Wither Skeleton",
+      "type": "dym:item",
+      "registry_name": "minecraft:skull",
+      "metadata": 1
+    },
+    {
+      "__comment": "Zombie",
+      "type": "dym:item",
+      "registry_name": "minecraft:skull",
+      "metadata": 2
+    },
+    {
+      "__comment": "Creeper",
+      "type": "dym:item",
+      "registry_name": "minecraft:skull",
+      "metadata": 4
+    },
+    {
+      "__comment": "Ender Dragon",
+      "type": "dym:item",
+      "registry_name": "minecraft:skull",
+      "metadata": 5
     }
   ],
   "documentation": [

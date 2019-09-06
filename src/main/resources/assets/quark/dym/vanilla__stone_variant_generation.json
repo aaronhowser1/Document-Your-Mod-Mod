@@ -1,0 +1,36 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.world.feature.RevampStoneGen"
+    }
+  ],
+  "for": [
+    {
+      "__comment": "Granite",
+      "type": "dym:block",
+      "registry_name": "minecraft:stone",
+      "metadata": 1
+    },
+    {
+      "__comment": "Andesite",
+      "type": "dym:block",
+      "registry_name": "minecraft:stone",
+      "metadata": 5
+    },
+    {
+      "__comment": "Diorite",
+      "type": "dym:block",
+      "registry_name": "minecraft:stone",
+      "metadata": 3
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.stone_variant_generation"
+  ]
+}

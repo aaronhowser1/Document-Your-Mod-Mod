@@ -1,0 +1,42 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.world.feature.UndergroundBiomes",
+      "field": "icystoneEnabled",
+      "value": true
+    },
+    {
+      "type": "quark:check_boolean_field",
+      "class": "vazkii.quark.world.feature.UndergroundBiomes",
+      "field": "enableWalls",
+      "value": true
+    }
+  ],
+  "requirements": [
+    {
+      "order": "after",
+      "registry_name": "quark:permafrost",
+      "required": true
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "quark:biome_cobblestone",
+      "metadata": 1
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "quark:icy_stone_wall"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.permafrost_wall"
+  ]
+}

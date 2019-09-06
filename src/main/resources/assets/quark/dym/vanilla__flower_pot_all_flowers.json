@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "dym:configuration_option",
+      "name": "quark.useVanillaQuark",
+      "value": true
+    },
+    {
+      "type": "quark:check_feature",
+      "class": "vazkii.quark.decoration.feature.BetterVanillaFlowerPot"
+    }
+  ],
+  "for": [
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:flower_pot"
+    }
+  ],
+  "documentation": [
+    "dym.doc.quark.vanilla.flower_pot_all_flowers"
+  ]
+}

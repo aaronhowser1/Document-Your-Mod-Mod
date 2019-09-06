@@ -318,7 +318,10 @@ public enum DocumentationLoader {
             if (!jsonElement.isJsonObject()) throw new JsonSyntaxException("conditions member must be a JsonObject");
             final ConditionFactory conditionFactory = this.getConditionFactory(jsonElement.getAsJsonObject());
             final BooleanSupplier booleanSupplier = conditionFactory.produce(jsonElement.getAsJsonObject(), modContainer);
-            if (!booleanSupplier.getAsBoolean()) return false;
+            if (!booleanSupplier.getAsBoolean()) {
+                DocumentMod.logger.trace("Loading interrupted because condition '" + conditionFactory + "' didn't pass");
+                return false;
+            }
         }
         return true;
     }

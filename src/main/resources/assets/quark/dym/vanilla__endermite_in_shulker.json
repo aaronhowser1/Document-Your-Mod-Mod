@@ -14,6 +14,36 @@
     {
       "type": "dym:block",
       "registry_name": "minecraft:purpur_block"
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:spawn_egg",
+      "nbt": {
+        "EntityTag": {
+          "type": "compound",
+          "value": {
+            "id": {
+              "type": "string",
+              "value": "minecraft:endermite"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "dym:item",
+      "registry_name": "minecraft:spawn_egg",
+      "nbt": {
+        "EntityTag": {
+          "type": "compound",
+          "value": {
+            "id": {
+              "type": "string",
+              "value": "minecraft:shulker"
+            }
+          }
+        }
+      }
     }
   ],
   "documentation": [
