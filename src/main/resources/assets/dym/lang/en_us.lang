@@ -64,9 +64,7 @@ dym.doc.quark.color_slime=Colored Slime blocks will not move Slime blocks of oth
 dym.doc.quark.colored_light=Placing a block of stained glass under a Lit Redstone Lamp will turn the light of the lamp to that color.
 dym.doc.quark.cooked_crab_leg=Food item obtained through cooking a Crab Leg. Replenishes almost half of the hunger bar.
 dym.doc.quark.cooked_frog_leg=Food item obtained through cooking a Frog Leg. Replenishes two hunger points.
-dym.doc.quark.crab=They can be found on beaches.\n\nWhen killed they drop an edible item and a Crab Shell Fragment, which can be used to brew a Potion of Stability.\n\nAlso, they dance if you--
-dym.doc.quark.crab_leg=Food item that can be obtained from Crabs.\nReplenishes a small amount of health, but can be cooked for better nourishment.
-dym.doc.quark.crab_shell=Dropped from Crabs, it can be used to brew a Potion of Stability.
+dym.doc.quark.crab=They can be found on beaches.\n\nWhen killed they drop an edible item and a Crab Shell Fragment, which can be used to brew a Potion of Stability.
 dym.doc.quark.crystal=Obtained from Crystal Caves, rare underground formations that host Crystals and large amounts of ores.\n\nIt emits light and can be used to craft Runes.
 dym.doc.quark.diamond_heart=Has a chance of dropping from Stonelings.\n\nRight click on a Stone block to "create" your own, allowing it to hold your items, eat Stone, and follow you when you're holding a Diamond.
 dym.doc.quark.dweller=Zombie variant that lurks in the darkness at low Y levels (less than 20).\n\nIt starts out invisible, but loses this ability once attacks or is attacked.
@@ -74,7 +72,6 @@ dym.doc.quark.elder_prismarine=Block that spawns in Ocean-type biomes undergroun
 dym.doc.quark.elder_sea_lantern=Block that spawns in Ocean-type biomes underground.\n\nIt acts the same as a regular Sea Lantern, but it has a more washed out look that resembles the tones of the Elder Guardian.
 dym.doc.quark.ender_watcher=Gives off a Redstone signal when being looked at.
 dym.doc.quark.enderdragon_scale=Craft with the Elytra to duplicate it.
-dym.doc.quark.fairy_ring=If you see a ring made out of Oxeye Daisies in Forests or Plains, you've come across a Fairy Ring.\n\nDigging in the center will reveal some diamond or emerald ores.
 dym.doc.quark.firestone=Brimstone is a block that can spawn in Mesa biomes underground.\n\nIt has a very bright orange texture which makes it a good block when building Nether-like or fiery-themed creations.
 dym.doc.quark.foxhound=Tameable but hostile mobs that spawn in the Nether. When they attack they set you on fire.\n\nTo tame them you can feed them coal, but be wary not to burn yourself to death.\n\nThey sleep on Magma blocks and they can heat up a furnace when sitting on top of it.
 dym.doc.quark.frame=The Frame is a block that can assume the appearance of any other block.\n\nRight click it with another block to camouflage the frame into it.
@@ -82,7 +79,6 @@ dym.doc.quark.frame_slab=The Frame Slab is a slab that can assume the appearance
 dym.doc.quark.framed_glass=Glass block that has a square pattern on all sides.\n\nUseful for windows in retro-styled buildings.
 dym.doc.quark.framed_glass_pane=Pane version of the Framed Glass block.\n\nCan connect to vanilla Glass panes.
 dym.doc.quark.frog=Spawn in Swamps. They eat fish and spider eyes. Their legs can be cooked or used to brew Jump Boost potions.
-dym.doc.quark.frog_leg=Food item dropped from Frogs. Replenishes a small amount of hunger. It can be cooked to give better nourishment or combined with gold to make a Golden Frog Leg.
 dym.doc.quark.glass_item_frame=Disappears when an item is placed in it, so you can only see the item.
 dym.doc.quark.glass_shards=When Glass is broken, it will drop some Glass Shards which can be crafted back into Glass.
 dym.doc.quark.glowcelium=Variant of Mycelium that spawns underground in Mountains or Mushroom Island biomes and emits light.\n\nIt is the best place for Glowshrooms to proliferate.
@@ -105,7 +101,6 @@ dym.doc.quark.limestone=Block with a lime texture, which can be used for buildin
 dym.doc.quark.lit_lamp=Always lit regardless of Redstone.
 dym.doc.quark.monster_box=The one use version of the Mob Spawner.\n\nThese blocks spawn randomly in caves and ignite when you get closer to them. They spawn a patch of mobs and then disappear.
 dym.doc.quark.obsidian_pressure_plate=Only triggers when used by a Player.
-dym.doc.quark.obsidian_spikes=In the Nether you may come across spikes that generate from the Lava ocean.\n\nThey are mostly decorative, but they can sometimes host a Blaze Spawner, a Blaze Lantern and some Fortress loot.
 dym.doc.quark.parrot_egg=Feeding Beetroot Seeds (or another seed if configured) to a Parrot has a chance to make it hatch a Parrot Egg, which can be thrown to get a guaranteed Parrot of the same color.
 dym.doc.quark.permafrost=Permafrost is a block that spawns underground in Cold biomes.
 dym.doc.quark.pickarang=Breaks the block it hits when thrown, and returns with the drop.
@@ -139,7 +134,7 @@ dym.doc.quark.turf=Block made of tall grass that has the Grass Block texture on 
 dym.doc.quark.witch_hat=Highly enchantable, and provides 50% resistance to Potions of Harming.
 dym.doc.quark.wraith=Spawns in the Nether on Soul Sand and attacks in groups. Everytime you get it, you get Slowness and the Wraith knocks themself back.\n\nSince they're ghosts, they sound like other mobs, so don't trust your ears while roaming in the Nether.
 
-# Quark Decoration
+# Quark Decoration (Separated for convenience) -> Documentation
 dym.doc.quark.bark=Building block that has the log texture on all sides.\nComes in all different variants.\nParticurarly useful for wood-themed constructions.
 dym.doc.quark.bark_stair_slab=Bark blocks also come in all of the respective stairs and slab variants for your building needs.
 dym.doc.quark.bark_wall=A Wooden version of walls that has the log texture on all sides is also present.
@@ -241,8 +236,6 @@ dym.doc.quark.world_stone_bricks_stair_slab=The Stone Bricks also come in stair 
 dym.doc.quark.world_stone_bricks_wall=A wall version of the Stone Bricks is also provided, to fence areas and for decorative purpouses.
 dym.doc.quark.world_stone_carved=Building blocks that have been chiseled in square patterns.\n\nUseful for decorations and as cornerstones.
 dym.doc.quark.world_stone_pavement=Building block with a textured look that resembles lots of small bricks placed together in a grid.\n\nUseful for floorings.
-
-
 
 # Quark Vanilla (Separated for convenience) -> Documentation
 dym.doc.quark.vanilla.anvil_name_dye=Combine any item with a dye in the Anvil to color its name in the tooltip.
