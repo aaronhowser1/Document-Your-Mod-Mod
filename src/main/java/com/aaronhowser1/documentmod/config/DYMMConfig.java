@@ -19,6 +19,10 @@ public class DYMMConfig {
         @Config.Name("Quark's Vanilla Info")
         @Config.Comment("Add information tabs to vanilla items that Quark changes?")
         public boolean useVanillaQuark = true;
+
+        @Config.Name("Quark's Decorative Blocks")
+        @Config.Comment("Add information to Quark's decorative blocks?")
+        public boolean useQuarkDecor = true;
     }
 
     @Config.Name("Nature's Compass info")

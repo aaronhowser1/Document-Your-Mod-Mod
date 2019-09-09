@@ -2,7 +2,7 @@
   "conditions": [
     {
       "type": "dym:configuration_option",
-      "name": "quark.useQuark",
+      "name": "quark.useQuarkDecor",
       "value": true
     }
   ],
