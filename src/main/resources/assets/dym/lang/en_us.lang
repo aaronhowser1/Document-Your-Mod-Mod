@@ -136,7 +136,6 @@ dym.doc.quark.thatch=Storage block for Wheat that can be used for building.\n\nN
 dym.doc.quark.tallow=Used to craft Candles.\n\nIt may be dropped by Pigs when they're killed.
 dym.doc.quark.trowel=When used, places a random block from your hotbar.
 dym.doc.quark.turf=Block made of tall grass that has the Grass Block texture on all sides and doesn't transform into dirt when a block is on top.
-dym.doc.quark.turf_stair_slab=Turf Blocks also come in Stair and Slab variant, with the same vibrant color.
 dym.doc.quark.witch_hat=Highly enchantable, and provides 50% resistance to Potions of Harming.
 dym.doc.quark.wraith=Spawns in the Nether on Soul Sand and attacks in groups. Everytime you get it, you get Slowness and the Wraith knocks themself back.\n\nSince they're ghosts, they sound like other mobs, so don't trust your ears while roaming in the Nether.
 
@@ -228,6 +227,7 @@ dym.doc.quark.stained_clay_tiles_stair_slab=Terracotta Shingles also come in var
 dym.doc.quark.stained_planks=Planks that are colored in various pastel tints, so not to hurt the eyes.
 dym.doc.quark.stained_planks_stair_slab=Stained Planks also come in all stairs and slab variants, with the same pastel colors.
 dym.doc.quark.thatch_stair_slab=Thatch also comes in stairs and slab variants.\n\nThey negate a configurable percentage of fall damage, too.
+dym.doc.quark.turf_stair_slab=Turf Blocks also come in Stair and Slab variant, with the same vibrant color.
 dym.doc.quark.vanilla_slabs=Half-height block that can be used as stairs, flooring, or decoration element on roofs, ceilings, and around windows.
 dym.doc.quark.vanilla_stairs=Allows entities to walk over them and go up one block.\n\nIt can also be used as a decorative element on ceilings or roofs.
 dym.doc.quark.vanilla_walls=Decorative blocks that can be used to delimit areas.\n\nHigher than one block and with more blast resistance, no entity can pass through them.
