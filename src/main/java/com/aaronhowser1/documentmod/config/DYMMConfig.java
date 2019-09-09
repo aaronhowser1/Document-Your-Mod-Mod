@@ -26,26 +26,34 @@ public class DYMMConfig {
     }
 
     @Config.Name("Nature's Compass info")
+    @Config.Comment("Document Nature's Compass?")
     public static boolean useNaturesCompass = true;
 
     @Config.Name("Tinkers' Construct info")
+    @Config.Comment("Document Tinkers' Construct?")
     public static boolean useTinkersConstruct = true;
 
     @Config.Name("Twilight Forest info")
+    @Config.Comment("Document Twilight Forest?")
     public static boolean useTwilightForest = true;
 
     @Config.Name("Waystones info")
+    @Config.Comment("Document Waystones?")
     public static boolean useWaystone = true;
 
     @Config.Name("Refined Storage info")
+    @Config.Comment("Document Refined Storage")
     public static boolean useRefinedStorage = true;
 
     @Config.Name("Iron Chest info")
+    @Config.Comment("Document Iron Chest")
     public static boolean useIronChest = true;
 
     @Config.Name("Debug - Mod Documented")
+    @Config.Comment("Displays in console what mods are documented")
     public static boolean debugModIsDocumented = false;
 
     @Config.Name("Debug - Not Documented Items")
+    @Config.Comment("Displays in console what items in documented mods aren't documented")
     public static boolean debugItemsNoEntry = false;
 }
