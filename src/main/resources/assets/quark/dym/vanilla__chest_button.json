@@ -6,6 +6,11 @@
       "value": true
     },
     {
+      "type": "dym:configuration_option",
+      "name": "quark.useQuarkGUI",
+      "value": true
+    },
+    {
       "type": "quark:check_feature",
       "class": "vazkii.quark.management.feature.ChestButtons"
     }

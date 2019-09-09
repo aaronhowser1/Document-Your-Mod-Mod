@@ -23,6 +23,10 @@ public class DYMMConfig {
         @Config.Name("Quark's Decorative Blocks")
         @Config.Comment("Add information to Quark's decorative blocks?")
         public boolean useQuarkDecor = true;
+
+        @Config.Name("Quark's GUI Elements")
+        @Config.Comment("Add information about Quark's UI elements?")
+        public boolean useQuarkGUI = true;
     }
 
     @Config.Name("Nature's Compass info")

@@ -18,26 +18,6 @@
     {
       "type": "dym:item",
       "registry_name": "minecraft:snow_layer"
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "minecraft:wooden_shovel"
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "minecraft:stone_shovel"
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "minecraft:iron_shovel"
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "minecraft:golden_shovel"
-    },
-    {
-      "type": "dym:item",
-      "registry_name": "minecraft:diamond_shovel"
     }
   ],
   "documentation": [
