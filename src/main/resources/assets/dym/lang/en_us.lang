@@ -237,7 +237,7 @@ dym.doc.quark.world_stone_bricks_wall=A wall version of the Stone Bricks is also
 dym.doc.quark.world_stone_carved=Building blocks that have been chiseled in square patterns.\n\nUseful for decorations and as cornerstones.
 dym.doc.quark.world_stone_pavement=Building block with a textured look that resembles lots of small bricks placed together in a grid.\n\nUseful for floorings.
 
-# Quark GUI
+# Quark GUI (Separated for convenience) -> Documentation
 dym.doc.quark.vanilla.chest_button=The chest GUI also provides buttons that allow you to manipulate the contents.\n\nYou can sort the chest inventory or yours, drop all your items or only selected ones in the chest, or extract all the items or selected ones from the chest.
 dym.doc.quark.vanilla.chest_drop_off=You can store the contents of your inventory (not hotbar, armor, and offhand) into nearby chests.\n\nPressing the Dropoff button while holding Shift will drop the items in chests that already contain them.\n\nThis feature can also be disabled through the `quark_allowDropoff` gamerule.
 dym.doc.quark.vanilla.chest_search_bar=You can search the content of the chest that is currently open and of your inventory with the search bar.
