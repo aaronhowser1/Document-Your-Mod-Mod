@@ -12,30 +12,6 @@
   ],
   "for": [
     {
-      "type": "dym:block",
-      "registry_name": "minecraft:chest"
-    },
-    {
-      "type": "dym:block",
-      "registry_name": "minecraft:tnt"
-    },
-    {
-      "type": "dym:block",
-      "registry_name": "minecraft:furnace"
-    },
-    {
-      "type": "dym:block",
-      "registry_name": "minecraft:hopper"
-    },
-    {
-      "type": "dym:block",
-      "registry_name": "minecraft:mob_spawner"
-    },
-    {
-      "type": "dym:block",
-      "registry_name": "minecraft:command_block"
-    },
-    {
       "type": "dym:item",
       "registry_name": "minecraft:minecart"
     },
