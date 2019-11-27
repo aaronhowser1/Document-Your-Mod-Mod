@@ -14,7 +14,21 @@ buildscript {
 }
 apply plugin: "net.minecraftforge.gradle.forge"
 
-version = "${mod_version}"
+static def getGitCommit() {
+    def proc = "git rev-parse --short HEAD".execute()
+    proc.waitFor()
+    return proc.exitValue() ? "EINVAL(NO_GIT)" : proc.text.trim()
+}
+
+static def getBuildNumber() {
+    return System.env.BUILD_NUMBER? System.env.BUILD_NUMBER : System.env.TRAVIS_BUILD_NUMBER
+}
+
+static def getBuildString() {
+    return getBuildNumber()? "+build.${getBuildNumber()}" : ""
+}
+
+version = "${mod_version}" + getBuildString()
 group = "com.aaronhowser1.dym" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "DocumentYourModMod"
 
@@ -29,7 +43,7 @@ minecraft {
     mappings = "${mappings_version}"
 
     replace "@VERSION@", project.version
-    replaceIn "DocumentYourMod.java"
+    replace "@FINGERPRINT@", project.findProperty('signSHA1')
 }
 
 repositories {
@@ -77,4 +91,48 @@ task checkTranslations(type: net.thesilkminer.gradle.plugin.translationchecker.t
     modId = "dym"
     dryRun = true
     templateFileName = "en_us.lang"
+}
+
+task deobfJar(type: Jar, dependsOn: 'jar') {
+    from "build/source/main"
+    classifier "deobf"
+}
+
+task signJar(type: SignJar, dependsOn: 'reobfJar') {
+    onlyIf {
+        project.hasProperty('keystore')
+    }
+    keyStore = project.findProperty('keystore')
+    alias = project.findProperty('keystoreAlias')
+    storePass = project.findProperty('keystorePass')
+    keyPass = project.findProperty('keyPass')
+    inputFile = jar.archivePath
+    outputFile = jar.archivePath
+}
+
+build.dependsOn signJar
+
+artifacts {
+    archives deobfJar
+}
+
+jar {
+    manifest {
+        attributes([
+                "Specification-Title": "Document Your Mod Mod",
+                "Specification-Vendor": "aaronhowser1",
+                "Specification-Version": "1.0.0",
+                "Implementation-Title": project.name,
+                "Implementation-Version": "${version}",
+                "Implementation-Vendor" :"aaronhowser1; TheSilkMiner",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+                "GitCommit": "" + getGitCommit(),
+                "BuildNumber": "" + getBuildNumber()
+        ])
+    }
+}
+
+wrapper {
+    gradleVersion = "4.9"
+    distributionType = Wrapper.DistributionType.ALL
 }
