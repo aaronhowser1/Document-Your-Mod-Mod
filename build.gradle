@@ -8,16 +8,14 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
-        classpath group: 'net.thesilkminer.gradle.translationchecker', name: 'TranslationChecker', version: '1.1'
+        classpath group: "net.minecraftforge.gradle", name: "ForgeGradle", version: "2.3-SNAPSHOT"
+        classpath group: "net.thesilkminer.gradle.translationchecker", name: "TranslationChecker", version: "1.1"
     }
 }
-apply plugin: 'net.minecraftforge.gradle.forge'
-//Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
-
+apply plugin: "net.minecraftforge.gradle.forge"
 
 version = "${mod_version}"
-group = "com.aaronhowser1.DocumentMod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = "com.aaronhowser1.dym" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "DocumentYourModMod"
 
 sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
@@ -31,31 +29,23 @@ minecraft {
     mappings = "${mappings_version}"
 
     replace "@VERSION@", project.version
-    replaceIn "DocumentMod.java"
+    replaceIn "DocumentYourMod.java"
 }
 
 repositories {
     maven {
-        // location of the maven that hosts JEI files
         name = "Progwml6 maven"
         url = "https://dvs1.progwml6.com/files/maven/"
     }
     maven {
-        // location of a maven mirror for JEI files, as a fallback
         name = "ModMaven"
         url = "https://modmaven.k-4u.nl"
-    }
-    maven { // for AutoRegLib and Quark
-        name "blamejared"
-        url "http://maven.blamejared.com/"
     }
 }
 
 dependencies {
-    // compile against the JEI API but do not include it at runtime
-    deobfProvided "mezz.jei:jei_${mc_version}:${jei_version}:api"
-    // at runtime, use the full JEI jar
-    runtime "mezz.jei:jei_${mc_version}:${jei_version}"
+    deobfProvided group: "mezz.jei", name: "jei_${mc_version}", version: "${jei_version}", classifier: "api"
+    runtime group: "mezz.jei", name: "jei_${mc_version}", version: "${jei_version}"
 
 }
 
@@ -67,11 +57,11 @@ processResources {
     // replace stuff in mcmod.info, nothing else
     from(sourceSets.main.resources.srcDirs) {
         include 'mcmod.info'
-                
+
         // replace version and mcversion
         expand 'version':project.version, 'mcversion':project.minecraft.version
     }
-        
+
     // copy everything else except the mcmod.info
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
@@ -79,12 +69,12 @@ processResources {
 }
 
 task updateTranslations(type: net.thesilkminer.gradle.plugin.translationchecker.tasks.TranslationCheckTask) {
-    modId = "documentmod"
+    modId = "dym"
     templateFileName = "en_us.lang"
 }
 
 task checkTranslations(type: net.thesilkminer.gradle.plugin.translationchecker.tasks.TranslationCheckTask) {
-    modId = "documentmod"
+    modId = "dym"
     dryRun = true
     templateFileName = "en_us.lang"
 }
