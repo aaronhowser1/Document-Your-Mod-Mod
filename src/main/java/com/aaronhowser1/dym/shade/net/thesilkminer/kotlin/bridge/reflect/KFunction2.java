@@ -3,6 +3,7 @@ package com.aaronhowser1.dym.shade.net.thesilkminer.kotlin.bridge.reflect;
 import javax.annotation.Nonnull;
 import java.util.function.BiFunction;
 
+@FunctionalInterface
 public interface KFunction2<A, B, R> extends BiFunction<A, B, R> {
 
     @Nonnull

@@ -49,4 +49,8 @@ public final class KClass<T> {
     public Nullable<String> getSimpleName() {
         return Nullable.get(this.javaClass.getSimpleName());
     }
+
+    public <F> boolean isSuperClassOf(@Nonnull final KClass<F> kClass) {
+        return kClass.javaClass.equals(this.javaClass) || this.isSuperClassOf(KClass.get(kClass.javaClass.getSuperclass()));
+    }
 }

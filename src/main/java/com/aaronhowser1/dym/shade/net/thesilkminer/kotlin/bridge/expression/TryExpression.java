@@ -26,7 +26,7 @@ public final class TryExpression<T> implements KFunction0<T> {
         }
 
         private boolean matches(@Nonnull final KClass<?> otherExceptionClass) {
-            return this.exceptionClass.equals(otherExceptionClass);
+            return this.exceptionClass.isSuperClassOf(otherExceptionClass);
         }
 
         @Nonnull
