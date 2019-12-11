@@ -117,7 +117,7 @@ public final class L implements Logger {
         final StringBuilder builder = new StringBuilder();
         builder.append(initialString);
         builder.append("\n\n");
-        final int start = dsb == DumpStackBehavior.FULL_DUMP? 5 : 0; // TODO Check if values are still correct
+        final int start = dsb == DumpStackBehavior.FULL_DUMP? 0 : 4;
         final int endT = dsb == DumpStackBehavior.NORMAL_DUMP? Math.min(stack.length, 4) : stack.length;
         final int end = Math.min(start + endT, stack.length);
         IntStream.range(start, end).forEach(i -> {
