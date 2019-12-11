@@ -36,7 +36,7 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 public final class OneForAllModContainerLocator implements Locator {
-    enum Kind {
+    public enum Kind {
         ASSETS("assets"),
         DATA("data");
 

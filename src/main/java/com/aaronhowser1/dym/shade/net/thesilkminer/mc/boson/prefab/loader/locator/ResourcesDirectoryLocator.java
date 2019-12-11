@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public final class ResourcesDirectoryLocator implements Locator {
-    enum Kind {
+    public enum Kind {
         ASSETS("assets"),
         DATA("data");
 
@@ -54,6 +54,16 @@ public final class ResourcesDirectoryLocator implements Locator {
             LOG.info("We are currently looking in the '" + this.targetDirectory + "' directory with kind " + this.kind);
             return this.scanResourcesDirectory(Paths.get(".").resolve("./resources").normalize().toAbsolutePath());
         });
+    }
+
+    @Nonnull
+    public static ResourcesDirectoryLocator create(@Nonnull final String targetDirectory, @Nonnull final Kind kind) {
+        return new ResourcesDirectoryLocator(targetDirectory, kind);
+    }
+
+    @Nonnull
+    public static ResourcesDirectoryLocator create(@Nonnull final String targetDirectory) {
+        return create(targetDirectory, Kind.DATA);
     }
 
     @Nonnull

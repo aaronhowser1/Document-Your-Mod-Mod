@@ -53,7 +53,7 @@ public final class LoaderBuilder {
         }
 
         @Nonnull
-        public LoadingPhaseBuilder createWithName(@Nonnull final String name) {
+        public static LoadingPhaseBuilder createWithName(@Nonnull final String name) {
             return new LoadingPhaseBuilder(name);
         }
 
