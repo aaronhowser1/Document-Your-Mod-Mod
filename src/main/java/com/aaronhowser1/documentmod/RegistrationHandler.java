@@ -25,7 +25,7 @@ import java.util.Map;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
-@Mod.EventBusSubscriber(modid = DocumentMod.MOD_ID)
+//@Mod.EventBusSubscriber(modid = DocumentMod.MOD_ID)
 public final class RegistrationHandler {
 
     private RegistrationHandler() {}

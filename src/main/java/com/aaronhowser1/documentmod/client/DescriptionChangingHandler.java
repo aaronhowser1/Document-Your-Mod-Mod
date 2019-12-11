@@ -14,7 +14,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import javax.annotation.Nonnull;
 import java.util.List;
 
-@Mod.EventBusSubscriber(modid = DocumentMod.MOD_ID, value = Side.CLIENT)
+//@Mod.EventBusSubscriber(modid = DocumentMod.MOD_ID, value = Side.CLIENT)
 public final class DescriptionChangingHandler {
 
     @SubscribeEvent
