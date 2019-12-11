@@ -10,7 +10,7 @@ import javax.annotation.Nullable;
 
 public interface DocumentationLoader {
     @Nonnull ResourceLocation getIdentifier();
-    @Nullable DocumentationEntry loadFromJson(@Nonnull final JsonObject object);
+    @Nullable DocumentationEntry loadFromJson(@Nonnull final JsonObject object, @Nonnull final GlobalLoadingState state);
 
     default void registerMetadataListeners(@Nonnull final MetadataListenerRegistry registry) {}
     default void onLoad() {}
