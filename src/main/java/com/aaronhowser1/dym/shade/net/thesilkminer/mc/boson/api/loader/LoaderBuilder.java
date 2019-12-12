@@ -2,7 +2,7 @@ package com.aaronhowser1.dym.shade.net.thesilkminer.mc.boson.api.loader;
 
 import com.aaronhowser1.dym.shade.net.thesilkminer.kotlin.bridge.Nullable;
 import com.aaronhowser1.dym.shade.net.thesilkminer.kotlin.bridge.reflect.KFunction0;
-import com.aaronhowser1.dym.shade.net.thesilkminer.mc.boson.implementation.loader.BosonLoader;
+import com.aaronhowser1.dym.shade.net.thesilkminer.mc.boson.api.ApiBindings;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
@@ -205,7 +205,6 @@ public final class LoaderBuilder {
 
     @Nonnull
     public Loader build() {
-        // Tight coupling between API and impl since this is a rewrite for this particular use case
-        return BosonLoader.from(this);
+        return ApiBindings.BOSON_API.invoke().buildLoader(this);
     }
 }

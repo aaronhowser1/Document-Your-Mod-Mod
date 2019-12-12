@@ -50,6 +50,16 @@ public final class KClass<T> {
         return Nullable.get(this.javaClass.getSimpleName());
     }
 
+    @Nonnull
+    public Nullable<String> getQualifiedName() {
+        return Nullable.get(this.javaClass.getName());
+    }
+
+    @Nonnull
+    public Class<T> java() {
+        return this.javaClass;
+    }
+
     public <F> boolean isSuperClassOf(@Nonnull final KClass<F> kClass) {
         return kClass.javaClass.equals(this.javaClass) || this.isSuperClassOf(KClass.get(kClass.javaClass.getSuperclass()));
     }

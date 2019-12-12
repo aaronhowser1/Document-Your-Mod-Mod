@@ -1,6 +1,7 @@
 package com.aaronhowser1.dym.shade.net.thesilkminer.mc.boson.api.loader;
 
 import com.aaronhowser1.dym.shade.net.thesilkminer.kotlin.bridge.reflect.KClass;
+import com.aaronhowser1.dym.shade.net.thesilkminer.mc.boson.api.ApiBindings;
 import com.aaronhowser1.dym.shade.net.thesilkminer.mc.boson.implementation.loader.BosonContextKey;
 
 import javax.annotation.Nonnull;
@@ -8,8 +9,7 @@ import javax.annotation.Nonnull;
 public interface ContextKey<T> {
     @Nonnull
     static <T> ContextKey<T> invoke(@Nonnull final String name, @Nonnull final KClass<T> type) {
-        // Tight coupling between API and impl since this is a rewrite for this particular use case
-        return BosonContextKey.create(name, type);
+        return ApiBindings.BOSON_API.invoke().createLoaderContextKey(name, type);
     }
 
     @Nonnull String getName();
