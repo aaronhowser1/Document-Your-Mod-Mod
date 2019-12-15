@@ -86,7 +86,7 @@ public final class L implements Logger {
 
         IntStream.range(0, maxLength).forEach(i -> messageBuilder.append('*'));
 
-        final List<String> logLines = Arrays.asList(messageBuilder.toString().split(Pattern.quote("\n")));
+        final List<String> logLines = Arrays.asList(messageBuilder.toString().replace("\r", "").replace("\t", "    ").split(Pattern.quote("\n")));
         messageBuilder.delete(0, messageBuilder.length());
         logLines.forEach(logFun);
     }

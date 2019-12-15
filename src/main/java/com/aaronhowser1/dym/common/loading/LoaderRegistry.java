@@ -27,6 +27,7 @@ public enum LoaderRegistry implements MetadataListenerRegistry {
     private final Map<String, List<MetadataListener>> listenersMap = new HashMap<>();
 
     public void discoverLoadersFromClasspath() {
+        this.loaders.clear();
         LOG.info("Discovering loaders on the classpath");
         final ServiceLoader<DocumentationLoader> serviceLoader = ServiceLoader.load(DocumentationLoader.class);
         serviceLoader.iterator().forEachRemaining(it -> {
@@ -50,13 +51,20 @@ public enum LoaderRegistry implements MetadataListenerRegistry {
             it.onLoad();
         });
         LOG.info("Loader discovery completed: found a total of " + this.loaders.size() + " loaders");
+        LOG.debug("Dumping loaders: ");
+        this.loaders.forEach((k, v) -> LOG.debug("    " + k + " -> " + v.getClass().getName()));
     }
 
     public void registerMetadataListeners() {
-        this.loaders.clear();
+        this.listenersMap.clear();
         LOG.info("Attempting to discover and register metadata listeners for all loaders");
         this.loaders.values().forEach(it -> it.registerMetadataListeners(this));
         LOG.info("Metadata listener registration completed: a total of " + this.listenersMap.values().stream().mapToLong(Collection::size).sum() + " listeners were registered");
+        LOG.debug("Dumping metadata listeners: ");
+        this.listenersMap.forEach((k, v) -> {
+            LOG.debug("    - " + k);
+            v.forEach(it -> LOG.debug("        " + it.getClass().getName()));
+        });
     }
 
     @Override
