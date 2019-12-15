@@ -2,6 +2,7 @@ package com.aaronhowser1.dymm.common.loading;
 
 import com.aaronhowser1.dymm.Constants;
 import com.aaronhowser1.dymm.L;
+import com.aaronhowser1.dymm.api.ApiBindings;
 import com.aaronhowser1.dymm.api.documentation.DocumentationEntry;
 import com.aaronhowser1.dymm.api.loading.DocumentationLoader;
 import com.aaronhowser1.dymm.api.loading.factory.ConditionFactory;
@@ -19,6 +20,7 @@ import com.google.gson.JsonParseException;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSyntaxException;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.config.Configuration;
 
 import javax.annotation.Nonnull;
 import java.util.HashMap;
@@ -152,11 +154,21 @@ public final class DocumentationLoadingProcessor implements Processor<JsonObject
 
     @Nonnull
     private Unit processDocumentation(@Nonnull final JsonObject content, @Nonnull final NameSpacedString identifier, @Nonnull final Context globalContext) {
+        if (!this.isEnabled(identifier)) {
+            LOG.info("Skipping processing of entry '"  + identifier + "' because its namespace was disabled in the targets configuration");
+            return Unit.UNIT;
+        }
         if (!content.has(KEY_LOADER)) {
             LOG.warn("The entry '" + identifier + "' has no loader specified! This is DEPRECATED and support for it will be removed soon. Replacing with default loader");
             content.add(KEY_LOADER, new JsonPrimitive(Constants.MOD_ID + ":default"));
         }
         return this.processDocumentationWithLoader(content, identifier, globalContext);
+    }
+
+    private boolean isEnabled(@Nonnull final NameSpacedString identifier) {
+        final String namespace = identifier.getNameSpace();
+        final Configuration targets = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.CONFIGURATION_TARGETS);
+        return targets.get(namespace, Constants.CONFIGURATION_TARGETS_MAIN_CATEGORY, true).getBoolean();
     }
 
     @Nonnull
