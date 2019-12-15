@@ -84,8 +84,8 @@ public enum LoaderRegistry implements MetadataListenerRegistry {
         return this.listenersMap.computeIfAbsent(metadataIdentifier, it -> new ArrayList<>());
     }
 
-    void fireEvent(@Nonnull final JsonObject object, @Nonnull final String identifier) {
-        this.findAllFor(identifier).forEach(it -> it.processMetadata(object));
+    void fireEvent(@Nonnull final JsonObject object, @Nonnull final String identifier, @Nonnull final String namespace) {
+        this.findAllFor(identifier).forEach(it -> it.processMetadata(object, namespace));
     }
 
     @Nullable

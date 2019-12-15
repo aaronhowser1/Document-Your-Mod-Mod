@@ -6,5 +6,5 @@ import javax.annotation.Nonnull;
 
 @FunctionalInterface
 public interface MetadataListener {
-    void processMetadata(@Nonnull final JsonObject object);
+    void processMetadata(@Nonnull final JsonObject object, @Nonnull final String nameSpace);
 }

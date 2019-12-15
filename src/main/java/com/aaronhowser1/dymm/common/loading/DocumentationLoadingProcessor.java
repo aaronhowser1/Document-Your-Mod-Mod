@@ -146,7 +146,7 @@ public final class DocumentationLoadingProcessor implements Processor<JsonObject
     private Unit processMetadata(@Nonnull final JsonObject content, @Nonnull final NameSpacedString identifier, @Nonnull final Context globalContext) {
         final String type = identifier.getPath().substring(1);
         LOG.info("Firing process metadata event of type '" + type + "' for '" + identifier + "'");
-        LoaderRegistry.INSTANCE.fireEvent(content, type);
+        LoaderRegistry.INSTANCE.fireEvent(content, type, identifier.getNameSpace());
         return Unit.UNIT;
     }
 
