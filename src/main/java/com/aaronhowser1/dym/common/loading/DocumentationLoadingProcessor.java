@@ -171,9 +171,10 @@ public final class DocumentationLoadingProcessor implements Processor<JsonObject
             throw new JsonParseException("For file '" + identifier + "': unable to find the specified loader '" + loaderName + "': maybe it hasn't been registered?");
         }
 
+        this.buildStateFor(loader, identifier, globalContext);
         final DocumentationEntry entry;
         try {
-            entry = loader.loadFromJson(content, this.buildStateFor(loader, identifier, globalContext));
+            entry = loader.loadFromJson(content);
         } catch (@Nonnull final Exception e) {
             throw new JsonParseException(e.getMessage(), e);
         }
@@ -190,9 +191,8 @@ public final class DocumentationLoadingProcessor implements Processor<JsonObject
         return Unit.UNIT;
     }
 
-    @Nonnull
-    private LoadingState buildStateFor(@Nonnull final DocumentationLoader loader, @Nonnull final NameSpacedString identifier, @Nonnull final Context globalContext) {
-        final ResourceLocation location = new ResourceLocation(identifier.getNameSpace(), identifier.getPath());
-        return LoadingState.build(location, LOG, loader, globalContext);
+    private void buildStateFor(@Nonnull final DocumentationLoader loader, @Nonnull final NameSpacedString identifier, @Nonnull final Context globalContext) {
+        final ResourceLocation targetId = new ResourceLocation(identifier.getNameSpace(), identifier.getPath());
+        LoadingState.rebuild(targetId, LOG, loader, globalContext);
     }
 }

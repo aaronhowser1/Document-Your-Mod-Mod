@@ -7,44 +7,44 @@ import com.aaronhowser1.dym.api.loading.Reporter;
 import com.aaronhowser1.dym.api.loading.factory.ConditionFactory;
 import com.aaronhowser1.dym.api.loading.factory.TargetFactory;
 import com.aaronhowser1.dym.shade.net.thesilkminer.mc.boson.api.loader.Context;
+import com.google.common.base.Preconditions;
 import net.minecraft.util.ResourceLocation;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.util.Objects;
 
 public final class LoadingState implements GlobalLoadingState, Reporter {
-    private final ResourceLocation targetIdentifier;
-    private final L l;
-    private final DocumentationLoader loader;
-    private final Context globalContext;
 
-    private LoadingState(@Nonnull final ResourceLocation targetIdentifier, @Nonnull final L log, @Nonnull final DocumentationLoader loader, @Nonnull final Context globalContext) {
-        this.targetIdentifier = Objects.requireNonNull(targetIdentifier);
-        this.l = Objects.requireNonNull(log);
+    private static LoadingState GLOBAL = null;
+
+    private ResourceLocation targetId;
+    private L l;
+    private DocumentationLoader loader;
+    private Context globalContext;
+
+    private LoadingState() {}
+
+    @Nullable
+    public static LoadingState obtainState() {
+        return GLOBAL;
+    }
+
+    @SuppressWarnings("SameParameterValue")
+    static void rebuild(@Nonnull final ResourceLocation targetId, @Nonnull final L l, @Nonnull final DocumentationLoader loader, @Nonnull final Context globalContext) {
+        if (GLOBAL == null) GLOBAL = new LoadingState();
+        GLOBAL.apply(targetId, l, loader, globalContext);
+    }
+
+    static void destroyCurrent() {
+        GLOBAL = null;
+    }
+
+    private void apply(@Nonnull final ResourceLocation targetId, @Nonnull final L l, @Nonnull final DocumentationLoader loader, @Nonnull final Context globalContext) {
+        this.targetId = Objects.requireNonNull(targetId);
+        this.l = Objects.requireNonNull(l);
         this.loader = Objects.requireNonNull(loader);
         this.globalContext = Objects.requireNonNull(globalContext);
-    }
-
-    @Nonnull
-    @SuppressWarnings("SameParameterValue")
-    static LoadingState build(@Nonnull final ResourceLocation targetIdentifier, @Nonnull final L log, @Nonnull final DocumentationLoader loader, @Nonnull final Context globalContext) {
-        return new LoadingState(targetIdentifier, log, loader, globalContext);
-    }
-
-    @Override
-    public void notify(@Nonnull final String message, @Nonnull final Object... arguments) {
-        this.l.info("In '" + this.targetIdentifier + "': " + message, arguments);
-    }
-
-    @Override
-    public void report(@Nonnull final String message, @Nonnull final Object... arguments) {
-        this.l.warn("In '" + this.targetIdentifier + "': " + message, arguments);
-    }
-
-    @Override
-    public void interrupt(@Nonnull final String message, @Nonnull final Object... arguments) {
-        this.l.error("An error has occurred in loader '" + this.loader.getIdentifier() + "' while attempting to load '" + this.targetIdentifier + "'");
-        this.l.error(message, arguments);
     }
 
     @Nonnull
@@ -71,5 +71,21 @@ public final class LoadingState implements GlobalLoadingState, Reporter {
             throw new IllegalArgumentException("The given identifier '" + location + "' does not represent a known target factory");
         }
         return factory;
+    }
+
+    @Override
+    public void notify(@Nonnull final String message, @Nonnull final Object... arguments) {
+        this.l.info("In '" + this.targetId + "': " + message, arguments);
+    }
+
+    @Override
+    public void report(@Nonnull final String message, @Nonnull final Object... arguments) {
+        this.l.warn("In '" + this.targetId + "': " + message, arguments);
+    }
+
+    @Override
+    public void interrupt(@Nonnull final String message, @Nonnull final Object... arguments) {
+        this.l.error("An error has occurred in loader '" + this.loader.getIdentifier() + "' while attempting to load '" + this.targetId + "'");
+        this.l.error(message, arguments);
     }
 }

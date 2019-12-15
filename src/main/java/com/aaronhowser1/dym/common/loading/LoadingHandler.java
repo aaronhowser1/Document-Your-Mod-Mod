@@ -120,8 +120,9 @@ public final class LoadingHandler {
 
         LOG.info("Preparing to load documentation data into registry");
         LOADER.load();
-        LOG.info("Unbinding registry");
+        LOG.info("Unbinding registry and state");
         registry = null;
+        LoadingState.destroyCurrent();
         LOG.info("Loading has completed");
 
         if (bar != null) ProgressManager.pop(bar);
