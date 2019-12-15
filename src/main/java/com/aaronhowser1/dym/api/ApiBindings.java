@@ -2,8 +2,10 @@ package com.aaronhowser1.dym.api;
 
 import com.aaronhowser1.dym.L;
 import com.aaronhowser1.dym.api.configuration.ConfigurationManager;
+import com.aaronhowser1.dym.api.documentation.DocumentationEntry;
 import com.aaronhowser1.dym.api.loading.GlobalLoadingState;
 import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.registries.IForgeRegistry;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -38,6 +40,12 @@ public final class ApiBindings {
             @Override
             public GlobalLoadingState getCurrentLoadingState() {
                 return null;
+            }
+
+            @Nonnull
+            @Override
+            public IForgeRegistry<DocumentationEntry> getDocumentationRegistry() {
+                throw new IllegalStateException("Registry wasn't created yet");
             }
         });
 
