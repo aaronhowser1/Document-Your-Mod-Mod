@@ -2,6 +2,7 @@ package com.aaronhowser1.dym.common.configuration;
 
 import com.aaronhowser1.dym.Constants;
 import com.aaronhowser1.dym.L;
+import com.aaronhowser1.dym.api.ApiBindings;
 import net.minecraftforge.common.config.ConfigCategory;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
@@ -88,7 +89,7 @@ public final class OldConfigurationMigrationTool {
                             return;
                         }
                         final MigrationMapping map = mapping.get();
-                        final Configuration newConfiguration = ConfigurationManager.get().getConfigurationFor(map.newFileName);
+                        final Configuration newConfiguration = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(map.newFileName);
                         final ConfigCategory newCategory = newConfiguration.getCategory(map.newCategory);
                         final Property newProperty = newCategory.get(map.newName);
                         if (newProperty != null) {
@@ -102,7 +103,7 @@ public final class OldConfigurationMigrationTool {
 
         LOG.info("Migration process completed successfully: the old file will now be deleted");
         // not really: we're just going to move it
-        if (true) return;
+        if (true) return; // TODO Remove
         final Path newLocation = Loader.instance().getConfigDir().toPath().resolve("./" + Constants.MOD_ID + "/_migration.backup");
         if (Files.exists(newLocation)) {
             try {
