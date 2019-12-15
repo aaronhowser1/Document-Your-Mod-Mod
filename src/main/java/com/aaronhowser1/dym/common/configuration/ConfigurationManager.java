@@ -11,7 +11,7 @@ import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
-public final class ConfigurationManager {
+public final class ConfigurationManager implements com.aaronhowser1.dym.api.configuration.ConfigurationManager {
     private static final class InstanceHolder {
         private static final ConfigurationManager INSTANCE = new ConfigurationManager();
     }
@@ -26,6 +26,7 @@ public final class ConfigurationManager {
     }
 
     @Nonnull
+    @Override
     public final Configuration getVersionedConfigurationFor(@Nonnull final String name, @Nonnull final String version) {
         return CONFIGURATION_CACHE.computeIfAbsent(name, it -> {
             final Configuration configuration = new Configuration(this.getFileFor(name), version);
@@ -36,6 +37,7 @@ public final class ConfigurationManager {
     }
 
     @Nonnull
+    @Override
     public final Configuration getConfigurationFor(@Nonnull final String name) {
         return this.getVersionedConfigurationFor(name, "1");
     }
