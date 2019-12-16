@@ -22,6 +22,7 @@ public final class DocumentationConsumerDispatcher {
 
     public static void dispatch() {
         LOG.info("Beginning dispatch of documentation data to listeners");
+        // TODO Perform sorting here: the registry doesn't care about it, but we do care when firing events
         registry.forEach(ConsumerRegistry.INSTANCE::fireAllFor);
     }
 
