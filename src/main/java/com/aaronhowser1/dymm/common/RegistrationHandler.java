@@ -2,6 +2,7 @@ package com.aaronhowser1.dymm.common;
 
 import com.aaronhowser1.dymm.Constants;
 import com.aaronhowser1.dymm.api.documentation.DocumentationEntry;
+import com.aaronhowser1.dymm.common.consume.DocumentationConsumerDispatcher;
 import com.aaronhowser1.dymm.common.loading.LoaderRegistry;
 import com.aaronhowser1.dymm.common.loading.LoadingHandler;
 import net.minecraft.util.ResourceLocation;
@@ -31,6 +32,7 @@ public final class RegistrationHandler {
     public static void onDocumentationRegistryEvent(@Nonnull final RegistryEvent.Register<DocumentationEntry> event) {
         LoadingHandler.bindRegistry(event.getRegistry());
         LoaderRegistry.INSTANCE.registerMetadataListeners();
+        DocumentationConsumerDispatcher.bind(event.getRegistry());
         LoadingHandler.performLoading();
     }
 }

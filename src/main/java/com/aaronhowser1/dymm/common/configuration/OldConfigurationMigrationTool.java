@@ -41,12 +41,12 @@ public final class OldConfigurationMigrationTool {
     private OldConfigurationMigrationTool() {}
 
     static {
-        final String mFile = MainConfigurationHandler.CONFIGURATION_MAIN;
-        final String tFile = MainConfigurationHandler.CONFIGURATION_TARGETS;
+        final String mFile = Constants.CONFIGURATION_MAIN;
+        final String tFile = Constants.CONFIGURATION_TARGETS;
 
         final String gCat = "general";
-        final String dCat = MainConfigurationHandler.CONFIGURATION_MAIN_DEBUG_CATEGORY;
-        final String tCat = MainConfigurationHandler.CONFIGURATION_TARGETS_MAIN_CATEGORY;
+        final String dCat = Constants.CONFIGURATION_MAIN_DEBUG_CATEGORY;
+        final String tCat = Constants.CONFIGURATION_TARGETS_MAIN_CATEGORY;
 
         MIGRATION_MAPPINGS.add(new MigrationMapping(gCat, "Debug - Mod Documented", mFile, dCat, "target_documented"));
         MIGRATION_MAPPINGS.add(new MigrationMapping(gCat, "Debug - Not Documented Items", mFile, dCat, "missing_entries"));

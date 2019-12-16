@@ -127,6 +127,11 @@ public final class LoadingHandler {
         if (bar != null) ProgressManager.pop(bar);
     }
 
+    public static void unbind() {
+        LOG.info("Unbinding global state");
+        LoadingState.destroyCurrent();
+    }
+
     @Nonnull
     static IForgeRegistry<DocumentationEntry> getRegistry() {
         return registry;

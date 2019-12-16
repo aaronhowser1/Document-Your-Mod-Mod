@@ -2,7 +2,10 @@ package com.aaronhowser1.dymm;
 
 import com.aaronhowser1.dymm.common.configuration.MainConfigurationHandler;
 import com.aaronhowser1.dymm.common.configuration.OldConfigurationMigrationTool;
+import com.aaronhowser1.dymm.common.consume.ConsumerRegistry;
+import com.aaronhowser1.dymm.common.consume.DocumentationConsumerDispatcher;
 import com.aaronhowser1.dymm.common.loading.LoaderRegistry;
+import com.aaronhowser1.dymm.common.loading.LoadingHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLConstructionEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -32,11 +35,19 @@ public final class DocumentYourMod {
     }
 
     @Mod.EventHandler
-    public void onInitialization(@Nonnull final FMLInitializationEvent event) {}
+    public void onInitialization(@Nonnull final FMLInitializationEvent event) {
+        LOG.info("Discovering and registering consumers");
+        ConsumerRegistry.INSTANCE.discoverConsumersFromClasspath();
+    }
 
     @Mod.EventHandler
-    public void onPostInitialization(@Nonnull final FMLPostInitializationEvent event) {}
+    public void onPostInitialization(@Nonnull final FMLPostInitializationEvent event) {
+        DocumentationConsumerDispatcher.dispatch();
+    }
 
     @Mod.EventHandler
-    public void onLoadComplete(@Nonnull final FMLLoadCompleteEvent event) {}
+    public void onLoadComplete(@Nonnull final FMLLoadCompleteEvent event) {
+        LoadingHandler.unbind();
+        DocumentationConsumerDispatcher.unbind();
+    }
 }
