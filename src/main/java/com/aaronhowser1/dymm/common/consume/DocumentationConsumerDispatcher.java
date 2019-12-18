@@ -3,6 +3,7 @@ package com.aaronhowser1.dymm.common.consume;
 import com.aaronhowser1.dymm.Constants;
 import com.aaronhowser1.dymm.L;
 import com.aaronhowser1.dymm.api.documentation.DocumentationEntry;
+import com.aaronhowser1.dymm.common.sort.DocumentationSorter;
 import net.minecraftforge.registries.IForgeRegistry;
 
 import javax.annotation.Nonnull;
@@ -22,8 +23,8 @@ public final class DocumentationConsumerDispatcher {
 
     public static void dispatch() {
         LOG.info("Beginning dispatch of documentation data to listeners");
-        // TODO Perform sorting here: the registry doesn't care about it, but we do care when firing events
-        registry.forEach(ConsumerRegistry.INSTANCE::fireAllFor);
+        LOG.info("Sorting mod documentation data");
+        new DocumentationSorter(registry.getEntries()).sort().forEach(ConsumerRegistry.INSTANCE::fireAllFor);
     }
 
     public static void unbind() {
