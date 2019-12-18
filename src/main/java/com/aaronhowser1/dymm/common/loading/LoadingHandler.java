@@ -129,6 +129,7 @@ public final class LoadingHandler {
 
     public static void unbind() {
         LOG.info("Unbinding global state");
+        LoaderRegistry.INSTANCE.fireEvent();
         LoadingState.destroyCurrent();
     }
 

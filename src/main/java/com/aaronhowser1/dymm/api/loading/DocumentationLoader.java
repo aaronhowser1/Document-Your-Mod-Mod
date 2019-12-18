@@ -14,4 +14,5 @@ public interface DocumentationLoader {
 
     default void registerMetadataListeners(@Nonnull final MetadataListenerRegistry registry) {}
     default void onLoad() {}
+    default void onGlobalLoadingStateUnbinding() {}
 }
