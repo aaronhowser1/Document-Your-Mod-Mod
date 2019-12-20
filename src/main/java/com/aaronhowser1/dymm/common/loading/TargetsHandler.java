@@ -21,26 +21,52 @@ import java.util.Set;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
-public final class UndocumentedTargetsHandler {
-    private static final L LOG = L.create(Constants.MOD_NAME, "Undocumented Targets");
+public final class TargetsHandler {
+    private static final L DOCUMENTED_LOG = L.create(Constants.MOD_NAME, "Documented Targets");
+    private static final L UNDOCUMENTED_LOG = L.create(Constants.MOD_NAME, "Undocumented Targets");
 
-    private UndocumentedTargetsHandler() {}
+    private TargetsHandler() {}
 
     public static void discoverAndLog() {
-        final Configuration configuration = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.CONFIGURATION_MAIN);
-        final boolean shouldUseWarn = configuration.get(Constants.CONFIGURATION_MAIN_DEBUG_CATEGORY, "missing_entries", false).getBoolean();
-        final Consumer<String> logFunction = shouldUseWarn? LOG::warn : LOG::debug;
-        discoverAndLog(logFunction);
+        discoverAndLogDocumented();
+        discoverAndLogUndocumented();
     }
 
-    private static void discoverAndLog(@Nonnull final Consumer<String> logFun) {
-        LOG.info("Discovering not documented targets");
+    private static void discoverAndLogDocumented() {
+        final Configuration configuration = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.CONFIGURATION_MAIN);
+        final boolean shouldPrint = configuration.get(Constants.CONFIGURATION_MAIN_DEBUG_CATEGORY, "target_documented", false).getBoolean();
+        if (!shouldPrint) return;
+        discoverAndLogDocumented(DOCUMENTED_LOG::info);
+    }
+
+    private static void discoverAndLogDocumented(@Nonnull final Consumer<String> consumer) {
+        ApiBindings.getMainApi()
+                .getDocumentationRegistry()
+                .getValuesCollection()
+                .stream()
+                .map(DocumentationEntry::getRegistryName)
+                .peek(Objects::requireNonNull)
+                .map(ResourceLocation::getNamespace)
+                .distinct()
+                .map(it -> "Target '" + it + "' has been documented")
+                .forEach(consumer);
+    }
+
+    private static void discoverAndLogUndocumented() {
+        final Configuration configuration = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.CONFIGURATION_MAIN);
+        final boolean shouldUseWarn = configuration.get(Constants.CONFIGURATION_MAIN_DEBUG_CATEGORY, "missing_entries", false).getBoolean();
+        final Consumer<String> logFunction = shouldUseWarn? UNDOCUMENTED_LOG::warn : UNDOCUMENTED_LOG::debug;
+        discoverAndLogUndocumented(logFunction);
+    }
+
+    private static void discoverAndLogUndocumented(@Nonnull final Consumer<String> logFun) {
+        UNDOCUMENTED_LOG.info("Discovering not documented targets");
         final Map<ResourceLocation, DocumentationEntry> documentedTargets = findDocumentedTargets();
         final Set<String> documentedNamespaces = documentedTargets.keySet().stream().map(ResourceLocation::getNamespace).collect(Collectors.toSet());
         final Map<String, List<ResourceLocation>> targetsForTargets = findAllPossibleTargetsFor();
         final Map<String, List<ResourceLocation>> missingTargets = mergeAndFind(documentedNamespaces, documentedTargets, targetsForTargets);
         logMissingTargets(missingTargets, logFun);
-        LOG.info("Discovery complete");
+        UNDOCUMENTED_LOG.info("Discovery complete");
     }
 
     @Nonnull
