@@ -74,6 +74,8 @@ public final class DefaultDocumentationLoader implements DocumentationLoader {
      *   ]
      * }
      */
+    private final Set<Target> targets = new HashSet<>();
+    private boolean hasRegisteredDummy;
 
     @Nonnull
     @Override
@@ -84,6 +86,16 @@ public final class DefaultDocumentationLoader implements DocumentationLoader {
     @Nullable
     @Override
     public DocumentationEntry loadFromJson(@Nonnull final JsonObject object) {
+        if (!this.hasRegisteredDummy) {
+            this.hasRegisteredDummy = true;
+            // This is wrong on so many levels: you should never ever do this
+            // Like, never: this is hacking inside the registry: entries will get registered automatically according
+            // to the loaders. There is no need to do it manually: heck that's the entire purpose of a loader that
+            // goes down the drain. After all, though, this is a hack.
+            ApiBindings.getMainApi().getDocumentationRegistry().register(BasicDocumentationEntry.create(new HashSet<>(this.targets), new HashSet<>(), new HashSet<>()));
+            this.targets.clear();
+        }
+
         final JsonArray conditions = JsonUtilities.getJsonArray(object, "conditions");
         if (!this.doConditionsPass(conditions)) return null;
         final Set<Dependency> dependencies = this.parseDependencies(JsonUtilities.getJsonArrayOrElse(object, "dependencies", JsonArray::new));
@@ -95,6 +107,14 @@ public final class DefaultDocumentationLoader implements DocumentationLoader {
     @Override
     public void registerMetadataListeners(@Nonnull final MetadataListenerRegistry registry) {
         registry.register("configuration", new ConfigurationMetadataListener());
+        registry.register("undocumented_targets", (object, namespace) -> {
+            final GlobalLoadingState state = Objects.requireNonNull(ApiBindings.getMainApi().getCurrentLoadingState());
+            state.getReporter().notify("Reading purposefully undocumented items for namespace '" + namespace + "'");
+            if (!object.has("targets")) {
+                state.getReporter().report("The metadata-carrying entry for '" + namespace + "' has an empty target list! This is useless!");
+            }
+            this.targets.addAll(this.parseTargets(JsonUtilities.getJsonArrayOrElse(object, "targets", JsonArray::new)));
+        });
     }
 
     private boolean doConditionsPass(@Nonnull final JsonArray conditions) {
