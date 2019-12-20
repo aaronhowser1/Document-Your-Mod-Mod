@@ -92,7 +92,10 @@ public final class DefaultDocumentationLoader implements DocumentationLoader {
             // Like, never: this is hacking inside the registry: entries will get registered automatically according
             // to the loaders. There is no need to do it manually: heck that's the entire purpose of a loader that
             // goes down the drain. After all, though, this is a hack.
-            ApiBindings.getMainApi().getDocumentationRegistry().register(BasicDocumentationEntry.create(new HashSet<>(this.targets), new HashSet<>(), new HashSet<>()));
+            ApiBindings.getMainApi().getDocumentationRegistry().register(
+                    BasicDocumentationEntry.create(new HashSet<>(this.targets), new HashSet<>(), new HashSet<>())
+                            .setRegistryName(new ResourceLocation(Constants.MOD_ID, "_dummy$undocumented"))
+            );
             this.targets.clear();
         }
 

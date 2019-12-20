@@ -6,6 +6,7 @@ import com.aaronhowser1.dymm.common.consume.ConsumerRegistry;
 import com.aaronhowser1.dymm.common.consume.DocumentationConsumerDispatcher;
 import com.aaronhowser1.dymm.common.loading.LoaderRegistry;
 import com.aaronhowser1.dymm.common.loading.LoadingHandler;
+import com.aaronhowser1.dymm.common.loading.UndocumentedTargetsHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLConstructionEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -49,5 +50,6 @@ public final class DocumentYourMod {
     public void onLoadComplete(@Nonnull final FMLLoadCompleteEvent event) {
         LoadingHandler.unbind();
         DocumentationConsumerDispatcher.unbind();
+        UndocumentedTargetsHandler.discoverAndLog();
     }
 }
