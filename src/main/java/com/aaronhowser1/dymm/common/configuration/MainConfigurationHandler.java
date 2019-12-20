@@ -21,6 +21,8 @@ public final class MainConfigurationHandler {
         configuration.get(Constants.CONFIGURATION_MAIN_DEBUG_CATEGORY, "target_documented", false, "Shows in the game console which targets have been documented");
         configuration.get(Constants.CONFIGURATION_MAIN_DEBUG_CATEGORY, "missing_entries", false,
                 "Automatically scans the targets and displays in the console which items haven't been documented yet. Only works with targets that have at least one documented entry");
+        configuration.get(Constants.CONFIGURATION_MAIN_DEBUG_CATEGORY, "target_entries", false,
+                "Shows on the target tooltip which entries are responsible for its documentation");
         configuration.save();
     }
 
