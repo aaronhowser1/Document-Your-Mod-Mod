@@ -43,10 +43,13 @@ public final class OldConfigurationMigrationTool {
     static {
         final String mFile = Constants.CONFIGURATION_MAIN;
         final String tFile = Constants.CONFIGURATION_TARGETS;
+        final String qFile = "quark";
 
         final String gCat = "general";
+        final String qCat = "general.quark";
         final String dCat = Constants.CONFIGURATION_MAIN_DEBUG_CATEGORY;
         final String tCat = Constants.CONFIGURATION_TARGETS_MAIN_CATEGORY;
+        final String mCat = "targets";
 
         MIGRATION_MAPPINGS.add(new MigrationMapping(gCat, "Debug - Mod Documented", mFile, dCat, "target_documented"));
         MIGRATION_MAPPINGS.add(new MigrationMapping(gCat, "Debug - Not Documented Items", mFile, dCat, "missing_entries"));
@@ -56,12 +59,17 @@ public final class OldConfigurationMigrationTool {
         MIGRATION_MAPPINGS.add(new MigrationMapping(gCat, "Tinkers' Construct info", tFile, tCat, "tconstruct"));
         MIGRATION_MAPPINGS.add(new MigrationMapping(gCat, "Twilight Forest info", tFile, tCat, "twilightforest"));
         MIGRATION_MAPPINGS.add(new MigrationMapping(gCat, "Waystones info", tFile, tCat, "waystones"));
+        MIGRATION_MAPPINGS.add(new MigrationMapping(qCat, "Quark Info", tFile, tCat, "quark"));
+        MIGRATION_MAPPINGS.add(new MigrationMapping(qCat, "Quark's Decorative Blocks", qFile, mCat, "decorative_blocks"));
+        MIGRATION_MAPPINGS.add(new MigrationMapping(qCat, "Quark's GUI Elements", qFile, mCat, "gui_element"));
+        MIGRATION_MAPPINGS.add(new MigrationMapping(qCat, "Quark's Vanilla Info", qFile, mCat, "vanilla"));
     }
 
     public static void attemptToMigrateConfiguration() {
         final Path oldConfigurationPath = Loader.instance().getConfigDir().toPath().resolve("./dym.cfg").normalize().toAbsolutePath();
         if (!Files.exists(oldConfigurationPath)) {
             LOG.info("No old configuration to migrate was found");
+            return;
         }
         doConfigurationMigration(oldConfigurationPath);
     }
@@ -103,7 +111,6 @@ public final class OldConfigurationMigrationTool {
 
         LOG.info("Migration process completed successfully: the old file will now be deleted");
         // not really: we're just going to move it
-        if (true) return; // TODO Remove
         final Path newLocation = Loader.instance().getConfigDir().toPath().resolve("./" + Constants.MOD_ID + "/_migration.backup");
         if (Files.exists(newLocation)) {
             try {

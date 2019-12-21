@@ -109,7 +109,7 @@ public final class TooltipDocumentationConsumer implements DocumentationDataCons
                                     }
                                 }
 
-                                if (matches) {
+                                if (matches && TARGET_ENTRIES.get(target) != null) {
                                     lines.addAll(TARGET_ENTRIES.get(target));
                                 }
                             }
