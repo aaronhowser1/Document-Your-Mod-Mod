@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.Loader;
 import javax.annotation.Nonnull;
 import java.util.List;
 
-@JEIPlugin
+//@JEIPlugin
 public class DocumentModJEIIntegration implements IModPlugin
 {
     @Override
