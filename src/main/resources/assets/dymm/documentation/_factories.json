@@ -1,0 +1,8 @@
+{
+  "condition": {
+    "configuration_option": "com.aaronhowser1.dymm.module.base.factory.ConfigurationOptionConditionFactory"
+  },
+  "target": {
+    "item_meta_range": "com.aaronhowser1.dymm.module.base.factory.MetadataRangeItemTargetFactory"
+  }
+}

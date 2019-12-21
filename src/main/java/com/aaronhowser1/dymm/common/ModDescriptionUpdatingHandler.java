@@ -108,7 +108,7 @@ public final class ModDescriptionUpdatingHandler {
     @Nonnull
     private static Support getContainerSupportLevel(@Nonnull final ModContainer container) {
         final String modId = container.getModId();
-        final String currentVersion = container.getVersion();
+        final String currentVersion = container.getDisplayVersion();
         final List<String> supportedVersions = SUPPORTED_VERSIONS.get(modId);
 
         if (supportedVersions == null) return Support.NOT_SUPPORTED;

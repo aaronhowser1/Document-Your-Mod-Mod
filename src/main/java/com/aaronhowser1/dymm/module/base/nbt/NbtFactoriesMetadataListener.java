@@ -31,7 +31,14 @@ public final class NbtFactoriesMetadataListener implements MetadataListener {
             final String tagType = it.getKey();
             final String factoryClassName = JsonUtilities.asString(it.getValue(), tagType);
             final NbtFactory<?> factory = this.instantiateFactoryFromClassName(factoryClassName);
-            NbtFactoryRegistry.INSTANCE.registerFactory(tagType, factory);
+            try {
+                NbtFactoryRegistry.INSTANCE.registerFactory(tagType, factory);
+            } catch (@Nonnull final IllegalStateException e) {
+                if (!e.getMessage().contains("factory assigned already")) throw e;
+                // This is a duplicate due to double mod loading that happens due to the loader library
+                // This workaround will be eliminated when the loader library will allow us to filter out certain
+                // containers from the locators
+            }
         });
     }
 

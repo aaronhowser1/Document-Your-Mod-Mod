@@ -1,0 +1,15 @@
+{
+  "byte": "com.aaronhowser1.dymm.module.base.nbt.ByteNbtFactory",
+  "byte_array": "com.aaronhowser1.dymm.module.base.nbt.ByteArrayNbtFactory",
+  "compound": "com.aaronhowser1.dymm.module.base.nbt.CompoundNbtFactory",
+  "double": "com.aaronhowser1.dymm.module.base.nbt.DoubleNbtFactory",
+  "end": "com.aaronhowser1.dymm.module.base.nbt.EndNbtFactory",
+  "float": "com.aaronhowser1.dymm.module.base.nbt.FloatNbtFactory",
+  "int": "com.aaronhowser1.dymm.module.base.nbt.IntNbtFactory",
+  "int_array": "com.aaronhowser1.dymm.module.base.nbt.IntArrayNbtFactory",
+  "list": "com.aaronhowser1.dymm.module.base.nbt.ListNbtFactory",
+  "long": "com.aaronhowser1.dymm.module.base.nbt.LongNbtFactory",
+  "long_array": "com.aaronhowser1.dymm.module.base.nbt.LongArrayNbtFactory",
+  "short": "com.aaronhowser1.dymm.module.base.nbt.ShortNbtFactory",
+  "string": "com.aaronhowser1.dymm.module.base.nbt.StringNbtFactory"
+}

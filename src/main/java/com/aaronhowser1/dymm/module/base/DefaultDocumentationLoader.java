@@ -186,12 +186,12 @@ public final class DefaultDocumentationLoader implements DocumentationLoader {
     private Set<Target> parseTargets(@Nonnull final JsonArray targets) {
         if (targets.size() <= 0) throw new JsonParseException("A documentation entry must have at least one target");
         final Set<Target> targetSet = new HashSet<>();
-        JsonUtilities.consumeEntriesAsJsonObjects(targets, "targets", it -> targetSet.add(this.parseTarget(it)));
+        JsonUtilities.consumeEntriesAsJsonObjects(targets, "targets", it -> targetSet.addAll(this.parseTarget(it)));
         return targetSet;
     }
 
     @Nonnull
-    private Target parseTarget(@Nonnull final JsonObject jsonTarget) {
+    private List<Target> parseTarget(@Nonnull final JsonObject jsonTarget) {
         final ResourceLocation type = new ResourceLocation(JsonUtilities.getString(jsonTarget, "type"));
         final GlobalLoadingState state = Objects.requireNonNull(ApiBindings.getMainApi().getCurrentLoadingState());
         final TargetFactory factory = state.getTargetFactory(type);

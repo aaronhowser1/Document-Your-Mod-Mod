@@ -114,7 +114,7 @@ public final class DocumentationLoadingProcessor implements Processor<JsonObject
                 final Map<ResourceLocation, Object> map = (Map<ResourceLocation, Object>) globalContext
                         .computeIfAbsent(Objects.requireNonNull(NAME_TO_CONTEXT_KEY.get(name), name + " does not have a context key"), key -> new HashMap<>());
 
-                if (map.get(id) == null) {
+                if (map.get(id) != null && !Constants.MOD_ID.equals(id.getNamespace())) { // We get loaded twice: we don't want to print this warning twice
                     LOG.bigWarn("An attempt of overriding a previously registered factory has been identified\n" +
                             "Note that this attempt will not be blocked, but it may lead to errors in the future\n" +
                             "Name of conflict: " + id, L.DumpStackBehavior.DO_NOT_DUMP);

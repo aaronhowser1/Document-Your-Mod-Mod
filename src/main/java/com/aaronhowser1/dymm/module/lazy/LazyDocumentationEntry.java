@@ -15,6 +15,7 @@ import net.minecraftforge.registries.IForgeRegistryEntry;
 
 import javax.annotation.Nonnull;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
@@ -62,12 +63,12 @@ public final class LazyDocumentationEntry extends IForgeRegistryEntry.Impl<Docum
     @Nonnull
     private Set<Target> parseTargetsArray() {
         final Set<Target> targets = new HashSet<>();
-        JsonUtilities.consumeEntriesAsJsonObjects(this.targetsArray, "targets", it -> targets.add(this.parseTarget(it)));
+        JsonUtilities.consumeEntriesAsJsonObjects(this.targetsArray, "targets", it -> targets.addAll(this.parseTarget(it)));
         return targets;
     }
 
     @Nonnull
-    private Target parseTarget(@Nonnull final JsonObject jsonTarget) {
+    private List<Target> parseTarget(@Nonnull final JsonObject jsonTarget) {
         final ResourceLocation type = new ResourceLocation(JsonUtilities.getString(jsonTarget, "type"));
         final GlobalLoadingState state = Objects.requireNonNull(ApiBindings.getMainApi().getCurrentLoadingState());
         final TargetFactory factory = state.getTargetFactory(type);

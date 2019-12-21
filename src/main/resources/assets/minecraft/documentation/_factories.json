@@ -1,0 +1,6 @@
+{
+  "target": {
+    "dynamic_nbt_item": "com.aaronhowser1.dymm.module.compatibility.minecraft.factory.DynamicNbtItemTargetFactory",
+    "item": "com.aaronhowser1.dymm.module.compatibility.minecraft.factory.ItemTargetFactory"
+  }
+}
