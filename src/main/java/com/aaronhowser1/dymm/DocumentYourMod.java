@@ -1,5 +1,6 @@
 package com.aaronhowser1.dymm;
 
+import com.aaronhowser1.dymm.common.ModDescriptionUpdatingHandler;
 import com.aaronhowser1.dymm.common.configuration.MainConfigurationHandler;
 import com.aaronhowser1.dymm.common.configuration.OldConfigurationMigrationTool;
 import com.aaronhowser1.dymm.common.consume.ConsumerRegistry;
@@ -44,6 +45,7 @@ public final class DocumentYourMod {
     @Mod.EventHandler
     public void onPostInitialization(@Nonnull final FMLPostInitializationEvent event) {
         DocumentationConsumerDispatcher.dispatch();
+        ModDescriptionUpdatingHandler.updateModDescription();
     }
 
     @Mod.EventHandler

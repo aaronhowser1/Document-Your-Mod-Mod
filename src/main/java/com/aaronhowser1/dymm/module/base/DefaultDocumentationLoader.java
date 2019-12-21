@@ -110,6 +110,7 @@ public final class DefaultDocumentationLoader implements DocumentationLoader {
     @Override
     public void registerMetadataListeners(@Nonnull final MetadataListenerRegistry registry) {
         registry.register("configuration", new ConfigurationMetadataListener());
+        registry.register("supported_versions", new SupportedVersionsMetadataListener());
         registry.register("undocumented_targets", (object, namespace) -> {
             final GlobalLoadingState state = Objects.requireNonNull(ApiBindings.getMainApi().getCurrentLoadingState());
             state.getReporter().notify("Reading purposefully undocumented items for namespace '" + namespace + "'");
