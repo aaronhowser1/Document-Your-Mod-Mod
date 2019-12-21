@@ -76,6 +76,7 @@ public final class ConfigurationGuiFactory implements IModGuiFactory {
                 element.setRequiresWorldRestart(category.requiresWorldRestart());
                 categoryElements.add(element);
             });
+            // TODO Rewrite everything manually (maybe import Boson?) since comments are not supported for some reason
             elements.add(new DummyConfigElement.DummyCategoryElement(name + ".cfg", "", categoryElements));
         });
         return elements;

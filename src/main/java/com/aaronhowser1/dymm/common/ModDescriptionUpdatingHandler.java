@@ -74,7 +74,7 @@ public final class ModDescriptionUpdatingHandler {
         sortCompatibilityList(buildCompatibilityList())
                 .forEach(it -> {
                     builder.append(it.getRight().getColor());
-                    builder.append("  -");
+                    builder.append("  - ");
                     builder.append(it.getLeft().getName());
                     builder.append(' ');
                     builder.append(formatIpBased(it.getLeft().getDisplayVersion(), it.getRight().getColor()));

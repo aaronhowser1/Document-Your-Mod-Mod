@@ -11,6 +11,7 @@ public final class Constants {
 
     public static final String CONFIGURATION_MAIN = "_main";
     public static final String CONFIGURATION_MAIN_DEBUG_CATEGORY = "debug";
+    public static final String CONFIGURATION_MAIN_FOOLERY_CATEGORY = "foolery";
 
     public static final String CONFIGURATION_TARGETS = "_targets";
     public static final String CONFIGURATION_TARGETS_MAIN_CATEGORY = "targets";

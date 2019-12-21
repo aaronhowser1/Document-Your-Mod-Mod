@@ -23,6 +23,9 @@ public final class MainConfigurationHandler {
                 "Automatically scans the targets and displays in the console which items haven't been documented yet. Only works with targets that have at least one documented entry");
         configuration.get(Constants.CONFIGURATION_MAIN_DEBUG_CATEGORY, "target_entries", false,
                 "Shows on the target tooltip which entries are responsible for its documentation");
+        final ConfigCategory foolery = configuration.getCategory(Constants.CONFIGURATION_MAIN_FOOLERY_CATEGORY);
+        foolery.setComment("Some random features that aren't part of the mod, but may be fun to enable nonetheless");
+        configuration.get(Constants.CONFIGURATION_MAIN_FOOLERY_CATEGORY, "branding_time", false, "Mods loaded... mods active... but how many are documented?");
         configuration.save();
     }
 
