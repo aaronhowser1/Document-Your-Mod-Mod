@@ -47,7 +47,7 @@ public final class JsonUtilities {
     }
 
     public static float asFloat(@Nonnull final JsonElement element, @Nonnull final String name) {
-        if (element.isJsonPrimitive() && element.getAsJsonPrimitive().isNumber()) return element.getAsJsonPrimitive().getAsFloat();
+        if (element.isJsonPrimitive() && element.getAsJsonPrimitive().isNumber()) return tryFloatNarrowing(asDouble(element, name));
         throw expectedType(element, name, "a float");
     }
 
@@ -60,8 +60,50 @@ public final class JsonUtilities {
         return object.has(name)? getFloat(object, name) : fallback.get();
     }
 
+    public static double asDouble(@Nonnull final JsonElement element, @Nonnull final String name) {
+        if (element.isJsonPrimitive() && element.getAsJsonPrimitive().isNumber()) return element.getAsJsonPrimitive().getAsDouble();
+        throw expectedType(element, name, "a double");
+    }
+
+    public static double getDouble(@Nonnull final JsonObject object, @Nonnull final String name) {
+        if (object.has(name)) return asDouble(object.get(name), name);
+        throw missingProperty(name, "a double");
+    }
+
+    public static double getDoubleOrElse(@Nonnull final JsonObject object, @Nonnull final String name, @Nonnull final Supplier<Double> fallback) {
+        return object.has(name)? getDouble(object, name) : fallback.get();
+    }
+
+    public static byte asByte(@Nonnull final JsonElement element, @Nonnull final String name) {
+        if (element.isJsonPrimitive() && element.getAsJsonPrimitive().isNumber()) return tryByteNarrowing(asLong(element, name));
+        throw expectedType(element, name, "a short");
+    }
+
+    public static byte getByte(@Nonnull final JsonObject object, @Nonnull final String name) {
+        if (object.has(name)) return asByte(object.get(name), name);
+        throw missingProperty(name, "an integer");
+    }
+
+    public static byte getByteOrElse(@Nonnull final JsonObject object, @Nonnull final String name, @Nonnull final Supplier<Byte> fallback) {
+        return object.has(name)? getByte(object, name) : fallback.get();
+    }
+
+    public static short asShort(@Nonnull final JsonElement element, @Nonnull final String name) {
+        if (element.isJsonPrimitive() && element.getAsJsonPrimitive().isNumber()) return tryShortNarrowing(asLong(element, name));
+        throw expectedType(element, name, "a short");
+    }
+
+    public static short getShort(@Nonnull final JsonObject object, @Nonnull final String name) {
+        if (object.has(name)) return asShort(object.get(name), name);
+        throw missingProperty(name, "an integer");
+    }
+
+    public static short getShortOrElse(@Nonnull final JsonObject object, @Nonnull final String name, @Nonnull final Supplier<Short> fallback) {
+        return object.has(name)? getShort(object, name) : fallback.get();
+    }
+
     public static int asInt(@Nonnull final JsonElement element, @Nonnull final String name) {
-        if (element.isJsonPrimitive() && element.getAsJsonPrimitive().isNumber()) return element.getAsJsonPrimitive().getAsInt();
+        if (element.isJsonPrimitive() && element.getAsJsonPrimitive().isNumber()) return tryIntNarrowing(asLong(element, name));
         throw expectedType(element, name, "an integer");
     }
 
@@ -72,6 +114,20 @@ public final class JsonUtilities {
 
     public static int getIntOrElse(@Nonnull final JsonObject object, @Nonnull final String name, @Nonnull final Supplier<Integer> fallback) {
         return object.has(name)? getInt(object, name) : fallback.get();
+    }
+
+    public static long asLong(@Nonnull final JsonElement element, @Nonnull final String name) {
+        if (element.isJsonPrimitive() && element.getAsJsonPrimitive().isNumber()) return element.getAsJsonPrimitive().getAsLong();
+        throw expectedType(element, name, "a long");
+    }
+
+    public static long getLong(@Nonnull final JsonObject object, @Nonnull final String name) {
+        if (object.has(name)) return asLong(object.get(name), name);
+        throw missingProperty(name, "a long");
+    }
+
+    public static long getLongOrElse(@Nonnull final JsonObject object, @Nonnull final String name, @Nonnull final Supplier<Long> fallback) {
+        return object.has(name)? getLong(object, name) : fallback.get();
     }
 
     @Nonnull
@@ -121,6 +177,26 @@ public final class JsonUtilities {
         }
     }
 
+    private static byte tryByteNarrowing(final long value) {
+        if (value >= Byte.MAX_VALUE || value < Byte.MIN_VALUE) throw narrowingFailed(value, "a byte");
+        return (byte) value;
+    }
+
+    private static short tryShortNarrowing(final long value) {
+        if (value >= Short.MAX_VALUE || value < Short.MIN_VALUE) throw narrowingFailed(value, "a short");
+        return (short) value;
+    }
+
+    private static int tryIntNarrowing(final long value) {
+        if (value >= Integer.MAX_VALUE || value < Integer.MIN_VALUE) throw narrowingFailed(value, "an integer");
+        return (int) value;
+    }
+
+    private static float tryFloatNarrowing(final double value) {
+        if (value >= Float.MAX_VALUE || value < -Float.MAX_VALUE) throw narrowingFailed(value, "a float");
+        return (float) value;
+    }
+
     @Nonnull
     private static JsonSyntaxException expectedType(@Nonnull final JsonElement element, @Nonnull final String name, @Nonnull final String expected) {
         throw new JsonSyntaxException("Expected '" + name + "' to be " + expected + ", but it was " + toErrorString(element));
@@ -129,6 +205,11 @@ public final class JsonUtilities {
     @Nonnull
     private static JsonSyntaxException missingProperty(@Nonnull final String name, @Nonnull final String expected) {
         throw new JsonSyntaxException("Property '" + name + "' was missing: expected to find " + expected);
+    }
+
+    @Nonnull
+    private static <T extends Number> JsonSyntaxException narrowingFailed(@Nonnull final T value, @Nonnull final String name) {
+        throw new JsonSyntaxException("Number '" + value + "' is too big to be represented as " + name);
     }
 
     @Nonnull
