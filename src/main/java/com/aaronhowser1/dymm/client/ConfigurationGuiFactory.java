@@ -6,6 +6,7 @@ import com.aaronhowser1.dymm.api.ApiBindings;
 import com.aaronhowser1.dymm.api.configuration.ConfigurationManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.ConfigCategory;
 import net.minecraftforge.common.config.ConfigElement;
 import net.minecraftforge.common.config.Configuration;
@@ -13,6 +14,8 @@ import net.minecraftforge.fml.client.IModGuiFactory;
 import net.minecraftforge.fml.client.config.DummyConfigElement;
 import net.minecraftforge.fml.client.config.GuiConfig;
 import net.minecraftforge.fml.client.config.IConfigElement;
+import net.minecraftforge.fml.client.event.ConfigChangedEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -28,10 +31,11 @@ import java.util.Set;
 @SuppressWarnings("unused")
 public final class ConfigurationGuiFactory implements IModGuiFactory {
     private static final L LOG = L.create(Constants.MOD_NAME, "Configuration GUI");
+    private Map<String, Configuration> configurationMap;
 
     @Override
     public void initialize(@Nonnull final Minecraft minecraftInstance) {
-
+        MinecraftForge.EVENT_BUS.register(this);
     }
 
     @Override
@@ -79,8 +83,11 @@ public final class ConfigurationGuiFactory implements IModGuiFactory {
 
     @Nonnull
     private Map<String, Configuration> getMapOrElse() {
+        if (this.configurationMap != null) {
+            return this.configurationMap;
+        }
         try {
-            return this.reflectMap();
+            return this.configurationMap = this.reflectMap();
         } catch (@Nonnull final RuntimeException e) {
             final StringWriter builder = new StringWriter();
             e.printStackTrace(new PrintWriter(builder));
@@ -102,5 +109,12 @@ public final class ConfigurationGuiFactory implements IModGuiFactory {
         } catch (@Nonnull final ReflectiveOperationException e) {
             throw new RuntimeException("Unable to obtain configurations", e);
         }
+    }
+
+    @SubscribeEvent
+    public void onConfigurationChangedEvent(@Nonnull final ConfigChangedEvent.OnConfigChangedEvent event) {
+        if (this.configurationMap == null) return;
+        this.configurationMap.values().forEach(Configuration::save);
+        this.configurationMap.values().forEach(Configuration::load);
     }
 }
