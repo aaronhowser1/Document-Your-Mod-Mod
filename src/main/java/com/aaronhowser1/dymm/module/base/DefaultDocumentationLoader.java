@@ -13,6 +13,7 @@ import com.aaronhowser1.dymm.api.loading.GlobalLoadingState;
 import com.aaronhowser1.dymm.api.loading.factory.ConditionFactory;
 import com.aaronhowser1.dymm.api.loading.factory.TargetFactory;
 import com.aaronhowser1.dymm.api.loading.metadata.MetadataListenerRegistry;
+import com.aaronhowser1.dymm.module.base.nbt.NbtFactoriesMetadataListener;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
@@ -111,6 +112,7 @@ public final class DefaultDocumentationLoader implements DocumentationLoader {
     public void registerMetadataListeners(@Nonnull final MetadataListenerRegistry registry) {
         registry.register("configuration", new ConfigurationMetadataListener());
         registry.register("supported_versions", new SupportedVersionsMetadataListener());
+        registry.register("nbt_factories", new NbtFactoriesMetadataListener());
         registry.register("undocumented_targets", (object, namespace) -> {
             final GlobalLoadingState state = Objects.requireNonNull(ApiBindings.getMainApi().getCurrentLoadingState());
             state.getReporter().notify("Reading purposefully undocumented items for namespace '" + namespace + "'");
