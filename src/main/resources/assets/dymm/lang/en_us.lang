@@ -5,6 +5,14 @@
 # Each specifier is separated using double underscores
 # All the entries are ordered in (ascending) alphabetical order.
 
+# Mod Specific Entries
+dymm.mod.debug.target_entry=Documentation Entries:
+dymm.mod.support.documentation_newer_than_mod=Documentation is for a newer version
+dymm.mod.support.documentation_out_of_date=Documentation may be out of date
+dymm.mod.support.full_support=Fully supported
+dymm.mod.support.info_not_provided=Version information not provided
+dymm.mod.support.not_supported=Not supported
+
 # Iron Chest -> Documentation
 dymm.doc.ironchest.copper_chest=5 rows of 9 slots for a total of 45 slots.
 dymm.doc.ironchest.copper_to_iron=Right click on a Copper Chest to turn it into an Iron Chest without breaking it.
