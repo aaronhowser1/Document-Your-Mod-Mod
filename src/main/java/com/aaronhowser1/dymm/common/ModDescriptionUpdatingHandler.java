@@ -20,6 +20,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
 import java.util.regex.Pattern;
@@ -155,7 +156,7 @@ public final class ModDescriptionUpdatingHandler {
     @Nonnull
     private static List<Pair<ModContainer, Support>> sortCompatibilityList(@Nonnull final List<Pair<ModContainer, Support>> unsorted) {
         final List<Pair<ModContainer, Support>> sorted = new ArrayList<>();
-        unsorted.sort(Comparator.comparing(it -> it.getLeft().getModId()));
+        unsorted.sort(Comparator.comparing(it -> it.getLeft().getName().toLowerCase(Locale.ENGLISH)));
         unsorted.stream().filter(it -> it.getRight() == Support.FULL_SUPPORT).forEach(sorted::add);
         unsorted.stream().filter(it -> it.getRight() == Support.DOCUMENTATION_OUT_OF_DATE).forEach(sorted::add);
         unsorted.stream().filter(it -> it.getRight() == Support.DOCUMENTATION_NEWER_THAN_MOD).forEach(sorted::add);
