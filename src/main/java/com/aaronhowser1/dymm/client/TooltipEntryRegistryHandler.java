@@ -123,6 +123,6 @@ public final class TooltipEntryRegistryHandler {
         if (targets.isEmpty()) return;
         final List<String> tooltip = event.getToolTip();
         tooltip.add(String.format("%s%s:%s", TextFormatting.DARK_AQUA, I18n.format("dymm.mod.debug.target_entry"), TextFormatting.RESET));
-        targets.forEach(it -> tooltip.add(String.format("  %s- %s%s%s%s", TextFormatting.DARK_GRAY, TextFormatting.DARK_GRAY, TextFormatting.ITALIC, it.toString(), TextFormatting.RESET)));
+        targets.forEach(it -> tooltip.add(String.format("  %s- %s%s%s", TextFormatting.DARK_GRAY, TextFormatting.DARK_GRAY, it.toString(), TextFormatting.RESET)));
     }
 }

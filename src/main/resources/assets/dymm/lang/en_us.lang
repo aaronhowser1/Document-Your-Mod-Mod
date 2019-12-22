@@ -8,7 +8,7 @@
 # Mod Specific Entries
 dymm.mod.configuration.error.message=An error has occurred while attempting to display the in-game configuration GUI, no further information.
 dymm.mod.configuration.error.title=Unable to Retrieve Configuration
-dymm.mod.debug.target_entry=Documentation Entries:
+dymm.mod.debug.target_entry=Documentation Entries
 dymm.mod.support.documentation_newer_than_mod=Documentation is for a newer version
 dymm.mod.support.documentation_out_of_date=Documentation may be out of date
 dymm.mod.support.full_support=Fully supported

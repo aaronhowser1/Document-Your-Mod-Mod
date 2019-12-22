@@ -87,7 +87,7 @@ public final class LazyDocumentationLoader implements DocumentationLoader {
     @Nullable
     @Override
     public DocumentationEntry loadFromJson(@Nonnull final JsonObject object) {
-        final JsonArray conditions = JsonUtilities.getJsonArray(object, "conditions");
+        final JsonArray conditions = JsonUtilities.getJsonArrayOrElse(object, "conditions", JsonArray::new);
         if (!this.doConditionsPass(conditions)) return null;
         final Set<Dependency> dependencies = this.parseDependencies(JsonUtilities.getJsonArrayOrElse(object, "dependencies", JsonArray::new));
         final JsonArray targets = JsonUtilities.getJsonArray(object, "targets");

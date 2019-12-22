@@ -100,7 +100,7 @@ public final class DefaultDocumentationLoader implements DocumentationLoader {
             this.targets.clear();
         }
 
-        final JsonArray conditions = JsonUtilities.getJsonArray(object, "conditions");
+        final JsonArray conditions = JsonUtilities.getJsonArrayOrElse(object, "conditions", JsonArray::new);
         if (!this.doConditionsPass(conditions)) return null;
         final Set<Dependency> dependencies = this.parseDependencies(JsonUtilities.getJsonArrayOrElse(object, "dependencies", JsonArray::new));
         final Set<Target> targets = this.parseTargets(JsonUtilities.getJsonArray(object, "targets"));
