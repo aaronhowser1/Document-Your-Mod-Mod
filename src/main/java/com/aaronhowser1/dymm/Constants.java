@@ -39,6 +39,7 @@ public final class Constants {
     public static final String MOD_VERSION = "@VERSION@";
     public static final String MOD_DEPENDENCIES = "required-after:jei@[1.12.2-4.15.0.268,)";
     public static final String MOD_GUI_FACTORY = "com.aaronhowser1.dymm.client.ConfigurationGuiFactory";
+    public static final String MOD_UPDATE_URL = "https://raw.githubusercontent.com/aaronhowser1/Document-Your-Mod-Mod/master/promo-slim.json";
     @SuppressWarnings("unused") public static final String JAR_FINGERPRINT = "@FINGERPRINT@";
 
     private Constants() {}

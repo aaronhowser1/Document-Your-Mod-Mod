@@ -17,7 +17,9 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import javax.annotation.Nonnull;
 
-@Mod(modid = Constants.MOD_ID, name = Constants.MOD_NAME, version = Constants.MOD_VERSION, dependencies = Constants.MOD_DEPENDENCIES, guiFactory = Constants.MOD_GUI_FACTORY)
+@Mod(modid = Constants.MOD_ID, name = Constants.MOD_NAME, version = Constants.MOD_VERSION,
+        dependencies = Constants.MOD_DEPENDENCIES, guiFactory = Constants.MOD_GUI_FACTORY,
+        updateJSON = Constants.MOD_UPDATE_URL)
 public final class DocumentYourMod {
     private static final L LOG = L.create(Constants.MOD_NAME, "Lifecycle");
 
