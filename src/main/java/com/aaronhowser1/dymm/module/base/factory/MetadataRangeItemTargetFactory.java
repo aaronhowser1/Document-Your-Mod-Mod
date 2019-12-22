@@ -31,7 +31,7 @@ public final class MetadataRangeItemTargetFactory implements TargetFactory {
 
         final Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation(registryName));
         if (item == null || item == Items.AIR) {
-            state.getReporter().notify("The registry name '" + registryName + "' does not match any known item: it will be skipped");
+            state.getReporter().report("The registry name '" + registryName + "' does not match any known item: it will be skipped");
             return new ArrayList<>();
         }
 

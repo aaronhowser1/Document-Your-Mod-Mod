@@ -72,7 +72,7 @@ public final class ItemTargetFactory implements TargetFactory {
     private Item getFromRegistry(@Nonnull final GlobalLoadingState state, @Nonnull final ResourceLocation registryName) {
         final Item item = ForgeRegistries.ITEMS.getValue(registryName);
         if (item == null || item == Items.AIR) {
-            state.getReporter().notify("No item with the given registry name '" + registryName + "' exists: addition will be skipped");
+            state.getReporter().report("No item with the given registry name '" + registryName + "' exists: addition will be skipped");
             return null;
         }
         return item;

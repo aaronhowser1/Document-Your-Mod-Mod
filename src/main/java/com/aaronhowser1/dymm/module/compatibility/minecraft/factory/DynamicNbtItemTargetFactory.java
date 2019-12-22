@@ -31,7 +31,7 @@ public final class DynamicNbtItemTargetFactory implements TargetFactory {
 
         final Item mainItem = ForgeRegistries.ITEMS.getValue(new ResourceLocation(registryName));
         if (mainItem == null || mainItem == Items.AIR) {
-            state.getReporter().notify("No dynamic NBT item with the given registry name '" + registryName + "' exists: addition will be skipped");
+            state.getReporter().report("No dynamic NBT item with the given registry name '" + registryName + "' exists: addition will be skipped");
             return targets;
         }
 
