@@ -1,2 +1,3 @@
 com.aaronhowser1.dymm.module.base.DefaultDocumentationLoader
+com.aaronhowser1.dymm.module.base.UndocumentedItemsPlaceholderLoader
 com.aaronhowser1.dymm.module.lazy.LazyDocumentationLoader
