@@ -15,26 +15,34 @@ public final class MainConfigurationHandler {
     }
 
     private static void initializeMainConfiguration() {
-        final Configuration configuration = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.CONFIGURATION_MAIN);
-        final ConfigCategory debug = configuration.getCategory(Constants.CONFIGURATION_MAIN_DEBUG_CATEGORY);
-        debug.setComment("Set of options useful for developers: you generally want these to be set to false");
-        configuration.get(Constants.CONFIGURATION_MAIN_DEBUG_CATEGORY, "target_documented", false, "Shows in the game console which targets have been documented");
-        configuration.get(Constants.CONFIGURATION_MAIN_DEBUG_CATEGORY, "missing_entries", false,
-                "Automatically scans the targets and displays in the console which items haven't been documented yet. Only works with targets that have at least one documented entry");
-        configuration.get(Constants.CONFIGURATION_MAIN_DEBUG_CATEGORY, "target_entries", false,
-                "Shows on the target tooltip which entries are responsible for its documentation");
-        final ConfigCategory foolery = configuration.getCategory(Constants.CONFIGURATION_MAIN_FOOLERY_CATEGORY);
-        foolery.setComment("Some random features that aren't part of the mod, but may be fun to enable nonetheless");
-        configuration.get(Constants.CONFIGURATION_MAIN_FOOLERY_CATEGORY, "branding_time", false, "Mods loaded... mods active... but how many are documented?");
+        final Configuration configuration = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.ConfigurationMain.NAME);
+
+        final ConfigCategory debug = configuration.getCategory(Constants.ConfigurationMain.CATEGORY_DEBUG);
+        debug.setComment(Constants.ConfigurationMain.CATEGORY_DEBUG_COMMENT);
+
+        configuration.get(Constants.ConfigurationMain.CATEGORY_DEBUG, Constants.ConfigurationMain.PROPERTY_DEBUG_TARGET_DOCUMENTED,
+                false, Constants.ConfigurationMain.PROPERTY_DEBUG_TARGET_DOCUMENTED_COMMENT);
+        configuration.get(Constants.ConfigurationMain.CATEGORY_DEBUG, Constants.ConfigurationMain.PROPERTY_DEBUG_MISSING_ENTRIES,
+                false,Constants.ConfigurationMain.PROPERTY_DEBUG_MISSING_ENTRIES_COMMENT);
+        configuration.get(Constants.ConfigurationMain.CATEGORY_DEBUG, Constants.ConfigurationMain.PROPERTY_DEBUG_TARGET_ENTRIES,
+                false, Constants.ConfigurationMain.PROPERTY_DEBUG_TARGET_ENTRIES_COMMENT);
+
+        final ConfigCategory foolery = configuration.getCategory(Constants.ConfigurationMain.CATEGORY_FOOLERY);
+        foolery.setComment(Constants.ConfigurationMain.CATEGORY_FOOLERY_COMMENT);
+
+        configuration.get(Constants.ConfigurationMain.CATEGORY_FOOLERY, Constants.ConfigurationMain.PROPERTY_FOOLERY_BRANDING_TIME,
+                false, Constants.ConfigurationMain.PROPERTY_FOOLERY_BRANDING_TIME_COMMENT);
+
         configuration.save();
     }
 
     private static void initializeModsConfiguration() {
-        final Configuration configuration = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.CONFIGURATION_TARGETS);
-        final ConfigCategory targets = configuration.getCategory(Constants.CONFIGURATION_TARGETS_MAIN_CATEGORY);
-        targets.setComment("Set here which targets should be enabled or not.\nNote that not all targets present here may also have entries in game.\n" +
-                "NOTE: Certain targets may require additional configuration");
-        Loader.instance().getModList().forEach(it -> configuration.get(Constants.CONFIGURATION_TARGETS_MAIN_CATEGORY, it.getModId(), true, it.getName()));
+        final Configuration configuration = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.ConfigurationTargets.NAME);
+
+        final ConfigCategory targets = configuration.getCategory(Constants.ConfigurationTargets.CATEGORY_TARGETS);
+        targets.setComment(Constants.ConfigurationTargets.CATEGORY_TARGETS_COMMENT);
+
+        Loader.instance().getModList().forEach(it -> configuration.get(Constants.ConfigurationTargets.CATEGORY_TARGETS, it.getModId(), true, it.getName()));
         configuration.save();
     }
 }

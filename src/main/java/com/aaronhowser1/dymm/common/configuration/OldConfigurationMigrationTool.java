@@ -41,18 +41,18 @@ public final class OldConfigurationMigrationTool {
     private OldConfigurationMigrationTool() {}
 
     static {
-        final String mFile = Constants.CONFIGURATION_MAIN;
-        final String tFile = Constants.CONFIGURATION_TARGETS;
+        final String mFile = Constants.ConfigurationMain.NAME;
+        final String tFile = Constants.ConfigurationTargets.NAME;
         final String qFile = "quark";
 
         final String gCat = "general";
         final String qCat = "general.quark";
-        final String dCat = Constants.CONFIGURATION_MAIN_DEBUG_CATEGORY;
-        final String tCat = Constants.CONFIGURATION_TARGETS_MAIN_CATEGORY;
+        final String dCat = Constants.ConfigurationMain.CATEGORY_DEBUG;
+        final String tCat = Constants.ConfigurationTargets.CATEGORY_TARGETS;
         final String mCat = "targets";
 
-        MIGRATION_MAPPINGS.add(new MigrationMapping(gCat, "Debug - Mod Documented", mFile, dCat, "target_documented"));
-        MIGRATION_MAPPINGS.add(new MigrationMapping(gCat, "Debug - Not Documented Items", mFile, dCat, "missing_entries"));
+        MIGRATION_MAPPINGS.add(new MigrationMapping(gCat, "Debug - Mod Documented", mFile, dCat, Constants.ConfigurationMain.PROPERTY_DEBUG_TARGET_DOCUMENTED));
+        MIGRATION_MAPPINGS.add(new MigrationMapping(gCat, "Debug - Not Documented Items", mFile, dCat, Constants.ConfigurationMain.PROPERTY_DEBUG_MISSING_ENTRIES));
         MIGRATION_MAPPINGS.add(new MigrationMapping(gCat, "Iron Chest info", tFile, tCat, "ironchest"));
         MIGRATION_MAPPINGS.add(new MigrationMapping(gCat, "Nature's Compass info", tFile, tCat, "naturescompass"));
         MIGRATION_MAPPINGS.add(new MigrationMapping(gCat, "Refined Storage info", tFile, tCat, "refinedstorage"));

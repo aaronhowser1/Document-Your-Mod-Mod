@@ -33,8 +33,9 @@ public final class TargetsHandler {
     }
 
     private static void discoverAndLogDocumented() {
-        final Configuration configuration = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.CONFIGURATION_MAIN);
-        final boolean shouldPrint = configuration.get(Constants.CONFIGURATION_MAIN_DEBUG_CATEGORY, "target_documented", false).getBoolean();
+        final Configuration configuration = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.ConfigurationMain.NAME);
+        final boolean shouldPrint = configuration.getBoolean(Constants.ConfigurationMain.PROPERTY_DEBUG_TARGET_DOCUMENTED, Constants.ConfigurationMain.CATEGORY_DEBUG,
+                false, Constants.ConfigurationMain.PROPERTY_DEBUG_TARGET_DOCUMENTED_COMMENT);
         if (!shouldPrint) return;
         discoverAndLogDocumented(DOCUMENTED_LOG::info);
     }
@@ -53,8 +54,9 @@ public final class TargetsHandler {
     }
 
     private static void discoverAndLogUndocumented() {
-        final Configuration configuration = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.CONFIGURATION_MAIN);
-        final boolean shouldUseWarn = configuration.get(Constants.CONFIGURATION_MAIN_DEBUG_CATEGORY, "missing_entries", false).getBoolean();
+        final Configuration configuration = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.ConfigurationMain.NAME);
+        final boolean shouldUseWarn = configuration.getBoolean(Constants.ConfigurationMain.PROPERTY_DEBUG_MISSING_ENTRIES, Constants.ConfigurationMain.CATEGORY_DEBUG,
+                false, Constants.ConfigurationMain.PROPERTY_DEBUG_MISSING_ENTRIES_COMMENT);
         final Consumer<String> logFunction = shouldUseWarn? UNDOCUMENTED_LOG::warn : UNDOCUMENTED_LOG::debug;
         discoverAndLogUndocumented(logFunction);
     }

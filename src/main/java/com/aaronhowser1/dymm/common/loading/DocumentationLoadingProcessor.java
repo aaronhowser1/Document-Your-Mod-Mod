@@ -21,6 +21,8 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSyntaxException;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.fml.common.Loader;
+import net.minecraftforge.fml.common.ModContainer;
 
 import javax.annotation.Nonnull;
 import java.util.HashMap;
@@ -167,8 +169,9 @@ public final class DocumentationLoadingProcessor implements Processor<JsonObject
 
     private boolean isEnabled(@Nonnull final NameSpacedString identifier) {
         final String namespace = identifier.getNameSpace();
-        final Configuration targets = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.CONFIGURATION_TARGETS);
-        return targets.get(namespace, Constants.CONFIGURATION_TARGETS_MAIN_CATEGORY, true).getBoolean();
+        final ModContainer targetContainer = Loader.instance().getModList().stream().filter(it -> namespace.equals(it.getModId())).findFirst().orElseThrow(RuntimeException::new);
+        final Configuration targets = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.ConfigurationTargets.CATEGORY_TARGETS);
+        return targets.get(Constants.ConfigurationTargets.CATEGORY_TARGETS, namespace, true, targetContainer.getName()).getBoolean();
     }
 
     @Nonnull

@@ -21,55 +21,82 @@ import java.util.Objects;
 
 @Mod.EventBusSubscriber(modid = Constants.MOD_ID, value = Side.CLIENT)
 public final class MainMenuDocumentedTargetsHandler {
-    private static final int DOCUMENTED_TARGETS_COUNT;
+    @SuppressWarnings("unchecked")
+    private static final class LazyConstants {
+        private static final int DOCUMENTED_TARGETS_COUNT;
 
-    static {
-        DOCUMENTED_TARGETS_COUNT = (int) ApiBindings.getMainApi()
-                .getDocumentationRegistry()
-                .getValuesCollection()
-                .stream()
-                .map(DocumentationEntry::getRegistryName)
-                .peek(Objects::requireNonNull)
-                .map(ResourceLocation::getNamespace)
-                .distinct()
-                .count();
+        private static final Field BRAND;
+        private static final Field BRAND_NO_MC;
+
+        private static final List<String> PREVIOUS_BRAND_LIST;
+        private static final List<String> PREVIOUS_BRAND_NO_MC_LIST;
+
+        static {
+            FMLCommonHandler.instance().computeBranding();
+
+            DOCUMENTED_TARGETS_COUNT = (int) ApiBindings.getMainApi()
+                    .getDocumentationRegistry()
+                    .getValuesCollection()
+                    .stream()
+                    .map(DocumentationEntry::getRegistryName)
+                    .peek(Objects::requireNonNull)
+                    .map(ResourceLocation::getNamespace)
+                    .distinct()
+                    .count();
+
+            try {
+                final Class<?> handler = FMLCommonHandler.instance().getClass();
+
+                BRAND = handler.getDeclaredField("brandings");
+                BRAND_NO_MC = handler.getDeclaredField("brandingsNoMC");
+                BRAND.setAccessible(true);
+                BRAND_NO_MC.setAccessible(true);
+
+                PREVIOUS_BRAND_LIST = new ArrayList<>((Collection<String>) BRAND.get(FMLCommonHandler.instance()));
+                PREVIOUS_BRAND_NO_MC_LIST = new ArrayList<>((Collection<String>) BRAND_NO_MC.get(FMLCommonHandler.instance()));
+            } catch (@Nonnull final ReflectiveOperationException e) {
+                throw new RuntimeException("Unable to reflectively get the handler class!", e);
+            }
+        }
     }
+
+    private static boolean prevShallBrand = false;
 
     @SubscribeEvent
     public static void onOpenGuiEvent(@Nonnull final GuiOpenEvent event) {
         if (!(event.getGui() instanceof GuiMainMenu)) return;
-        final Configuration configuration = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.CONFIGURATION_MAIN);
-        if (!configuration.get(Constants.CONFIGURATION_MAIN_FOOLERY_CATEGORY, "branding_time", false).getBoolean()) return;
-        FMLCommonHandler.instance().computeBranding();
-        try {
-            final Class<?> handler = FMLCommonHandler.instance().getClass();
+        final Configuration configuration = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.ConfigurationMain.NAME);
+        final boolean shallBrand = configuration.getBoolean(Constants.ConfigurationMain.PROPERTY_FOOLERY_BRANDING_TIME, Constants.ConfigurationMain.CATEGORY_FOOLERY,
+                false, Constants.ConfigurationMain.PROPERTY_FOOLERY_BRANDING_TIME_COMMENT);
 
-            final Field brand = handler.getDeclaredField("brandings");
-            final Field brandNoMc = handler.getDeclaredField("brandingsNoMC");
-            brand.setAccessible(true);
-            brandNoMc.setAccessible(true);
+        if (prevShallBrand != shallBrand) {
+            prevShallBrand = shallBrand;
 
-            @SuppressWarnings("unchecked")
-            final List<String> brandList = new ArrayList<>((Collection<String>) brand.get(FMLCommonHandler.instance()));
-            @SuppressWarnings("unchecked")
-            final List<String> brandListNoMc = new ArrayList<>((Collection<String>) brandNoMc.get(FMLCommonHandler.instance()));
+            final List<String> brandList = new ArrayList<>(LazyConstants.PREVIOUS_BRAND_LIST);
+            final List<String> brandListNoMc = new ArrayList<>(LazyConstants.PREVIOUS_BRAND_NO_MC_LIST);
 
-            /*mutable*/ int targetIndex = -1;
-            for (int i = 0; i < brandList.size(); ++i) {
-                if (brandList.get(i).contains("active") && brandList.get(i).contains("mod") && !brandList.get(i).contains("documented")) {
-                    targetIndex = i;
-                    break;
+            if (shallBrand) {
+                /*mutable*/
+                int targetIndex = -1;
+                for (int i = 0; i < brandList.size(); ++i) {
+                    if (brandList.get(i).contains("active") && brandList.get(i).contains("mod")) {
+                        targetIndex = i;
+                        break;
+                    }
                 }
+                if (targetIndex == -1) return;
+
+                final String s = LazyConstants.DOCUMENTED_TARGETS_COUNT != 1? "s" : "";
+                brandList.set(targetIndex, brandList.get(targetIndex) + String.format(", %d mod%s documented", LazyConstants.DOCUMENTED_TARGETS_COUNT, s));
+                brandListNoMc.set(targetIndex - 1, brandListNoMc.get(targetIndex - 1) + String.format(", %d mod%s documented", LazyConstants.DOCUMENTED_TARGETS_COUNT, s));
             }
-            if (targetIndex == -1) return;
 
-            brandList.set(targetIndex, brandList.get(targetIndex) + String.format(", %d mod%s documented", DOCUMENTED_TARGETS_COUNT, DOCUMENTED_TARGETS_COUNT != 1? "s" : ""));
-            brandListNoMc.set(targetIndex - 1, brandListNoMc.get(targetIndex - 1) + String.format(", %d mod%s documented", DOCUMENTED_TARGETS_COUNT, DOCUMENTED_TARGETS_COUNT != 1? "s" : ""));
-
-            brand.set(FMLCommonHandler.instance(), brandList);
-            brandNoMc.set(FMLCommonHandler.instance(), brandListNoMc);
-        } catch (@Nonnull final ReflectiveOperationException ignored) {
-            // We won't edit the branding then
+            try {
+                LazyConstants.BRAND.set(FMLCommonHandler.instance(), brandList);
+                LazyConstants.BRAND_NO_MC.set(FMLCommonHandler.instance(), brandListNoMc);
+            } catch (@Nonnull final ReflectiveOperationException ignored) {
+                // And no brand will be set
+            }
         }
     }
 }

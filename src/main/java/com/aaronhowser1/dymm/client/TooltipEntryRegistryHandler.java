@@ -115,8 +115,10 @@ public final class TooltipEntryRegistryHandler {
 
     @SubscribeEvent
     public static void onTooltip(@Nonnull final ItemTooltipEvent event) {
-        final Configuration config = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.CONFIGURATION_MAIN);
-        if (!config.get(Constants.CONFIGURATION_MAIN_DEBUG_CATEGORY, "target_entries", false).getBoolean()) return;
+        final Configuration config = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.ConfigurationMain.NAME);
+        final boolean isTooltipEnabled = config.getBoolean(Constants.ConfigurationMain.PROPERTY_DEBUG_TARGET_ENTRIES, Constants.ConfigurationMain.CATEGORY_DEBUG,
+                false, Constants.ConfigurationMain.PROPERTY_DEBUG_TARGET_ENTRIES_COMMENT);
+        if (!isTooltipEnabled) return;
         final List<ResourceLocation> targets = STACKS_CACHE.getUnchecked(event.getItemStack());
         if (targets.isEmpty()) return;
         final List<String> tooltip = event.getToolTip();
