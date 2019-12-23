@@ -27,7 +27,7 @@ public final class LazyDocumentationEntry extends IForgeRegistryEntry.Impl<Docum
     private JsonArray targetsArray;
 
     private LazyDocumentationEntry(@Nonnull final JsonArray jsonTargets, @Nonnull final Set<DocumentationData> data, @Nonnull final Set<Dependency> dependencies) {
-        this.targets = new HashSet<>();
+        this.targets = null;
         this.data = new HashSet<>(data);
         this.dependencies = new HashSet<>(dependencies);
         this.targetsArray = jsonTargets;

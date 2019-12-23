@@ -1,6 +1,5 @@
 package com.aaronhowser1.dymm.module.compatibility.minecraft.consume;
 
-import com.aaronhowser1.dymm.Constants;
 import com.aaronhowser1.dymm.api.ApiBindings;
 import com.aaronhowser1.dymm.api.consume.DocumentationDataConsumer;
 import com.aaronhowser1.dymm.api.documentation.DocumentationData;
@@ -15,10 +14,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.relauncher.Side;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 
@@ -32,7 +30,6 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
-@Mod.EventBusSubscriber(modid = Constants.MOD_ID, value = Side.CLIENT)
 public final class TooltipDocumentationConsumer implements DocumentationDataConsumer {
     private static final Map<Target, List<Pair<TextFormatting, String>>> TARGET_ENTRIES;
     private static final LoadingCache<ResourceLocation, List<DocumentationEntry>> DOCUMENTATION_CACHE;
@@ -131,6 +128,11 @@ public final class TooltipDocumentationConsumer implements DocumentationDataCons
         targets.forEach(target -> TARGET_ENTRIES.computeIfAbsent(target, key -> new ArrayList<>()).addAll(this.convert(data.getData())));
     }
 
+    @Override
+    public void onCreation() {
+        MinecraftForge.EVENT_BUS.register(this);
+    }
+
     @Nonnull
     private List<Pair<TextFormatting, String>> convert(@Nonnull final List<String> strings) {
         return strings.stream().map(this::convert).collect(Collectors.toList());
@@ -149,7 +151,7 @@ public final class TooltipDocumentationConsumer implements DocumentationDataCons
     }
 
     @SubscribeEvent
-    public static void onItemTooltip(@Nonnull final ItemTooltipEvent event) {
+    public void onItemTooltip(@Nonnull final ItemTooltipEvent event) {
         STACKS_CACHE.getUnchecked(event.getItemStack()).forEach(it -> {
             final String line;
             if (it.getLeft() == null) {

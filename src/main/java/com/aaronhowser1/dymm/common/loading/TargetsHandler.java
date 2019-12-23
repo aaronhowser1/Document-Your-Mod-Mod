@@ -85,7 +85,7 @@ public final class TargetsHandler {
                                 .map(Item::getRegistryName)
                                 .map(target -> ImmutablePair.of(target, it))
                 )
-                .collect(Collectors.toMap(Pair::getLeft, Pair::getRight));
+                .collect(Collectors.toMap(Pair::getLeft, Pair::getRight, (a, b) -> a));
     }
 
     @Nonnull

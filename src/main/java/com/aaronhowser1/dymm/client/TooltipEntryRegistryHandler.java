@@ -7,11 +7,14 @@ import com.aaronhowser1.dymm.api.documentation.Target;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
+import net.minecraft.client.gui.GuiMainMenu;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraftforge.client.event.GuiOpenEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -114,7 +117,15 @@ public final class TooltipEntryRegistryHandler {
     }
 
     @SubscribeEvent
-    public static void onTooltip(@Nonnull final ItemTooltipEvent event) {
+    public static void onMainMenuGuiOpen(@Nonnull final GuiOpenEvent event) {
+        if (event.getGui() instanceof GuiMainMenu) {
+            MinecraftForge.EVENT_BUS.unregister(TooltipEntryRegistryHandler.class);
+            MinecraftForge.EVENT_BUS.register(new TooltipEntryRegistryHandler());
+        }
+    }
+
+    @SubscribeEvent
+    public void onTooltip(@Nonnull final ItemTooltipEvent event) {
         final Configuration config = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.ConfigurationMain.NAME);
         final boolean isTooltipEnabled = config.getBoolean(Constants.ConfigurationMain.PROPERTY_DEBUG_TARGET_ENTRIES, Constants.ConfigurationMain.CATEGORY_DEBUG,
                 false, Constants.ConfigurationMain.PROPERTY_DEBUG_TARGET_ENTRIES_COMMENT);
