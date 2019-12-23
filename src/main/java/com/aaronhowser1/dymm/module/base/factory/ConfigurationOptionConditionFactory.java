@@ -7,7 +7,10 @@ import com.aaronhowser1.dymm.api.loading.GlobalLoadingState;
 import com.aaronhowser1.dymm.api.loading.factory.ConditionFactory;
 import com.aaronhowser1.dymm.module.base.BasicCondition;
 import com.google.gson.JsonObject;
+import net.minecraftforge.common.config.ConfigCategory;
 import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.common.config.Property;
+import scala.tools.partest.ScaladocModelTest;
 
 import javax.annotation.Nonnull;
 
@@ -22,7 +25,9 @@ public final class ConfigurationOptionConditionFactory implements ConditionFacto
         final boolean value = JsonUtilities.getBooleanOrElse(object, "value", () -> true);
 
         final Configuration targetConfiguration = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(configuration);
-        final boolean configurationValue = targetConfiguration.get(category, name, value).getBoolean();
+        final ConfigCategory configurationCategory = targetConfiguration.getCategory(category);
+        final Property property = configurationCategory.get(name);
+        final boolean configurationValue = property.getBoolean();
 
         return new BasicCondition(configurationValue == value);
     }
