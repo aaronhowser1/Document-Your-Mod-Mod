@@ -90,7 +90,7 @@ public final class ConfigurationMetadataListener implements MetadataListener {
             final String categoryName = it.getKey();
             final JsonObject categoryDescription = JsonUtilities.asJsonObject(it.getValue(), it.getKey());
             this.setupCategory(categoryName, categoryDescription, configuration);
-            this.setupProperties(categoryName, configuration, JsonUtilities.getJsonObjectOrElse(object, "properties", JsonObject::new));
+            this.setupProperties(categoryName, configuration, JsonUtilities.getJsonObjectOrElse(categoryDescription, "properties", JsonObject::new));
         });
     }
 

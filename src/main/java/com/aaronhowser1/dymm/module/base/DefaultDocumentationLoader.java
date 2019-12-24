@@ -75,9 +75,6 @@ public final class DefaultDocumentationLoader implements DocumentationLoader {
      *   ]
      * }
      */
-    private final Set<Target> targets = new HashSet<>();
-    private boolean hasRegisteredDummy;
-
     @Nonnull
     @Override
     public ResourceLocation getIdentifier() {
