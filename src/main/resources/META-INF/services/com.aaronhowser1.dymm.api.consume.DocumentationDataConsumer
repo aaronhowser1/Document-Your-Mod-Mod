@@ -1,2 +1,3 @@
 com.aaronhowser1.dymm.module.compatibility.jei.consume.JeiDocumentationConsumer
 com.aaronhowser1.dymm.module.compatibility.minecraft.consume.TooltipDocumentationConsumer
+com.aaronhowser1.dymm.module.compatibility.refinedstorage.consume.CoverJeiDocumentationConsumer
