@@ -10,7 +10,6 @@ import com.google.gson.JsonObject;
 import net.minecraftforge.common.config.ConfigCategory;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
-import scala.tools.partest.ScaladocModelTest;
 
 import javax.annotation.Nonnull;
 
