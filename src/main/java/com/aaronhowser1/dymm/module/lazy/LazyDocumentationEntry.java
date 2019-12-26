@@ -1,6 +1,8 @@
 package com.aaronhowser1.dymm.module.lazy;
 
+import com.aaronhowser1.dymm.Constants;
 import com.aaronhowser1.dymm.JsonUtilities;
+import com.aaronhowser1.dymm.L;
 import com.aaronhowser1.dymm.api.ApiBindings;
 import com.aaronhowser1.dymm.api.documentation.Dependency;
 import com.aaronhowser1.dymm.api.documentation.DocumentationData;
@@ -14,6 +16,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.registries.IForgeRegistryEntry;
 
 import javax.annotation.Nonnull;
+import java.lang.reflect.Field;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
@@ -62,6 +65,7 @@ public final class LazyDocumentationEntry extends IForgeRegistryEntry.Impl<Docum
 
     @Nonnull
     private Set<Target> parseTargetsArray() {
+        this.setEntryNameToState(Objects.requireNonNull(this.getRegistryName()));
         final Set<Target> targets = new HashSet<>();
         JsonUtilities.consumeEntriesAsJsonObjects(this.targetsArray, "targets", it -> targets.addAll(this.parseTarget(it)));
         return targets;
@@ -73,5 +77,18 @@ public final class LazyDocumentationEntry extends IForgeRegistryEntry.Impl<Docum
         final GlobalLoadingState state = Objects.requireNonNull(ApiBindings.getMainApi().getCurrentLoadingState());
         final TargetFactory factory = state.getTargetFactory(type);
         return factory.fromJson(state, jsonTarget);
+    }
+
+    private void setEntryNameToState(@Nonnull final ResourceLocation name) {
+        try {
+            final GlobalLoadingState state = Objects.requireNonNull(ApiBindings.getMainApi().getCurrentLoadingState());
+            final Class<?> stateClass = state.getClass();
+            final Field targetId = stateClass.getDeclaredField("targetId");
+            targetId.setAccessible(true);
+            targetId.set(state, name);
+        } catch (@Nonnull final ReflectiveOperationException e) {
+            L.create(Constants.MOD_ID, "LazyDocumentationEntry").warn("API implementation replaced: unable to set reg names");
+            e.printStackTrace();
+        }
     }
 }
