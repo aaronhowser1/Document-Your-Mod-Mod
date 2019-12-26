@@ -61,15 +61,15 @@ public final class PotionTargetFactory implements TargetFactory {
 
     @Nonnull
     private Set<PotionType> getTypesFromJson(@Nonnull final GlobalLoadingState state, @Nonnull final JsonObject object) {
-        final String type = JsonUtilities.getString(object, "type");
+        final String type = JsonUtilities.getString(object, "kind");
         if ("all".equals(type)) {
-            state.getReporter().report("Found deprecated 'all' type, it will match " + Arrays.toString(PotionType.values()) + ": prefer specifying them explicitly!");
+            state.getReporter().report("Found deprecated 'all' kind, it will match " + Arrays.toString(PotionType.values()) + ": prefer specifying them explicitly!");
             return new HashSet<>(Arrays.asList(PotionType.values()));
         }
         final Set<PotionType> types = new HashSet<>();
         Arrays.stream(PotionType.values()).filter(it -> type.equals(it.toString())).findFirst().ifPresent(types::add);
         if (types.isEmpty()) {
-            throw new JsonParseException("The given type '" + type + "' is not recognized as the ID of a valid potion type. Valid ones are: " + Arrays.toString(PotionType.values()));
+            throw new JsonParseException("The given kind '" + type + "' is not recognized as the ID of a valid potion type. Valid ones are: " + Arrays.toString(PotionType.values()));
         }
         return types;
     }

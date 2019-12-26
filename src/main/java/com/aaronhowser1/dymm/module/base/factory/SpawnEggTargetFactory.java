@@ -10,6 +10,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
@@ -32,10 +33,17 @@ public final class SpawnEggTargetFactory implements TargetFactory {
 
     @Nonnull
     private NBTTagCompound createNbt(@Nonnull final GlobalLoadingState state, @Nonnull final String id) {
+        final NBTTagCompound tag = new NBTTagCompound();
+        tag.setTag("tag", this.createTag(state, id));
+        return tag;
+    }
+
+    @Nonnull
+    private NBTTagCompound createTag(@Nonnull final GlobalLoadingState state, @Nonnull final String id) {
         final NBTTagCompound tagCompound = new NBTTagCompound();
         final NBTTagCompound entityTag = new NBTTagCompound();
         entityTag.setString("id", this.checkIdValid(state, id));
-        tagCompound.setTag("EntityTag", tagCompound);
+        tagCompound.setTag("EntityTag", entityTag);
         return tagCompound;
     }
 

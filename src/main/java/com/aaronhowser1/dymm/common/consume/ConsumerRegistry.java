@@ -52,6 +52,7 @@ public enum ConsumerRegistry {
     private void fireEvent(@Nonnull final ResourceLocation type, @Nonnull final ResourceLocation id, @Nonnull final DocumentationData data, @Nonnull final Set<Target> targets) {
         if (!this.consumers.containsKey(type)) {
             this.signalMissingReceiver(type, id);
+            return;
         }
         this.consumers.get(type).forEach(it -> it.consumeData(data, targets));
     }

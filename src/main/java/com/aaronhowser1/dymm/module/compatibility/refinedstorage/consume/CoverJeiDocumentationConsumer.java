@@ -26,7 +26,6 @@ public final class CoverJeiDocumentationConsumer implements DocumentationDataCon
 
     @Override
     public void consumeData(@Nonnull final DocumentationData data, @Nonnull final Set<Target> targets) {
-        System.out.println("Consuming data " + data);
         targets.forEach(it -> docData.add(ImmutablePair.of(it, data)));
     }
 }
