@@ -29,7 +29,7 @@ static def getBuildString() {
 }
 
 version = "${mod_version}" + getBuildString()
-group = "com.aaronhowser1.dym" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = "com.aaronhowser1.dymm" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "DocumentYourModMod"
 
 sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.

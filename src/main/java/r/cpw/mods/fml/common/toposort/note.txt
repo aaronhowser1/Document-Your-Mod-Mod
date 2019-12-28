@@ -1,6 +1,0 @@
-This file has been taken and mostly copy-pasted from the source code of Forge Mod Loader (FML for short), made by
-cpw. Why not using it directly? Because his Topological Sort is deeply interconnected with the internals of the loading
-process. For this reason, I am copying it and making it sort of generic, hopefully. No infringement intended.
-
-Due to the extensiveness of the changes, comments cannot be used. Users who want to check the differences are
-more than welcome to compare the original version of the code available in the Forge's repository with ours.
