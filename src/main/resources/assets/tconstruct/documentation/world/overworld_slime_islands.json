@@ -1,0 +1,113 @@
+{
+  "loader": "dymm:default",
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_sapling",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_sapling",
+      "metadata": 1
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 1
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 2
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 3
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 5
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 6
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 7
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 8
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 10
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 11
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 12
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 13
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_dirt",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_dirt",
+      "metadata": 1
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_dirt",
+      "metadata": 2
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_congealed",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_congealed",
+      "metadata": 1
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_congealed",
+      "metadata": 2
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.tconstruct.world.overworld_slime_islands"
+      ]
+    }
+  ]
+}

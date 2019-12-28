@@ -1,0 +1,53 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "decorative_blocks"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "building",
+      "feature": "vertical_wood_planks"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "building",
+      "feature": "stained_planks"
+    },
+    {
+      "type": "quark:stained_planks_enabled"
+    }
+  ],
+  "documentation": [
+    {
+      "ordering": "after",
+      "requirement": "required",
+      "target": "quark:decoration/building/vertical_wooden_planks/vertical_planks"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "quark:vertical_planks",
+      "metadata_begin": 0,
+      "metadata_end": 5
+    },
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "quark:vertical_stained_planks",
+      "metadata_begin": 0,
+      "metadata_end": 15
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.decoration.building.vertical_wooden_planks.vertical_stained_planks"
+      ]
+    }
+  ]
+}

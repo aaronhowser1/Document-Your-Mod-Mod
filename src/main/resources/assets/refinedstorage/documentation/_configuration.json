@@ -1,0 +1,16 @@
+{
+  "version": "1",
+  "categories": {
+    "experimental": {
+      "comment": "Experimental settings that may or may not cause issues in your instance.\nEnable with care and MAKE BACKUPS!",
+      "language_key": "dymm.mod.refinedstorage.configuration.experimental",
+      "properties": {
+        "covers_jei_support": {
+          "comment": "Enable proper JEI support for documentation entries about covers and hollow covers.\nCurrently experimental since it may cause errors in Refined Storage's JEI Plugin",
+          "language_key": "dymm.mod.refinestorage.configuration.experimental.covers_jei_support",
+          "default": false
+        }
+      }
+    }
+  }
+}

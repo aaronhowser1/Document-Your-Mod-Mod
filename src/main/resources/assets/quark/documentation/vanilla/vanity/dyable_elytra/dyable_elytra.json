@@ -1,0 +1,42 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "vanity",
+      "feature": "dyable_elytra"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:elytra"
+    },
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "minecraft:dye",
+      "metadata_begin": 0,
+      "metadata_end": 15
+    },
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "quark:root_dye",
+      "metadata_begin": 0,
+      "metadata_end": 2
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.vanity.dyable_elytra.dyable_elytra"
+      ]
+    }
+  ]
+}

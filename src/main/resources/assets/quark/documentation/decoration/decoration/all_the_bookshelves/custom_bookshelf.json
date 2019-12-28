@@ -1,0 +1,32 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "decorative_blocks"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "decoration",
+      "feature": "varied_bookshelves"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "quark:custom_bookshelf",
+      "metadata_begin": 0,
+      "metadata_end": 4
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.decoration.decoration.all_the_bookshelves.custom_bookshelf"
+      ]
+    }
+  ]
+}

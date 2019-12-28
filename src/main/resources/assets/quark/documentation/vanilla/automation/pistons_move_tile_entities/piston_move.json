@@ -1,0 +1,34 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "automation",
+      "feature": "pistons_move_t_es"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:piston"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:sticky_piston"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.automation.pistons_move_tile_entities.piston_move"
+      ]
+    }
+  ]
+}

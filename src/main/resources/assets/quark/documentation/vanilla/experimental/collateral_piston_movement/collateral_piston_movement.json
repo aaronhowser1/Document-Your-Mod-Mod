@@ -1,0 +1,33 @@
+{
+  "loader": "dymm:lazy",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:experimental_feature_enabled",
+      "feature": "collateral_piston_movement"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:piston"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:sticky_piston"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.experimental.collateral_piston_movement.collateral_piston_movement"
+      ]
+    }
+  ]
+}

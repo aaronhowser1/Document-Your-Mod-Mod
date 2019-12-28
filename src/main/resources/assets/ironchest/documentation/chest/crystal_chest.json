@@ -1,0 +1,19 @@
+{
+  "loader": "dymm:default",
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "ironchest:iron_chest",
+      "metadata": 5
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.ironchest.diamond_chest",
+        "dymm.doc.ironchest.crystal_chest"
+      ]
+    }
+  ]
+}

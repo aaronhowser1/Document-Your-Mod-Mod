@@ -1,0 +1,42 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "mod_elements"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "world",
+      "feature": "cave_roots"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:roots"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:roots_blue_flower"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:roots_black_flower"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:roots_white_flower"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.mod.world.cave_roots.roots"
+      ]
+    }
+  ]
+}

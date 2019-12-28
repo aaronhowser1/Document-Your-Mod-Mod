@@ -1,0 +1,30 @@
+{
+  "loader": "dymm:lazy",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "tweaks",
+      "feature": "squids_ink_you"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:squid"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.tweaks.squid_inking.squid_inking"
+      ]
+    }
+  ]
+}

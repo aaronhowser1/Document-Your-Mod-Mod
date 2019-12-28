@@ -1,0 +1,28 @@
+{
+  "loader": "dymm:default",
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "refinedstorage:upgrade",
+      "metadata": 7
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "refinedstorage:upgrade",
+      "metadata": 8
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "refinedstorage:upgrade",
+      "metadata": 9
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.refinedstorage.upgrade.fortune"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "loader": "dymm:default",
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "refinedstorage:cover"
+    }
+  ],
+  "data": [
+    {
+      "type": "refinedstorage:cover_jei_information",
+      "data": [
+        "dymm.doc.refinedstorage.cover"
+      ]
+    }
+  ]
+}

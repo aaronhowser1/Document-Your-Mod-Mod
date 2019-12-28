@@ -1,0 +1,34 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "mod_elements"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "misc",
+      "feature": "horse_whistle"
+    },
+    {
+      "type": "quark:magical_horse_whistle",
+      "value": false
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:horse_whistle"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.mod.misc.horse_whistles.ordinary_horse_whistle"
+      ]
+    }
+  ]
+}

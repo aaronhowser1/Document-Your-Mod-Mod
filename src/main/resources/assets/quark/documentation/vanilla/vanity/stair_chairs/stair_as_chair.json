@@ -1,0 +1,82 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "vanity",
+      "feature": "sit_in_stairs"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:oak_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:stone_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:brick_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:stone_brick_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:nether_brick_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:sandstone_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:spruce_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:birch_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:jungle_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:quartz_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:acacia_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:dark_oak_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:red_sandstone_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:purpur_stairs"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.vanity.stair_chairs.stair_as_chair"
+      ]
+    }
+  ]
+}

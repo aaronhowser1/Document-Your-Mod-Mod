@@ -1,0 +1,19 @@
+{
+  "loader": "dymm:default",
+  "targets": [
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "tconstruct:slimesling",
+      "metadata_begin": 0,
+      "metadata_end": 4
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.tconstruct.gadget.slimesling"
+      ]
+    }
+  ]
+}

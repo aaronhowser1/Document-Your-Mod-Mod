@@ -1,0 +1,70 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "management",
+      "feature": "chests_in_boats"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:boat"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:spruce_boat"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:birch_boat"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:jungle_boat"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:acacia_boat"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:dark_oak_boat"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:chest"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:trapped_chest"
+    },
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "quark:custom_chest",
+      "metadata_begin": 0,
+      "metadata_end": 4
+    },
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "quark:custom_chest_trap",
+      "metadata_begin": 0,
+      "metadata_end": 4
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.management.chests_in_boats.boat_carry_chest"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "vanity",
+      "feature": "boat_sails"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "minecraft:banner",
+      "metadata_begin": 0,
+      "metadata_end": 15
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:boat"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:spruce_boat"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:birch_boat"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:jungle_boat"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:acacia_boat"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:dark_oak_boat"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.vanity.boat_sails.boat_sail"
+      ]
+    }
+  ]
+}

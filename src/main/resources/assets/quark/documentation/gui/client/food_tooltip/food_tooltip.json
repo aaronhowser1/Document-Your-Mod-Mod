@@ -1,0 +1,150 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "gui_element"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "client",
+      "feature": "food_tooltip"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:apple"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:bread"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:porkchop"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:cooked_porkchop"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:cookie"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:melon"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:beef"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:cooked_beef"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:chicken"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:cooked_chicken"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:rotten_flesh"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:spider_eye"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:baked_potato"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:poisonous_potato"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:golden_carrot"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:pumpkin_pie"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:rabbit"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:cooked_rabbit"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:mutton"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:cooked_mutton"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:beetroot"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:golden_apple"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:chorus_fruit"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:fish"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:cooked_fish"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:carrot"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:potato"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:mushroom_stew"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:rabbit_stew"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:beetroot_soup"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:edible"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.gui.client.food_tooltip.food_tooltip"
+      ]
+    }
+  ]
+}
