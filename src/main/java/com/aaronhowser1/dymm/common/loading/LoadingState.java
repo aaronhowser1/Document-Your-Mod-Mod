@@ -35,6 +35,11 @@ public final class LoadingState implements GlobalLoadingState, Reporter {
         GLOBAL.apply(targetId, l, loader, globalContext);
     }
 
+    static void l(@Nonnull final L l) {
+        if (GLOBAL == null) return;
+        GLOBAL.l = Objects.requireNonNull(l);
+    }
+
     static void destroyCurrent() {
         GLOBAL = null;
     }

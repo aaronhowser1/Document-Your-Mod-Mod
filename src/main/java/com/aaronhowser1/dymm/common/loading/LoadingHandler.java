@@ -31,6 +31,7 @@ import javax.annotation.Nonnull;
 
 public final class LoadingHandler {
     private static final L LOG = L.create(Constants.MOD_NAME, "Documentation Loader");
+    private static final L LAZY_LOG = L.create(Constants.MOD_NAME, "Documentation Loader (LAZY)");
 
     private static final Loader LOADER;
 
@@ -122,7 +123,8 @@ public final class LoadingHandler {
         LOADER.load();
         LOG.info("Unbinding registry");
         registry = null;
-        LOG.info("Loading has completed");
+        LOG.info("Loading has completed, marking future loading attempts as \"lazy\"");
+        LoadingState.l(LAZY_LOG);
 
         if (bar != null) ProgressManager.pop(bar);
     }
