@@ -170,7 +170,7 @@ public final class DocumentationLoadingProcessor implements Processor<JsonObject
     private boolean isEnabled(@Nonnull final NameSpacedString identifier) {
         final String namespace = identifier.getNameSpace();
         final ModContainer targetContainer = Loader.instance().getModList().stream().filter(it -> namespace.equals(it.getModId())).findFirst().orElseThrow(RuntimeException::new);
-        final Configuration targets = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.ConfigurationTargets.CATEGORY_TARGETS);
+        final Configuration targets = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.ConfigurationTargets.NAME);
         return targets.get(Constants.ConfigurationTargets.CATEGORY_TARGETS, namespace, true, targetContainer.getName()).getBoolean();
     }
 
