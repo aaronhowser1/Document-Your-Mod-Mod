@@ -19,7 +19,9 @@ public final class Constants {
         public static final String CATEGORY_FOOLERY_COMMENT = "Some random features that aren't part of the mod, but may be fun to enable and play around with nonetheless";
 
         public static final String PROPERTY_FOOLERY_BRANDING_TIME = "branding_time";
-        public static final String PROPERTY_FOOLERY_BRANDING_TIME_COMMENT = "Mods loaded... mods active... but how many are documented?";
+        public static final String PROPERTY_FOOLERY_BRANDING_TIME_COMMENT = "Mods loaded... mods active... but how many are documented?\n" +
+                "Adds the amount of documented mods to the mod count in the bottom left of the main menu.\n" +
+                "Example: \"15 mods loaded, 15 mods active, 10 mods documented\"";
 
         private ConfigurationMain() {}
     }
