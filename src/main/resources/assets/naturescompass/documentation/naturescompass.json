@@ -19,11 +19,5 @@
         "dymm.tip.naturescompass.naturescompass"
       ]
     }
-  ],
-  "documentation": [
-    "dym.doc.naturescompass.naturescompass"
-  ],
-  "tooltip": [
-    "dym.tip.naturescompass.naturescompass"
   ]
 }
