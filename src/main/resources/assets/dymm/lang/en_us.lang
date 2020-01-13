@@ -8,6 +8,11 @@
 # Mod Specific Entries
 dymm.mod.configuration.error.message=An error has occurred while attempting to display the in-game configuration GUI, no further information.
 dymm.mod.configuration.error.title=Unable to Retrieve Configuration
+dymm.mod.configuration._main.tooltip=Handles configuration that is specific to DYMM behavior
+dymm.mod.configuration._main.debug.tooltip=Set of options useful for developers: you generally want these to be set to false
+dymm.mod.configuration._main.foolery.tooltip=Some random features that aren't part of the mod, but may be fun to enable and play around with nonetheless
+dymm.mod.configuration._targets.tooltip=Allows you to configure which mod targets DYMM should attempt to document
+dymm.mod.configuration._targets.targets.tooltip=Set here which targets should be enabled or not.\nNote that not all targets present here may also have entries in game.\nNOTE: Certain targets may require additional configuration
 dymm.mod.debug.target_entry=Documentation Entries
 dymm.mod.support.documentation_newer_than_mod=Documentation is for a newer version
 dymm.mod.support.documentation_out_of_date=Documentation may be out of date
@@ -50,6 +55,10 @@ dymm.doc.naturescompass.naturescompass=Use to open a list of biomes. Select one 
 
 # Nature's Compass -> Tooltip
 dymm.tip.naturescompass.naturescompass=Finds biomes
+
+# Quark -> Configuration Settings
+dymm.mod.configuration.quark.tooltip=Allows you to configure Quark-specific behavior
+dymm.mod.configuration.quark.targets.tooltip=Configures which category of targets should be documented inside Quark
 
 # Quark / Decorative Elements -> Documentation
 dymm.doc.quark.decoration.building.bark.block=Building block that has the log texture on all sides.\nComes in all different variants.\nParticurarly useful for wood-themed constructions.
@@ -334,6 +343,10 @@ dymm.doc.quark.vanilla.world.nether_fossils.nether_fossils=Fossils can now spawn
 dymm.doc.quark.vanilla.world.pathfinder_maps.pathfinder_map=Cartographer Villagers may trade you a Pathfinder Map, which points to the location of the nearest biome in the tooltip.
 dymm.doc.quark.vanilla.world.tree_variants.sakura=Blossoming Trees seldom generate in Mountain biomes.\n\nThey have Spruce wood and pink leaves which are good for decorations.
 dymm.doc.quark.vanilla.world.underground_clay.underground_clay=Clay generates in random patches underground, similar to Dirt.
+
+# Refined Storage -> Configuration Settings
+dymm.mod.configuration.refinedstorage.tooltip=Allows you to configure settings that are specific to Refined Storage
+dymm.mod.configuration.refinedstorage.experimental.tooltip=Experimental options to ease compatibility with Refined Storage.\nWARNING: They may not work correctly or cause errors; enable with care.
 
 # Refined Storage -> Documentation
 dymm.doc.refinedstorage.cable=Connects blocks to the Controller.
