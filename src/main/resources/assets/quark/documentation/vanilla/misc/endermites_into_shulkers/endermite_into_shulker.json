@@ -1,0 +1,38 @@
+{
+  "loader": "dymm:lazy",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "misc",
+      "feature": "endermites_into_shulkers"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:purpur_block"
+    },
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:endermite"
+    },
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:shulker"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.misc.endermites_into_shulkers.endermite_into_shulker"
+      ]
+    }
+  ]
+}

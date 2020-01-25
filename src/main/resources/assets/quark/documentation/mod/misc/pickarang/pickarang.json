@@ -1,0 +1,30 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "mod_elements"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "misc",
+      "feature": "pickarang"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:pickarang"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.mod.misc.pickarang.pickarang"
+      ]
+    }
+  ]
+}

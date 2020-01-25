@@ -1,0 +1,173 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "decorative_blocks"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "building",
+      "feature": "stained_planks"
+    },
+    {
+      "type": "quark:stair_slab_wall",
+      "module": "building",
+      "feature": "stained_planks",
+      "target": "stair_slab"
+    }
+  ],
+  "dependencies": [
+    {
+      "ordering": "after",
+      "requirement": "required",
+      "target": "quark:decoration/building/stained_wooden_planks/block"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "quark:stained_planks",
+      "metadata_begin": 0,
+      "metadata_end": 15
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_white_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_orange_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_magenta_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_light_blue_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_yellow_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_lime_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_pink_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_gray_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_silver_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_cyan_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_purple_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_blue_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_brown_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_green_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_red_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_black_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_white_slab"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_orange_slab"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_magenta_slab"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_light_blue_slab"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_yellow_slab"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_lime_slab"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_pink_slab"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_gray_slab"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_silver_slab"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_cyan_slab"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_purple_slab"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_blue_slab"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_brown_slab"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_green_slab"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_red_slab"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stained_planks_black_slab"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.decoration.building.stained_wooden_planks.stair_slab"
+      ]
+    }
+  ]
+}

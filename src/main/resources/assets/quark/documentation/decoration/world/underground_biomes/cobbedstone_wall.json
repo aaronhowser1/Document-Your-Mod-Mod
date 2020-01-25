@@ -1,0 +1,52 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "decorative_blocks"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "world",
+      "feature": "underground_biomes"
+    },
+    {
+      "type": "quark:underground_biomes_feature",
+      "feature": "cobbedstone"
+    },
+    {
+      "type": "quark:stair_slab_wall",
+      "module": "world",
+      "feature": "underground_biomes",
+      "target": "wall"
+    }
+  ],
+  "dependencies": [
+    {
+      "ordering": "after",
+      "requirement": "required",
+      "target": "quark:mod/world/underground_biomes/cobbedstone"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:biome_cobblestone",
+      "metadata": 2
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:cobbed_stone_wall"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.decoration.world.underground_biomes.cobbedstone_wall"
+      ]
+    }
+  ]
+}

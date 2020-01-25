@@ -1,0 +1,17 @@
+{
+  "loader": "dymm:default",
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "refinedstorage:wireless_fluid_grid"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.refinedstorage.grid.wireless_fluid"
+      ]
+    }
+  ]
+}

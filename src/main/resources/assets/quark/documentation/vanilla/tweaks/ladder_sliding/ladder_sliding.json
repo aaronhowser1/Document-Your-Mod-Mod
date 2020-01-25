@@ -1,0 +1,38 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "tweaks",
+      "feature": "look_down_ladders"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:ladder"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:iron_ladder"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:stone_ladder"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.tweaks.ladder_sliding.ladder_sliding"
+      ]
+    }
+  ]
+}

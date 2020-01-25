@@ -1,0 +1,33 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "mod_elements"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "automation",
+      "feature": "color_slime"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "quark:color_slime",
+      "metadata_begin": 0,
+      "metadata_end": 4
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.mod.automation.color_slime.color_slime"
+      ]
+    }
+  ]
+}
+

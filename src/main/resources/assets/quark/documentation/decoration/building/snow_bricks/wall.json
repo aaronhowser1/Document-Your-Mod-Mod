@@ -1,0 +1,36 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "decorative_blocks"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "building",
+      "feature": "snow_bricks"
+    },
+    {
+      "type": "quark:stair_slab_wall",
+      "module": "building",
+      "feature": "snow_bricks",
+      "target": "wall"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:snow_bricks_wall"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.decoration.building.snow_bricks.wall"
+      ]
+    }
+  ]
+}

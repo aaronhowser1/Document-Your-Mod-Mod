@@ -1,0 +1,146 @@
+{
+  "loader": "dymm:lazy",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "automation",
+      "feature": "animals_eat_floor_food"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:wheat"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:carrot"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:potato"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:beetroot"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:wheat_seeds"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:pumpkin_seeds"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:beetroot_seeds"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:melon_seeds"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:nether_wart"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:fish"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:golden_carrot"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:yellow_flower"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:porkchop"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:cooked_porkchop"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:rabbit"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:cooked_rabbit"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:mutton"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:cooked_mutton"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:beef"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:cooked_beef"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:chicken"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:cooked_chicken"
+    },
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:chicken"
+    },
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:cow"
+    },
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:mooshroom"
+    },
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:ocelot"
+    },
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:pig"
+    },
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:rabbit"
+    },
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:sheep"
+    },
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:wolf"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.automation.hungry_animals.animals_eat_floor_food"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "condition": {
+    "configuration_option": "com.aaronhowser1.dymm.module.base.factory.ConfigurationOptionConditionFactory"
+  },
+  "target": {
+    "item_meta_range": "com.aaronhowser1.dymm.module.base.factory.MetadataRangeItemTargetFactory",
+    "potion": "com.aaronhowser1.dymm.module.base.factory.PotionTargetFactory",
+    "spawn_egg": "com.aaronhowser1.dymm.module.base.factory.SpawnEggTargetFactory"
+  }
+}

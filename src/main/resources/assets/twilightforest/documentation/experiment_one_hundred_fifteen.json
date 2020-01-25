@@ -1,0 +1,17 @@
+{
+  "loader": "dymm:default",
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "twilightforest:experiment_115"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.twilightforest.experiment_one_hundred_fifteen"
+      ]
+    }
+  ]
+}

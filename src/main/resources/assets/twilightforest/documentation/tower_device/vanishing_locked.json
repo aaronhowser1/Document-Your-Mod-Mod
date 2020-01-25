@@ -1,0 +1,30 @@
+{
+  "loader": "dymm:default",
+  "dependencies": [
+    {
+      "ordering": "after",
+      "requirement": "required",
+      "target": "twilightforest:tower_device/vanishing"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "twilightforest:tower_device",
+      "metadata": 2
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "twilightforest:tower_device",
+      "metadata": 4
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.twilightforest.tower_device.vanishing_locked"
+      ]
+    }
+  ]
+}

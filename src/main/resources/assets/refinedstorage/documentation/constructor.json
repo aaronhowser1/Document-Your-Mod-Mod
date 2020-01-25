@@ -1,0 +1,17 @@
+{
+  "loader": "dymm:default",
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "refinedstorage:constructor"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.refinedstorage.constructor"
+      ]
+    }
+  ]
+}

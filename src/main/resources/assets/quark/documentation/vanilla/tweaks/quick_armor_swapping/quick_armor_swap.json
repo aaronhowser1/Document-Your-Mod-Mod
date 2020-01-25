@@ -1,0 +1,30 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "tweaks",
+      "feature": "quick_armor_swapping"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:armor_stand"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.tweaks.quick_armor_swapping.quick_armor_swap"
+      ]
+    }
+  ]
+}

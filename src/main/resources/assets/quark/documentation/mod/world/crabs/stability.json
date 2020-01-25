@@ -1,0 +1,41 @@
+{
+  "loader": "dymm:lazy",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "mod_elements"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "world",
+      "feature": "crabs"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:potion",
+      "kind": "all",
+      "effect": "quark:resilience"
+    },
+    {
+      "type": "dymm:potion",
+      "kind": "all",
+      "effect": "quark:long_resilience"
+    },
+    {
+      "type": "dymm:potion",
+      "kind": "all",
+      "effect": "quark:strong_resilience"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.mod.world.crabs.stability"
+      ]
+    }
+  ]
+}

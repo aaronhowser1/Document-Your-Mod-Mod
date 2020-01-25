@@ -1,0 +1,30 @@
+{
+  "loader": "dymm:lazy",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "mod_elements"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "world",
+      "feature": "depth_mobs"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:spawn_egg",
+      "id": "quark:dweller"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.mod.world.depth_mobs.dweller"
+      ]
+    }
+  ]
+}

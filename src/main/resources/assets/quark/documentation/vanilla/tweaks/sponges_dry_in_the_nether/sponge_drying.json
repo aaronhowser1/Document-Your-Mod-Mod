@@ -1,0 +1,36 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "tweaks",
+      "feature": "sponge_dries_in_nether"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:sponge",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:sponge",
+      "metadata": 1
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.tweaks.sponges_dry_in_the_nether.sponge_drying"
+      ]
+    }
+  ]
+}

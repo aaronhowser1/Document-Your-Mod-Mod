@@ -1,0 +1,17 @@
+{
+  "loader": "dymm:default",
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:piggybackpack"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.tconstruct.piggybackpack"
+      ]
+    }
+  ]
+}

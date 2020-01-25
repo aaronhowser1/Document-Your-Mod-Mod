@@ -1,0 +1,36 @@
+{
+  "loader": "dymm:lazy",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "mod_elements"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "misc",
+      "feature": "parrot_eggs"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "quark:parrot_egg",
+      "metadata_begin": 0,
+      "metadata_end": 4
+    },
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:parrot"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.mod.misc.parrot_eggs.parrot_egg"
+      ]
+    }
+  ]
+}

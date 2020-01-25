@@ -1,0 +1,17 @@
+{
+  "loader": "dymm:default",
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "refinedstorage:network_receiver"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.refinedstorage.network_receiver"
+      ]
+    }
+  ]
+}

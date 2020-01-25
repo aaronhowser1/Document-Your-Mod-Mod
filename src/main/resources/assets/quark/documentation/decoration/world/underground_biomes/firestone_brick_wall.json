@@ -1,0 +1,57 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "decorative_blocks"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "world",
+      "feature": "underground_biomes"
+    },
+    {
+      "type": "quark:underground_biomes_feature",
+      "feature": "firestone"
+    },
+    {
+      "type": "quark:stair_slab_wall",
+      "module": "world",
+      "feature": "underground_biomes",
+      "target": "wall"
+    }
+  ],
+  "dependencies": [
+    {
+      "ordering": "after",
+      "requirement": "required",
+      "target": "quark:decoration/world/underground_biomes/firestone_brick"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:biome_cobblestone",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:biome_brick",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:fire_stone_brick_wall"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.decoration.world.underground_biomes.firestone_brick_wall"
+      ]
+    }
+  ]
+}

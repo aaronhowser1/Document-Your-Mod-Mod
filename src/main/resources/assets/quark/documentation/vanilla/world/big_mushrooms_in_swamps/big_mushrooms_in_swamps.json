@@ -1,0 +1,34 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "world",
+      "feature": "mushrooms_in_swamps"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:brown_mushroom_block"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:red_mushroom_block"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.world.big_mushrooms_in_swamps.big_mushrooms_in_swamps"
+      ]
+    }
+  ]
+}

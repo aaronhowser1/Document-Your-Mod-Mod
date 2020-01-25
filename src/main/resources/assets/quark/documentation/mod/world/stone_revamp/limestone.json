@@ -1,0 +1,32 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "mod_elements"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "world",
+      "feature": "revamp_stone_gen"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "quark:limestone",
+      "metadata_begin": 0,
+      "metadata_end": 1
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.mod.world.stone_revamp.limestone"
+      ]
+    }
+  ]
+}

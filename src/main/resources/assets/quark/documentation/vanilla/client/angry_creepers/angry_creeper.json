@@ -1,0 +1,30 @@
+{
+  "loader": "dymm:lazy",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "client",
+      "feature": "angry_creepers"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:creeper"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.client.angry_creepers.angry_creeper"
+      ]
+    }
+  ]
+}

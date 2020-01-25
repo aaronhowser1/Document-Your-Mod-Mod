@@ -1,0 +1,21 @@
+{
+  "loader": "dymm:default",
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "twilightforest:ore_map"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "twilightforest:ore_map_empty"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.twilightforest.map.ore"
+      ]
+    }
+  ]
+}

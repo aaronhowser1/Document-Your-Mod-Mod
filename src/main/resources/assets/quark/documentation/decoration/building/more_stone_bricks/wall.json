@@ -1,0 +1,77 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "decorative_blocks"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "building",
+      "feature": "world_stone_bricks"
+    },
+    {
+      "type": "quark:stair_slab_wall",
+      "module": "building",
+      "feature": "world_stone_bricks",
+      "target": "wall"
+    }
+  ],
+  "dependencies": [
+    {
+      "ordering": "after",
+      "requirement": "required",
+      "target": "quark:decoration/building/more_stone_bricks/block"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "quark:world_stone_bricks",
+      "metadata_begin": 0,
+      "metadata_end": 7
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stone_granite_bricks_wall"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stone_diorite_bricks_wall"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stone_andesite_bricks_wall"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stone_basalt_bricks_wall"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stone_marble_bricks_wall"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stone_limestone_bricks_wall"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stone_jasper_bricks_wall"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stone_slate_bricks_wall"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.decoration.building.more_stone_bricks.wall"
+      ]
+    }
+  ]
+}

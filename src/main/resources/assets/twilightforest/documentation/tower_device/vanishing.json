@@ -1,0 +1,18 @@
+{
+  "loader": "dymm:default",
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "twilightforest:tower_device",
+      "metadata": 2
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.twilightforest.tower_device.vanishing"
+      ]
+    }
+  ]
+}

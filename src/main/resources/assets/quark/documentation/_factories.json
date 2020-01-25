@@ -1,0 +1,18 @@
+{
+  "condition": {
+    "archaeologist_hat_behavior": "com.aaronhowser1.dymm.module.compatibility.quark.factory.ArchaeologistHatBehaviorConditionFactory",
+    "experimental_feature_enabled": "com.aaronhowser1.dymm.module.compatibility.quark.factory.ExperimentalFeatureEnabledConditionFactory",
+    "extra_potion": "com.aaronhowser1.dymm.module.compatibility.quark.factory.ExtraPotionConditionFactory",
+    "magical_horse_whistle": "com.aaronhowser1.dymm.module.compatibility.quark.factory.MagicalHorseWhistleConditionFactory",
+    "module_feature_enabled": "com.aaronhowser1.dymm.module.compatibility.quark.factory.ModuleFeatureEnabledConditionFactory",
+    "rope_dispensing_behavior": "com.aaronhowser1.dymm.module.compatibility.quark.factory.RopeDispensingBehaviorConditionFactory",
+    "stained_clay_enabled": "com.aaronhowser1.dymm.module.compatibility.quark.factory.StainedClayEnabledConditionFactory",
+    "stained_planks_enabled": "com.aaronhowser1.dymm.module.compatibility.quark.factory.StainedPlanksEnabledConditionFactory",
+    "stair_slab_wall": "com.aaronhowser1.dymm.module.compatibility.quark.factory.StairSlabWallConditionFactory",
+    "tree_variants_generation_status": "com.aaronhowser1.dymm.module.compatibility.quark.factory.TreeVariantsGenerationStatusConditionFactory",
+    "underground_biomes_feature": "com.aaronhowser1.dymm.module.compatibility.quark.factory.UndergroundBiomesFeatureConditionFactory",
+    "vanilla_dust_placing_status": "com.aaronhowser1.dymm.module.compatibility.quark.factory.VanillaDustPlacingStatusConditionFactory",
+    "varied_buttons_pressure_plates_feature": "com.aaronhowser1.dymm.module.compatibility.quark.factory.VariedButtonsPressurePlatesFeatureConditionFactory",
+    "wraith_curse_status": "com.aaronhowser1.dymm.module.compatibility.quark.factory.WraithCurseStatusConditionFactory"
+  }
+}

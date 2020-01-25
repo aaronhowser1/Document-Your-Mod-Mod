@@ -1,0 +1,18 @@
+{
+  "loader": "dymm:default",
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "refinedstorage:fluid_storage",
+      "metadata": 2
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.refinedstorage.storage_block.fluid.1024k"
+      ]
+    }
+  ]
+}

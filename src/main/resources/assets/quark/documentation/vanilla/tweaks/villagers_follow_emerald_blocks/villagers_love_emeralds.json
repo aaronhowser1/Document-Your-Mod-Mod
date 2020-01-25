@@ -1,0 +1,34 @@
+{
+  "loader": "dymm:lazy",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "tweaks",
+      "feature": "villager_pursue_emeralds"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:emerald_block"
+    },
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:villager"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.tweaks.villagers_follow_emerald_blocks.villagers_love_emeralds"
+      ]
+    }
+  ]
+}

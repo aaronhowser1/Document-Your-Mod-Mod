@@ -1,0 +1,58 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "decoration",
+      "feature": "tie_fences"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:lead"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:fence"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:nether_brick_fence"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:spruce_fence"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:birch_fence"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:jungle_fence"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:dark_oak_fence"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:acacia_fence"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.decoration.tie_leads_to_fences.tie_fences"
+      ]
+    }
+  ]
+}

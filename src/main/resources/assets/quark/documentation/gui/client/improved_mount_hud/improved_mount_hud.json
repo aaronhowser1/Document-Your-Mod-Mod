@@ -1,0 +1,42 @@
+{
+  "loader": "dymm:lazy",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "gui_element"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "client",
+      "feature": "improved_mount_h_u_d"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:horse"
+    },
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:donkey"
+    },
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:mule"
+    },
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:pig"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.gui.client.improved_mount_hud.improved_mount_hud"
+      ]
+    }
+  ]
+}

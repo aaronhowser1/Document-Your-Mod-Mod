@@ -1,0 +1,45 @@
+{
+  "loader": "dymm:lazy",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "misc",
+      "feature": "extra_potions"
+    },
+    {
+      "type": "quark:extra_potion",
+      "potion": "haste"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:potion",
+      "kind": "all",
+      "effect": "quark:mining_fatigue"
+    },
+    {
+      "type": "dymm:potion",
+      "kind": "all",
+      "effect": "quark:long_mining_fatigue"
+    },
+    {
+      "type": "dymm:potion",
+      "kind": "all",
+      "effect": "quark:strong_mining_fatigue"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.misc.extra_potions.mining_fatigue"
+      ]
+    }
+  ]
+}

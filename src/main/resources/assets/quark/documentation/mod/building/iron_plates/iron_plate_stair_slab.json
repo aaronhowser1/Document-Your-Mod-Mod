@@ -1,0 +1,52 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "mod_elements"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "building",
+      "feature": "iron_plates"
+    },
+    {
+      "type": "quark:stair_slab_wall",
+      "module": "building",
+      "feature": "iron_plates",
+      "target": "stair_slab"
+    }
+  ],
+  "dependencies": [
+    {
+      "ordering": "after",
+      "requirement": "required",
+      "target": "quark:mod/building/iron_plates/iron_plate"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:iron_plate",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:iron_plate_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:iron_plate_slab"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.mod.building.iron_plates.iron_plate_stair_slab"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "loader": "dymm:default",
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "naturescompass:naturescompass"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.naturescompass.naturescompass"
+      ]
+    },
+    {
+      "type": "minecraft:tooltip",
+      "data": [
+        "dymm.tip.naturescompass.naturescompass"
+      ]
+    }
+  ]
+}

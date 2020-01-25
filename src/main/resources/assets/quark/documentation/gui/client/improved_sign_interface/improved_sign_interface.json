@@ -1,0 +1,30 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "gui_element"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "client",
+      "feature": "improved_sign_edit"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:sign"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.gui.client.improved_sign_interface.improved_sign_interface"
+      ]
+    }
+  ]
+}

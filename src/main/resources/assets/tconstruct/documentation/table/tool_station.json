@@ -1,0 +1,18 @@
+{
+  "loader": "dymm:default",
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:tooltables",
+      "metadata": 3
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.tconstruct.table.tool_station"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "decorative_blocks"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "decoration",
+      "feature": "colored_item_frames"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:item_frame"
+    },
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "quark:colored_item_frame",
+      "metadata_begin": 0,
+      "metadata_end": 15
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.decoration.decoration.colored_item_frames.colored_item_frames"
+      ]
+    }
+  ]
+}

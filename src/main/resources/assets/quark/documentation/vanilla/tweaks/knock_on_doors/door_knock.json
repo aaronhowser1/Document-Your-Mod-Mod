@@ -1,0 +1,50 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "tweaks",
+      "feature": "knock_on_doors"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:acacia_door"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:birch_door"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:dark_oak_door"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:jungle_door"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:wooden_door"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:spruce_door"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.tweaks.knock_on_doors.door_knock"
+      ]
+    }
+  ]
+}

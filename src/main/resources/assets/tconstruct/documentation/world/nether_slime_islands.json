@@ -1,0 +1,43 @@
+{
+  "loader": "dymm:default",
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_sapling",
+      "metadata": 2
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 4
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 9
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_grass",
+      "metadata": 14
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_dirt",
+      "metadata": 3
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "tconstruct:slime_congealed",
+      "metadata": 4
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.tconstruct.world.nether_slime_islands"
+      ]
+    }
+  ]
+}
