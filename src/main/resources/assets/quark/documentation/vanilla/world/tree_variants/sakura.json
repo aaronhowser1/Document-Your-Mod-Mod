@@ -1,0 +1,45 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "world",
+      "feature": "tree_variants"
+    },
+    {
+      "type": "quark:tree_variants_generation_status",
+      "variant": "sakura"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:log",
+      "metadata": 1
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:variant_leaves",
+      "metadata": 1
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:variant_sapling",
+      "metadata": 1
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.world.tree_variants.sakura"
+      ]
+    }
+  ]
+}

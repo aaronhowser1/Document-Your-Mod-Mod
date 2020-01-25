@@ -1,0 +1,70 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "decorative_blocks"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "building",
+      "feature": "vanilla_stairs_and_slabs"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stone_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stone_granite_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stone_diorite_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stone_andesite_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:end_bricks_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:prismarine_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:prismarine_bricks_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:prismarine_dark_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:red_nether_brick_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:cobblestone_mossy_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stonebrick_mossy_stairs"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.decoration.building.vanilla_stairs_and_slabs.vanilla_stairs"
+      ]
+    }
+  ]
+}

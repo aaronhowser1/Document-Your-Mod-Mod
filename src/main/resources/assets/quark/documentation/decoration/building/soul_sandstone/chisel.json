@@ -1,0 +1,36 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "decorative_blocks"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "building",
+      "feature": "soul_sandstone"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:soul_sandstone",
+      "metadata": 1
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:soul_sandstone",
+      "metadata": 2
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.decoration.building.soul_sandstone.chisel"
+      ]
+    }
+  ]
+}

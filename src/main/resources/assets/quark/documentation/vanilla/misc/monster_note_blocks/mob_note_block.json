@@ -1,0 +1,60 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "misc",
+      "feature": "note_blocks_mob_sounds"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:noteblock"
+    },
+    {
+      "__comment": "Skeleton",
+      "type": "minecraft:item",
+      "registry_name": "minecraft:skull",
+      "metadata": 0
+    },
+    {
+      "__comment": "Wither Skeleton",
+      "type": "minecraft:item",
+      "registry_name": "minecraft:skull",
+      "metadata": 1
+    },
+    {
+      "__comment": "Zombie",
+      "type": "minecraft:item",
+      "registry_name": "minecraft:skull",
+      "metadata": 2
+    },
+    {
+      "__comment": "Creeper",
+      "type": "minecraft:item",
+      "registry_name": "minecraft:skull",
+      "metadata": 4
+    },
+    {
+      "__comment": "Ender Dragon",
+      "type": "minecraft:item",
+      "registry_name": "minecraft:skull",
+      "metadata": 5
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.misc.monster_note_blocks.mob_note_block"
+      ]
+    }
+  ]
+}

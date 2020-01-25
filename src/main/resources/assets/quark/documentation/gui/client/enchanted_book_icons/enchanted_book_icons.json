@@ -1,0 +1,34 @@
+{
+  "loader": "dymm:lazy",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "gui_element"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "client",
+      "feature": "enchanted_books_show_items"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:dynamic_nbt_item",
+      "registry_name": "minecraft:enchanted_book"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:ancient_tome"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.gui.client.enchanted_book_icons.enchanted_book_icons"
+      ]
+    }
+  ]
+}

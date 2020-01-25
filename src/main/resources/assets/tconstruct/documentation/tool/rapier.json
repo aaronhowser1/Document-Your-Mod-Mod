@@ -1,0 +1,17 @@
+{
+  "loader": "dymm:lazy",
+  "targets": [
+    {
+      "type": "minecraft:dynamic_nbt_item",
+      "registry_name": "tconstruct:rapier"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.tconstruct.tool.rapier"
+      ]
+    }
+  ]
+}

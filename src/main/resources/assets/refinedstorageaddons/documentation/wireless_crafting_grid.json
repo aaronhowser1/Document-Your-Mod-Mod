@@ -1,0 +1,18 @@
+{
+  "loader": "dymm:default",
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "refinedstorageaddons:wireless_crafting_grid",
+      "metadata": 0
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.refinedstorageaddons.wireless_crafting_grid"
+      ]
+    }
+  ]
+}

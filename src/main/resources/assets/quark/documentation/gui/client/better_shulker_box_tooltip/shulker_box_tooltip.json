@@ -1,0 +1,90 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "gui_element"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "client",
+      "feature": "shulker_box_tooltip"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:white_shulker_box"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:orange_shulker_box"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:magenta_shulker_box"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:light_blue_shulker_box"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:yellow_shulker_box"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:lime_shulker_box"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:pink_shulker_box"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:gray_shulker_box"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:silver_shulker_box"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:cyan_shulker_box"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:purple_shulker_box"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:blue_shulker_box"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:brown_shulker_box"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:green_shulker_box"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:red_shulker_box"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:black_shulker_box"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.gui.client.better_shulker_box_tooltip.shulker_box_tooltip"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "decorative_blocks"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "world",
+      "feature": "underground_biomes"
+    },
+    {
+      "type": "quark:underground_biomes_feature",
+      "feature": "elder_prismarine"
+    }
+  ],
+  "dependencies": [
+    {
+      "ordering": "after",
+      "requirement": "required",
+      "target": "quark:mod/world/underground_biomes/elder_prismarine"
+    },
+    {
+      "ordering": "after",
+      "requirement": "optional",
+      "target": "quark:decoration/world/underground_biomes/elder_prismarine_stair_slab"
+    },
+    {
+      "ordering": "after",
+      "requirement": "optional",
+      "target": "quark:decoration/world/underground_biomes/elder_prismarine_wall"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:elder_prismarine",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:elder_prismarine",
+      "metadata": 2
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.decoration.world.underground_biomes.elder_prismarine_dark"
+      ]
+    }
+  ]
+}

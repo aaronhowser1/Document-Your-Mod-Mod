@@ -1,0 +1,58 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "tweaks",
+      "feature": "axes_break_leaves"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "minecraft:leaves",
+      "metadata_begin": 0,
+      "metadata_end": 3
+    },
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "minecraft:leaves2",
+      "metadata_begin": 0,
+      "metadata_end": 1
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:wooden_axe"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:stone_axe"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:iron_axe"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:golden_axe"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:diamond_axe"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.tweaks.axe_leaf_harvesting.axe_leaf_break"
+      ]
+    }
+  ]
+}

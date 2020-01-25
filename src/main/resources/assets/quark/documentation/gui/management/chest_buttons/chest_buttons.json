@@ -1,0 +1,50 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "gui_element"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "management",
+      "feature": "chest_buttons"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:chest"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:ender_chest"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:trapped_chest"
+    },
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "quark:custom_chest",
+      "metadata_begin": 0,
+      "metadata_end": 4
+    },
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "quark:custom_chest_trap",
+      "metadata_begin": 0,
+      "metadata_end": 4
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.gui.management.chest_buttons.chest_buttons"
+      ]
+    }
+  ]
+}

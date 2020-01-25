@@ -1,0 +1,31 @@
+{
+  "loader": "dymm:lazy",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "tweaks",
+      "feature": "jump_boost_step_assist"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:potion",
+      "kind": "all",
+      "effect": "minecraft:strong_leaping"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.tweaks.jump_boost_step_assist.jump_boost_step_assist"
+      ]
+    }
+  ]
+}

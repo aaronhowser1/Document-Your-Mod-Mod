@@ -1,0 +1,30 @@
+{
+  "loader": "dymm:lazy",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "tweaks",
+      "feature": "endermen_anti_cheese"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:enderman"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.tweaks.enderman_anti_cheese.enderman_anti_cheese"
+      ]
+    }
+  ]
+}

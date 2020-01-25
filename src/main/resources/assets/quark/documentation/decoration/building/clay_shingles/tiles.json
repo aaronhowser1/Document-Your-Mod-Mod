@@ -1,0 +1,51 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "decorative_blocks"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "building",
+      "feature": "hardened_clay_tiles"
+    },
+    {
+      "type": "quark:stained_clay_enabled"
+    }
+  ],
+  "dependencies": [
+    {
+      "ordering": "after",
+      "requirement": "required",
+      "target": "quark:decoration/building/clay_shingles/block"
+    },
+    {
+      "ordering": "after",
+      "requirement": "optional",
+      "target": "quark:decoration/building/clay_shingles/stair_slab"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:hardened_clay_tiles"
+    },
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "quark:stained_clay_tiles",
+      "metadata_begin": 0,
+      "metadata_end": 15
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.decoration.building.clay_shingles.tiles"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "mod_elements"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "world",
+      "feature": "speleothems"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:stone_speleothem"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:granite_speleothem"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:diorite_speleothem"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:andesite_speleothem"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:netherrack_speleothem"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:basalt_speleothem"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:marble_speleothem"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:limestone_speleothem"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:jasper_speleothem"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:slate_speleothem"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.mod.world.speleothems.speleothem"
+      ]
+    }
+  ]
+}

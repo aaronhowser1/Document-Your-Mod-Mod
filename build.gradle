@@ -8,16 +8,28 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
-        classpath group: 'net.thesilkminer.gradle.translationchecker', name: 'TranslationChecker', version: '1.1'
+        classpath group: "net.minecraftforge.gradle", name: "ForgeGradle", version: "2.3-SNAPSHOT"
+        classpath group: "net.thesilkminer.gradle.translationchecker", name: "TranslationChecker", version: "1.1"
     }
 }
-apply plugin: 'net.minecraftforge.gradle.forge'
-//Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
+apply plugin: "net.minecraftforge.gradle.forge"
 
+static def getGitCommit() {
+    def proc = "git rev-parse --short HEAD".execute()
+    proc.waitFor()
+    return proc.exitValue() ? "EINVAL(NO_GIT)" : proc.text.trim()
+}
 
-version = "${mod_version}"
-group = "com.aaronhowser1.DocumentMod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+static def getBuildNumber() {
+    return System.env.BUILD_NUMBER? System.env.BUILD_NUMBER : System.env.TRAVIS_BUILD_NUMBER
+}
+
+static def getBuildString() {
+    return getBuildNumber()? "+build.${getBuildNumber()}" : ""
+}
+
+version = "${mod_version}" + getBuildString()
+group = "com.aaronhowser1.dymm" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "DocumentYourModMod"
 
 sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
@@ -31,31 +43,23 @@ minecraft {
     mappings = "${mappings_version}"
 
     replace "@VERSION@", project.version
-    replaceIn "DocumentMod.java"
+    replace "@FINGERPRINT@", project.findProperty('signSHA1')
 }
 
 repositories {
     maven {
-        // location of the maven that hosts JEI files
         name = "Progwml6 maven"
         url = "https://dvs1.progwml6.com/files/maven/"
     }
     maven {
-        // location of a maven mirror for JEI files, as a fallback
         name = "ModMaven"
         url = "https://modmaven.k-4u.nl"
-    }
-    maven { // for AutoRegLib and Quark
-        name "blamejared"
-        url "http://maven.blamejared.com/"
     }
 }
 
 dependencies {
-    // compile against the JEI API but do not include it at runtime
-    deobfProvided "mezz.jei:jei_${mc_version}:${jei_version}:api"
-    // at runtime, use the full JEI jar
-    runtime "mezz.jei:jei_${mc_version}:${jei_version}"
+    deobfProvided group: "mezz.jei", name: "jei_${mc_version}", version: "${jei_version}", classifier: "api"
+    runtime group: "mezz.jei", name: "jei_${mc_version}", version: "${jei_version}"
 
 }
 
@@ -67,24 +71,70 @@ processResources {
     // replace stuff in mcmod.info, nothing else
     from(sourceSets.main.resources.srcDirs) {
         include 'mcmod.info'
-                
+        include 'assets/dymm/documentation/_supported_versions.json'
+
         // replace version and mcversion
         expand 'version':project.version, 'mcversion':project.minecraft.version
     }
-        
+
     // copy everything else except the mcmod.info
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
+        exclude 'assets/dymm/documentation/_supported_versions.json'
     }
 }
 
 task updateTranslations(type: net.thesilkminer.gradle.plugin.translationchecker.tasks.TranslationCheckTask) {
-    modId = "documentmod"
+    modId = "dym"
     templateFileName = "en_us.lang"
 }
 
 task checkTranslations(type: net.thesilkminer.gradle.plugin.translationchecker.tasks.TranslationCheckTask) {
-    modId = "documentmod"
+    modId = "dym"
     dryRun = true
     templateFileName = "en_us.lang"
+}
+
+task deobfJar(type: Jar, dependsOn: 'jar') {
+    from "build/source/main"
+    classifier "deobf"
+}
+
+task signJar(type: SignJar, dependsOn: 'reobfJar') {
+    onlyIf {
+        project.hasProperty('keystore')
+    }
+    keyStore = project.findProperty('keystore')
+    alias = project.findProperty('keystoreAlias')
+    storePass = project.findProperty('keystorePass')
+    keyPass = project.findProperty('keyPass')
+    inputFile = jar.archivePath
+    outputFile = jar.archivePath
+}
+
+build.dependsOn signJar
+
+artifacts {
+    archives deobfJar
+}
+
+jar {
+    manifest {
+        attributes([
+                "Specification-Title": "Document Your Mod Mod",
+                "Specification-Vendor": "aaronhowser1",
+                "Specification-Version": "1.0.0",
+                "Implementation-Title": project.name,
+                "Implementation-Version": "${version}",
+                "Implementation-Vendor" :"aaronhowser1; TheSilkMiner",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+                "GitCommit": "" + getGitCommit(),
+                "BuildNumber": "" + getBuildNumber()
+        ])
+    }
+}
+
+wrapper {
+    gradleVersion = "4.9"
+    distributionType = Wrapper.DistributionType.ALL
 }

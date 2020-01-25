@@ -1,0 +1,50 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "decorative_blocks"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "decoration",
+      "feature": "varied_buttons_and_pressure_plates"
+    },
+    {
+      "type": "quark:varied_buttons_pressure_plates_feature",
+      "feature": "plate"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:spruce_pressure_plate"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:birch_pressure_plate"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:jungle_pressure_plate"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:acacia_pressure_plate"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:dark_oak_pressure_plate"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.decoration.decoration.all_the_buttons_and_pressure_plates.varied_pressure_plates"
+      ]
+    }
+  ]
+}

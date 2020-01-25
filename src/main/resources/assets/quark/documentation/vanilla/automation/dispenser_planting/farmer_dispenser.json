@@ -1,0 +1,67 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "automation",
+      "feature": "dispensers_place_seeds"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:dispenser"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:pumpkin_seeds"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:beetroot_seeds"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:wheat_seeds"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:melon_seeds"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:nether_wart"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:potato"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:carrot"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:chorus_flower"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:dye",
+      "metadata": 3
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.automation.dispenser_planting.farmer_dispenser"
+      ]
+    }
+  ]
+}

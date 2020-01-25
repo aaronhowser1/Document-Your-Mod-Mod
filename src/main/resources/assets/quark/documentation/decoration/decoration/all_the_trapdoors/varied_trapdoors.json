@@ -1,0 +1,46 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "decorative_blocks"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "decoration",
+      "feature": "varied_trapdoors"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:spruce_trapdoor"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:birch_trapdoor"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:jungle_trapdoor"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:acacia_trapdoor"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:dark_oak_trapdoor"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.decoration.decoration.all_the_trapdoors.varied_trapdoors"
+      ]
+    }
+  ]
+}

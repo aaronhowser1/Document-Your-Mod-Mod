@@ -1,0 +1,62 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "decorative_blocks"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "building",
+      "feature": "soul_sandstone"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "building",
+      "feature": "more_sandstone"
+    },
+    {
+      "type": "quark:stair_slab_wall",
+      "module": "building",
+      "feature": "more_sandstone",
+      "target": "stair_slab"
+    }
+  ],
+  "dependencies": [
+    {
+      "ordering": "after",
+      "requirement": "required",
+      "target": "quark:decoration/building/soul_sandstone/decor"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "quark:sandstone_new",
+      "metadata_begin": 4,
+      "metadata_end": 5
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:soul_sandstone_bricks_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:soul_sandstone_smooth_slab"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:soul_sandstone_bricks_slab"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.decoration.building.soul_sandstone.decor_stair_slab"
+      ]
+    }
+  ]
+}

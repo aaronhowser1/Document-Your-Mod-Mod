@@ -1,0 +1,51 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "decorative_blocks"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "building",
+      "feature": "magma_bricks"
+    },
+    {
+      "type": "quark:stair_slab_wall",
+      "module": "building",
+      "feature": "magma_bricks",
+      "target": "stair_slab"
+    }
+  ],
+  "dependencies": [
+    {
+      "ordering": "after",
+      "requirement": "required",
+      "target": "quark:mod/building/magma_bricks/magma_bricks"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:magma_bricks"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:magma_bricks_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:magma_bricks_slab"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.decoration.building.magma_bricks.magma_bricks_stair_slab"
+      ]
+    }
+  ]
+}

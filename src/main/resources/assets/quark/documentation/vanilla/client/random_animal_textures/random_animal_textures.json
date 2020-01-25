@@ -1,0 +1,38 @@
+{
+  "loader": "dymm:lazy",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "client",
+      "feature": "random_animal_textures"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:cow"
+    },
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:pig"
+    },
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:chicken"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.client.random_animal_textures.random_animal_textures"
+      ]
+    }
+  ]
+}

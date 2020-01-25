@@ -1,0 +1,45 @@
+{
+  "loader": "dymm:lazy",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "misc",
+      "feature": "extra_potions"
+    },
+    {
+      "type": "quark:extra_potion",
+      "potion": "resistance"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:potion",
+      "kind": "all",
+      "effect": "quark:resistance"
+    },
+    {
+      "type": "dymm:potion",
+      "kind": "all",
+      "effect": "quark:long_resistance"
+    },
+    {
+      "type": "dymm:potion",
+      "kind": "all",
+      "effect": "quark:strong_resistance"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.vanilla.misc.extra_potions.resistance"
+      ]
+    }
+  ]
+}

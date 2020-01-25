@@ -1,0 +1,46 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "decorative_blocks"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "building",
+      "feature": "midori_blocks"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:midori_block"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:midori_pillar"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:midori_block_stairs"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:midori_block_slab"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:midori_block_wall"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.decoration.building.midori_blocks.midori_blocks"
+      ]
+    }
+  ]
+}

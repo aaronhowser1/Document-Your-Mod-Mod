@@ -1,0 +1,40 @@
+{
+  "loader": "dymm:lazy",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "mod_elements"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "misc",
+      "feature": "extra_potions"
+    },
+    {
+      "type": "quark:extra_potion",
+      "potion": "danger_sight"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:potion",
+      "kind": "all",
+      "effect": "quark:danger_sight"
+    },
+    {
+      "type": "dymm:potion",
+      "kind": "all",
+      "effect": "quark:long_danger_sight"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quark.mod.misc.extra_potions.danger_sight"
+      ]
+    }
+  ]
+}
