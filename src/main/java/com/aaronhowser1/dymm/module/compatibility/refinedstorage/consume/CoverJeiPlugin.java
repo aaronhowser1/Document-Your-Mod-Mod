@@ -10,6 +10,7 @@ import mezz.jei.api.ingredients.VanillaTypes;
 import net.minecraftforge.common.config.ConfigCategory;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
+import net.minecraftforge.fml.common.Loader;
 
 import javax.annotation.Nonnull;
 
@@ -21,6 +22,11 @@ public final class CoverJeiPlugin implements IModPlugin {
     @Override
     public void register(@Nonnull final IModRegistry registry) {
         LOG.info("Attempting to set up JEI integration for Refined Storage's covers");
+
+        if (!Loader.isModLoaded("refinedstorage")) {
+            LOG.warn("Unable to load plugin: Refined Storage isn't loaded");
+            return;
+        }
 
         final RecipeRegistryCoverDocumentation plugin = new RecipeRegistryCoverDocumentation(registry.getJeiHelpers().getGuiHelper());
 
