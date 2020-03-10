@@ -17,6 +17,7 @@ import net.minecraftforge.client.event.GuiOpenEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
+import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
@@ -33,7 +34,11 @@ public final class TooltipEntryRegistryHandler {
     private static final LoadingCache<ResourceLocation, List<DocumentationEntry>> DOCUMENTATION_CACHE;
     private static final LoadingCache<ItemStack, List<ResourceLocation>> STACKS_CACHE;
 
-    private TooltipEntryRegistryHandler() {}
+    private boolean tooltip;
+
+    private TooltipEntryRegistryHandler() {
+        this.readTooltipValue();
+    }
 
     static {
         DOCUMENTATION_CACHE = CacheBuilder.newBuilder()
@@ -125,15 +130,24 @@ public final class TooltipEntryRegistryHandler {
     }
 
     @SubscribeEvent
+    public void onConfigChanged(@Nonnull final ConfigChangedEvent event) {
+        this.readTooltipValue();
+    }
+
+
+    @SubscribeEvent
     public void onTooltip(@Nonnull final ItemTooltipEvent event) {
-        final Configuration config = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.ConfigurationMain.NAME);
-        final boolean isTooltipEnabled = config.getBoolean(Constants.ConfigurationMain.PROPERTY_DEBUG_TARGET_ENTRIES, Constants.ConfigurationMain.CATEGORY_DEBUG,
-                false, Constants.ConfigurationMain.PROPERTY_DEBUG_TARGET_ENTRIES_COMMENT);
-        if (!isTooltipEnabled) return;
+        if (!this.tooltip) return;
         final List<ResourceLocation> targets = STACKS_CACHE.getUnchecked(event.getItemStack());
         if (targets.isEmpty()) return;
         final List<String> tooltip = event.getToolTip();
         tooltip.add(String.format("%s%s:%s", TextFormatting.DARK_AQUA, I18n.format("dymm.mod.debug.target_entry"), TextFormatting.RESET));
         targets.forEach(it -> tooltip.add(String.format("  %s- %s%s%s", TextFormatting.DARK_GRAY, TextFormatting.DARK_GRAY, it.toString(), TextFormatting.RESET)));
+    }
+
+    private void readTooltipValue() {
+        final Configuration config = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.ConfigurationMain.NAME);
+        this.tooltip = config.getBoolean(Constants.ConfigurationMain.PROPERTY_DEBUG_TARGET_ENTRIES, Constants.ConfigurationMain.CATEGORY_DEBUG,
+                false, Constants.ConfigurationMain.PROPERTY_DEBUG_TARGET_ENTRIES_COMMENT);
     }
 }
