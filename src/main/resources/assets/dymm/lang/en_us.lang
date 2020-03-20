@@ -11,6 +11,7 @@ dymm.mod.configuration.error.title=Unable to Retrieve Configuration
 dymm.mod.configuration._main.tooltip=Handles configuration that is specific to DYMM behavior
 dymm.mod.configuration._main.debug.tooltip=Set of options useful for developers: you generally want these to be set to false
 dymm.mod.configuration._main.foolery.tooltip=Some random features that aren't part of the mod, but may be fun to enable and play around with nonetheless
+dymm.mod.configuration._main.performance.tooltip=Allows you to configure some mod behavior, allowing you to prioritize speed over efficiency or vice versa
 dymm.mod.configuration._targets.tooltip=Allows you to configure which mod targets DYMM should attempt to document
 dymm.mod.configuration._targets.targets.tooltip=Set here which targets should be enabled or not.\nNote that not all targets present here may also have entries in game.\nNOTE: Certain targets may require additional configuration
 dymm.mod.debug.target_entry=Documentation Entries

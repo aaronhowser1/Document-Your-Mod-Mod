@@ -23,6 +23,14 @@ public final class Constants {
                 "Adds the amount of documented mods to the mod count in the bottom left of the main menu.\n" +
                 "Example: \"15 mods loaded, 15 mods active, 10 mods documented\"";
 
+        public static final String CATEGORY_PERFORMANCE = "performance";
+        public static final String CATEGORY_PERFORMANCE_COMMENT = "Allows you to configure some mod behavior, allowing you to prioritize speed over efficiency or vice versa";
+
+        public static final String PROPERTY_PERFORMANCE_RAM_SAVING = "ram_saving";
+        public static final String PROPERTY_PERFORMANCE_RAM_SAVING_COMMENT = "Makes the mod run in RAM-light mode, making it allocate as few resources as possible.\n" +
+                "WARNING! This WILL exponentially decrease performance up to 70%! Use this option if you REALLY need to spare as much RAM as possible!\n" +
+                "In most cases this mod can automatically regulate itself, so turn this on ONLY if you've already tried everything! Do NOT come to us for huge slowdowns";
+
         private ConfigurationMain() {}
     }
 

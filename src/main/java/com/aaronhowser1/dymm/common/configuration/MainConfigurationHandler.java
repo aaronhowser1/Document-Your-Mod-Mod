@@ -33,6 +33,12 @@ public final class MainConfigurationHandler {
         configuration.get(Constants.ConfigurationMain.CATEGORY_FOOLERY, Constants.ConfigurationMain.PROPERTY_FOOLERY_BRANDING_TIME,
                 false, Constants.ConfigurationMain.PROPERTY_FOOLERY_BRANDING_TIME_COMMENT);
 
+        final ConfigCategory performance = configuration.getCategory(Constants.ConfigurationMain.CATEGORY_PERFORMANCE);
+        performance.setComment(Constants.ConfigurationMain.CATEGORY_PERFORMANCE_COMMENT);
+
+        configuration.get(Constants.ConfigurationMain.CATEGORY_PERFORMANCE, Constants.ConfigurationMain.PROPERTY_PERFORMANCE_RAM_SAVING,
+                false, Constants.ConfigurationMain.PROPERTY_PERFORMANCE_RAM_SAVING_COMMENT).setRequiresMcRestart(true);
+
         configuration.save();
     }
 

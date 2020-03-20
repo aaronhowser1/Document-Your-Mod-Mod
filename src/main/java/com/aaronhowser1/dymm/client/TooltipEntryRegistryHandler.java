@@ -31,94 +31,103 @@ import java.util.stream.Collectors;
 
 @Mod.EventBusSubscriber(modid = Constants.MOD_ID, value = Side.CLIENT)
 public final class TooltipEntryRegistryHandler {
-    private static final LoadingCache<ResourceLocation, List<DocumentationEntry>> DOCUMENTATION_CACHE;
-    private static final LoadingCache<ItemStack, List<ResourceLocation>> STACKS_CACHE;
+    private static final class LoadingCacheLazyLoaders {
+        private static final LoadingCache<ResourceLocation, List<DocumentationEntry>> DOCUMENTATION_CACHE;
+        private static final LoadingCache<ItemStack, List<ResourceLocation>> STACKS_CACHE;
+
+        static {
+            DOCUMENTATION_CACHE = createBuilder(2_000L)
+                    .expireAfterAccess(5, TimeUnit.MINUTES)
+                    .expireAfterWrite(10, TimeUnit.MINUTES)
+                    .build(new CacheLoader<ResourceLocation, List<DocumentationEntry>>() {
+                        @Nonnull
+                        @Override
+                        public List<DocumentationEntry> load(@Nonnull final ResourceLocation key) {
+                            return ApiBindings.getMainApi()
+                                    .getDocumentationRegistry()
+                                    .getValuesCollection()
+                                    .stream()
+                                    .filter(it -> it.getTargets()
+                                            .stream()
+                                            .map(Target::obtainTarget)
+                                            .map(ItemStack::getItem)
+                                            .map(Item::getRegistryName)
+                                            .peek(Objects::requireNonNull)
+                                            .anyMatch(key::equals)
+                                    )
+                                    .collect(Collectors.toList());
+                        }
+                    });
+
+            // Stacks are the worst as keys, because they don't override equals, they rely on
+            // identity etc... For this reason, this cache is only useful in case someone is
+            // looking at the same ItemStack for a certain amount of time. Any operation on
+            // an ItemStack will make it change (especially with "copy") and so on. This is
+            // the reason why we keep them for such a low time: a few seconds basically.
+            STACKS_CACHE = createBuilder(7_000L)
+                    .expireAfterAccess(3, TimeUnit.SECONDS)
+                    .expireAfterWrite(5, TimeUnit.SECONDS)
+                    .build(new CacheLoader<ItemStack, List<ResourceLocation>>() {
+                        @Nonnull
+                        @Override
+                        public List<ResourceLocation> load(@Nonnull final ItemStack key) {
+                            final ResourceLocation registryName = key.getItem().getRegistryName();
+                            if (registryName == null) return new ArrayList<>();
+
+                            final List<DocumentationEntry> entryCandidates = DOCUMENTATION_CACHE.getUnchecked(registryName);
+                            final List<ResourceLocation> correctTargets = new ArrayList<>();
+
+                            entryCandidates.forEach(candidate -> {
+                                boolean matches = false;
+                                for (@Nonnull final Target target : candidate.getTargets()) {
+                                    if (matches) break;
+                                    final ItemStack stack = target.obtainTarget();
+
+                                    // First we check the items
+                                    matches = ItemStack.areItemsEqual(stack, key);
+
+                                    if (matches && stack.hasTagCompound()) {
+                                        // This item stack has a tag compound: we need to go deeper
+                                        matches = ItemStack.areItemStackTagsEqual(stack, key);
+
+                                        if (!matches) {
+                                            // We are going to match if and only if the "difference"
+                                            // between the two is just the display name, unless the
+                                            // second stack has itself a display name
+                                            if (key.hasDisplayName() && stack.hasDisplayName()) continue;
+                                            if (!key.hasDisplayName()) continue;
+
+                                            stack.setStackDisplayName(key.getDisplayName());
+
+                                            matches = ItemStack.areItemStackTagsEqual(stack, key);
+                                        }
+                                    }
+                                }
+
+                                if (!matches) return;
+
+                                correctTargets.add(candidate.getRegistryName());
+                            });
+
+                            return correctTargets;
+                        }
+                    });
+        }
+
+        private static CacheBuilder<Object, Object> createBuilder(long maximumSize) {
+            final Configuration config = ApiBindings.getMainApi().getConfigurationManager().getConfigurationFor(Constants.ConfigurationMain.NAME);
+            final boolean isRamSaving = config.getBoolean(Constants.ConfigurationMain.PROPERTY_PERFORMANCE_RAM_SAVING, Constants.ConfigurationMain.CATEGORY_PERFORMANCE,
+                    false, Constants.ConfigurationMain.PROPERTY_PERFORMANCE_RAM_SAVING_COMMENT);
+
+            final CacheBuilder<Object, Object> builder = CacheBuilder.newBuilder();
+            return isRamSaving? builder.maximumSize(maximumSize) : builder;
+        }
+    }
 
     private boolean tooltip;
 
     private TooltipEntryRegistryHandler() {
         this.readTooltipValue();
-    }
-
-    static {
-        DOCUMENTATION_CACHE = CacheBuilder.newBuilder()
-                .maximumSize(500)
-                .expireAfterAccess(5, TimeUnit.MINUTES)
-                .expireAfterWrite(10, TimeUnit.MINUTES)
-                .build(new CacheLoader<ResourceLocation, List<DocumentationEntry>>() {
-                    @Nonnull
-                    @Override
-                    public List<DocumentationEntry> load(@Nonnull final ResourceLocation key) {
-                        return ApiBindings.getMainApi()
-                                .getDocumentationRegistry()
-                                .getValuesCollection()
-                                .stream()
-                                .filter(it -> it.getTargets()
-                                        .stream()
-                                        .map(Target::obtainTarget)
-                                        .map(ItemStack::getItem)
-                                        .map(Item::getRegistryName)
-                                        .peek(Objects::requireNonNull)
-                                        .anyMatch(key::equals)
-                                )
-                                .collect(Collectors.toList());
-                    }
-                });
-
-        // Stacks are the worst as keys, because they don't override equals, they rely on
-        // identity etc... For this reason, this cache is only useful in case someone is
-        // looking at the same ItemStack for a certain amount of time. Any operation on
-        // an ItemStack will make it change (especially with "copy") and so on. This is
-        // the reason why we keep them for such a low time: a few seconds basically.
-        STACKS_CACHE = CacheBuilder.newBuilder()
-                .maximumSize(50)
-                .expireAfterAccess(3, TimeUnit.SECONDS)
-                .expireAfterWrite(5, TimeUnit.SECONDS)
-                .build(new CacheLoader<ItemStack, List<ResourceLocation>>() {
-                    @Nonnull
-                    @Override
-                    public List<ResourceLocation> load(@Nonnull final ItemStack key) {
-                        final ResourceLocation registryName = key.getItem().getRegistryName();
-                        if (registryName == null) return new ArrayList<>();
-
-                        final List<DocumentationEntry> entryCandidates = DOCUMENTATION_CACHE.getUnchecked(registryName);
-                        final List<ResourceLocation> correctTargets = new ArrayList<>();
-
-                        entryCandidates.forEach(candidate -> {
-                            boolean matches = false;
-                            for (@Nonnull final Target target : candidate.getTargets()) {
-                                if (matches) break;
-                                final ItemStack stack = target.obtainTarget();
-
-                                // First we check the items
-                                matches = ItemStack.areItemsEqual(stack, key);
-
-                                if (matches && stack.hasTagCompound()) {
-                                    // This item stack has a tag compound: we need to go deeper
-                                    matches = ItemStack.areItemStackTagsEqual(stack, key);
-
-                                    if (!matches) {
-                                        // We are going to match if and only if the "difference"
-                                        // between the two is just the display name, unless the
-                                        // second stack has itself a display name
-                                        if (key.hasDisplayName() && stack.hasDisplayName()) continue;
-                                        if (!key.hasDisplayName()) continue;
-
-                                        stack.setStackDisplayName(key.getDisplayName());
-
-                                        matches = ItemStack.areItemStackTagsEqual(stack, key);
-                                    }
-                                }
-                            }
-
-                            if (!matches) return;
-
-                            correctTargets.add(candidate.getRegistryName());
-                        });
-
-                        return correctTargets;
-                    }
-                });
     }
 
     @SubscribeEvent
@@ -138,7 +147,7 @@ public final class TooltipEntryRegistryHandler {
     @SubscribeEvent
     public void onTooltip(@Nonnull final ItemTooltipEvent event) {
         if (!this.tooltip) return;
-        final List<ResourceLocation> targets = STACKS_CACHE.getUnchecked(event.getItemStack());
+        final List<ResourceLocation> targets = LoadingCacheLazyLoaders.STACKS_CACHE.getUnchecked(event.getItemStack());
         if (targets.isEmpty()) return;
         final List<String> tooltip = event.getToolTip();
         tooltip.add(String.format("%s%s:%s", TextFormatting.DARK_AQUA, I18n.format("dymm.mod.debug.target_entry"), TextFormatting.RESET));
