@@ -15,6 +15,18 @@ import java.util.Objects;
 import java.util.ServiceLoader;
 import java.util.function.Supplier;
 
+/**
+ * Main entry point for the API, responsible for binding it to the
+ * implementation.
+ *
+ * @apiNote
+ *      While this is to be considered public API at all effects, it is
+ *      suggested for clients not to depend on this class but rather use
+ *      alternatives provided by the various implementations. This will avoid
+ *      potential API mismatches between versions.
+ *
+ * @since 2.0.0
+ */
 public final class ApiBindings {
     private static final class MainApiBindingHolder {
         private static final DocumentYourModModApi API = loadThroughService(DocumentYourModModApi.class, () -> new DocumentYourModModApi() {
@@ -56,6 +68,15 @@ public final class ApiBindings {
 
     private ApiBindings() {}
 
+    /**
+     * Gets the implementation of the main API entry points, represented by
+     * an instance of {@link DocumentYourModModApi}.
+     *
+     * @return
+     *      The implementation for this API, guaranteed not to be {@code null}.
+     *
+     * @since 2.0.0
+     */
     @Nonnull
     public static DocumentYourModModApi getMainApi() {
         return MainApiBindingHolder.API;
