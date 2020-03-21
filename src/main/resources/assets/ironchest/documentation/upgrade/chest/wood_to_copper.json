@@ -3,20 +3,20 @@
   "targets": [
     {
       "type": "minecraft:item",
-      "registry_name": "ironchest:wood_iron_chest_upgrade"
+      "registry_name": "ironchest:wood_copper_chest_upgrade"
     }
   ],
   "data": [
     {
       "type": "jei:information",
       "data": [
-        "dymm.doc.ironchest.upgrade.wood_to_iron"
+        "dymm.doc.ironchest.upgrade.chest.wood_to_copper"
       ]
     },
     {
       "type": "minecraft:tooltip",
       "data": [
-        "dymm.tip.ironchest.upgrade.wood_to_iron"
+        "dymm.tip.ironchest.upgrade.chest.wood_to_copper"
       ]
     }
   ]

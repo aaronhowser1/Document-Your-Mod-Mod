@@ -3,20 +3,20 @@
   "targets": [
     {
       "type": "minecraft:item",
-      "registry_name": "ironchest:copper_iron_chest_upgrade"
+      "registry_name": "ironchest:silver_gold_shulker_upgrade"
     }
   ],
   "data": [
     {
       "type": "jei:information",
       "data": [
-        "dymm.doc.ironchest.upgrade.copper_to_iron"
+        "dymm.doc.ironchest.upgrade.shulker_box.silver_to_gold"
       ]
     },
     {
       "type": "minecraft:tooltip",
       "data": [
-        "dymm.tip.ironchest.upgrade.copper_to_iron"
+        "dymm.tip.ironchest.upgrade.shulker_box.silver_to_gold"
       ]
     }
   ]

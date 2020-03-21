@@ -4,14 +4,14 @@
     {
       "type": "minecraft:item",
       "registry_name": "ironchest:iron_chest",
-      "metadata": 1
+      "metadata": 4
     }
   ],
   "data": [
     {
       "type": "jei:information",
       "data": [
-        "dymm.doc.ironchest.gold_chest"
+        "dymm.doc.ironchest.silver"
       ]
     }
   ]

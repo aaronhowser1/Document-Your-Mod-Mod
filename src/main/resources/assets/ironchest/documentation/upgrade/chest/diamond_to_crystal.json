@@ -1,0 +1,23 @@
+{
+  "loader": "dymm:default",
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "ironchest:diamond_crystal_chest_upgrade"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.ironchest.upgrade.chest.diamond_to_crystal"
+      ]
+    },
+    {
+      "type": "minecraft:tooltip",
+      "data": [
+        "dymm.tip.ironchest.upgrade.chest.diamond_to_crystal"
+      ]
+    }
+  ]
+}

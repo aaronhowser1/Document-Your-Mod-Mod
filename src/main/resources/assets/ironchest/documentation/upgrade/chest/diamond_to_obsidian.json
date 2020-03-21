@@ -1,0 +1,23 @@
+{
+  "loader": "dymm:default",
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "ironchest:diamond_obsidian_chest_upgrade"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.ironchest.upgrade.chest.diamond_to_obsidian"
+      ]
+    },
+    {
+      "type": "minecraft:tooltip",
+      "data": [
+        "dymm.tip.ironchest.upgrade.chest.diamond_to_obsidian"
+      ]
+    }
+  ]
+}

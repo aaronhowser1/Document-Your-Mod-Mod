@@ -4,90 +4,90 @@
     {
       "type": "minecraft:item",
       "registry_name": "ironchest:iron_shulker_box_white",
-      "metadata": 6
+      "metadata": 5
     },
     {
       "type": "minecraft:item",
       "registry_name": "ironchest:iron_shulker_box_orange",
-      "metadata": 6
+      "metadata": 5
     },
     {
       "type": "minecraft:item",
       "registry_name": "ironchest:iron_shulker_box_magenta",
-      "metadata": 6
+      "metadata": 5
     },
     {
       "type": "minecraft:item",
       "registry_name": "ironchest:iron_shulker_box_light_blue",
-      "metadata": 6
+      "metadata": 5
     },
     {
       "type": "minecraft:item",
       "registry_name": "ironchest:iron_shulker_box_yellow",
-      "metadata": 6
+      "metadata": 5
     },
     {
       "type": "minecraft:item",
       "registry_name": "ironchest:iron_shulker_box_lime",
-      "metadata": 6
+      "metadata": 5
     },
     {
       "type": "minecraft:item",
       "registry_name": "ironchest:iron_shulker_box_pink",
-      "metadata": 6
+      "metadata": 5
     },
     {
       "type": "minecraft:item",
       "registry_name": "ironchest:iron_shulker_box_gray",
-      "metadata": 6
+      "metadata": 5
     },
     {
       "type": "minecraft:item",
       "registry_name": "ironchest:iron_shulker_box_silver",
-      "metadata": 6
+      "metadata": 5
     },
     {
       "type": "minecraft:item",
       "registry_name": "ironchest:iron_shulker_box_cyan",
-      "metadata": 6
+      "metadata": 5
     },
     {
       "type": "minecraft:item",
       "registry_name": "ironchest:iron_shulker_box_purple",
-      "metadata": 6
+      "metadata": 5
     },
     {
       "type": "minecraft:item",
       "registry_name": "ironchest:iron_shulker_box_blue",
-      "metadata": 6
+      "metadata": 5
     },
     {
       "type": "minecraft:item",
       "registry_name": "ironchest:iron_shulker_box_brown",
-      "metadata": 6
+      "metadata": 5
     },
     {
       "type": "minecraft:item",
       "registry_name": "ironchest:iron_shulker_box_green",
-      "metadata": 6
+      "metadata": 5
     },
     {
       "type": "minecraft:item",
       "registry_name": "ironchest:iron_shulker_box_red",
-      "metadata": 6
+      "metadata": 5
     },
     {
       "type": "minecraft:item",
       "registry_name": "ironchest:iron_shulker_box_black",
-      "metadata": 6
+      "metadata": 5
     }
   ],
   "data": [
     {
       "type": "jei:information",
       "data": [
-        "dymm.doc.ironchest.diamond_chest",
-        "dymm.doc.ironchest.obsidian_chest"
+        "dymm.doc.ironchest.diamond",
+        "dymm.doc.ironchest.crystal"
       ]
     }
   ]

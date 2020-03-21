@@ -3,20 +3,20 @@
   "targets": [
     {
       "type": "minecraft:item",
-      "registry_name": "ironchest:wood_copper_chest_upgrade"
+      "registry_name": "ironchest:gold_diamond_shulker_upgrade"
     }
   ],
   "data": [
     {
       "type": "jei:information",
       "data": [
-        "dymm.doc.ironchest.upgrade.wood_to_copper"
+        "dymm.doc.ironchest.upgrade.shulker_box.gold_to_diamond"
       ]
     },
     {
       "type": "minecraft:tooltip",
       "data": [
-        "dymm.tip.ironchest.upgrade.wood_to_copper"
+        "dymm.tip.ironchest.upgrade.shulker_box.gold_to_diamond"
       ]
     }
   ]
