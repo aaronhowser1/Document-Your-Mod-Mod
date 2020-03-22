@@ -1,0 +1,19 @@
+{
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:frog_leg",
+      "__comment": "Just a food item, not much else to say"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:crab_leg",
+      "__comment": "Just a food item, not much else to say"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:crab_shell",
+      "__comment": "Brewing item"
+    }
+  ]
+}
