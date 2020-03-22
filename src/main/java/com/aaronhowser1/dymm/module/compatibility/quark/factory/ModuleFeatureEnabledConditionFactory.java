@@ -32,7 +32,7 @@ public final class ModuleFeatureEnabledConditionFactory implements ConditionFact
         if (!feature.toLowerCase(Locale.ENGLISH).equals(feature)) throw new JsonSyntaxException("Feature name '" + feature + "' is invalid: must be lowercase");
 
         final boolean isEnabled = MODULE_CACHE.computeIfAbsent(module, it -> {
-            state.getReporter().notify("No cache present for module '" + it + "': computing value now");
+            //state.getReporter().notify("No cache present for module '" + it + "': computing value now");
             try {
                 return this.isModuleEnabled(it);
             } catch (@Nonnull final ReflectiveOperationException e) {
@@ -48,7 +48,7 @@ public final class ModuleFeatureEnabledConditionFactory implements ConditionFact
         if (EMPTY_FEATURE.equals(feature)) return new BasicCondition(true);
 
         return FEATURE_CACHE.computeIfAbsent(feature, it -> {
-            state.getReporter().notify("No cache present for feature '" + it + "': computing value now");
+            //state.getReporter().notify("No cache present for feature '" + it + "': computing value now");
             try {
                 return new BasicCondition(this.isFeatureEnabled(module, it));
             } catch (@Nonnull final ReflectiveOperationException e) {
