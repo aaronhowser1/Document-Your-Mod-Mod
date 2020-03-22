@@ -1,0 +1,30 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "mod_elements"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "oddities",
+      "feature": "pipes"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:pipe"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quarkoddities.mod.oddities.item_pipes.pipe"
+      ]
+    }
+  ]
+}

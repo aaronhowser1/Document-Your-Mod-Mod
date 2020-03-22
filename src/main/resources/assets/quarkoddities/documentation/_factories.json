@@ -1,0 +1,5 @@
+{
+  "condition": {
+    "backpack_behavior": "com.aaronhowser1.dymm.module.compatibility.quarkoddities.factory.BackpackBehaviorConditionFactory"
+  }
+}

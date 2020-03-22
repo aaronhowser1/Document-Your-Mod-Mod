@@ -1,0 +1,42 @@
+{
+  "loader": "dymm:lazy",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "mod_elements"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "oddities",
+      "feature": "backpacks"
+    },
+    {
+      "type": "quarkoddities:backpack_behavior",
+      "behavior": "op",
+      "value": false
+    }
+  ],
+  "dependencies": [
+    {
+      "ordering": "after",
+      "requirement": "required",
+      "target": "quarkoddities:mod/oddities/backpack/backpack"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:dynamic_nbt_item",
+      "registry_name": "quark:backpack"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quarkoddities.mod.oddities.backpack.backpack_non_op_mode"
+      ]
+    }
+  ]
+}

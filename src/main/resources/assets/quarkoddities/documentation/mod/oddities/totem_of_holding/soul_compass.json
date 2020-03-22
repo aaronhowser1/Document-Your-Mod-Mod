@@ -1,0 +1,30 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "quark",
+      "category": "targets",
+      "name": "mod_elements"
+    },
+    {
+      "type": "quark:module_feature_enabled",
+      "module": "oddities",
+      "feature": "totem_of_holding"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "quark:soul_compass"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.quarkoddities.mod.oddities.totem_of_holding.soul_compass"
+      ]
+    }
+  ]
+}

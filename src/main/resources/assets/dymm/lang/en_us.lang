@@ -363,6 +363,17 @@ dymm.doc.quark.vanilla.world.pathfinder_maps.pathfinder_map=Cartographer Village
 dymm.doc.quark.vanilla.world.tree_variants.sakura=Blossoming Trees seldom generate in Mountain biomes.\n\nThey have Spruce wood and pink leaves which are good for decorations.
 dymm.doc.quark.vanilla.world.underground_clay.underground_clay=Clay generates in random patches underground, similar to Dirt.
 
+# Quark Oddities / Mod Added Elements -> Documentation
+dymm.doc.quarkoddities.mod.oddities.backpack.backpack=Adds an additional 3x9 space to your inventory when equipped in the Chest slot.\n\nYou can also combine it with dyes to change its color.
+dymm.doc.quarkoddities.mod.oddities.backpack.backpack_non_op_mode=Note that you will not be able to take it off if you have items inside of it.
+dymm.doc.quarkoddities.mod.oddities.backpack.backpack_villager_trade=To obtain it, trade with a Leatherworker at your nearest village: they may like some leather and emeralds.
+dymm.doc.quarkoddities.mod.oddities.item_pipes.pipe=Transports items from one point to another, according to a set of rules:\n- If an item can go down, it will always go down;\n- At an intersection, an item will go forward if possible, otherwise either left or right randomly;\n- An item will never go up unless that's the only possibility;\n- Items can reach full inventories, in which case they'll turn around;\n- At the end of a pipe, if such a pipe is not connected to anything, the item will pop out.\n\nPipes can also be disabled with redstone: a disabled pipe will not count when calculating the path.\n\nPipes can also be moved by Pistons are retain the items inside when this is done.\n\nToo many items inside a pipe will cause it to break.
+dymm.doc.quarkoddities.mod.oddities.tiny_potato.tiny_potato=Can hold one item, plus it can be patted via right-click.
+dymm.doc.quarkoddities.mod.oddities.totem_of_holding.soul_compass=When you die, a Totem of Holding is spawned, with all the inventory contents.\n\nThis totem can be located using the Soul Compass.\n\nNote that if you die again, the Totem of Holding will break.
+
+# Quark Oddities / Vanilla-editing Additions -> Documentation
+dymm.doc.quarkoddities.vanilla.oddities.matrix_enchanting.matrix_enchanting=Enchanting an item now requires to mix and match pieces on the enchanting table.\n\nThe pieces can be generated up to a certain limit, given by the amount of bookshelves and candles arount the table.\n\nPieces can be rotated and upgraded, by clicking over them with other pieces that represent the same enchantment.
+
 # Refined Storage -> Configuration Settings
 dymm.mod.configuration.refinedstorage.tooltip=Allows you to configure settings that are specific to Refined Storage
 dymm.mod.configuration.refinedstorage.experimental.tooltip=Experimental options to ease compatibility with Refined Storage.\nWARNING: They may not work correctly or cause errors; enable with care.
