@@ -27,7 +27,7 @@ import java.util.Objects;
 import java.util.Queue;
 import java.util.Set;
 
-public final class UndocumentedItemsPlaceholderLoader implements DocumentationLoader {
+public final class UndocumentedTargetsPlaceholderLoader implements DocumentationLoader {
     /*
      * Expected JSON:
      * {
@@ -50,7 +50,7 @@ public final class UndocumentedItemsPlaceholderLoader implements DocumentationLo
     @Nonnull
     @Override
     public ResourceLocation getIdentifier() {
-        return new ResourceLocation(Constants.MOD_ID, "undocumented_items_preloaded");
+        return new ResourceLocation(Constants.MOD_ID, "undocumented_targets_preloaded");
     }
 
     @Nullable
