@@ -1,0 +1,33 @@
+{
+  "loader": "dymm:lazy",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "inspirations",
+      "category": "targets",
+      "name": "decorative_blocks"
+    },
+    {
+      "type": "inspirations:pulse_loaded",
+      "pulse": "building"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "enableEnlightenedBush"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:dynamic_nbt_item",
+      "registry_name": "inspirations:enlightened_bush"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.inspirations.decoration.building.enlightened_bushes.enlightened_bush"
+      ]
+    }
+  ]
+}

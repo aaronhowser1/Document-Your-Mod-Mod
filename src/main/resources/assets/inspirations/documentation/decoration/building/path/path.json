@@ -1,0 +1,35 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "inspirations",
+      "category": "targets",
+      "name": "decorative_blocks"
+    },
+    {
+      "type": "inspirations:pulse_loaded",
+      "pulse": "building"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "enablePath"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "inspirations:path",
+      "metadata_begin": 0,
+      "metadata_end": 3
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.inspirations.decoration.building.path.path"
+      ]
+    }
+  ]
+}

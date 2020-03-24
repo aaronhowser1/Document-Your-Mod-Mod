@@ -1,0 +1,26 @@
+{
+  "version": "1",
+  "categories": {
+    "targets": {
+      "comment": "Configure which targets should be loaded out of all Inspirations' options",
+      "language_key": "dymm.mod.inspirations.configuration.targets",
+      "properties": {
+        "decorative_blocks": {
+          "comment": "Whether all decorative blocks (such as stairs) should be documented",
+          "language_key": "dymm.mod.inspirations.configuration.targets.decorative_blocks",
+          "default": true
+        },
+        "mod_elements": {
+          "comment": "Whether mod-added elements that do not fall into one of the above categories should be documented",
+          "language_key": "dymm.mod.inspirations.configuration.targets.mod_elements",
+          "default": true
+        },
+        "vanilla": {
+          "comment": "Whether additions or edits to vanilla behavior should be documented\nNote that this doesn't cover GUI elements",
+          "language_key": "dymm.mod.inspirations.configuration.targets.vanilla",
+          "default": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "loader": "dymm:lazy",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "inspirations",
+      "category": "targets",
+      "name": "mod_elements"
+    },
+    {
+      "type": "inspirations:pulse_loaded",
+      "pulse": "building"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "enableBookshelf"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:dynamic_nbt_item",
+      "registry_name": "inspirations:bookshelf"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.inspirations.mod.building.bookshelf.bookshelf"
+      ]
+    }
+  ]
+}

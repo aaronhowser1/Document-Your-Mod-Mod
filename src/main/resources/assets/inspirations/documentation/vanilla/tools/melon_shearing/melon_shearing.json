@@ -1,0 +1,37 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "inspirations",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "inspirations:pulse_loaded",
+      "pulse": "tools"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:shears"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:melon_block"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:melon"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.inspirations.vanilla.tools.melon_shearing.melon_shearing"
+      ]
+    }
+  ]
+}

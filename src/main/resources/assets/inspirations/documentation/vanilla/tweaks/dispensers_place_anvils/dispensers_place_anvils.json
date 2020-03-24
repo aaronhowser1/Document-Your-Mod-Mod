@@ -1,0 +1,39 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "inspirations",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "inspirations:pulse_loaded",
+      "pulse": "tweaks"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "dispensersPlaceAnvils"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:dispenser"
+    },
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "minecraft:anvil",
+      "metadata_begin": 0,
+      "metadata_end": 3
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.inspirations.vanilla.tweaks.dispensers_place_anvils.dispensers_place_anvils"
+      ]
+    }
+  ]
+}

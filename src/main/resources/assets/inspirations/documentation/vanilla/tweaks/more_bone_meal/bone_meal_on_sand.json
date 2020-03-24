@@ -1,0 +1,44 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "inspirations",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "inspirations:pulse_loaded",
+      "pulse": "tweaks"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "bonemealDeadBush"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:dye",
+      "metadata": 15
+    },
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "minecraft:sand",
+      "metadata_begin": 0,
+      "metadata_end": 1
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:deadbush"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.inspirations.vanilla.tweaks.more_bone_meal.bone_meal_on_sand"
+      ]
+    }
+  ]
+}

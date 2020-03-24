@@ -1,0 +1,33 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "inspirations",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "inspirations:pulse_loaded",
+      "pulse": "utility"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "enableDispenserFluidTanks"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:dispenser"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.inspirations.vanilla.utility.dispensers_fill_fluid_tanks.dispenser_fill_fluid_tank"
+      ]
+    }
+  ]
+}

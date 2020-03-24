@@ -1,0 +1,38 @@
+{
+  "loader": "dymm:lazy",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "inspirations",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "inspirations:pulse_loaded",
+      "pulse": "tweaks"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "skeletonSkull"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:skull",
+      "metadata": 0
+    },
+    {
+      "type": "dymm:spawn_egg",
+      "id": "minecraft:skeleton"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.inspirations.vanilla.tweaks.skeleton_skull_drops.skull_drop"
+      ]
+    }
+  ]
+}

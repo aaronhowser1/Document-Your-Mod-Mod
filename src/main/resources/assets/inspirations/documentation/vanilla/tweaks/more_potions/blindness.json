@@ -1,0 +1,39 @@
+{
+  "loader": "dymm:lazy",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "inspirations",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "inspirations:pulse_loaded",
+      "pulse": "tweaks"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "brewMissingPotions"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:potion",
+      "kind": "all",
+      "effect": "inspirations:blindness"
+    },
+    {
+      "type": "dymm:potion",
+      "kind": "all",
+      "effect": "inspirations:long_blindness"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.inspirations.vanilla.tweaks.more_potions.blindness"
+      ]
+    }
+  ]
+}

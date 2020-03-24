@@ -1,0 +1,46 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "inspirations",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "inspirations:pulse_loaded",
+      "pulse": "tweaks"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "bonemealMushrooms"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:dye",
+      "metadata": 15
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:mycelium"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:brown_mushroom"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:red_mushroom"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.inspirations.vanilla.tweaks.more_bone_meal.bone_meal_on_mycelium"
+      ]
+    }
+  ]
+}

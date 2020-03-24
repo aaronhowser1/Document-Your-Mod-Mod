@@ -1,0 +1,33 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "inspirations",
+      "category": "targets",
+      "name": "mod_elements"
+    },
+    {
+      "type": "inspirations:pulse_loaded",
+      "pulse": "tools"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "enableBarometer"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:barometer"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.inspirations.mod.tools.barometer.barometer"
+      ]
+    }
+  ]
+}

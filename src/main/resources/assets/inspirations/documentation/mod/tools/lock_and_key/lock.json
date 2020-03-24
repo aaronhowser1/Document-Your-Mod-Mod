@@ -1,0 +1,34 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "inspirations",
+      "category": "targets",
+      "name": "mod_elements"
+    },
+    {
+      "type": "inspirations:pulse_loaded",
+      "pulse": "tools"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "enableLock"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:materials",
+      "metadata": 0
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.inspirations.mod.tools.lock_and_key.lock"
+      ]
+    }
+  ]
+}

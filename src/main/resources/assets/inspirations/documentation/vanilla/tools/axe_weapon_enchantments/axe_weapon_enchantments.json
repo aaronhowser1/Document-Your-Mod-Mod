@@ -1,0 +1,49 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "inspirations",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "inspirations:pulse_loaded",
+      "pulse": "tools"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "axeWeaponEnchants"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:wooden_axe"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:stone_axe"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:iron_axe"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:golden_axe"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:diamond_axe"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.inspirations.vanilla.tools.axe_weapon_enchantments.axe_weapon_enchantments"
+      ]
+    }
+  ]
+}

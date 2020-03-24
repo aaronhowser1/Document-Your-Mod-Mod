@@ -1,0 +1,35 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "inspirations",
+      "category": "targets",
+      "name": "mod_elements"
+    },
+    {
+      "type": "inspirations:pulse_loaded",
+      "pulse": "recipes"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "enableCauldronDyeing"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "inspirations:dyed_bottle",
+      "metadata_begin": 0,
+      "metadata_end": 15
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.inspirations.mod.recipes.better_cauldrons.dyed_bottle"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "inspirations",
+      "category": "targets",
+      "name": "decorative_blocks"
+    },
+    {
+      "type": "inspirations:pulse_loaded",
+      "pulse": "building"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "enableColoredBooks"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "inspirations:books",
+      "metadata_begin": 0,
+      "metadata_end": 15
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.inspirations.decoration.building.bookshelf.dyed_books"
+      ]
+    }
+  ]
+}

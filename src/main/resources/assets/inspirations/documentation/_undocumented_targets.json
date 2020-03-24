@@ -1,0 +1,30 @@
+{
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:potato_soup",
+      "__comment": "It's just food"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:cactus_seeds"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:sugar_cane_seeds"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:carrot_seeds"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:potato_seeds"
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:materials",
+      "metadata": 8
+    }
+  ]
+}

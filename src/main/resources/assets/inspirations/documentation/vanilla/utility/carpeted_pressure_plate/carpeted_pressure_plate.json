@@ -1,0 +1,39 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "inspirations",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "inspirations:pulse_loaded",
+      "pulse": "utility"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "enableCarpetedPressurePlate"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:stone_pressure_plate"
+    },
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "minecraft:carpet",
+      "metadata_begin": 0,
+      "metadata_end": 15
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.inspirations.vanilla.utility.carpeted_pressure_plate.carpeted_pressure_plate"
+      ]
+    }
+  ]
+}

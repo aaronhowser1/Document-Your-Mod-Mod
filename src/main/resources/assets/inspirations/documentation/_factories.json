@@ -1,0 +1,6 @@
+{
+  "condition": {
+    "configuration_option": "com.aaronhowser1.dymm.module.compatibility.inspirations.factory.ConfigurationOptionConditionFactory",
+    "pulse_loaded": "com.aaronhowser1.dymm.module.compatibility.inspirations.factory.PulseLoadedConditionFactory"
+  }
+}

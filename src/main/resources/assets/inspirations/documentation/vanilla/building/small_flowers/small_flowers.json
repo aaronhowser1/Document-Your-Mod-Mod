@@ -1,0 +1,50 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "inspirations",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "inspirations:pulse_loaded",
+      "pulse": "building"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "enableFlowers"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "inspirations:flower",
+      "metadata_begin": 0,
+      "metadata_end": 3
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:double_plant",
+      "metadata": 1
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:double_plant",
+      "metadata": 4
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:double_plant",
+      "metadata": 5
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.inspirations.vanilla.building.small_flowers.small_flowers"
+      ]
+    }
+  ]
+}

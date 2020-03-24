@@ -1,0 +1,35 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "inspirations",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "inspirations:pulse_loaded",
+      "pulse": "recipes"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "enableAnvilSmashing"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "minecraft:anvil",
+      "metadata_begin": 0,
+      "metadata_end": 2
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.inspirations.vanilla.recipes.anvil_smashing.anvil_smashing"
+      ]
+    }
+  ]
+}

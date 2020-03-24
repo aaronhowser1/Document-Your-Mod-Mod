@@ -1,0 +1,44 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "inspirations",
+      "category": "targets",
+      "name": "mod_elements"
+    },
+    {
+      "type": "inspirations:pulse_loaded",
+      "pulse": "tools"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "separateCrook"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "netherCrooks"
+    }
+  ],
+  "dependencies": [
+    {
+      "ordering": "after",
+      "requirement": "required",
+      "target": "inspirations:mod/tools/crook/crook"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:wither_crook"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.inspirations.mod.tools.crook.wither_crook"
+      ]
+    }
+  ]
+}

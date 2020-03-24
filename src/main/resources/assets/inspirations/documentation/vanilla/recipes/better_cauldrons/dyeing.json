@@ -1,0 +1,44 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "inspirations",
+      "category": "targets",
+      "name": "vanilla"
+    },
+    {
+      "type": "inspirations:pulse_loaded",
+      "pulse": "recipes"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "enableExtendedCauldron"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "enableCauldronDyeing"
+    }
+  ],
+  "dependencies": [
+    {
+      "ordering": "after",
+      "requirement": "required",
+      "target": "inspirations:vanilla/recipes/better_cauldrons/better_cauldron"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "minecraft:cauldron"
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.inspirations.vanilla.recipes.better_cauldrons.dyeing"
+      ]
+    }
+  ]
+}

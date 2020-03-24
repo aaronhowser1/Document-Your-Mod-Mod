@@ -1,0 +1,35 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "inspirations",
+      "category": "targets",
+      "name": "decorative_blocks"
+    },
+    {
+      "type": "inspirations:pulse_loaded",
+      "pulse": "utility"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "enableBricksButton"
+    }
+  ],
+  "targets": [
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "inspirations:bricks_button",
+      "metadata_begin": 0,
+      "metadata_end": 1
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.inspirations.decoration.utility.bricks_button.bricks_button"
+      ]
+    }
+  ]
+}

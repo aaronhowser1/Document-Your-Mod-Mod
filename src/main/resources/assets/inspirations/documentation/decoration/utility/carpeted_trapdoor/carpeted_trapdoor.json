@@ -1,0 +1,109 @@
+{
+  "loader": "dymm:default",
+  "conditions": [
+    {
+      "type": "dymm:configuration_option",
+      "configuration": "inspirations",
+      "category": "targets",
+      "name": "decorative_blocks"
+    },
+    {
+      "type": "inspirations:pulse_loaded",
+      "pulse": "utility"
+    },
+    {
+      "type": "inspirations:configuration_option",
+      "value": "enableCarpetedTrapdoor"
+    }
+  ],
+  "targets": [
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:carpeted_trapdoor_white",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:carpeted_trapdoor_orange",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:carpeted_trapdoor_magenta",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:carpeted_trapdoor_light_blue",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:carpeted_trapdoor_yellow",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:carpeted_trapdoor_lime",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:carpeted_trapdoor_pink",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:carpeted_trapdoor_gray",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:carpeted_trapdoor_silver",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:carpeted_trapdoor_cyan",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:carpeted_trapdoor_purple",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:carpeted_trapdoor_blue",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:carpeted_trapdoor_brown",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:carpeted_trapdoor_green",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:carpeted_trapdoor_red",
+      "metadata": 0
+    },
+    {
+      "type": "minecraft:item",
+      "registry_name": "inspirations:carpeted_trapdoor_black",
+      "metadata": 0
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.inspirations.decoration.utility.carpeted_trapdoor.carpeted_trapdoor"
+      ]
+    }
+  ]
+}

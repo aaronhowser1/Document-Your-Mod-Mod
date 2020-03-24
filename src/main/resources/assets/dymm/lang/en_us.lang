@@ -21,6 +21,86 @@ dymm.mod.support.full_support=Fully supported
 dymm.mod.support.info_not_provided=Version information not provided
 dymm.mod.support.not_supported=Not supported
 
+# Inspirations -> Configuration Options
+dymm.mod.configuration.inspirations.tooltip=Allows you to configure Inspirations-specific behavior
+dymm.mod.configuration.inspirations.targets.tooltip=Configures which category of targets should be documented inside Inspirations
+
+# Inspirations / Decorative Elements -> Documentation
+dymm.doc.inspirations.decoration.building.bookshelf.dyed_books=Books come in all the different spectrum colors: they can be used to decorate bookshelves of the Default kind in specific arrangements.
+dymm.doc.inspirations.decoration.building.enlightened_bushes.enlightened_bush=Variant of leaves with little lights intertwined that emit light.\n\nUseful for holiday decorations.\n\nThey come in white, red, green, blue, rainbow, and Christmas variants.
+dymm.doc.inspirations.decoration.building.glass_doors_and_trapdoors.glass_door_and_trapdoor=Acts like their vanilla counterpart, except that it's see through.\n\nRequires a tool enchanted with Silk Touch to be picked up, like Normal Glass.
+dymm.doc.inspirations.decoration.building.path.path=Decorative block available in 4 variants (Bricks, Rocks, Round, and Tiles) that can be placed on the floor.
+dymm.doc.inspirations.decoration.tweaks.fitted_carpets.fitted_carpets=Carpets adapt to the shape of the block if placed on Stairs.
+dymm.doc.inspirations.decoration.utility.bricks_button.bricks_button=Acts exactly like a button, but it blends seamlessly with Bricks or Nether Bricks, for more camouflaged triggers.
+dymm.doc.inspirations.decoration.utility.carpeted_trapdoor.carpeted_trapdoor=Variant of Trapdoor that blends seamlessly with other carpets, but it can be opened freely.
+
+# Inspirations / Mod Added Elements -> Documentation
+dymm.doc.inspirations.mod.building.bookshelf.ancient=This is the Ancient version, where books have colors that range from brown to tan and have an Adventure-like feel to them.
+dymm.doc.inspirations.mod.building.bookshelf.bookshelf=Alternative bookshelf that can be filled with books and provides an enchanting table bonus, which can reach 1.5, with a bookshelf full of normal books, or 2.5, with a bookshelf full of enchanted books (For reference: 1 is the vanilla enchanting table bonus).\n\nComes in all wood variants and in 4 different types that differ on the looks of books: Default, Rainbow, Tomes, and Ancient.
+dymm.doc.inspirations.mod.building.bookshelf.default=This is the Default version, which has books that are of random size and take the color of the book in the slot.
+dymm.doc.inspirations.mod.building.bookshelf.rainbow=This is the Rainbow version, which has books whose colors go from red to purple in order.
+dymm.doc.inspirations.mod.building.bookshelf.tomes=This is the Tomes version, where all the books look the same and are of the same size.
+dymm.doc.inspirations.mod.building.mulch.mulch=Gravity-affected block that can sustain most plants that can be placed on Dirt or Grass, but not saplings.\n\nIt comes in different colors.
+dymm.doc.inspirations.mod.building.rope_and_chains.chain_ladder=Right-clicking on it with Iron Nuggets turns it into a hanging ladder.
+dymm.doc.inspirations.mod.building.rope_and_chains.rope=Decorative form of ladders that can be attached to the bottom of most blocks.\n\nRight-clicking on a rope with a rope of the same type will place the rope at the bottom of the current rope, extending it downwards.
+dymm.doc.inspirations.mod.building.rope_and_chains.rope_ladder=Right-clicking on it with Sticks turns it into a hanging ladder.
+dymm.doc.inspirations.mod.recipes.better_cauldrons.dyed_bottle=Used in conjuction with a Cauldron to store or place back dyed water.
+dymm.doc.inspirations.mod.recipes.better_cauldrons.lingering_potion_bottle=Used in conjuction with a Cauldron to create a Lingering Potion from a potion liquid present in the cauldron itself.
+dymm.doc.inspirations.mod.recipes.better_cauldrons.splash_potion_bottle=Used in conjuction with a Cauldron to create a Splash Potion from a potion liquid present in the cauldron itself.
+dymm.doc.inspirations.mod.tools.barometer.barometer=Allows you to determine your altitude in world.\n\nThe glass capsule will go from completely full when at the bottom of the world, to almost empty at the top of the world. For reference, sea level is when the glass capsule is half full.
+dymm.doc.inspirations.mod.tools.beacon_compass.beacon_compass=Binding a Beacon Compass to a Beacon with a right-click, will make the compass point to the beacon location instead of world spawn.\n\nThis also works across dimensions.
+dymm.doc.inspirations.mod.tools.charged_arrow.charged_arrow=Arrows that do less damage but are able to power the block they land on for 10 redstone ticks.
+dymm.doc.inspirations.mod.tools.crook.blaze_crook=Additionally, this crook can light mobs on fire.
+dymm.doc.inspirations.mod.tools.crook.crook=Crooks are a useful tool when breaking leaves, as they increase the chance of a sapling to drop.\n\nAdditionally, they can also be used to pull back mobs.
+dymm.doc.inspirations.mod.tools.crook.wither_crook=Additionally, this crook can inflict the Wither effect on mobs.
+dymm.doc.inspirations.mod.tools.lock_and_key.key=Used to unlock containers, such as chests.\n\nBefore being effective, it must be renamed in an Anvil.\n\nCan only open locks with a matching name.\n\nShift-right-clicking allows you to remove the lock.
+dymm.doc.inspirations.mod.tools.lock_and_key.lock=Used to lock containers, such as chests.\n\nBefore being effective, it must be renamed in an Anvil.\n\nCan only be opened with a key with a matching name.
+dymm.doc.inspirations.mod.tools.north_compass.north_compass=Variant of the compass that always points to the true North.
+dymm.doc.inspirations.mod.tools.photometer.photometer=Shows the light level at the current player position or at the block being targeted if held in the main hand.\n\nThe bottom of the texture is yellow in safe levels and red in dangerous levels.
+dymm.doc.inspirations.mod.tools.redstone_charger.redstone_charger=Produces a short redstone pulse of 10 redstone ticks (or 1 redstone tick, if shift-right-clicked) that strongly powers the targeted block and weakly power the blocks around it.
+dymm.doc.inspirations.mod.tweaks.heartbeets.heartbeet=Give 5 seconds of regeneration when eaten.
+dymm.doc.inspirations.mod.utility.collector.collector=Able to pull items from the world and inventories, like the Hopper, but that can be placed in all six directions and that requires a redstone pulse to work, like a Dropper.\n\nRequires a Hopper to extract items from its internal inventory.
+dymm.doc.inspirations.mod.utility.pipe.pipe=Cheaper and more efficient version of the Hopper, can transport items in all directions (including upwards). It is unable to extract items from inventories, though, requiring a hopper to begin the chain.
+dymm.doc.inspirations.mod.utility.redstone_barrel.redstone_barrel=Can be filled with redstone dust and its output can be read by a comparator.\n\nAllows more fine-grained control than the Cauldron, allowing the block to be filled with varying levels of Redstone Dust, from 0 to 15.
+dymm.doc.inspirations.mod.utility.redstone_torch_lever.redstone_torch_lever=Lever that outputs power only to the block that it is attached on.\n\nMoreover, it is highly sensible to redstone level changes, making it able to be toggled with other redstone pulses.
+dymm.doc.inspirations.mod.utility.torch_lever.torch_lever=Mixes the features of a Lever and a Torch, being able to produce redstone power when activated, but also giving off light.
+dymm.doc.inspirations.mod.utility.trapped_book.trapped_book=When placed in a bookshelf, it allows the bookshelf to give off power, ranging from a strength of 2, when the book is in the first slot, to a strength of 15, when the book is in the last slot.
+
+# Inspirations / Vanilla-editing Additions -> Documentation
+dymm.doc.inspirations.vanilla.building.small_flowers.small_flowers=Shearing the bottom block of one of the two-high flowers will drop two flowers of the small version of them.
+dymm.doc.inspirations.vanilla.recipes.anvil_smashing.anvil_smashing=Anvils that land on blocks may smash them, either breaking them or turning them into softer blocks.
+dymm.doc.inspirations.vanilla.recipes.better_cauldrons.better_cauldron=Cauldrons can hold any type of liquids, not only water, and tossing items in them enables an additional form of crafting.\n\nNote that hot liquids can harm entities that fall into the cauldron.
+dymm.doc.inspirations.vanilla.recipes.better_cauldrons.brewing=If placed on top of fire, cauldrons can be used to brew potions.\n\nAdditionally, stepping into the cauldron with a potion in it will cause the effect to be applied to the entity.\n\nBreaking the cauldron while it holds a potion liquid will also leave a lingering effect in its place.
+dymm.doc.inspirations.vanilla.recipes.better_cauldrons.cooking=Stews and soups can also be cooked inside the cauldron.
+dymm.doc.inspirations.vanilla.recipes.better_cauldrons.dispenser_fill_cauldron=Dispensers can fill Cauldrons with liquids.
+dymm.doc.inspirations.vanilla.recipes.better_cauldrons.dyeing=Dyed water stored in Cauldrons can then be used to dye armor or bottled up for successive use inside Dyed Water Bottles.
+dymm.doc.inspirations.vanilla.tools.axe_weapon_enchantments.axe_weapon_enchantments=Axes can be enchanted with more weapon-specific enchantments, like Fire Aspect, Knockback, and Looting.
+dymm.doc.inspirations.vanilla.tools.harvest_hanging_vines.shear_harvest_vine=Shearing a Vine will also automatically shear all the Vines that hang from it, instead of destroying them.
+dymm.doc.inspirations.vanilla.tools.melon_shearing.melon_shearing=Shearing a Melon Block will let it drop all 9 slices instead of only a few.
+dymm.doc.inspirations.vanilla.tools.shield_enchantments.shield_enchantments=Shields can now be enchanted, both in the enchanting table and from books in the anvil.
+dymm.doc.inspirations.vanilla.tweaks.better_flower_pots.better_flower_pot=The Flower Pot can host all kinds of flowers and saplings, even modded ones.
+dymm.doc.inspirations.vanilla.tweaks.colored_enchanted_book_ribbons.colored_enchanted_book_ribbons=The ribbon on the Enchanted Book changes color depending on the rarity of the enchantment, with red identifying common ones, orange uncommon, green rare, and purple extremely rare.
+dymm.doc.inspirations.vanilla.tweaks.colored_firework_item.colored_firework_item=The stripes on the firework identify the color of the first star.\nThe color of the tip identifies the second star.\nThe fuse color depends on the firework duration.
+dymm.doc.inspirations.vanilla.tweaks.colored_portals.portal_color_enablers=Placing Stained Glass under a column of portal blocks will tint them with the color of the Stained Glass.
+dymm.doc.inspirations.vanilla.tweaks.desaddle_pigs.desaddle_pigs=Pigs can be desaddled via a shift-right-click.
+dymm.doc.inspirations.vanilla.tweaks.dispensers_place_anvils.dispensers_place_anvils=Dispensers attempt to place anvils instead of simply firing them.
+dymm.doc.inspirations.vanilla.tweaks.flower_pot_comparator.flower_pot_comparator=Comparators can react to the contents of the flower pot. The possible values are:\n- 0: empty;\n- 1: mushroom;\n-4: fern;\n- 7: flower;\n- 10: dead bush;\n- 12: sapling;\n- 15: cactus.
+dymm.doc.inspirations.vanilla.tweaks.more_bone_meal.bone_meal_on_dirt=Using Bone Meal on Dirt that is near a Grass Block or Mycelium has a chance of making Grass or Mycelium spread faster onto the targeted Dirt block.
+dymm.doc.inspirations.vanilla.tweaks.more_bone_meal.bone_meal_on_mycelium=Using Bone Meal on Mycelium has a chance to spawn Red and Brown Mushrooms.
+dymm.doc.inspirations.vanilla.tweaks.more_bone_meal.bone_meal_on_sand=Using Bone Meal on Sand has a chance to spawn Dead Bushes.
+dymm.doc.inspirations.vanilla.tweaks.more_potions.blindness=Blinds the target, restricting its viewing radius and making it more susceptible to attacks.
+dymm.doc.inspirations.vanilla.tweaks.more_potions.decay=Inflicts the Wither effect on the target, draining its health up until the end of the effect.\n\nThe target can be killed in the process.
+dymm.doc.inspirations.vanilla.tweaks.more_potions.fatigue=The target is limited in the movement speed, making mining and attacking more difficult.
+dymm.doc.inspirations.vanilla.tweaks.more_potions.hunger=Inflicts Food Poisoning on the target, making its food bar drain much faster.
+dymm.doc.inspirations.vanilla.tweaks.more_potions.levitation=The target starts to levitate as if it were hit by a Shulker.\nDoes not prevent fall damage when the potion ends.
+dymm.doc.inspirations.vanilla.tweaks.more_potions.resistance=Makes the target more resilient to attacks.
+dymm.doc.inspirations.vanilla.tweaks.more_potions.silverfish_powder=Dropped by Silverfishes, with a very small chance.
+dymm.doc.inspirations.vanilla.tweaks.more_potions.withered_bone=Dropped by Wither Skeletons, with a very small chance.
+dymm.doc.inspirations.vanilla.tweaks.skeleton_skull_drops.skull_drop=Skeletons have a (very small) chance to drop their skull on death.
+dymm.doc.inspirations.vanilla.tweaks.spider_web_drops.cobweb_drop=Cave Spiders can drop Cobwebs.
+dymm.doc.inspirations.vanilla.utility.carpeted_pressure_plate.carpeted_pressure_plate=Placing a carpet on top of a Stone Pressure Plate conceals it, making it harder to see.
+dymm.doc.inspirations.vanilla.utility.dispensers_fill_fluid_tanks.dispenser_fill_fluid_tank=Dispensers can fill vanilla and modded Fluid Tanks when they are placed right against it.
+
 # Iron Chest -> Documentation
 dymm.doc.ironchest.copper=5 rows of 9 slots for a total of 45 slots.
 dymm.doc.ironchest.crystal=You can see the contained items from outside the GUI.
