@@ -22,6 +22,7 @@ import javax.annotation.Nonnull;
         updateJSON = Constants.MOD_UPDATE_URL)
 public final class DocumentYourMod {
     private static final L LOG = L.create(Constants.MOD_NAME, "Lifecycle");
+    private boolean trigger = false;
 
     @Mod.EventHandler
     public void onConstruct(@Nonnull final FMLConstructionEvent event) {}
@@ -52,6 +53,9 @@ public final class DocumentYourMod {
 
     @Mod.EventHandler
     public void onLoadComplete(@Nonnull final FMLLoadCompleteEvent event) {
+        if (this.trigger) return;
+        this.trigger = true;
+        LOG.info("Reached loading completion: closing loading handlers and disabling future invocations");
         LoadingHandler.unbind();
         DocumentationConsumerDispatcher.unbind();
         TargetsHandler.discoverAndLog();

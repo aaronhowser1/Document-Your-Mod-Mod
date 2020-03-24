@@ -69,6 +69,7 @@ public final class TargetsHandler {
         final Map<String, List<ResourceLocation>> missingTargets = mergeAndFind(documentedNamespaces, documentedTargets, targetsForTargets);
         logMissingTargets(missingTargets, logFun);
         UNDOCUMENTED_LOG.info("Discovery complete");
+        logFun.accept("Note that the list may have some elements missing, especially in case of metadata: revise in game anyway");
     }
 
     @Nonnull

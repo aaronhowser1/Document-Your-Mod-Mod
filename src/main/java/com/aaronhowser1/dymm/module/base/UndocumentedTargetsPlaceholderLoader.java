@@ -44,6 +44,8 @@ public final class UndocumentedTargetsPlaceholderLoader implements Documentation
      * }
      */
 
+    private static final L LOG = L.create(Constants.MOD_NAME, "Undocumented Targets Listener");
+
     private boolean hasRegistered = false;
     private final Queue<Pair<JsonObject, String>> undocumentedItemsQueue = new LinkedList<>();
 
@@ -61,17 +63,18 @@ public final class UndocumentedTargetsPlaceholderLoader implements Documentation
             reporter.interrupt("A placeholder entry has already been registered! If you're attempting to use this loader for your own entries, DON'T! THIS IS NOT FOR EXTERNAL USE!");
             return null;
         }
-        reporter.notify("Undocumented items placeholder registered successfully: populating with data");
         this.hasRegistered = true;
         final Set<Target> targets = new HashSet<>();
         this.undocumentedItemsQueue.stream().map(this::parseUndocumentedTargets).forEach(targets::addAll);
+        this.undocumentedItemsQueue.clear();
+        reporter.notify("The undocumented targets placeholder registered successfully, with a total of " + targets.size() + " entries");
         return BasicDocumentationEntry.create(new HashSet<>(targets), new HashSet<>(), new HashSet<>());
     }
 
     @Override
     public void registerMetadataListeners(@Nonnull final MetadataListenerRegistry registry) {
         registry.register("undocumented_targets", (object, namespace) -> {
-            L.create(Constants.MOD_NAME, "Undocumented Targets Listener").info("Found undocumented targets metadata for namespace '" + namespace + "': enqueueing processing");
+            LOG.info("Found undocumented targets metadata for namespace '" + namespace + "': enqueueing processing");
             this.undocumentedItemsQueue.add(ImmutablePair.of(object, namespace));
         });
     }
@@ -83,17 +86,16 @@ public final class UndocumentedTargetsPlaceholderLoader implements Documentation
 
     @Nonnull
     private Set<Target> parseUndocumentedTargets(@Nonnull final JsonObject object, @Nonnull final String namespace) {
-        final Reporter state = Objects.requireNonNull(ApiBindings.getMainApi().getCurrentLoadingState()).getReporter();
-        state.notify("Reading purposefully undocumented items for namespace '" + namespace + "'");
+        LOG.info("Parsing purposefully undocumented targets for namespace '" + namespace + "'");
         if (!object.has("targets")) {
-            state.report("The metadata-carrying entry for '" + namespace + "' has an empty target list! This is useless!");
+            LOG.warn("The metadata-carrying entry for '" + namespace + "' has an empty target list! This is useless!");
         }
         return this.parseTargets(JsonUtilities.getJsonArrayOrElse(object, "targets", JsonArray::new));
     }
 
     @Nonnull
     private Set<Target> parseTargets(@Nonnull final JsonArray targets) {
-        if (targets.size() <= 0) throw new JsonParseException("A documentation entry must have at least one target");
+        if (targets.size() <= 0) throw new JsonParseException("No target specified: this is a serious error!");
         final Set<Target> targetSet = new HashSet<>();
         JsonUtilities.consumeEntriesAsJsonObjects(targets, "targets", it -> targetSet.addAll(this.parseTarget(it)));
         return targetSet;
