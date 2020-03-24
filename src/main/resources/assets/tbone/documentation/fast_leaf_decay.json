@@ -1,0 +1,25 @@
+{
+  "loader": "dymm:default",
+  "targets": [
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "minecraft:leaves",
+      "metadata_begin": 0,
+      "metadata_end": 3
+    },
+    {
+      "type": "dymm:item_meta_range",
+      "registry_name": "minecraft:leaves2",
+      "metadata_begin": 0,
+      "metadata_end": 1
+    }
+  ],
+  "data": [
+    {
+      "type": "jei:information",
+      "data": [
+        "dymm.doc.tbone.fast_leaf_decay"
+      ]
+    }
+  ]
+}

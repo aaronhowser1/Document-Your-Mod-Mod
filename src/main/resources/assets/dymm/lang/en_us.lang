@@ -453,6 +453,9 @@ dymm.doc.refinedstorage.writer=Writers can take items, fluids, energy, and/or Re
 # Refined Storage Addons -> Documentation
 dymm.doc.refinedstorageaddons.wireless_crafting_grid=Acts like the Crafting Grid, but works anywhere in range of a Wireless Transmitter.\n\nSpecify the storage system to connect to by right clicking the Wireless Crafting Grid on the Controller.
 
+# TBone -> Documentation
+dymm.doc.tbone.fast_leaf_decay=Leaves decay quicker when not attached to a log.
+
 # Tinkers' Construct -> Documentation
 dymm.doc.tconstruct.fancy_frame_glass=Disappears when an item is placed in it, so you can only see the item.
 dymm.doc.tconstruct.gadget.efln=Can be thrown, exploding into a giant crater where it lands.\n\nItems do not get destroyed by the explosion.
