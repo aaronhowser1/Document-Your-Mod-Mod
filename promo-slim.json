@@ -1,10 +1,11 @@
 {
   "homepage": "https:\/\/www.curseforge.com\/minecraft\/mc-mods\/document-your-mod-mod",
   "promos": {
-    "1.12.2-latest": "2.0.0",
-    "1.12.2-recommended": "2.0.0"
+    "1.12.2-latest": "2.0.1",
+    "1.12.2-recommended": "2.0.1"
   },
   "1.12.2": {
+    "2.0.1": "BUG FIXES:\n- Fixed huge performance decrease during client and world loading (#10)\n- Fixed NPE occurring when Refined Storage isn't installed (#11)\nADDITIONS:\n- Added digital signature to JAR\n- Completed documentation for Iron Chests\n- Added documentation for Quark Oddities\n- Added partial documentation for Metal Chests (#7)\n- Added documentation for Inspirations (#12)",
     "2.0.0": "Rewrote entire mod\nAdded addon support, see source's resources/assets/ for example\nAPI at source's com/aaronhowser1/dymm/api",
     "1.2.0": "A ton of internal changes\nAll Tinkers' Construct Tables now have descriptions\nMod info page now shows a list of all documented mods, as well as if they're loaded and up to date\nCorrected Tinkers' Construct's durability modifier to say it adds 20% chance to not use durability, rather than 10%\nDocumented Quark's Danger Sight and Resilience potion effects\nDocumented a lot more of Quark, as well as created a new config (Quark Decor)",
     "1.1.1": "Fixed Wireless Crafting Grid description, used to only show on Creative Wireless Crafting Grid\nAdded description to Orange Slimesling\nAdded descriptions to Crafting Station, Part Chest, Pattern Chest, Tool Forge, and Tool Station\nFixed Bolt Cores not showing description\nAdded information to Iron Chests\nUpdated information for Quark 200",
