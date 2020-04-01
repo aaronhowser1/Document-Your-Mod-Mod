@@ -5,6 +5,7 @@ import com.aaronhowser1.dymm.api.ApiBindings;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.ModContainer;
 import net.minecraftforge.fml.common.ModMetadata;
@@ -79,7 +80,7 @@ public final class ModDescriptionUpdatingHandler {
                     builder.append(' ');
                     builder.append(formatIpBased(it.getLeft().getDisplayVersion(), it.getRight().getColor()));
                     builder.append(" (");
-                    builder.append(formatIpBased(I18n.format(it.getRight().getFriendlyName()), it.getRight().getColor()));
+                    builder.append(formatIpBased(format(it.getRight().getFriendlyName()), it.getRight().getColor()));
                     builder.append(')');
                     builder.append(TextFormatting.RESET);
                     builder.append('\n');
@@ -163,6 +164,12 @@ public final class ModDescriptionUpdatingHandler {
         unsorted.stream().filter(it -> it.getRight() == Support.INFO_NOT_PROVIDED).forEach(sorted::add);
         unsorted.stream().filter(it -> it.getRight() == Support.NOT_SUPPORTED).forEach(sorted::add);
         return sorted;
+    }
+
+    @Nonnull
+    private static String format(@Nonnull final String string) {
+        if (FMLCommonHandler.instance().getSide().isClient()) return I18n.format(string);
+        return string;
     }
 
     @Nonnull

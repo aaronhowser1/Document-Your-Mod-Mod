@@ -18,6 +18,7 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
@@ -141,7 +142,7 @@ public final class TooltipDocumentationConsumer implements DocumentationDataCons
 
     @Override
     public void onCreation() {
-        MinecraftForge.EVENT_BUS.register(this);
+        if (FMLCommonHandler.instance().getSide().isClient()) MinecraftForge.EVENT_BUS.register(this);
     }
 
     @Nonnull
